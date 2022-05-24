@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2022, Executable Book Project
 # This file is distributed under the same license as the MyST-NB package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# xinetzone <xinzone@outlook.com>, 2022.
 #
 #, fuzzy
 msgid ""
@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../authoring/basics.md:3
 msgid "The basics"
-msgstr ""
+msgstr "基础"
 
 #: ../../authoring/basics.md:5
 msgid "Default file formats"
-msgstr ""
+msgstr "默认文件格式"
 
 #: ../../authoring/basics.md:7
 msgid ""
@@ -32,22 +32,24 @@ msgid ""
 "doc.org/en/master/usage/restructuredtext/basics.html) (`.rst`), loading "
 "`myst_nb` will also parse:"
 msgstr ""
+"除了使用 Sphinx 的默认格式，[RestructuredText](https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html) （`.rst`），加载 `myst_nb` 也会解析："
 
 #: ../../authoring/basics.md:9
 msgid "Markdown files (`.md`)"
-msgstr ""
+msgstr "Markdown 文件 （`.md`）"
 
 #: ../../authoring/basics.md:10
 msgid "Jupyter notebooks (`.ipynb`)"
-msgstr ""
+msgstr "Jupyter 笔记本（`.ipynb`）"
 
 #: ../../authoring/basics.md:11
 msgid "MyST-NB text-based notebooks (`.md` + top-matter)"
-msgstr ""
+msgstr "基于文本的笔记本 MyST-NB（`.md` + top-matter）"
 
 #: ../../authoring/basics.md:13
 msgid "Custom file extensions"
-msgstr ""
+msgstr "自定义文件扩展名"
 
 #: ../../authoring/basics.md:15
 msgid ""
@@ -56,10 +58,12 @@ msgid ""
 "doc.org/en/master/usage/configuration.html#confval-source_suffix) option "
 "in your `conf.py`, e.g.:"
 msgstr ""
+"你可以使用 `conf.py` 中的 [source_suffix](https://www.sphinx-"
+"doc.org/en/master/usage/configuration.html#confval-source_suffix) 选项来改变 MyST-NB 解析的文件扩展名，例如："
 
 #: ../../authoring/basics.md:27
 msgid "Other notebook formats"
-msgstr ""
+msgstr "其他笔记本格式"
 
 #: ../../authoring/basics.md:29
 msgid ""
@@ -67,6 +71,8 @@ msgid ""
 "Notebook formats into your build, and integration with "
 "[jupytext](https://github.com/mwouts/jupytext)."
 msgstr ""
+"请参阅 [](write/custom_formats) 节，了解如何将其他笔记本格式集成到您的构建中，"
+"以及如何与 [jupytext](https://github.com/mwouts/jupytext) 集成。"
 
 #: ../../authoring/basics.md:31
 msgid "MyST Markdown"
@@ -79,22 +85,28 @@ msgid ""
 "[CommonMark](https://commonmark.org/) with RST inspired syntaxes to "
 "provide the additional functionality required for technical writing."
 msgstr ""
+"对于所有的文件格式，Markdown 创作是 MyST-NB 的支柱。"
+"默认情况下，MyST 风格的 Markdown 是启用的，它扩展了 [CommonMark](https://commonmark.org/)，"
+"使用 RST 启发的语法，提供技术写作所需的额外功能。"
 
 #: ../../authoring/basics.md:37
 msgid ""
 "In particular MyST adds targets, roles and directives syntax, allowing "
 "you to utilise all available Docutils/Sphinx features:"
 msgstr ""
+"特别是 MyST 添加了目标（targets）、角色（roles）和指令（directives）语法，"
+"允许你利用所有可用的 Docutils/Sphinx 特性："
 
 #: ../../authoring/basics.md:76
 msgid ""
 "See the [](authoring/jupyter-notebooks) section, for more details on how "
 "to author Jupyter notebooks."
 msgstr ""
+"参见 [](authoring/jupyter-notebooks) 部分，了解如何编写 Jupyter 笔记本的更多细节。"
 
 #: ../../authoring/basics.md:79
 msgid "Text-based notebooks"
-msgstr ""
+msgstr "基于文本的笔记本"
 
 #: ../../authoring/basics.md:81
 msgid ""
@@ -102,12 +114,15 @@ msgid ""
 "notebooks in a text file. They map directly to a Notebook file, without "
 "directly storing the code execution outputs."
 msgstr ""
+"MyST-NB 文本笔记本是用于在文本文件中存储 Jupyter 笔记本的特殊格式。"
+"它们直接映射到 Notebook 文件，而不直接存储代码执行输出。"
 
 #: ../../authoring/basics.md:84
 msgid ""
 "To designate a Markdown file as a text-based notebook, add the following "
 "top-matter to the start of the file:"
 msgstr ""
+"要将 Markdown 文件指定为基于文本的记事本，请在文件开头添加以下 top-matter："
 
 #: ../../authoring/basics.md:94
 msgid ""
@@ -115,20 +130,23 @@ msgid ""
 "kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) "
 "installed in your environment."
 msgstr ""
+"`kernelspec.name` 应该与安装在您的环境中的 [Jupyter 内核]"
+"(https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) 相关。"
 
 #: ../../authoring/basics.md:96
 msgid ""
 "MyST-NB will also recognise [jupytext](https://jupytext.readthedocs.io) "
 "top-matter, such as:"
 msgstr ""
+"MyST-NB 也将认可 [jupytext](https://jupytext.readthedocs.io) 的顶级内容，比如："
 
 #: ../../authoring/basics.md:112
 msgid "Code cells are then designated by the `code-cell` directive:"
-msgstr ""
+msgstr "然后，代码单元格由 `code-cell` 指令指定："
 
 #: ../../authoring/basics.md:122
 msgid "and Markdown can be split into cells by the `+++` break syntax:"
-msgstr ""
+msgstr "而且 Markdown 可以通过 `+++` break 语法拆分为单元格："
 
 #: ../../authoring/basics.md:133
 msgid ""
@@ -136,10 +154,12 @@ msgid ""
 "based notebooks, and integration with "
 "[jupytext](https://jupytext.readthedocs.io)."
 msgstr ""
+"请参阅 [](authoring/text-notebooks) 部分，"
+"以获得关于基于文本的笔记本以及与 [jupytext](https://jupytext.readthedocs.io) 集成的更多详细信息。"
 
 #: ../../authoring/basics.md:136
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../authoring/basics.md:138
 msgid ""
@@ -147,10 +167,12 @@ msgid ""
 "levels of specificity; globally, per file, and per notebook cell, with "
 "the most specific configuration taking precedence."
 msgstr ""
+"MyST-NB 的解析、执行和呈现可以在三个层次的特异性上配置；"
+"在全局范围内，每个文件和每个笔记本单元，最具体的配置优先。"
 
 #: ../../authoring/basics.md:140
 msgid ""
 "See the [](config/intro) section, for more details on how to configure "
 "MyST-NB."
 msgstr ""
-
+"关于如何配置 MyST-NB 的更多细节，请参见 [](config/intro) 部分。"
