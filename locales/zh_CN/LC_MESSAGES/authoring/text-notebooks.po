@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../authoring/text-notebooks.md:8
 msgid "Text-based Notebooks"
-msgstr ""
+msgstr "基于文本的笔记本"
 
 #: ../../authoring/text-notebooks.md:10
 msgid ""

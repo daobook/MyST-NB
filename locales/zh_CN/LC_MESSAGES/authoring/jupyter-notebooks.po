@@ -19,13 +19,14 @@ msgstr ""
 
 #: ../../authoring/jupyter-notebooks.md:8
 msgid "Jupyter Notebooks"
-msgstr ""
+msgstr "Jupyter 笔记本"
 
 #: ../../authoring/jupyter-notebooks.md:10
 msgid ""
 "This notebook is a demonstration of directly-parsing Jupyter Notebooks "
 "into Sphinx using the MyST parser.[^download]"
 msgstr ""
+#  "这个笔记本演示了如何使用 MyST 解析器将 Jupyter 笔记本直接解析为 Sphinx。 [^download]"
 
 #: ../../authoring/jupyter-notebooks.md:15
 msgid "Markdown"
@@ -36,10 +37,11 @@ msgid ""
 "For more information about what you can write with MyST Markdown, see the"
 " [MyST Parser syntax guide](myst:syntax/syntax)."
 msgstr ""
+"关于 MyST Markdown 的更多信息，请参见 [MyST 解析器语法指南](myst:syntax/syntax)。"
 
 #: ../../authoring/jupyter-notebooks.md:22
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../authoring/jupyter-notebooks.md:24
 msgid ""
@@ -49,10 +51,13 @@ msgid ""
 " set of options, and [MyST syntax guide](myst:example_syntax) for all the"
 " syntax options."
 msgstr ""
+"MyST-NB 解析器源自 [基本的 MyST-Parser](myst:intro/get-started)，所以所有的配置选项都是可用的。"
+"请参阅 [MyST 配置选项](myst:sphinx/config-options) 以获得完整的选项集，"
+"以及 [MyST 语法指南](myst:example_syntax) 以获得所有语法选项。"
 
 #: ../../authoring/jupyter-notebooks.md:27
 msgid "To build documentation from this notebook, the following options are set:"
-msgstr ""
+msgstr "要从这个笔记本构建文档，需要设置以下选项："
 
 #: ../../authoring/jupyter-notebooks.md:41
 msgid ""
@@ -61,16 +66,20 @@ msgid ""
 "Markdown. It is not required to add this explicitly in the list of "
 "`extensions`."
 msgstr ""
+"加载 `myst_nb` 扩展也会激活 [`myst_parser`](myst:index) 扩展，以启用 MyST 的“Markdown”风格。"
+"不需要在 `extensions` 列表中显式地添加它。"
 
 #: ../../authoring/jupyter-notebooks.md:45
 msgid "Syntax"
-msgstr ""
+msgstr "语法"
 
 #: ../../authoring/jupyter-notebooks.md:47
 msgid ""
 "As you can see, markdown is parsed as expected. Embedding images should "
 "work as expected. For example, here's the MyST-NB logo:"
 msgstr ""
+"正如您所看到的，markdown 是按照预期进行解析的。"
+"嵌入图像应该可以正常工作。例如，这是 MyST-NB 的 logo："
 
 #: ../../authoring/jupyter-notebooks.md:54
 msgid "![myst-nb logo](../_static/logo-wide.svg)"
@@ -86,6 +95,8 @@ msgid ""
 "sphinx configuration ([see here](myst:syntax/images)), you can even add "
 "HTML `img` tags with attributes:"
 msgstr ""
+"通过在 sphinx 配置中的 `myst_enable_extensions` 列表中添加 `\"html_image\"` "
+"（[参见这里](myst:syntax/images)），你甚至可以添加带有属性的 HTML  `img` tag："
 
 #: ../../authoring/jupyter-notebooks.md:62
 msgid "logo"
@@ -97,6 +108,8 @@ msgid ""
 "markdown with Sphinx in your notebook. For example, here's a note "
 "admonition block:"
 msgstr ""
+"因为 MyST-NB 使用了 MyST-markdown 解析器，"
+"你可以在你的笔记本中加入 Sphinx 的丰富的 markdown 功能。例如，这里有注释警告块："
 
 #: ../../authoring/jupyter-notebooks.md:68
 msgid ""
@@ -111,6 +124,8 @@ msgid ""
 "configuration. This is [explained here](myst:syntax/amsmath), and works "
 "as such:"
 msgstr ""
+"如果您希望使用裸 LaTeX 方程，那么应该将 `\"amsmath\"` 添加到 sphinx 配置中的 "
+"`myst_enable_extensions` 列表中。这里 [解释了它](myst:syntax/amsmath) 的工作原理："
 
 #: ../../authoring/jupyter-notebooks.md:93
 msgid ""
@@ -133,6 +148,7 @@ msgid ""
 "Also you can use features like **equation numbering** and referencing in "
 "the notebooks:"
 msgstr ""
+"你也可以使用诸如公式编号并在笔记本上引用的功能。"
 
 #: ../../authoring/jupyter-notebooks.md:108
 msgid "e^{i\\pi} + 1 = 0"
@@ -143,38 +159,41 @@ msgid ""
 "Euler's identity, equation {math:numref}`euler`, was elected one of the "
 "most beautiful mathematical formulas."
 msgstr ""
+"欧拉等式，{math:numref}`euler`，被选为最美丽的数学公式之一。"
 
 #: ../../authoring/jupyter-notebooks.md:113
 msgid ""
 "You can see the syntax used for this example [here in the MyST "
 "documentation](myst:syntax/math)."
 msgstr ""
+"你可以在 MyST 文档中看到 [这个例子所使用的语法](myst:syntax/math)。"
 
 #: ../../authoring/jupyter-notebooks.md:115
 msgid "Code cells and outputs"
-msgstr ""
+msgstr "代码单元格和输出"
 
 #: ../../authoring/jupyter-notebooks.md:117
 msgid ""
 "You can run cells, and the cell outputs will be captured and inserted "
 "into the resulting Sphinx site."
 msgstr ""
+"您可以运行单元格，单元格输出将被捕获并插入到生成的 Sphinx 站点中。"
 
 #: ../../authoring/jupyter-notebooks.md:120
 msgid "`__repr__` and HTML outputs"
-msgstr ""
+msgstr "`__repr__` 和 HTML 输出"
 
 #: ../../authoring/jupyter-notebooks.md:122
 msgid "For example, here's some simple Python:"
-msgstr ""
+msgstr "例如，下面是一些简单的 Python："
 
 #: ../../authoring/jupyter-notebooks.md:131
 msgid "This will also work with HTML outputs"
-msgstr ""
+msgstr "这也将用于 HTML 输出"
 
 #: ../../authoring/jupyter-notebooks.md:139
 msgid "as well as math outputs"
-msgstr ""
+msgstr "以及数学输出"
 
 #: ../../authoring/jupyter-notebooks.md:143
 msgid "\\displaystyle \\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}"
@@ -182,21 +201,22 @@ msgstr ""
 
 #: ../../authoring/jupyter-notebooks.md:146
 msgid "This works for error messages as well:"
-msgstr ""
+msgstr "这也适用于错误消息："
 
 #: ../../authoring/jupyter-notebooks.md:155
 msgid "Images"
-msgstr ""
+msgstr "图片"
 
 #: ../../authoring/jupyter-notebooks.md:157
 msgid ""
 "Images that are generated from your code (e.g., with Matplotlib) will "
 "also be embedded."
 msgstr ""
+"由你的代码生成的图像（例如，使用 Matplotlib）也将被嵌入。"
 
 #: ../../authoring/jupyter-notebooks.md:165
 msgid "Raw cells"
-msgstr ""
+msgstr "Raw 单元格"
 
 #: ../../authoring/jupyter-notebooks.md:167
 msgid ""
@@ -206,10 +226,14 @@ msgid ""
 " specific [MIME media type](https://developer.mozilla.org/en-"
 "US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)."
 msgstr ""
+"[原始单元类型](https://nbformat.readthedocs.io/en/latest/format_description.html"
+"#raw-nbconvert-cells) 可用于将内容特定地呈现为特定的 [MIME 媒体类型](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。"
 
 #: ../../authoring/jupyter-notebooks.md:13
 msgid ""
 "This notebook can be downloaded as **{nb-download}`jupyter-"
 "notebooks.ipynb`** and {download}`jupyter-notebooks.md`"
 msgstr ""
-
+"这个笔记本可以下载为 **{nb-download}`jupyter-"
+"notebooks.ipynb`** 和 {download}`jupyter-notebooks.md`。"
