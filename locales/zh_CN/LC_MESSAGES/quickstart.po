@@ -19,33 +19,36 @@ msgstr ""
 
 #: ../../quickstart.md:1
 msgid "Get Started"
-msgstr ""
+msgstr "快速入门"
 
 #: ../../quickstart.md:3
 msgid ""
 "`myst-nb` is distributed as a Python package and requires no non-Python "
 "dependencies."
 msgstr ""
+"`myst-nb` 作为 Python 包发布，不需要任何非 Python 依赖。"
 
 #: ../../quickstart.md:5
 msgid "Use pip to install `myst-nb`:"
-msgstr ""
+msgstr "可以使用 pip 安装 `myst-nb`："
 
 #: ../../quickstart.md:11
 msgid ""
 "You can use the `mystnb-quickstart` CLI to quickly create an example "
 "Sphinx + MyST-NB project:"
 msgstr ""
+"你可以使用 `mystnb-quickstart` 命令来快速创建 Sphinx + MyST-NB 项目示例："
 
 #: ../../quickstart.md:17
 msgid "or simply add `myst_nb` to your existing Sphinx configuration:"
-msgstr ""
+msgstr "或者简单地将 `myst_nb` 添加到现有的 Sphinx 配置中："
 
 #: ../../quickstart.md:26
 msgid ""
 "By default, MyST-NB will now parse both markdown (`.md`) and notebooks "
 "(`.ipynb`)."
 msgstr ""
+"默认情况下，MyST-NB 将解析 markdown（`.md`）和 notebook（`.ipynb`）。"
 
 #: ../../quickstart.md:28
 msgid ""
@@ -55,6 +58,11 @@ msgid ""
 "d=\"M0 0h24v24H0z\" fill=\"none\"></path><path d=\"M10 6L8.59 7.41 13.17 "
 "12l-4.58 4.59L10 18l6-6z\"></path></svg>"
 msgstr ""
+"开始编写您的内容 <svg version=\"4.0.0.63c5cb3\" "
+"width=\"2.0em\" height=\"2.0em\" class=\"sd-material-icon sd-material-"
+"icon-navigate_next\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path "
+"d=\"M0 0h24v24H0z\" fill=\"none\"></path><path d=\"M10 6L8.59 7.41 13.17 "
+"12l-4.58 4.59L10 18l6-6z\"></path></svg>"
 
 #: ../../quickstart.md:35
 msgid ""
@@ -62,16 +70,19 @@ msgid ""
 "[sphinx-build CLI](https://www.sphinx-doc.org/en/master/man/sphinx-"
 "build.html) to build your documentation, e.g."
 msgstr ""
+"一旦完成了内容的创作，可以使用 [sphinx-build CLI](https://www.sphinx-doc.org/en/master/man/sphinx-"
+"build.html) 来构建文档，例如"
 
 #: ../../quickstart.md:42
 msgid ""
 "MyST-NB is parallel-friendly, so you can also distribute the build (and "
 "execution of notebooks) over *N* processes with: `sphinx-build -j 4`"
 msgstr ""
+"MyST-NB 是并行友好型的，所以也可以使用 `sphinx-build -j 4` 在 *N* 个进程上分发构建（和笔记本的执行）。"
 
 #: ../../quickstart.md:46
 msgid ""
 "Check out [Read the Docs](https://docs.readthedocs.io) for hosting and "
 "*continuous deployment* of documentation"
 msgstr ""
-
+"请切换到 [Read the Docs](https://docs.readthedocs.io)，了解文档的托管和持续部署"
