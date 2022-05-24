@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>The basics</title>
+    <title>基础</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,8 +48,8 @@
     <link rel="shortcut icon" href="../_static/logo-square.svg"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Jupyter Notebooks" href="jupyter-notebooks.html" />
-    <link rel="prev" title="Authoring" href="index.html" />
+    <link rel="next" title="Jupyter 笔记本" href="jupyter-notebooks.html" />
+    <link rel="prev" title="创作" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -122,7 +122,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Authoring
+   创作
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -132,17 +132,17 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     The basics
+     基础
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="jupyter-notebooks.html">
-     Jupyter Notebooks
+     Jupyter 笔记本
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="text-notebooks.html">
-     Text-based Notebooks
+     基于文本的笔记本
     </a>
    </li>
    <li class="toctree-l2">
@@ -422,17 +422,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#default-file-formats">
-   Default file formats
+   默认文件格式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#custom-file-extensions">
-   Custom file extensions
+   自定义文件扩展名
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-notebook-formats">
-   Other notebook formats
+   其他笔记本格式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -442,12 +442,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#text-based-notebooks">
-   Text-based notebooks
+   基于文本的笔记本
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configuration">
-   Configuration
+   配置
   </a>
  </li>
 </ul>
@@ -459,7 +459,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The basics</h1>
+                <h1>基础</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -471,17 +471,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#default-file-formats">
-   Default file formats
+   默认文件格式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#custom-file-extensions">
-   Custom file extensions
+   自定义文件扩展名
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-notebook-formats">
-   Other notebook formats
+   其他笔记本格式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -491,12 +491,12 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#text-based-notebooks">
-   Text-based notebooks
+   基于文本的笔记本
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configuration">
-   Configuration
+   配置
   </a>
  </li>
 </ul>
@@ -510,20 +510,19 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="the-basics">
-<span id="authoring-intro"></span><h1>The basics<a class="headerlink" href="#the-basics" title="永久链接至标题">#</a></h1>
+<span id="authoring-intro"></span><h1>基础<a class="headerlink" href="#the-basics" title="永久链接至标题">#</a></h1>
 <section id="default-file-formats">
-<h2>Default file formats<a class="headerlink" href="#default-file-formats" title="永久链接至标题">#</a></h2>
-<p>As well as writing in the Sphinx default format, <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">RestructuredText</a> (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>), loading <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> will also parse:</p>
+<h2>默认文件格式<a class="headerlink" href="#default-file-formats" title="永久链接至标题">#</a></h2>
+<p>除了使用 Sphinx 的默认格式，<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">RestructuredText</a> （<code class="docutils literal notranslate"><span class="pre">.rst</span></code>），加载 <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> 也会解析：</p>
 <ul class="simple">
-<li><p>Markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>)</p></li>
-<li><p>Jupyter notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)</p></li>
-<li><p>MyST-NB text-based notebooks (<code class="docutils literal notranslate"><span class="pre">.md</span></code> + top-matter)</p></li>
+<li><p>Markdown 文件 （<code class="docutils literal notranslate"><span class="pre">.md</span></code>）</p></li>
+<li><p>Jupyter 笔记本（<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>）</p></li>
+<li><p>基于文本的笔记本 MyST-NB（<code class="docutils literal notranslate"><span class="pre">.md</span></code> + top-matter）</p></li>
 </ul>
 </section>
 <section id="custom-file-extensions">
-<h2>Custom file extensions<a class="headerlink" href="#custom-file-extensions" title="永久链接至标题">#</a></h2>
-<p>You can change which file extensions are parsed by MyST-NB using
-the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-source_suffix">source_suffix</a> option in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, e.g.:</p>
+<h2>自定义文件扩展名<a class="headerlink" href="#custom-file-extensions" title="永久链接至标题">#</a></h2>
+<p>你可以使用 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中的 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-source_suffix">source_suffix</a> 选项来改变 MyST-NB 解析的文件扩展名，例如：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;myst_nb&quot;</span><span class="p">]</span>
 <span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
@@ -534,15 +533,13 @@ the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usa
 </div>
 </section>
 <section id="other-notebook-formats">
-<h2>Other notebook formats<a class="headerlink" href="#other-notebook-formats" title="永久链接至标题">#</a></h2>
-<p>See the <a class="reference internal" href="custom-formats.html#write-custom-formats"><span class="std std-ref">Custom Formats</span></a> section, for how to integrate other Notebook formats into your build, and integration with <a class="reference external" href="https://github.com/mwouts/jupytext">jupytext</a>.</p>
+<h2>其他笔记本格式<a class="headerlink" href="#other-notebook-formats" title="永久链接至标题">#</a></h2>
+<p>请参阅 <a class="reference internal" href="custom-formats.html#write-custom-formats"><span class="std std-ref">Custom Formats</span></a> 节，了解如何将其他笔记本格式集成到您的构建中，以及如何与 <a class="reference external" href="https://github.com/mwouts/jupytext">jupytext</a> 集成。</p>
 </section>
 <section id="myst-markdown">
 <h2>MyST Markdown<a class="headerlink" href="#myst-markdown" title="永久链接至标题">#</a></h2>
-<p>For all file formats, Markdown authoring is the backbone of MyST-NB.
-By default, the MyST flavour of Markdown is enabled,
-which extends <a class="reference external" href="https://commonmark.org/">CommonMark</a> with RST inspired syntaxes to provide the additional functionality required for technical writing.</p>
-<p>In particular MyST adds targets, roles and directives syntax, allowing you to utilise all available Docutils/Sphinx features:</p>
+<p>对于所有的文件格式，Markdown 创作是 MyST-NB 的支柱。默认情况下，MyST 风格的 Markdown 是启用的，它扩展了 <a class="reference external" href="https://commonmark.org/">CommonMark</a>，使用 RST 启发的语法，提供技术写作所需的额外功能。</p>
+<p>特别是 MyST 添加了目标（targets）、角色（roles）和指令（directives）语法，允许你利用所有可用的 Docutils/Sphinx 特性：</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -589,14 +586,13 @@ content
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>See the <a class="reference internal" href="jupyter-notebooks.html#authoring-jupyter-notebooks"><span class="std std-ref">Jupyter Notebooks</span></a> section, for more details on how to author Jupyter notebooks.</p>
+<p>参见 <a class="reference internal" href="jupyter-notebooks.html#authoring-jupyter-notebooks"><span class="std std-ref">Jupyter 笔记本</span></a> 部分，了解如何编写 Jupyter 笔记本的更多细节。</p>
 </div>
 </section>
 <section id="text-based-notebooks">
-<h2>Text-based notebooks<a class="headerlink" href="#text-based-notebooks" title="永久链接至标题">#</a></h2>
-<p>MyST-NB text-based notebooks are a special format for storing Jupyter notebooks in a text file.
-They map directly to a Notebook file, without directly storing the code execution outputs.</p>
-<p>To designate a Markdown file as a text-based notebook, add the following top-matter to the start of the file:</p>
+<h2>基于文本的笔记本<a class="headerlink" href="#text-based-notebooks" title="永久链接至标题">#</a></h2>
+<p>MyST-NB 文本笔记本是用于在文本文件中存储 Jupyter 笔记本的特殊格式。它们直接映射到 Notebook 文件，而不直接存储代码执行输出。</p>
+<p>要将 Markdown 文件指定为基于文本的记事本，请在文件开头添加以下 top-matter：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
 <span class="nt">file_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mystnb</span><span class="w"></span>
 <span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
@@ -604,8 +600,8 @@ They map directly to a Notebook file, without directly storing the code executio
 <span class="nn">---</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">kernelspec.name</span></code> should relate to a <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter kernel</a> installed in your environment.</p>
-<p>MyST-NB will also recognise <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a> top-matter, such as:</p>
+<p><code class="docutils literal notranslate"><span class="pre">kernelspec.name</span></code> 应该与安装在您的环境中的 <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter 内核</a> 相关。</p>
+<p>MyST-NB 也将认可 <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a> 的顶级内容，比如：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
 <span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
@@ -619,7 +615,7 @@ They map directly to a Notebook file, without directly storing the code executio
 <span class="nn">---</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Code cells are then designated by the <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> directive:</p>
+<p>然后，代码单元格由 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 指令指定：</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{code-cell}
 :tags: [my-tag]
 
@@ -627,7 +623,7 @@ print(&quot;Hello world!&quot;)
 ```
 </pre></div>
 </div>
-<p>and Markdown can be split into cells by the <code class="docutils literal notranslate"><span class="pre">+++</span></code> break syntax:</p>
+<p>而且 Markdown 可以通过 <code class="docutils literal notranslate"><span class="pre">+++</span></code> break 语法拆分为单元格：</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Markdown cell 1
 
 +++ {&quot;tags&quot;: [&quot;my-tag&quot;]}
@@ -637,13 +633,13 @@ Markdown cell 2, with metadata tags
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>See the <a class="reference internal" href="text-notebooks.html#authoring-text-notebooks"><span class="std std-ref">Text-based Notebooks</span></a> section, for more details on text-based notebooks, and integration with <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a>.</p>
+<p>请参阅 <a class="reference internal" href="text-notebooks.html#authoring-text-notebooks"><span class="std std-ref">基于文本的笔记本</span></a> 部分，以获得关于基于文本的笔记本以及与 <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a> 集成的更多详细信息。</p>
 </div>
 </section>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">#</a></h2>
-<p>MyST-NB parsing, execution and rendering can be configured at three levels of specificity; globally, per file, and per notebook cell, with the most specific configuration taking precedence.</p>
-<p>See the <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">Configuration</span></a> section, for more details on how to configure MyST-NB.</p>
+<h2>配置<a class="headerlink" href="#configuration" title="永久链接至标题">#</a></h2>
+<p>MyST-NB 的解析、执行和呈现可以在三个层次的特异性上配置；在全局范围内，每个文件和每个笔记本单元，最具体的配置优先。</p>
+<p>关于如何配置 MyST-NB 的更多细节，请参见 <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">Configuration</span></a> 部分。</p>
 </section>
 </section>
 
@@ -659,13 +655,13 @@ Markdown cell 2, with metadata tags
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Authoring</p>
+            <p class="prev-next-title">创作</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="jupyter-notebooks.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Jupyter Notebooks</p>
+        <p class="prev-next-title">Jupyter 笔记本</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
