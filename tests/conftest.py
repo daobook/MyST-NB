@@ -105,7 +105,7 @@ class SphinxFixture:
     def get_html(self, index=0):
         """Return the built HTML file."""
         name = self.files[index][0]
-        _path = self.app.outdir / (name + ".html")
+        _path = self.app.outdir / f"{name}.html"
         if not _path.exists():
             pytest.fail("html not output")
         return bs4.BeautifulSoup(read_text(_path), "html.parser")
@@ -113,7 +113,7 @@ class SphinxFixture:
     def get_nb(self, index=0):
         """Return the output notebook (after any execution)."""
         name = self.files[index][0]
-        _path = self.app.srcdir / "_build" / "jupyter_execute" / (name + ".ipynb")
+        _path = self.app.srcdir / "_build" / "jupyter_execute" / f"{name}.ipynb"
         if not _path.exists():
             pytest.fail("notebook not output")
         return read_text(_path)
@@ -121,7 +121,7 @@ class SphinxFixture:
     def get_report_file(self, index=0):
         """Return the report file for a failed execution."""
         name = self.files[index][0]
-        _path = self.app.outdir / "reports" / (name + ".err.log")
+        _path = self.app.outdir / "reports" / f"{name}.err.log"
         if not _path.exists():
             pytest.fail("report log not output")
         return read_text(_path)
@@ -142,7 +142,7 @@ def sphinx_params(request):
     kwargs = {}
     if markers is not None:
         for info in reversed(list(markers)):
-            kwargs.update(info.kwargs)
+            kwargs |= info.kwargs
             kwargs["files"] = info.args
     return kwargs
 
@@ -165,7 +165,7 @@ def sphinx_run(sphinx_params, make_app, tempdir):
         "exclude_patterns": ["_build"],
         "nb_execution_show_tb": True,
     }
-    confoverrides.update(conf)
+    confoverrides |= conf
 
     current_dir = os.getcwd()
     if "working_dir" in sphinx_params:
@@ -178,12 +178,22 @@ def sphinx_run(sphinx_params, make_app, tempdir):
     srcdir.makedirs(exist_ok=True)
     os.chdir(base_dir)
     (srcdir / "conf.py").write_text(
-        "# conf overrides (passed directly to sphinx):\n"
-        + "\n".join(
-            ["# " + ll for ll in json.dumps(confoverrides, indent=2).splitlines()]
+        (
+            (
+                "# conf overrides (passed directly to sphinx):\n"
+                + "\n".join(
+                    [
+                        f"# {ll}"
+                        for ll in json.dumps(
+                            confoverrides, indent=2
+                        ).splitlines()
+                    ]
+                )
+            )
+            + "\n"
         )
-        + "\n"
     )
+
 
     for nb_file in sphinx_params["files"]:
         nb_path = TEST_FILE_DIR.joinpath(nb_file)

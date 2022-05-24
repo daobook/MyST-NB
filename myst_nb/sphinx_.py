@@ -150,8 +150,9 @@ class Parser(MystParser):
             if nb_client.exec_metadata["traceback"]:
                 # store error traceback in outdir and log its path
                 reports_file = Path(self.env.app.outdir).joinpath(
-                    "reports", *(self.env.docname + ".err.log").split("/")
+                    "reports", *f"{self.env.docname}.err.log".split("/")
                 )
+
                 reports_file.parent.mkdir(parents=True, exist_ok=True)
                 reports_file.write_text(
                     nb_client.exec_metadata["traceback"], encoding="utf8"
@@ -163,7 +164,7 @@ class Parser(MystParser):
 
         # write final (updated) notebook to output folder (utf8 is standard encoding)
         path = self.env.docname.split("/")
-        ipynb_path = path[:-1] + [path[-1] + ".ipynb"]
+        ipynb_path = path[:-1] + [f"{path[-1]}.ipynb"]
         content = nbformat.writes(notebook).encode("utf-8")
         nb_renderer.write_file(ipynb_path, content, overwrite=True)
 
@@ -171,7 +172,7 @@ class Parser(MystParser):
         # and store the keys to environment doc metadata,
         # so that they may be used in any post-transform steps
         if nb_client.glue_data:
-            glue_path = path[:-1] + [path[-1] + ".glue.json"]
+            glue_path = path[:-1] + [f"{path[-1]}.glue.json"]
             nb_renderer.write_file(
                 glue_path,
                 json.dumps(nb_client.glue_data, cls=BytesEncoder).encode("utf8"),
@@ -241,8 +242,6 @@ class SphinxNbRenderer(SphinxRenderer, MditRenderMixin):
                     )
                     self.add_line_and_source_path_r(_nodes, token)
                     self.current_node.extend(_nodes)
-                else:
-                    pass  # TODO warning
             elif output.output_type == "error":
                 _nodes = self.nb_renderer.render_error(
                     output, metadata, cell_index, line

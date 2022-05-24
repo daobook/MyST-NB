@@ -124,11 +124,11 @@ class PasteFigureDirective(DirectiveBase):
     final_argument_whitespace = True
     has_content = True
 
-    def align(argument):
-        return spec.choice(argument, ("left", "center", "right"))
+    def align(self):
+        return spec.choice(self, ("left", "center", "right"))
 
-    def figwidth_value(argument):
-        return spec.length_or_percentage_or_unitless(argument, "px")
+    def figwidth_value(self):
+        return spec.length_or_percentage_or_unitless(self, "px")
 
     option_spec = {
         # note we don't add converters for image options,
@@ -271,7 +271,7 @@ class PasteMathDirective(DirectiveBase):
         node["number"] = domain.get_equation_number_for(node["label"])
 
         # add target node
-        node_id = nodes.make_id("equation-%s" % node["label"])
+        node_id = nodes.make_id(f'equation-{node["label"]}')
         target = nodes.target("", "", ids=[node_id])
         self.document.note_explicit_target(target)
 

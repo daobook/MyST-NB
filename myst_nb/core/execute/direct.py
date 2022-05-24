@@ -22,11 +22,11 @@ class NotebookClientDirect(NotebookClientBase):
         cwd_context: ContextManager[str]
         if self.nb_config.execution_in_temp:
             cwd_context = TemporaryDirectory()
+        elif self.path is None:
+            raise ValueError(
+                "Input source must exist as file, if execution_in_temp=False"
+            )
         else:
-            if self.path is None:
-                raise ValueError(
-                    "Input source must exist as file, if execution_in_temp=False"
-                )
             cwd_context = nullcontext(str(self.path.parent))
 
         # execute in the context of the current working directory
@@ -59,7 +59,7 @@ class NotebookClientDirect(NotebookClientBase):
             "mtime": datetime.now().timestamp(),
             "runtime": result.time,
             "method": self.nb_config.execution_mode,
-            "succeeded": False if result.err else True,
+            "succeeded": not result.err,
             "error": f"{result.err.__class__.__name__}" if result.err else None,
             "traceback": result.exc_string if result.err else None,
         }

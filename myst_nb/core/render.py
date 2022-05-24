@@ -157,8 +157,7 @@ class MditRenderMixin:
 
         # create a container for all the input/output
         classes = ["cell"]
-        for tag in tags:
-            classes.append(f"tag_{tag.replace(' ', '_')}")
+        classes.extend(f"tag_{tag.replace(' ', '_')}" for tag in tags)
         cell_container = nodes.container(
             nb_element="cell_code",
             cell_index=cell_index,
@@ -368,17 +367,16 @@ class NbElementRenderer:
             filepath.parent.mkdir(parents=True, exist_ok=True)
             filepath.write_bytes(content)
 
-        if self.renderer.sphinx_env:
-            # sphinx expects paths in POSIX format, relative to the documents path,
-            # or relative to the source folder if prepended with '/'
-            filepath = filepath.resolve()
-            if os.name == "nt":
-                # Can't get relative path between drives on Windows
-                return filepath.as_posix()
-            # Path().relative_to() doesn't work when not a direct subpath
-            return "/" + os.path.relpath(filepath, self.renderer.sphinx_env.app.srcdir)
-        else:
+        if not self.renderer.sphinx_env:
             return str(filepath)
+        # sphinx expects paths in POSIX format, relative to the documents path,
+        # or relative to the source folder if prepended with '/'
+        filepath = filepath.resolve()
+        if os.name == "nt":
+            # Can't get relative path between drives on Windows
+            return filepath.as_posix()
+            # Path().relative_to() doesn't work when not a direct subpath
+        return f"/{os.path.relpath(filepath, self.renderer.sphinx_env.app.srcdir)}"
 
     def add_js_file(self, key: str, uri: str | None, kwargs: dict[str, str]) -> None:
         """Register a JavaScript file to include in the HTML output of this document.
@@ -397,7 +395,7 @@ class NbElementRenderer:
         # The JSON inside the script tag is identified and parsed by:
         # https://github.com/jupyter-widgets/ipywidgets/blob/32f59acbc63c3ff0acf6afa86399cb563d3a9a86/packages/html-manager/src/libembed.ts#L36
         # see also: https://ipywidgets.readthedocs.io/en/7.6.5/embedding.html
-        ipywidgets = metadata.get("widgets", None)
+        ipywidgets = metadata.get("widgets")
         ipywidgets_mime = (ipywidgets or {}).get(WIDGET_STATE_MIMETYPE, {})
         if ipywidgets_mime.get("state", None):
             self.add_js_file(
@@ -482,7 +480,6 @@ class NbElementRenderer:
             "output_stderr", cell_metadata, line=source_line
         )
         msg = f"stderr was found in the cell outputs of cell {cell_index + 1}"
-        outputs = []
         if output_stderr == "remove":
             return []
         elif output_stderr == "remove-warn":
@@ -501,8 +498,7 @@ class NbElementRenderer:
             output["text"], lexer, source=self.source, line=source_line
         )
         node["classes"] += ["output", "stderr"]
-        outputs.append(node)
-        return outputs
+        return [node]
 
     def render_error(
         self,
@@ -782,10 +778,7 @@ class NbElementRenderer:
         current_md_config = self.renderer.md_config
         try:
             # potentially replace the parser temporarily
-            if fmt == "myst":
-                # use the current configuration to render the markdown
-                pass
-            elif fmt == "commonmark":
+            if fmt == "commonmark":
                 # use an isolated, CommonMark only, parser
                 self.renderer.md_config = MdParserConfig(commonmark_only=True)
                 self.renderer.md = create_md_parser(
@@ -797,7 +790,7 @@ class NbElementRenderer:
                 self.renderer.md = create_md_parser(
                     self.renderer.md_config, self.renderer.__class__
                 )
-            else:
+            elif fmt != "myst":
                 self.logger.warning(
                     f"skipping unknown markdown format: {fmt}",
                     subtype="unknown_markdown_format",
@@ -1206,7 +1199,7 @@ def get_mime_priority(
     for plugin in load_mime_renders():
         overrides = list(getattr(plugin, "mime_priority_overrides", [])) + overrides
     for override in overrides:
-        if override[0] == "*" or override[0] == builder:
+        if override[0] in ["*", builder]:
             base[override[1]] = override[2]
     sort = sorted(
         ((k, p) for k, p in base.items() if p is not None), key=lambda x: x[1]

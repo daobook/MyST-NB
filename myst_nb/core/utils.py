@@ -45,13 +45,16 @@ def coalesce_streams(outputs: list[NotebookNode]) -> list[NotebookNode]:
     # We also want to ensure stdout and stderr are always in the same consecutive order,
     # because they are asynchronous, so order isn't guaranteed.
     for i, output in enumerate(new_outputs):
-        if output["output_type"] == "stream" and output["name"] == "stderr":
-            if (
+        if (
+            output["output_type"] == "stream"
+            and output["name"] == "stderr"
+            and (
                 len(new_outputs) >= i + 2
                 and new_outputs[i + 1]["output_type"] == "stream"
                 and new_outputs[i + 1]["name"] == "stdout"
-            ):
-                stdout = new_outputs.pop(i + 1)
-                new_outputs.insert(i, stdout)
+            )
+        ):
+            stdout = new_outputs.pop(i + 1)
+            new_outputs.insert(i, stdout)
 
     return new_outputs

@@ -39,11 +39,11 @@ class NotebookClientInline(NotebookClientBase):
         if self.nb_config.execution_in_temp:
             self._tmp_path = mkdtemp()
             resources = {"metadata": {"path": self._tmp_path}}
+        elif self.path is None:
+            raise ValueError(
+                "Input source must exist as file, if execution_in_temp=False"
+            )
         else:
-            if self.path is None:
-                raise ValueError(
-                    "Input source must exist as file, if execution_in_temp=False"
-                )
             resources = {"metadata": {"path": str(self.path.parent)}}
 
         self.logger.info("Starting inline execution client")
@@ -95,12 +95,13 @@ class NotebookClientInline(NotebookClientBase):
             "mtime": datetime.now().timestamp(),
             "runtime": _exec_time,
             "method": self.nb_config.execution_mode,
-            "succeeded": False if self._cell_error else True,
+            "succeeded": not self._cell_error,
             "error": f"{self._cell_error.__class__.__name__}"
             if self._cell_error
             else None,
             "traceback": self._exc_string,
         }
+
         if not self._cell_error:
             self.logger.info(f"Executed notebook in {_exec_time:.2f} seconds")
         else:
@@ -166,13 +167,10 @@ class ModifiedNotebookClient(NotebookClient):
         assert self.kc is not None
         self.log.debug(f"Evaluating expression: {name}")
         parent_msg_id = await ensure_async(
-            self.kc.execute(
-                str(name),
-                store_history=False,
-                stop_on_error=False,
-            )
+            self.kc.execute(name, store_history=False, stop_on_error=False)
         )
-        cell = nbformat.v4.new_code_cell(source=str(name))
+
+        cell = nbformat.v4.new_code_cell(source=name)
         exec_timeout = self._get_timeout(cell)
         cell_index = -1
         self.clear_before_next_output = False

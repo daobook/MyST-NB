@@ -165,7 +165,7 @@ def setup(app):
         def field_default(value):
             default = " ".join(f"{value!r}".splitlines())
             if len(default) > 20:
-                default = default[:20] + "..."
+                default = f"{default[:20]}..."
             return default
 
         @staticmethod

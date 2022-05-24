@@ -28,8 +28,9 @@ def regress_nb_doc(file_regression, sphinx_run, check_nbs):
         )
         if os.name == "nt":  # on Windows image file paths are absolute
             doctree_string = doctree_string.replace(
-                Path(sphinx_run.app.srcdir).as_posix() + "/", ""
+                f"{Path(sphinx_run.app.srcdir).as_posix()}/", ""
             )
+
         file_regression.check(doctree_string, extension=".xml", encoding="utf8")
 
 

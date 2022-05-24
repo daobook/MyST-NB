@@ -197,15 +197,15 @@ class Parser(MystParser):
 
             # if we are using an HTML writer, dynamically add the CSS to the output
             if nb_config.append_css and hasattr(document.settings, "stylesheet"):
-                css_paths = []
-
-                css_paths.append(
+                css_paths = [
                     nb_renderer.write_file(
                         ["mystnb.css"],
                         import_resources.read_binary(static, "mystnb.css"),
                         overwrite=True,
                     )
-                )
+                ]
+
+
                 fmt = get_formatter_by_name("html", style="default")
                 css_paths.append(
                     nb_renderer.write_file(
@@ -221,7 +221,7 @@ class Parser(MystParser):
                 if document.settings.stylesheet:
                     document.settings.stylesheet.extend(css_paths)
 
-            # TODO also handle JavaScript
+                # TODO also handle JavaScript
 
         # remove temporary state
         document.attributes.pop("nb_renderer")
@@ -277,8 +277,6 @@ class DocutilsNbRenderer(DocutilsRenderer, MditRenderMixin):
                     )
                     self.add_line_and_source_path_r(_nodes, token)
                     self.current_node.extend(_nodes)
-                else:
-                    pass  # TODO warning
             elif output.output_type == "error":
                 _nodes = self.nb_renderer.render_error(
                     output, metadata, cell_index, line

@@ -16,7 +16,7 @@ def test_basic_run(sphinx_run, file_regression):
         "kernelspec",
         "language_info",
     }
-    assert set(sphinx_run.env.nb_metadata["basic_run"].keys()) == set()
+    assert not set(sphinx_run.env.nb_metadata["basic_run"].keys())
     assert sphinx_run.env.metadata["basic_run"]["test_name"] == "notebook1"
     assert sphinx_run.env.metadata["basic_run"]["kernelspec"] == {
         "display_name": "Python 3",
@@ -27,9 +27,10 @@ def test_basic_run(sphinx_run, file_regression):
         sphinx_run.get_doctree().pformat(), extension=".xml", encoding="utf8"
     )
 
-    filenames = {
-        p for p in (sphinx_run.app.srcdir / "_build" / "jupyter_execute").listdir()
-    }
+    filenames = set(
+        (sphinx_run.app.srcdir / "_build" / "jupyter_execute").listdir()
+    )
+
     assert filenames == {"basic_run.ipynb"}
 
 
@@ -51,7 +52,7 @@ def test_complex_outputs(sphinx_run, file_regression):
         "kernelspec",
         "language_info",
     }
-    assert set(sphinx_run.env.nb_metadata["complex_outputs"].keys()) == set()
+    assert not set(sphinx_run.env.nb_metadata["complex_outputs"].keys())
     assert sphinx_run.env.metadata["complex_outputs"]["celltoolbar"] == "Edit Metadata"
     assert sphinx_run.env.metadata["complex_outputs"]["hide_input"] == "False"
     assert sphinx_run.env.metadata["complex_outputs"]["kernelspec"] == {
@@ -62,8 +63,9 @@ def test_complex_outputs(sphinx_run, file_regression):
     doctree_string = sphinx_run.get_doctree().pformat()
     if os.name == "nt":  # on Windows image file paths are absolute
         doctree_string = doctree_string.replace(
-            Path(sphinx_run.app.srcdir).as_posix() + "/", ""
+            f"{Path(sphinx_run.app.srcdir).as_posix()}/", ""
         )
+
     file_regression.check(doctree_string, extension=".xml", encoding="utf8")
 
     filenames = {

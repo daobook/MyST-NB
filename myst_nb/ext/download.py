@@ -20,8 +20,9 @@ class NbDownloadRole(ReferenceRole):
         reftarget = (
             path.as_posix()
             if os.name == "nt"
-            else ("/" + os.path.relpath(path, self.env.app.srcdir))
+            else f"/{os.path.relpath(path, self.env.app.srcdir)}"
         )
+
         node = download_reference(self.rawtext, reftarget=reftarget)
         self.set_source_info(node)
         title = self.title if self.has_explicit_title else self.target

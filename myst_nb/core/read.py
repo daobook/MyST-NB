@@ -117,7 +117,7 @@ def is_myst_markdown_notebook(text: str | Iterator[str]) -> bool:
     if isinstance(text, str):
         if not text.startswith("---"):  # skip creating the line list in memory
             return False
-        text = (line for line in text.splitlines())
+        text = iter(text.splitlines())
     try:
         if not next(text).startswith("---"):
             return False
@@ -323,10 +323,9 @@ def _read_fenced_cell(token, cell_index, cell_type):
         )
     except DirectiveParsingError as err:
         raise MystMetadataParsingError(
-            "{} cell {} at line {} could not be read: {}".format(
-                cell_type, cell_index, token.map[0] + 1, err
-            )
+            f"{cell_type} cell {cell_index} at line {token.map[0] + 1} could not be read: {err}"
         )
+
     return options, body_lines
 
 
@@ -337,16 +336,14 @@ def _read_cell_metadata(token, cell_index):
             metadata = json.loads(token.content.strip())
         except Exception as err:
             raise MystMetadataParsingError(
-                "Markdown cell {} at line {} could not be read: {}".format(
-                    cell_index, token.map[0] + 1, err
-                )
+                f"Markdown cell {cell_index} at line {token.map[0] + 1} could not be read: {err}"
             )
+
         if not isinstance(metadata, dict):
             raise MystMetadataParsingError(
-                "Markdown cell {} at line {} is not a dict".format(
-                    cell_index, token.map[0] + 1
-                )
+                f"Markdown cell {cell_index} at line {token.map[0] + 1} is not a dict"
             )
+
 
     return metadata
 
@@ -358,14 +355,6 @@ def _load_code_from_file(
     if nb_path is None:
         raise _LoadFileParsingError("path to notebook not supplied for :load:")
     file_path = Path(nb_path).parent.joinpath(file_name).resolve()
-    if len(body_lines):
-        pass  # TODO this would make the reader dependent on sphinx
-        # line = token.map[0] if token.map else 0
-        # msg = (
-        #     f"{nb_path}:{line} content of code-cell is being overwritten by "
-        #     f":load: {file_name}"
-        # )
-        # LOGGER.warning(msg)
     try:
         body_lines = file_path.read_text().split("\n")
     except Exception:

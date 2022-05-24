@@ -111,9 +111,6 @@ def notebook_to_tokens(
                     map=[0, 0],
                 )
             ]
-        else:
-            pass  # TODO create warning
-
         # update token's source lines, using either a source_map (index -> line),
         # set when converting to a notebook, or a pseudo base of the cell index
         smap = notebook.metadata.get("source_map", None)

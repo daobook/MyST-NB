@@ -123,11 +123,11 @@ class EvalFigureDirective(DirectiveBase):
     final_argument_whitespace = False
     has_content = True
 
-    def align(argument):
-        return spec.choice(argument, ("left", "center", "right"))
+    def align(self):
+        return spec.choice(self, ("left", "center", "right"))
 
-    def figwidth_value(argument):
-        return spec.length_or_percentage_or_unitless(argument, "px")
+    def figwidth_value(self):
+        return spec.length_or_percentage_or_unitless(self, "px")
 
     option_spec = {
         # note we don't add converters for image options,

@@ -526,7 +526,7 @@ class NbParserConfig:
 
     def __getitem__(self, field: str) -> Any:
         """Get a field value by name."""
-        if field in ("get_fields", "as_dict", "as_triple", "copy"):
+        if field in {"get_fields", "as_dict", "as_triple", "copy"}:
             raise KeyError(field)
         try:
             return getattr(self, field)
@@ -567,7 +567,7 @@ class NbParserConfig:
             )
             cell_meta = cell_metadata["render"]
         else:
-            cell_meta = cell_metadata.get(self.cell_metadata_key, None)
+            cell_meta = cell_metadata.get(self.cell_metadata_key)
 
         if cell_meta:
             try:

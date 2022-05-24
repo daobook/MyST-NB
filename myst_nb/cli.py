@@ -91,7 +91,7 @@ nitpicky = True
 def generate_index(children: list[str]) -> str:
     """Generate `index.md` content."""
     children_str = "\n".join(children)
-    content = (
+    return (
         f"""\
 # MyST-NB Quickstart
 
@@ -101,7 +101,6 @@ def generate_index(children: list[str]) -> str:
     """.rstrip()
         + "\n"
     )
-    return content
 
 
 def generate_jupyter_notebook() -> str:
@@ -123,7 +122,7 @@ def generate_jupyter_notebook() -> str:
 
 def generate_text_notebook() -> str:
     """Generate `notebook.md` content."""
-    content = (
+    return (
         """\
 ---
 file_format: mystnb
@@ -139,7 +138,6 @@ print("Hello, World!")
     """.rstrip()
         + "\n"
     )
-    return content
 
 
 def md_to_nb(args: list[str] | None = None):

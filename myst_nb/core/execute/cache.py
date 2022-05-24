@@ -104,7 +104,7 @@ class NotebookClientCache(NotebookClientBase):
             "mtime": datetime.now().timestamp(),
             "runtime": result.time,
             "method": self.nb_config.execution_mode,
-            "succeeded": False if result.err else True,
+            "succeeded": not result.err,
             "error": f"{result.err.__class__.__name__}" if result.err else None,
             "traceback": result.exc_string if result.err else None,
         }

@@ -83,25 +83,25 @@ def render_variable_output(
     cell_metadata = {}
     if render:
         cell_metadata[output.nb_renderer.config.cell_metadata_key] = render
-    if is_sphinx(document):
-        _nodes = _render_output_sphinx(
+    # TODO rendering should perhaps return if it succeeded explicitly,
+    # and whether system_messages or not (required for roles)
+    return (
+        _render_output_sphinx(
             output,
             cell_metadata,
             source,
             line,
             inline,
         )
-    else:
-        _nodes = _render_output_docutils(
+        if is_sphinx(document)
+        else _render_output_docutils(
             output,
             cell_metadata,
             document,
             line,
             inline,
         )
-    # TODO rendering should perhaps return if it succeeded explicitly,
-    # and whether system_messages or not (required for roles)
-    return _nodes
+    )
 
 
 def _render_output_docutils(
@@ -177,11 +177,11 @@ def format_plain_text(text: str, fmt_spec: str) -> str:
         value = literal_eval(text)
     except (SyntaxError, ValueError):
         value = text
-    if fmt_spec == "":
-        return str(value)
+    if not fmt_spec:
+        return value
     type_char = fmt_spec[-1]
     if type_char == "s":
-        value = str(value)
+        value = value
     elif type_char in ("b", "c", "d", "o", "x", "X"):
         value = int(value)
     elif type_char in ("e", "E", "f", "F", "g", "G", "n", "%"):

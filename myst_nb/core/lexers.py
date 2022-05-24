@@ -40,15 +40,14 @@ def _token_from_lexer_state(
         components += (fg_color,)
 
     if bg_color:
-        components += ("BG" + bg_color,)
+        components += (f"BG{bg_color}", )
 
-    if len(components) == 0:
+    if not components:
         return pygments.token.Text
-    else:
-        token = pygments.token.Token.Color
-        for component in components:
-            token = getattr(token, component)
-        return token
+    token = pygments.token.Token.Color
+    for component in components:
+        token = getattr(token, component)
+    return token
 
 
 class AnsiColorLexer(pygments.lexer.RegexLexer):
@@ -120,7 +119,7 @@ class AnsiColorLexer(pygments.lexer.RegexLexer):
                         # Shouldn't ever happen, but could with invalid ANSI.
                         values = []
 
-                    while len(values) > 0:
+                    while values:
                         value = values.pop(0)
                         fg_color = _ansi_code_to_color.get(value - 30)
                         bg_color = _ansi_code_to_color.get(value - 40)
