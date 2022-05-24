@@ -1,0 +1,1243 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Change Log</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Contribute to MyST-NB" href="contributing.html" />
+    <link rel="prev" title="Python API" href="api.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../authoring/index.html">
+   Authoring
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/jupyter-notebooks.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/text-notebooks.html">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../render/index.html">
+   Rendering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/format_code_cells.html">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docutils.html">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb/edit/master/docs/reference/changelog.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/reference/changelog.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-15-0-2022-05-05">
+   v0.15.0 - 2022-05-05
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-14-0-2022-04-27">
+   v0.14.0 - 2022-04-27
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-changes">
+     Breaking Changes ‼️
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#configuration">
+       Configuration
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dependencies">
+       Dependencies
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ast-structure-and-rendering-plugins">
+       AST structure and rendering plugins
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#glue-functionality">
+       Glue functionality
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dependency-changes">
+     Dependency changes ⬆️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new-and-improved">
+     New and improved ✨
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-pull-requests">
+     Additional Pull Requests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-13-2-2022-02-10">
+   v0.13.2 - 2022-02-10
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   0.13.1 - 2021-10-04
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   0.13.0 - 2021-09-02
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgraded-to-sphinx-v4">
+     Upgraded to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sphinx
+      </span>
+     </code>
+     v4 ⬆️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   0.12.1 - 2021-04-25
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   0.12.0 - 2021-02-23
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   0.11.1 - 2021-01-20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   0.11.0 - 2021-01-12
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   0.10.2 - 2021-01-12
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   0.10.1 - 2020-09-08
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   0.10.0 - 2020-08-28
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   0.9.2 - 2020-08-27
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   0.9.1 - 2020-08-24
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   0.9.0 - 2020-08-24
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new">
+     New ✨
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improved">
+     Improved 👌
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixed">
+     Fixed 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documented">
+     Documented 📚
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refactored">
+     Refactored ♻️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   0.8.5 - 2020-08-11
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Improved 👌
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Fixed 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrades">
+     Upgrades ⬆️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Documented 📚
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributors-for-previously-releases">
+   Contributors for previously releases
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Change Log</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-15-0-2022-05-05">
+   v0.15.0 - 2022-05-05
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-14-0-2022-04-27">
+   v0.14.0 - 2022-04-27
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking-changes">
+     Breaking Changes ‼️
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#configuration">
+       Configuration
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dependencies">
+       Dependencies
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ast-structure-and-rendering-plugins">
+       AST structure and rendering plugins
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#glue-functionality">
+       Glue functionality
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dependency-changes">
+     Dependency changes ⬆️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new-and-improved">
+     New and improved ✨
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-pull-requests">
+     Additional Pull Requests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-13-2-2022-02-10">
+   v0.13.2 - 2022-02-10
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   0.13.1 - 2021-10-04
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   0.13.0 - 2021-09-02
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgraded-to-sphinx-v4">
+     Upgraded to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sphinx
+      </span>
+     </code>
+     v4 ⬆️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   0.12.1 - 2021-04-25
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   0.12.0 - 2021-02-23
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   0.11.1 - 2021-01-20
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   0.11.0 - 2021-01-12
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   0.10.2 - 2021-01-12
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   0.10.1 - 2020-09-08
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   0.10.0 - 2020-08-28
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   0.9.2 - 2020-08-27
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   0.9.1 - 2020-08-24
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   0.9.0 - 2020-08-24
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new">
+     New ✨
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improved">
+     Improved 👌
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixed">
+     Fixed 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documented">
+     Documented 📚
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refactored">
+     Refactored ♻️
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   0.8.5 - 2020-08-11
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Improved 👌
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Fixed 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrades">
+     Upgrades ⬆️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Documented 📚
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributors-for-previously-releases">
+   Contributors for previously releases
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="change-log">
+<h1>Change Log<a class="headerlink" href="#change-log" title="永久链接至标题">#</a></h1>
+<section id="v0-15-0-2022-05-05">
+<h2>v0.15.0 - 2022-05-05<a class="headerlink" href="#v0-15-0-2022-05-05" title="永久链接至标题">#</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/MyST-NB/compare/v0.14.0...v0.15.0">Full changelog</a></p>
+<p>✨ NEW: Add <code class="docutils literal notranslate"><span class="pre">inline</span></code> execution mode and <code class="docutils literal notranslate"><span class="pre">eval</span></code> role/directive, for inserting code variables directly into the text flow of your documentation!
+See <a class="reference internal" href="../render/inline.html"><span class="doc std std-doc">Inline variable evaluation</span></a> for more information.</p>
+</section>
+<section id="v0-14-0-2022-04-27">
+<h2>v0.14.0 - 2022-04-27<a class="headerlink" href="#v0-14-0-2022-04-27" title="永久链接至标题">#</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/MyST-NB/compare/v0.13.2...v0.14.0">Full changelog</a></p>
+<p>This release encompasses a <strong>major</strong> rewrite of the entire library and its documentation, primarily in <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/380">#380</a> and <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/405">#405</a>.</p>
+<section id="breaking-changes">
+<h3>Breaking Changes ‼️<a class="headerlink" href="#breaking-changes" title="永久链接至标题">#</a></h3>
+<section id="configuration">
+<h4>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">#</a></h4>
+<p>A number of configuration option names have been changed, such that they now share the <code class="docutils literal notranslate"><span class="pre">nb_</span></code> prefix.
+Most of the deprecated names will be auto-converted at the start of the build, emitting a warning such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WARNING</span><span class="p">:</span> <span class="s1">&#39;jupyter_execute_notebooks&#39;</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="k">for</span> <span class="s1">&#39;nb_execution_mode&#39;</span> <span class="p">[</span><span class="n">mystnb</span><span class="o">.</span><span class="n">config</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">nb_render_priority</span></code> has been removed and replaced by <code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code>, which has a different format and is more flexible. See <a class="reference internal" href="../render/format_code_cells.html"><span class="doc std std-doc">Outputs MIME priority</span></a> for more information.</p>
+<p>As per the changes in <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/develop/_changelog.html" title="(在 MyST Parser v0.17.2)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">myst_parser</span></code></span></a>, the <code class="docutils literal notranslate"><span class="pre">dollarmath</span></code> syntax extension is no longer included by default.
+To re-add this extension, ensure that it is specified in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>: <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span> <span class="pre">=</span> <span class="pre">[&quot;dollarmath&quot;]</span></code>.</p>
+<p>For cell-level configuration the top-level key <code class="docutils literal notranslate"><span class="pre">render</span></code> has now been deprecated for <code class="docutils literal notranslate"><span class="pre">mystnb</span></code>.
+For example, replace:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell}</span>
+<span class="gu">---</span>
+render:
+  image:
+<span class="gu">    width: 200px</span>
+<span class="gu">---</span>
+...
+```
+</pre></div>
+</div>
+<p>with:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell}</span>
+<span class="gu">---</span>
+mystnb:
+  image:
+<span class="gu">    width: 200px</span>
+<span class="gu">---</span>
+...
+```
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">render</span></code> will currently still be read, if present, and will issue a <code class="docutils literal notranslate"><span class="pre">[mystnb.cell_metadata_key]</span></code> warning.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">jupyter_sphinx_require_url</span></code> and <code class="docutils literal notranslate"><span class="pre">jupyter_sphinx_embed_url</span></code> configuration options are no longer used by this package, and are replaced by <code class="docutils literal notranslate"><span class="pre">nb_ipywidgets_js</span></code>.</p>
+<p>See the <a class="reference internal" href="../configuration.html"><span class="doc std std-doc">configuration section</span></a> for more details.</p>
+</section>
+<section id="dependencies">
+<h4>Dependencies<a class="headerlink" href="#dependencies" title="永久链接至标题">#</a></h4>
+<p>The <a class="reference external" href="https://ipywidgets.readthedocs.io">ipywidgets</a> package has been removed from the requirements.
+If required, please install it specifically.</p>
+</section>
+<section id="ast-structure-and-rendering-plugins">
+<h4>AST structure and rendering plugins<a class="headerlink" href="#ast-structure-and-rendering-plugins" title="永久链接至标题">#</a></h4>
+<p>The structure of the docutils AST and nodes produced by MyST-NB has been fully changed, for compatibility with the new <a class="reference internal" href="../docutils.html"><span class="doc std std-doc">docutils only functionality</span></a>.
+See <a class="reference internal" href="api.html"><span class="doc std std-doc">the API documentation</span></a> for more details.</p>
+<p>The renderer plugin system (used by the <code class="docutils literal notranslate"><span class="pre">myst_nb.renderers</span></code> entry point) has also been completely rewritten,
+so any current existing renderers will no longer work.
+There is also now a new <code class="docutils literal notranslate"><span class="pre">myst_nb.mime_renderers</span></code> entry point, to allow for targeted rendering of specific code-cell output MIME types.
+See <a class="reference internal" href="../render/format_code_cells.html"><span class="doc std std-doc">Customise the render process</span></a> for more information.</p>
+</section>
+<section id="glue-functionality">
+<h4>Glue functionality<a class="headerlink" href="#glue-functionality" title="永久链接至标题">#</a></h4>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">glue</span></code> roles and directives now only work for keys within the same document.
+To reference glued content in a different document, the <code class="docutils literal notranslate"><span class="pre">glue:any</span></code> directive allows for a <code class="docutils literal notranslate"><span class="pre">doc</span></code> option and <code class="docutils literal notranslate"><span class="pre">glue:any</span></code>/<code class="docutils literal notranslate"><span class="pre">glue:text</span></code> roles allow the (relative) doc path to be added, for example:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{glue:any} var_text
+:doc: other.ipynb
+```
+
+{glue:text}`other.ipynb::var_float:.2E`
+</pre></div>
+</div>
+<p>This cross-document functionality is currently restricted to only <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> and <code class="docutils literal notranslate"><span class="pre">text/html</span></code> output MIME types, not images.</p>
+<p>See <a class="reference internal" href="../render/glue.html"><span class="doc std std-doc">Embedding outputs as variables</span></a> for more details.</p>
+</section>
+</section>
+<section id="dependency-changes">
+<h3>Dependency changes ⬆️<a class="headerlink" href="#dependency-changes" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>Removed:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipywidgets</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyter_sphinx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nbconvert</span></code></p></li>
+</ul>
+</li>
+<li><p>Updated:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Python</span></code>: <code class="docutils literal notranslate"><span class="pre">3.6+</span> <span class="pre">-&gt;</span> <span class="pre">3.7+</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myst_parser</span></code>: <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/develop/_changelog.html" title="(在 MyST Parser v0.17.2)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">0.15</span> <span class="pre">-&gt;</span> <span class="pre">0.17</span></code></span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyter-cache</span></code>: <a class="reference external" href="https://github.com/executablebooks/jupyter-cache/blob/master/CHANGELOG.md"><code class="docutils literal notranslate"><span class="pre">0.4</span> <span class="pre">-&gt;</span> <span class="pre">0.5</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sphinx-togglebutton</span></code>: <a class="reference external" href="https://sphinx-togglebutton.readthedocs.io/en/latest/changelog.html"><code class="docutils literal notranslate"><span class="pre">0.1</span> <span class="pre">-&gt;</span> <span class="pre">0.3</span></code></a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="new-and-improved">
+<h3>New and improved ✨<a class="headerlink" href="#new-and-improved" title="永久链接至标题">#</a></h3>
+<p>The following is a non-exhaustive list of new features and improvements, see the rest of the documentation for all the changes.</p>
+<ul>
+<li><p>Multi-level configuration (global (<code class="docutils literal notranslate"><span class="pre">conf.py</span></code>) &lt; notebook level metadata &lt; cell level metadata)</p>
+<ul class="simple">
+<li><p>Plus new config options including: <code class="docutils literal notranslate"><span class="pre">nb_number_source_lines</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_remove_code_source</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_remove_code_outputs</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_render_error_lexer</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_execution_raise_on_error</span></code>, <code class="docutils literal notranslate"><span class="pre">nb_kernel_rgx_aliases</span></code></p></li>
+<li><p>See the <a class="reference internal" href="../configuration.html"><span class="doc std std-doc">configuration section</span></a> for more details.</p></li>
+</ul>
+</li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">mystnb-quickstart</span></code> and <code class="docutils literal notranslate"><span class="pre">mystnb-to-jupyter</span></code> CLI commands.</p></li>
+<li><p>MyST text-based notebooks can now be specified by just:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
+<span class="nt">file_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mystnb</span><span class="w"></span>
+<span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+</pre></div>
+</div>
+<p>as opposed to the alternative jupytext top-matter.
+See <a class="reference internal" href="../authoring/text-notebooks.html"><span class="doc std std-doc">Text-based Notebooks</span></a> for more details.</p>
+</li>
+<li><p>docutils API/CLI with command line tools, e.g. <code class="docutils literal notranslate"><span class="pre">mystnb-docutils-html</span></code></p>
+<ul class="simple">
+<li><p>Includes <code class="docutils literal notranslate"><span class="pre">glue</span></code> roles and directives</p></li>
+<li><p>See <a class="reference internal" href="../docutils.html"><span class="doc std std-doc">single page builds</span></a> for more details.</p></li>
+</ul>
+</li>
+<li><p>Parallel friendly (e.g. <code class="docutils literal notranslate"><span class="pre">sphinx-build</span> <span class="pre">-j</span> <span class="pre">4</span></code> can execute four notebooks in parallel)</p></li>
+<li><p>Page specific loading of ipywidgets JavaScript, i.e. only when ipywidgets are present in the notebook.</p></li>
+<li><p>Added raw cell rendering, with the <code class="docutils literal notranslate"><span class="pre">raw-cell</span></code> directive.
+See <a class="reference internal" href="../authoring/jupyter-notebooks.html"><span class="doc std std-doc">Raw cells authoring</span></a> for more details.</p></li>
+<li><p>Added MIME render plugins. See <a class="reference internal" href="../render/format_code_cells.html"><span class="doc std std-doc">Customise the render process</span></a> for more details.</p></li>
+<li><p>Better log info/warnings, with <code class="docutils literal notranslate"><span class="pre">type.subtype</span></code> specifiers for warning suppression.
+See <a class="reference internal" href="../configuration.html"><span class="doc std std-doc">Warning suppression</span></a> for more details.</p></li>
+<li><p>Reworked jupyter-cache integration to be easier to use (including parallel execution)</p></li>
+<li><p>Added image options to <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code></p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">glue:md</span></code> role/directive includes nested parsing of MyST Markdown.
+See <a class="reference internal" href="../render/glue.html"><span class="doc std std-doc">Embedding outputs as variables</span></a> for more details.</p></li>
+<li><p>Improved <code class="docutils literal notranslate"><span class="pre">nb-exec-table</span></code> directive (includes links to documents, etc)</p></li>
+</ul>
+</section>
+<section id="additional-pull-requests">
+<h3>Additional Pull Requests<a class="headerlink" href="#additional-pull-requests" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>👌 IMPROVE: Update ANSI CSS colors by &#64;saulshanabrook in <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/384">#384</a></p></li>
+<li><p>✨ NEW: Add <code class="docutils literal notranslate"><span class="pre">nb_execution_raise_on_error</span></code> config by &#64;chrisjsewell in <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/404">#404</a></p></li>
+<li><p>👌 IMPROVE: Add image options to <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> by &#64;chrisjsewell in <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/403">#403</a></p></li>
+</ul>
+</section>
+</section>
+<section id="v0-13-2-2022-02-10">
+<h2>v0.13.2 - 2022-02-10<a class="headerlink" href="#v0-13-2-2022-02-10" title="永久链接至标题">#</a></h2>
+<p>This release improves for cell outputs and brings UI improvements for toggling cell inputs and outputs.
+It also includes several bugfixes.</p>
+<ul class="simple">
+<li><p>Add CSS support for 8-bit ANSI colours <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/379">#379</a> (<a class="reference external" href="https://github.com/thiippal">&#64;thiippal</a>)</p></li>
+<li><p>Use configured <code class="docutils literal notranslate"><span class="pre">nb_render_plugin</span></code> for glue nodes <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/337">#337</a> (<a class="reference external" href="https://github.com/bryanwweber">&#64;bryanwweber</a>)</p></li>
+<li><p>UPGRADE: sphinx-togglebutton v0.3.0 <a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/390">#390</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id1">
+<h2>0.13.1 - 2021-10-04<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h2>
+<p>✨ NEW: <code class="docutils literal notranslate"><span class="pre">nb_merge_streams</span></code> configuration  [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/364">PR #364</a>]</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">nb_merge_streams=True</span></code>, all stdout / stderr output streams are merged into single outputs. This ensures deterministic outputs.</p>
+</section>
+<section id="id2">
+<h2>0.13.0 - 2021-09-02<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<section id="upgraded-to-sphinx-v4">
+<h3>Upgraded to <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> v4 ⬆️<a class="headerlink" href="#upgraded-to-sphinx-v4" title="永久链接至标题">#</a></h3>
+<p>The primary change in this release is to update the requirements of myst-nb from <code class="docutils literal notranslate"><span class="pre">sphinx&gt;=2,&lt;4</span></code> to <code class="docutils literal notranslate"><span class="pre">sphinx&gt;=3,&lt;5</span></code> to
+support <code class="docutils literal notranslate"><span class="pre">sphinx&gt;=4</span></code> [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/356">PR #356</a>].</p>
+<ul class="simple">
+<li><p>👌 IMPROVE: Allows more complex suffixes in notebooks [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/328">PR #328</a>]</p></li>
+<li><p>⬆️ UPDATE: myst-parser to <code class="docutils literal notranslate"><span class="pre">0.15.2</span></code> [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/353">PR #353</a>]</p></li>
+<li><p>⬆️ UPGRADE: nbconvert 6 support [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/326">PR #326</a>]</p></li>
+<li><p>⬆️ UPGRADE: markdown-it-py v1.0 [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/320">PR #320</a>]</p></li>
+<li><p>🔧 MAINT: Pin ipykernel to ~v5.5 [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/347">PR #347</a>]</p></li>
+<li><p>🔧 MAINT: Make a more specific selector for no-border [<a class="reference external" href="https://github.com/executablebooks/MyST-NB/pull/344">PR #344</a>]</p></li>
+</ul>
+<p>Many thanks to &#64;akhmerov, &#64;bollwyvl, &#64;choldgraf, &#64;chrisjsewell, &#64;juhuebner, &#64;mmcky</p>
+</section>
+</section>
+<section id="id3">
+<h2>0.12.1 - 2021-04-25<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<ul class="simple">
+<li><p>⬆️ UPDATE: jupyter_sphinx to <code class="docutils literal notranslate"><span class="pre">0.3.2</span></code>: fixes <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">code</span> <span class="pre">has</span> <span class="pre">no</span> <span class="pre">file</span> <span class="pre">extension</span> <span class="pre">metadata</span></code> warning)</p></li>
+<li><p>⬆️ UPDATE: importlib_metadata to <code class="docutils literal notranslate"><span class="pre">3.6</span></code>: to use new entry point loading interface</p></li>
+<li><p>Official support for Python 3.9</p></li>
+</ul>
+<p>(<code class="docutils literal notranslate"><span class="pre">0.12.2</span></code> and <code class="docutils literal notranslate"><span class="pre">0.12.3</span></code> fix a regression, when working with the entry point loading interface)</p>
+</section>
+<section id="id4">
+<h2>0.12.0 - 2021-02-23<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h2>
+<p>This release adds an experimental MyST-NB feature to enable loading of code from a file
+for <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> directives using a <code class="docutils literal notranslate"><span class="pre">:load:</span> <span class="pre">&lt;file&gt;</span></code> option.</p>
+<p>Usage information is available in the <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/markdown.html#syntax-for-code-cells">docs</a></p>
+</section>
+<section id="id5">
+<h2>0.11.1 - 2021-01-20<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
+<p>Minor update to handle MyST-Parser <code class="docutils literal notranslate"><span class="pre">v0.13.3</span></code> and <code class="docutils literal notranslate"><span class="pre">v4.5</span></code> notebooks.</p>
+</section>
+<section id="id6">
+<h2>0.11.0 - 2021-01-12<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
+<p>This release updates MyST-Parser to <code class="docutils literal notranslate"><span class="pre">v0.13</span></code>,
+which is detailed in the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/develop/_changelog.html">myst-parser changelog</a>.</p>
+<p>The primary change is to the extension system, with extensions now all loaded <em>via</em> <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span> <span class="pre">=</span> <span class="pre">[&quot;dollarmath&quot;,</span> <span class="pre">...]</span></code>,
+and a number of extensions added or improved.</p>
+</section>
+<section id="id7">
+<h2>0.10.2 - 2021-01-12<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
+<p>Minor fixes:</p>
+<ul class="simple">
+<li><p>🐛 FIX: empty myst file read</p></li>
+<li><p>🐛 FIX: remove cell background-color CSS for cells</p></li>
+<li><p>🔧 MAINTAIN: Pin jupyter-sphinx version</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>0.10.1 - 2020-09-08<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h2>
+<dl class="simple myst">
+<dt>⬆️ UPGRADE: myst-parser v0.12.9</dt><dd><p>Minor bug fixes and enhancements / new features</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h2>0.10.0 - 2020-08-28<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h2>
+<dl class="simple myst">
+<dt>⬆️ UPGRADE: jupyter-sphinx v0.3, jupyter-cache v0.4.1 and nbclient v0.5.</dt><dd><p>These upgrades allow for full Windows OS compatibility, and improve the stability of notebook execution on small machines.</p>
+</dd>
+</dl>
+<p>👌 IMPROVE: Formatting of stderr is now similar to stdout, but with a slight red background.</p>
+<p>🧪 TESTS: Add Windows CI</p>
+</section>
+<section id="id10">
+<h2>0.9.2 - 2020-08-27<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h2>
+<dl class="simple myst">
+<dt>⬆️ UPGRADE: myst-parser patch version</dt><dd><p>to ensure a few new features and bug fixes are incorporated (see its <a class="reference external" href="https://github.com/executablebooks/MyST-Parser/blob/master/CHANGELOG.md">CHANGELOG.md</a>)</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>0.9.1 - 2020-08-24<a class="headerlink" href="#id11" title="永久链接至标题">#</a></h2>
+<p>More configuration!</p>
+<ul class="simple">
+<li><p>✨ NEW: Add stderr global configuration: <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code>
+(see <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#removing-stdout-and-stderr">removing stderr</a>)</p></li>
+<li><p>✨ NEW: Add <code class="docutils literal notranslate"><span class="pre">nb_render_key</span></code> configuration
+(see <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#images">formatting outputs</a>)</p></li>
+<li><p>🐛 FIX: <code class="docutils literal notranslate"><span class="pre">auto</span></code> execution not recognising (and skipping) notebooks with existing outputs</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>0.9.0 - 2020-08-24<a class="headerlink" href="#id12" title="永久链接至标题">#</a></h2>
+<p>This versions see’s many great changes; utilising the ⬆️ upgrade to <code class="docutils literal notranslate"><span class="pre">myst-parser=v0.12</span></code>
+and accompanying ⬆️ upgrade to <code class="docutils literal notranslate"><span class="pre">sphinx=v3</span></code>,
+as well as major refactors to the execution (<a class="reference external" href="https://github.com/executablebooks/MyST-NB/commit/2bc0c11cedbad6206f70546819fad85d779ce449">#236</a>) and code output rendering (<a class="reference external" href="https://github.com/executablebooks/MyST-NB/commit/04f3bbb928cf1794e140de6a919fb58578753300">#243</a>).
+Plus much more configuration options, to allow for a more configurable workflow (the defaults work great as well!).</p>
+<p>Below is a summary of the changes, and you can also check out many examples in the documentation, <a class="reference external" href="https://myst-nb.readthedocs.io/">https://myst-nb.readthedocs.io/</a>,
+and the MyST-Parser Changelog for all the new Markdown parsing features available: <a class="reference external" href="https://github.com/executablebooks/MyST-Parser">https://github.com/executablebooks/MyST-Parser</a>.</p>
+<section id="new">
+<h3>New ✨<a class="headerlink" href="#new" title="永久链接至标题">#</a></h3>
+<ul>
+<li><p>Custom notebook formats:</p>
+<p>Configuration and logic has been added for designating additional file types to be converted to Notebooks, which are then executed &amp; parsed in the same manner as regular Notebooks.
+See <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/examples/custom-formats.html">Custom Notebook Formats</a> for details.</p>
+</li>
+<li><p>Allow for configuration of render priority (per output format) with <code class="docutils literal notranslate"><span class="pre">nb_render_priority</span></code>.</p></li>
+<li><p>The code cell output renderer class is now loaded from an entry-point, with a configurable name,
+meaning that anyone can provide their own renderer subclass.
+See <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#customise-the-render-process">Customise the render process</a> for details.</p></li>
+<li><p>Assignment of metadata tags <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> for removal of the relevant outputs (<a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#removing-stdout-and-stderr">see here</a>)</p></li>
+<li><p>Render <code class="docutils literal notranslate"><span class="pre">text/markdown</span></code> MIME types with an integrated CommonMark parser (<a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#markdown">see here</a>).</p></li>
+<li><p>Add code output image formatting, <em>via</em> cell metadata, including size, captions and labelling (<a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#images">see here</a>).</p></li>
+<li><p>Notebook outputs ANSI lexer which is applied to stdout/stderr and text/plain outputs, and is configurable <em>via</em> <code class="docutils literal notranslate"><span class="pre">nb_render_text_lexer</span></code> (<a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#ansi-outputs">see here</a>).</p></li>
+<li><p>Capture execution data in sphinx env, which can be output into the documentation, with the <code class="docutils literal notranslate"><span class="pre">nb-exec-table</span></code> directive. See <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/execute.html#execution-statistics">Execution statistics</a> for details.</p></li>
+</ul>
+</section>
+<section id="improved">
+<h3>Improved 👌<a class="headerlink" href="#improved" title="永久链接至标题">#</a></h3>
+<ul>
+<li><p>Standardise auto/cache execution</p>
+<p>Both now call the same underlying function (from <code class="docutils literal notranslate"><span class="pre">jupyter-cache</span></code>) and act the same.
+This improves <code class="docutils literal notranslate"><span class="pre">auto</span></code>, by making it output error reports and not raising an exception on an error.
+Additional config has also been added: <code class="docutils literal notranslate"><span class="pre">execution_allow_errors</span></code> and <code class="docutils literal notranslate"><span class="pre">execution_in_temp</span></code>.
+As for for <code class="docutils literal notranslate"><span class="pre">timeout</span></code>, <code class="docutils literal notranslate"><span class="pre">allow_errors</span></code> can also be set in the notebook <code class="docutils literal notranslate"><span class="pre">metadata.execution.allow_errors</span></code>
+This presents one breaking change, in that <code class="docutils literal notranslate"><span class="pre">cache</span></code> will now by default execute in a the local folder as the CWD (not a temporary one).</p>
+</li>
+</ul>
+</section>
+<section id="fixed">
+<h3>Fixed 🐛<a class="headerlink" href="#fixed" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>Code cell source code is now assigned the correct lexer when using custom kernels (<a class="reference external" href="https://github.com/executablebooks/MyST-NB/commit/39c1bb99e73b35812474366f2f1760850fe40a57">39c1bb9</a>)</p></li>
+</ul>
+</section>
+<section id="documented">
+<h3>Documented 📚<a class="headerlink" href="#documented" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>Add example of using kernels other than Python (<a class="reference external" href="https://github.com/executablebooks/MyST-NB/commit/676eb2c46b1ca605980180479c845b43ec64c5fb">676eb2c</a>)</p></li>
+</ul>
+</section>
+<section id="refactored">
+<h3>Refactored ♻️<a class="headerlink" href="#refactored" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>Add more signature typing and docstrings</p></li>
+<li><p>Move config value validation to separate function</p></li>
+<li><p>Rename functions in cache.py and improve their logical flow</p></li>
+<li><p>Rename variable stored in sphinx environment, to share same suffix:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">path_to_cache</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">nb_path_to_cache</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowed_nb_exec_suffixes</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">nb_allowed_exec_suffixes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excluded_nb_exec_paths</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">nb_excluded_exec_paths</span></code></p></li>
+</ul>
+</li>
+<li><p>Initial Nb output rendering:</p>
+<ul>
+<li><p>Ensure source (path, lineno) are correctly propagated to <code class="docutils literal notranslate"><span class="pre">CellOutputBundleNode</span></code></p></li>
+<li><p>Capture cell level metadata in <code class="docutils literal notranslate"><span class="pre">CellOutputBundleNode</span></code></p></li>
+<li><p>New <code class="docutils literal notranslate"><span class="pre">CellOutputRenderer</span></code> class to contain render methods</p></li>
+<li><p>Simplify test code, using sphinx <code class="docutils literal notranslate"><span class="pre">get_doctree</span></code> and <code class="docutils literal notranslate"><span class="pre">get_and_resolve_doctree</span></code> methods</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id13">
+<h2>0.8.5 - 2020-08-11<a class="headerlink" href="#id13" title="永久链接至标题">#</a></h2>
+<section id="id14">
+<h3>Improved 👌<a class="headerlink" href="#id14" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>Add configuration for traceback in stderr (#218)</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Fixed 🐛<a class="headerlink" href="#id15" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>MIME render priority lookup</p></li>
+</ul>
+</section>
+<section id="upgrades">
+<h3>Upgrades ⬆️<a class="headerlink" href="#upgrades" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>myst-parser -&gt; 0.9</p></li>
+<li><p>jupyter-cache to v0.3.0</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Documented 📚<a class="headerlink" href="#id16" title="永久链接至标题">#</a></h3>
+<ul class="simple">
+<li><p>More explanation of myst notebooks (#213)</p></li>
+<li><p>Update contributing guide</p></li>
+</ul>
+</section>
+</section>
+<section id="contributors-for-previously-releases">
+<h2>Contributors for previously releases<a class="headerlink" href="#contributors-for-previously-releases" title="永久链接至标题">#</a></h2>
+<p>Thanks to all these contributors 🙏:</p>
+<p><a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3AAakashGfude+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;AakashGfude</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Aakhmerov+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;akhmerov</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Aamueller+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;amueller</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Acholdgraf+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;choldgraf</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Achrisjsewell+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;chrisjsewell</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Acodecov+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;codecov</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3AconsideRatio+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;consideRatio</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Ajstac+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;jstac</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Amatthew-brett+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;matthew-brett</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Ammcky+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;mmcky</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Aphaustin+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;phaustin</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Arossbar+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;rossbar</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Arowanc1+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;rowanc1</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Aseanpue+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;seanpue</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Astefanv+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;stefanv</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3ATomDonoghue+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;TomDonoghue</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Atonyfast+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;tonyfast</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-NB+involves%3Awelcome+updated%3A2020-03-28..2020-08-11&amp;type=Issues">&#64;welcome</a></p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="api.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Python API</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="contributing.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Contribute to MyST-NB</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

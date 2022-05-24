@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Text-based Notebooks</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Custom Formats" href="custom-formats.html" />
+    <link rel="prev" title="Jupyter Notebooks" href="jupyter-notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Authoring
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyter-notebooks.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../render/index.html">
+   Rendering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/format_code_cells.html">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docutils.html">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/myst-nb/master?urlpath=tree/docs/authoring/text-notebooks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb/edit/master/docs/authoring/text-notebooks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/authoring/text-notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/authoring/text-notebooks.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-myst-notebook-structure">
+   The MyST notebook Structure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notebook-level-metadata">
+     Notebook-level metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax-for-markdown">
+     Syntax for Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax-for-code-cells">
+     Syntax for code cells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cell-level-metadata">
+     Cell-level metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-between-myst-notebooks-and-ipynb">
+   Convert between MyST notebooks and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .ipynb
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-interfaces">
+   MyST notebooks in Jupyter interfaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-book">
+   MyST notebooks in Jupyter Book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-from-files">
+   Code from Files
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Text-based Notebooks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-myst-notebook-structure">
+   The MyST notebook Structure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notebook-level-metadata">
+     Notebook-level metadata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax-for-markdown">
+     Syntax for Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax-for-code-cells">
+     Syntax for code cells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cell-level-metadata">
+     Cell-level metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convert-between-myst-notebooks-and-ipynb">
+   Convert between MyST notebooks and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .ipynb
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-interfaces">
+   MyST notebooks in Jupyter interfaces
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-book">
+   MyST notebooks in Jupyter Book
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-from-files">
+   Code from Files
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="text-based-notebooks">
+<span id="authoring-text-notebooks"></span><h1>Text-based Notebooks<a class="headerlink" href="#text-based-notebooks" title="永久链接至标题">#</a></h1>
+<p>MyST Markdown notebooks allow you to write your Jupyter Notebook entirely in markdown, utilising the MyST Markdown notebook format.
+This allows you to store notebook metadata, Markdown, and cell inputs in a text-based format that is easy to read and use with text-based tools.</p>
+<p>MyST notebooks have a 1-to-1 mapping with Jupyter notebook,
+so can be <a class="reference internal" href="#converting-ipynb"><span class="std std-ref">converted to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files</span></a> and <a class="reference internal" href="#myst-nb-jupyter-interfaces"><span class="std std-ref">opened as notebooks in Jupyter interfaces</span></a> (with jupytext installed).
+When used with <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code>, MyST notebooks are also integrated directly into the <a class="reference internal" href="../computation/execute.html#execute-cache"><span class="std std-ref">Execution and Caching</span></a> machinery.</p>
+<section id="the-myst-notebook-structure">
+<h2>The MyST notebook Structure<a class="headerlink" href="#the-myst-notebook-structure" title="永久链接至标题">#</a></h2>
+<p>MyST Markdown Notebooks (or MyST notebooks for short) have four main types of content:</p>
+<ul class="simple">
+<li><p><strong>cell/notebook level metadata</strong> that are written as YAML wrapped in <code class="docutils literal notranslate"><span class="pre">---</span></code></p></li>
+<li><p><strong>markdown cells</strong> that can be written as CommonMark or MyST Markdown</p></li>
+<li><p><strong>code cells</strong> that are written with the MyST Markdown <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> directive syntax</p></li>
+<li><p><strong>raw cells</strong> that are written with the MyST Markdown <code class="docutils literal notranslate"><span class="pre">raw-cell</span></code> directive syntax</p></li>
+</ul>
+<section id="notebook-level-metadata">
+<h3>Notebook-level metadata<a class="headerlink" href="#notebook-level-metadata" title="永久链接至标题">#</a></h3>
+<p>Begin a MyST notebook file with YAML top-matter metadata, containing at least the <code class="docutils literal notranslate"><span class="pre">file_format:</span> <span class="pre">mystnb</span></code> signifier.
+This will be used as <strong>notebook-level metadata</strong> for the resulting Jupyter Notebook.
+This metadata takes the following form:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
+<span class="nt">file_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mystnb</span><span class="w"></span>
+<span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
+<span class="nt">otherkey1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val1</span><span class="w"></span>
+<span class="nt">otherkey2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">val2</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+<span class="c1"># Notebook title</span><span class="w"></span>
+<span class="nn">...</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The kernel that your code cells use is determined by the <code class="docutils literal notranslate"><span class="pre">kernelspec.name</span></code> field, and  should relate to a <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter kernel</a> installed in your environment and registered with Jupyter.
+If no kernel is given, then the default kernel will be used.</p>
+</section>
+<section id="syntax-for-markdown">
+<h3>Syntax for Markdown<a class="headerlink" href="#syntax-for-markdown" title="永久链接至标题">#</a></h3>
+<p>Anything in-between code cells will be treated as Markdown.
+You can use any Markdown that is valid MyST.
+If you are using MyST notebooks with the <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> Sphinx extension, you can write Sphinx directives and roles.
+However, note that most Jupyter notebook environments may not be able to render MyST Markdown syntax.</p>
+<p><strong>To denote a break between two markdown cells</strong>, use the following syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">markdown</span>
+<span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;optionalkey&quot;</span><span class="p">:</span> <span class="s2">&quot;val&quot;</span><span class="p">}</span>
+<span class="n">More</span> <span class="n">markdown</span>
+</pre></div>
+</div>
+<p>This will result in two markdown cells in the resulting notebook. The key:val pairs
+specified in the <code class="docutils literal notranslate"><span class="pre">{}</span></code> brackets will be cell-level metadata in the second markdown cell.</p>
+</section>
+<section id="syntax-for-code-cells">
+<h3>Syntax for code cells<a class="headerlink" href="#syntax-for-code-cells" title="永久链接至标题">#</a></h3>
+<p>When writing MyST notebooks, use the following syntax to define a code cell:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+a = &quot;This is some&quot;
+b = &quot;Python code!&quot;
+print(f&quot;{a} {b}&quot;)
+```
+</pre></div>
+</div>
+<p>The argument after <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> (above, <code class="docutils literal notranslate"><span class="pre">ipython3</span></code>) is optional, and is used for
+readability purposes. The content inside <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> makes up the content of the cell,
+and will be executed at build time.</p>
+<p>This will result in the following output after building your site:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;This is some&quot;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;Python code!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is some Python code!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cell-level-metadata">
+<h3>Cell-level metadata<a class="headerlink" href="#cell-level-metadata" title="永久链接至标题">#</a></h3>
+<p>You can begin <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> blocks with top-matter metadata. These will be used
+as <strong>cell-level metadata</strong> in the resulting notebook cell.
+The same metadata tags can be used as you would in a normal notebook,
+for example those discussed in <a class="reference internal" href="../render/hiding.html#use-hiding-code"><span class="std std-ref">Hide code cells</span></a>:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
+<span class="gu">---</span>
+<span class="gu">tags: [hide-output]</span>
+<span class="gu">---</span>
+for i in range(20):
+    print(&quot;Millhouse did not test cootie positive&quot;)
+```
+</pre></div>
+</div>
+<p>Yields the following:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Millhouse did not test cootie positive&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+Millhouse did not test cootie positive
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is also an <strong>alternative short-hand syntax</strong> for cell-level metadata. This takes
+the following form:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
+:key: val
+print(&quot;hi&quot;)
+```
+</pre></div>
+</div>
+<p>For example, the following syntax adds a <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> tag to the cell, which
+means our code will execute without halting the kernel:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+:tags: [raises-exception]
+
+raise ValueError(&quot;oopsie!&quot;)
+```
+</pre></div>
+</div>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;oopsie!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;oopsie!&quot;</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: oopsie!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="convert-between-myst-notebooks-and-ipynb">
+<span id="converting-ipynb"></span><h2>Convert between MyST notebooks and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code><a class="headerlink" href="#convert-between-myst-notebooks-and-ipynb" title="永久链接至标题">#</a></h2>
+<p>MyST notebooks can be converted to Jupyter notebooks using the <code class="docutils literal notranslate"><span class="pre">mystnb-to-jupyter</span></code> CLI command.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mystnb-to-jupyter path/to/text-notebook.md
+<span class="go">Wrote notebook to: path/to/text-notebook.ipynb</span>
+</pre></div>
+</div>
+<p>MyST notebooks can also be converted back-and-forth from <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> files using <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a>,
+a Python library for two-way conversion of <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> files with many text-based formats.</p>
+<p>To let jupytext know the format of the notebook, add the notebook top-matter similar to:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
+<span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
+<span class="w">  </span><span class="nt">display_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
+<span class="nt">jupytext</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">text_representation</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">extension</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.md</span><span class="w"></span>
+<span class="w">    </span><span class="nt">format_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myst</span><span class="w"></span>
+<span class="w">    </span><span class="nt">format_version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0.13&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">jupytext_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.13.8</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Then you can run:</p>
+<ul class="simple">
+<li><p>To convert <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> to a MyST notebook, run: <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">notebook.ipynb</span> <span class="pre">--to</span> <span class="pre">myst</span></code></p></li>
+<li><p>To convert a MyST notebook to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, run: <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">mystfile.md</span> <span class="pre">--to</span> <span class="pre">ipynb</span></code></p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>For more information, see the <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext Documentation</a>,
+and specifically the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">MyST Markdown format</a>.</p>
+</div>
+</section>
+<section id="myst-notebooks-in-jupyter-interfaces">
+<span id="myst-nb-jupyter-interfaces"></span><h2>MyST notebooks in Jupyter interfaces<a class="headerlink" href="#myst-notebooks-in-jupyter-interfaces" title="永久链接至标题">#</a></h2>
+<p>You can use MyST notebooks in Jupyter interfaces by using Jupytext extensions. This
+allows you to open a MyST Markdown Notebook as a “regular” Jupyter Notebook in
+Jupyter Lab and the Classic Notebook interface. For more information, see
+<a class="reference external" href="https://jupytext.readthedocs.io">the Jupytext documentation</a>.</p>
+</section>
+<section id="myst-notebooks-in-jupyter-book">
+<span id="myst-nb-jupyter-book"></span><h2>MyST notebooks in Jupyter Book<a class="headerlink" href="#myst-notebooks-in-jupyter-book" title="永久链接至标题">#</a></h2>
+<p>In addition to using MyST notebooks with Sphinx, you may also use them with the
+Jupyter Book project. See <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/myst-notebooks.html" title="(在 Python)"><span>Notebooks written entirely in Markdown</span></a>.</p>
+</section>
+<section id="code-from-files">
+<h2>Code from Files<a class="headerlink" href="#code-from-files" title="永久链接至标题">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>This is an experimental feature that is <strong>not</strong> part of the core <code class="docutils literal notranslate"><span class="pre">MyST</span></code> markup specification, and may be removed in the future. Using <code class="docutils literal notranslate"><span class="pre">:load:</span></code> will also overwrite any code written into the directive.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> provides a convenience feature for importing executable code into a <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code>
+from a file. This can be useful when you want to share code between documents. To do this
+you specify a <code class="docutils literal notranslate"><span class="pre">load</span></code> metadata attribute such as:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+:load: &lt;path&gt;
+```
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="jupyter-notebooks.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Jupyter Notebooks</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="custom-formats.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Custom Formats</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

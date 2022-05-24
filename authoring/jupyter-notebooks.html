@@ -1,0 +1,895 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Jupyter Notebooks</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Text-based Notebooks" href="text-notebooks.html" />
+    <link rel="prev" title="The basics" href="basics.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Authoring
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="text-notebooks.html">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../render/index.html">
+   Rendering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/format_code_cells.html">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../render/glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docutils.html">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/myst-nb/master?urlpath=tree/docs/authoring/jupyter-notebooks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb/edit/master/docs/authoring/jupyter-notebooks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/authoring/jupyter-notebooks.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/authoring/jupyter-notebooks.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuration">
+     Configuration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax">
+     Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-cells-and-outputs">
+   Code cells and outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repr-and-html-outputs">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __repr__
+      </span>
+     </code>
+     and HTML outputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images">
+     Images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raw-cells">
+   Raw cells
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Jupyter Notebooks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuration">
+     Configuration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntax">
+     Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-cells-and-outputs">
+   Code cells and outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#repr-and-html-outputs">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       __repr__
+      </span>
+     </code>
+     and HTML outputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#images">
+     Images
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#raw-cells">
+   Raw cells
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="jupyter-notebooks">
+<span id="authoring-jupyter-notebooks"></span><h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="永久链接至标题">#</a></h1>
+<p>This notebook is a demonstration of directly-parsing Jupyter Notebooks into
+Sphinx using the MyST parser.<a class="footnote-reference brackets" href="#download" id="id1">1</a></p>
+<section id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">#</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>For more information about what you can write with MyST Markdown, see the
+<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html" title="(在 MyST Parser v0.17.2)"><span class="xref myst">MyST Parser syntax guide</span></a>.</p>
+</div>
+<section id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="永久链接至标题">#</a></h3>
+<p>The MyST-NB parser derives from <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/intro.html#intro-get-started" title="(在 MyST Parser v0.17.2)"><span class="xref myst">the base MyST-Parser</span></a>, and so all the same configuration options are available.
+See the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/configuration.html#sphinx-config-options" title="(在 MyST Parser v0.17.2)"><span class="xref myst">MyST configuration options</span></a> for the full set of options, and <span class="xref myst">MyST syntax guide</span> for all the syntax options.</p>
+<p>To build documentation from this notebook, the following options are set:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">myst_enable_extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;amsmath&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;colon_fence&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;deflist&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;dollarmath&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;html_image&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">myst_url_schemes</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">,</span> <span class="s2">&quot;https&quot;</span><span class="p">,</span> <span class="s2">&quot;mailto&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Loading the <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> extension also activates the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/index.html" title="(在 MyST Parser v0.17.2)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">myst_parser</span></code></span></a> extension, for enabling the MyST flavour of Markdown.
+It is not required to add this explicitly in the list of <code class="docutils literal notranslate"><span class="pre">extensions</span></code>.</p>
+</div>
+</section>
+<section id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="永久链接至标题">#</a></h3>
+<p>As you can see, markdown is parsed as expected. Embedding images should work as expected.
+For example, here’s the MyST-NB logo:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>![<span class="nt">myst-nb logo</span>](<span class="na">../_static/logo-wide.svg</span>)
+</pre></div>
+</div>
+<p><img alt="myst-nb logo" src="../_images/logo-wide.svg" /></p>
+<p>By adding <code class="docutils literal notranslate"><span class="pre">&quot;html_image&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code> list in the sphinx configuration (<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-images" title="(在 MyST Parser v0.17.2)"><span class="xref myst">see here</span></a>), you can even add HTML <code class="docutils literal notranslate"><span class="pre">img</span></code> tags with attributes:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../_static/logo-wide.svg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;logo&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;200px&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;shadow mb-2&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<a class="shadow mb-2 reference internal image-reference" href="../_images/logo-wide.svg"><img alt="logo" class="shadow mb-2" src="../_images/logo-wide.svg" width="200px" /></a>
+<p>Because MyST-NB is using the MyST-markdown parser, you can include rich markdown with Sphinx in your notebook.
+For example, here’s a note admonition block:</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p><strong>Wow</strong>, a note!
+It was generated with this code (<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-admonitions" title="(在 MyST Parser v0.17.2)"><span class="xref myst">as explained here</span></a>):</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{note}
+<span class="gs">**Wow**</span>, a note!
+:::
+</pre></div>
+</div>
+</div>
+<p>If you wish to use “bare” LaTeX equations, then you should add <code class="docutils literal notranslate"><span class="pre">&quot;amsmath&quot;</span></code> to the <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code> list in the sphinx configuration.
+This is <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath" title="(在 MyST Parser v0.17.2)"><span class="xref myst">explained here</span></a>, and works as such:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\frac</span> <span class="nb">{</span><span class="k">\partial</span> u<span class="nb">}{</span><span class="k">\partial</span> x<span class="nb">}</span> + <span class="k">\frac</span><span class="nb">{</span><span class="k">\partial</span> v<span class="nb">}{</span><span class="k">\partial</span> y<span class="nb">}</span> = - <span class="k">\,</span> <span class="k">\frac</span><span class="nb">{</span><span class="k">\partial</span> w<span class="nb">}{</span><span class="k">\partial</span> z<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+
+<span class="k">\begin</span><span class="nb">{</span>align*<span class="nb">}</span>
+2x - 5y <span class="nb">&amp;</span>=  8 <span class="k">\\</span>
+3x + 9y <span class="nb">&amp;</span>=  -12
+<span class="k">\end</span><span class="nb">{</span>align*<span class="nb">}</span>
+</pre></div>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-2940616f-dab8-47ac-afb0-5f26671b1063">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2940616f-dab8-47ac-afb0-5f26671b1063" title="公式的永久链接">#</a></span>\[\begin{equation}
+\frac {\partial u}{\partial x} + \frac{\partial v}{\partial y} = - \, \frac{\partial w}{\partial z}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+2x - 5y &amp;=  8 \\
+3x + 9y &amp;=  -12
+\end{align*}\]</div>
+<p>Also you can use features like <strong>equation numbering</strong> and referencing in the notebooks:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>$$e^{i\pi} + 1 = 0$$ (euler)
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-euler">
+<span class="eqno">(2)<a class="headerlink" href="#equation-euler" title="公式的永久链接">#</a></span>\[e^{i\pi} + 1 = 0\]</div>
+<p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">(2)</a>, was elected one of the
+most beautiful mathematical formulas.</p>
+<p>You can see the syntax used for this example <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-math" title="(在 MyST Parser v0.17.2)"><span class="xref myst">here in the MyST documentation</span></a>.</p>
+</section>
+</section>
+<section id="code-cells-and-outputs">
+<h2>Code cells and outputs<a class="headerlink" href="#code-cells-and-outputs" title="永久链接至标题">#</a></h2>
+<p>You can run cells, and the cell outputs will be captured and inserted into
+the resulting Sphinx site.</p>
+<section id="repr-and-html-outputs">
+<h3><code class="docutils literal notranslate"><span class="pre">__repr__</span></code> and HTML outputs<a class="headerlink" href="#repr-and-html-outputs" title="永久链接至标题">#</a></h3>
+<p>For example, here’s some simple Python:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">data</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[50.78131168, 69.78383455, 72.32990947, 68.97812447, 23.94417122,
+        94.25509545, 60.65368145, 41.81610743, 29.12335975, 18.2716479 ],
+       [63.15410634,  0.82233143, 65.00577926, 15.47256267, 20.82466287,
+        30.61392845, 66.54174066, 41.59668928, 78.63415531, 52.8935172 ],
+       [68.02491999, 77.93997389, 77.43387865, 67.93803066, 67.01415947,
+        49.97799632, 73.35768636, 51.28441562, 49.93691823, 90.13479856]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>This will also work with HTML outputs</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>50.781312</td>
+      <td>63.154106</td>
+      <td>68.024920</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>69.783835</td>
+      <td>0.822331</td>
+      <td>77.939974</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>72.329909</td>
+      <td>65.005779</td>
+      <td>77.433879</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>68.978124</td>
+      <td>15.472563</td>
+      <td>67.938031</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>23.944171</td>
+      <td>20.824663</td>
+      <td>67.014159</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>as well as math outputs</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Math</span>
+<span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}</span><span class="si">{6}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}\]</div>
+</div>
+</div>
+<p>This works for error messages as well:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will be properly printed...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">thiswont</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This will be properly printed...
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This will be properly printed...&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">thiswont</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;thiswont&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="images">
+<h3>Images<a class="headerlink" href="#images" title="永久链接至标题">#</a></h3>
+<p>Images that are generated from your code (e.g., with Matplotlib) will also
+be embedded.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f6e4eabaef0&gt;
+</pre></div>
+</div>
+<img alt="../_images/3e8cbd754b224a043e9e7497c709b24b3f132307aee6b085356846442cf5b0dc.png" src="../_images/3e8cbd754b224a043e9e7497c709b24b3f132307aee6b085356846442cf5b0dc.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="raw-cells">
+<h2>Raw cells<a class="headerlink" href="#raw-cells" title="永久链接至标题">#</a></h2>
+<p>The <a class="reference external" href="https://nbformat.readthedocs.io/en/latest/format_description.html#raw-nbconvert-cells">raw cell type</a> can be used to specifically render the content as a specific <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME media type</a>.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```{raw-cell}
+:format: text/html
+
+&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+```
+</pre></div>
+</div>
+<div class="output text_html"><p>My cat is <strong>very</strong> grumpy.</p></div><hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="download"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This notebook can be downloaded as <strong><a class="reference download internal" download="" href="../_downloads/4557f733e5d395e3749a8b5132feb8f3/jupyter-notebooks.ipynb"><code class="xref download myst-nb docutils literal notranslate"><span class="pre">jupyter-notebooks.ipynb</span></code></a></strong> and <a class="reference download internal" download="" href="../_downloads/4f52e0f34ec029a9d19b5644f22811a4/jupyter-notebooks.md"><code class="xref download docutils literal notranslate"><span class="pre">jupyter-notebooks.md</span></code></a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="basics.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">The basics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="text-notebooks.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Text-based Notebooks</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

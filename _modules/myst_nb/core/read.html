@@ -1,0 +1,786 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myst_nb.core.read</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../../../_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../authoring/index.html">
+   Authoring
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../authoring/basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../authoring/jupyter-notebooks.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../authoring/text-notebooks.html">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../authoring/custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../render/index.html">
+   Rendering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../render/format_code_cells.html">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../render/hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../render/interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../render/inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../render/glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docutils.html">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../reference/contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <h1>myst_nb.core.read 源代码</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module for reading notebook formats from a string input.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">import</span> <span class="nn">dataclasses</span> <span class="k">as</span> <span class="nn">dc</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Iterator</span>
+
+<span class="kn">from</span> <span class="nn">docutils.parsers.rst</span> <span class="kn">import</span> <span class="n">Directive</span>
+<span class="kn">from</span> <span class="nn">markdown_it.renderer</span> <span class="kn">import</span> <span class="n">RendererHTML</span>
+<span class="kn">from</span> <span class="nn">myst_parser.main</span> <span class="kn">import</span> <span class="n">MdParserConfig</span><span class="p">,</span> <span class="n">create_md_parser</span>
+<span class="kn">import</span> <span class="nn">nbformat</span> <span class="k">as</span> <span class="nn">nbf</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+<span class="kn">from</span> <span class="nn">myst_nb.core.config</span> <span class="kn">import</span> <span class="n">NbParserConfig</span>
+<span class="kn">from</span> <span class="nn">myst_nb.core.loggers</span> <span class="kn">import</span> <span class="n">DocutilsDocLogger</span><span class="p">,</span> <span class="n">SphinxDocLogger</span>
+
+<span class="n">NOTEBOOK_VERSION</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="sd">&quot;&quot;&quot;The notebook version that readers should return.&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="NbReader"><a class="viewcode-back" href="../../../reference/api.html#myst_nb.core.read.NbReader">[文档]</a><span class="nd">@dc</span><span class="o">.</span><span class="n">dataclass</span><span class="p">()</span>
+<span class="k">class</span> <span class="nc">NbReader</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A data class for reading a notebook format.&quot;&quot;&quot;</span>
+
+    <span class="n">read</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">str</span><span class="p">],</span> <span class="n">nbf</span><span class="o">.</span><span class="n">NotebookNode</span><span class="p">]</span>
+    <span class="sd">&quot;&quot;&quot;The function to read a notebook from a (utf8) string.&quot;&quot;&quot;</span>
+    <span class="n">md_config</span><span class="p">:</span> <span class="n">MdParserConfig</span>
+    <span class="sd">&quot;&quot;&quot;The configuration for parsing markdown cells.&quot;&quot;&quot;</span>
+    <span class="n">read_fmt</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="n">dc</span><span class="o">.</span><span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="sd">&quot;&quot;&quot;The type of the reader, if known.&quot;&quot;&quot;</span></div>
+
+
+<span class="k">def</span> <span class="nf">standard_nb_read</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nbf</span><span class="o">.</span><span class="n">NotebookNode</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Read a standard .ipynb notebook from a string.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">nbf</span><span class="o">.</span><span class="n">reads</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="n">NOTEBOOK_VERSION</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="create_nb_reader"><a class="viewcode-back" href="../../../reference/api.html#myst_nb.core.read.create_nb_reader">[文档]</a><span class="k">def</span> <span class="nf">create_nb_reader</span><span class="p">(</span>
+    <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">md_config</span><span class="p">:</span> <span class="n">MdParserConfig</span><span class="p">,</span>
+    <span class="n">nb_config</span><span class="p">:</span> <span class="n">NbParserConfig</span><span class="p">,</span>
+    <span class="n">content</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NbReader</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Create a notebook reader, given a string, source path and configuration.</span>
+
+<span class="sd">    Note, we do not directly parse to a notebook, since jupyter-cache functionality</span>
+<span class="sd">    requires the reader.</span>
+
+<span class="sd">    :param path: Path to the input source being processed.</span>
+<span class="sd">    :param nb_config: The  configuration for parsing Notebooks.</span>
+<span class="sd">    :param md_config: The default configuration for parsing Markown.</span>
+<span class="sd">    :param content: The input string (optionally used to check for text-based notebooks)</span>
+
+<span class="sd">    :returns: the notebook reader, and the (potentially modified) MdParserConfig,</span>
+<span class="sd">        or None if the input cannot be read as a notebook.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># the import is here so this module can be loaded without sphinx</span>
+    <span class="kn">from</span> <span class="nn">sphinx.util</span> <span class="kn">import</span> <span class="n">import_object</span>
+
+    <span class="c1"># get all possible readers</span>
+    <span class="n">readers</span> <span class="o">=</span> <span class="n">nb_config</span><span class="o">.</span><span class="n">custom_formats</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="c1"># add the default reader</span>
+    <span class="n">readers</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;.ipynb&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">standard_nb_read</span><span class="p">,</span> <span class="p">{},</span> <span class="kc">False</span><span class="p">))</span>  <span class="c1"># type: ignore</span>
+
+    <span class="c1"># we check suffixes ordered by longest first, to ensure we get the &quot;closest&quot; match</span>
+    <span class="n">iterator</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">readers</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">suffix</span><span class="p">,</span> <span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">reader_kwargs</span><span class="p">,</span> <span class="n">commonmark_only</span><span class="p">)</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">suffix</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="c1"># attempt to load the reader as an object path</span>
+                <span class="n">reader</span> <span class="o">=</span> <span class="n">import_object</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">commonmark_only</span><span class="p">:</span>
+                <span class="c1"># Markdown cells should be read as Markdown only</span>
+                <span class="n">md_config</span> <span class="o">=</span> <span class="n">dc</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">md_config</span><span class="p">,</span> <span class="n">commonmark_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">NbReader</span><span class="p">(</span><span class="n">partial</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="o">**</span><span class="p">(</span><span class="n">reader_kwargs</span> <span class="ow">or</span> <span class="p">{})),</span> <span class="n">md_config</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+    <span class="c1"># a Markdown file is a special case, since we only treat it as a notebook,</span>
+    <span class="c1"># if it starts with certain &quot;top-matter&quot;</span>
+    <span class="k">if</span> <span class="n">content</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">is_myst_markdown_notebook</span><span class="p">(</span><span class="n">content</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">NbReader</span><span class="p">(</span>
+            <span class="n">partial</span><span class="p">(</span>
+                <span class="n">read_myst_markdown_notebook</span><span class="p">,</span>
+                <span class="n">config</span><span class="o">=</span><span class="n">md_config</span><span class="p">,</span>
+                <span class="n">add_source_map</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">md_config</span><span class="p">,</span>
+            <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;plugin&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myst_nb_md&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="c1"># if we get here, we did not find a reader</span>
+    <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="is_myst_markdown_notebook"><a class="viewcode-back" href="../../../reference/api.html#myst_nb.core.read.is_myst_markdown_notebook">[文档]</a><span class="k">def</span> <span class="nf">is_myst_markdown_notebook</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Check if the input is a MyST Markdown notebook.</span>
+
+<span class="sd">    This is identified by the presence of a top-matter section, containing either::</span>
+
+<span class="sd">        ---</span>
+<span class="sd">        file_format: mystnb</span>
+<span class="sd">        ---</span>
+
+<span class="sd">    or::</span>
+
+<span class="sd">        ---</span>
+<span class="sd">        jupytext:</span>
+<span class="sd">            text_representation:</span>
+<span class="sd">                format_name: myst</span>
+<span class="sd">        ---</span>
+
+<span class="sd">    :param text: The input text.</span>
+<span class="sd">    :returns: True if the input is a markdown notebook.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">):</span>  <span class="c1"># skip creating the line list in memory</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">())</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">next</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="n">top_matter</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">):</span>
+            <span class="k">break</span>
+        <span class="n">top_matter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">top_matter</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="s2">&quot;file_format&quot;</span> <span class="ow">in</span> <span class="n">metadata</span> <span class="ow">and</span> <span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;file_format&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;mystnb&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="n">metadata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;jupytext&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;text_representation&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;format_name&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="o">!=</span> <span class="s2">&quot;myst&quot;</span>
+    <span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span></div>
+
+    <span class="c1"># TODO move this to reader, since not strictly part of function objective</span>
+    <span class="c1"># or just allow nbformat/nbclient to handle the failure</span>
+    <span class="c1"># if &quot;name&quot; not in metadata.get(&quot;kernelspec&quot;, {}):</span>
+    <span class="c1">#     raise IOError(</span>
+    <span class="c1">#         &quot;A myst notebook text-representation requires &quot; &quot;kernelspec/name metadata&quot;</span>
+    <span class="c1">#     )</span>
+    <span class="c1"># if &quot;display_name&quot; not in metadata.get(&quot;kernelspec&quot;, {}):</span>
+    <span class="c1">#     raise IOError(</span>
+    <span class="c1">#         &quot;A myst notebook text-representation requires &quot;</span>
+    <span class="c1">#         &quot;kernelspec/display_name metadata&quot;</span>
+    <span class="c1">#     )</span>
+
+
+<span class="k">def</span> <span class="nf">myst_nb_reader_plugin</span><span class="p">(</span><span class="n">uri</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nbf</span><span class="o">.</span><span class="n">NotebookNode</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Read a myst notebook from a string.</span>
+
+<span class="sd">    Used as plugin for jupyter-cache.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">read_myst_markdown_notebook</span><span class="p">(</span>
+        <span class="n">Path</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">),</span> <span class="n">add_source_map</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">uri</span>
+    <span class="p">)</span>
+
+
+<div class="viewcode-block" id="read_myst_markdown_notebook"><a class="viewcode-back" href="../../../reference/api.html#myst_nb.core.read.read_myst_markdown_notebook">[文档]</a><span class="k">def</span> <span class="nf">read_myst_markdown_notebook</span><span class="p">(</span>
+    <span class="n">text</span><span class="p">,</span>
+    <span class="n">config</span><span class="p">:</span> <span class="n">MdParserConfig</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">code_directive</span><span class="o">=</span><span class="s2">&quot;{code-cell}&quot;</span><span class="p">,</span>
+    <span class="n">raw_directive</span><span class="o">=</span><span class="s2">&quot;{raw-cell}&quot;</span><span class="p">,</span>
+    <span class="n">add_source_map</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nbf</span><span class="o">.</span><span class="n">NotebookNode</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Convert text written in the myst format to a notebook.</span>
+
+<span class="sd">    :param text: the file text</span>
+<span class="sd">    :param code_directive: the name of the directive to search for containing code cells</span>
+<span class="sd">    :param raw_directive: the name of the directive to search for containing raw cells</span>
+<span class="sd">    :param add_source_map: add a `source_map` key to the notebook metadata,</span>
+<span class="sd">        which is a list of the starting source line number for each cell.</span>
+<span class="sd">    :param path: path to notebook (required for :load:)</span>
+
+<span class="sd">    :raises MystMetadataParsingError if the metadata block is not valid JSON/YAML</span>
+
+<span class="sd">    NOTE: we assume here that all of these directives are at the top-level,</span>
+<span class="sd">    i.e. not nested in other directives.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">config</span> <span class="ow">or</span> <span class="n">MdParserConfig</span><span class="p">()</span>
+    <span class="c1"># parse markdown file up to the block level (i.e. don&#39;t worry about inline text)</span>
+    <span class="n">inline_config</span> <span class="o">=</span> <span class="n">dc</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="n">config</span><span class="p">,</span> <span class="n">disable_syntax</span><span class="o">=</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">disable_syntax</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;inline&quot;</span><span class="p">])</span>
+    <span class="p">)</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">create_md_parser</span><span class="p">(</span><span class="n">inline_config</span><span class="p">,</span> <span class="n">RendererHTML</span><span class="p">)</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+    <span class="n">md_start_line</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># get the document metadata</span>
+    <span class="n">metadata_nb</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;front_matter&quot;</span><span class="p">:</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="n">tokens</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">md_start_line</span> <span class="o">=</span> <span class="n">metadata</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">metadata</span><span class="o">.</span><span class="n">map</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">metadata_nb</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">metadata</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">except</span> <span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">ParserError</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">scanner</span><span class="o">.</span><span class="n">ScannerError</span><span class="p">)</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MystMetadataParsingError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Notebook metadata: </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># add missing display name to the metadata, as required by the nbformat schema:</span>
+    <span class="c1"># https://github.com/jupyter/nbformat/blob/f712d60f13c5b168313222cbf4bee7face98a081/nbformat/v4/nbformat.v4.5.schema.json#L16</span>
+    <span class="k">if</span> <span class="p">(</span>
+        <span class="s2">&quot;kernelspec&quot;</span> <span class="ow">in</span> <span class="n">metadata_nb</span>
+        <span class="ow">and</span> <span class="s2">&quot;name&quot;</span> <span class="ow">in</span> <span class="n">metadata_nb</span><span class="p">[</span><span class="s2">&quot;kernelspec&quot;</span><span class="p">]</span>
+        <span class="ow">and</span> <span class="s2">&quot;display_name&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">metadata_nb</span><span class="p">[</span><span class="s2">&quot;kernelspec&quot;</span><span class="p">]</span>
+    <span class="p">):</span>
+        <span class="n">metadata_nb</span><span class="p">[</span><span class="s2">&quot;kernelspec&quot;</span><span class="p">][</span><span class="s2">&quot;display_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">metadata_nb</span><span class="p">[</span><span class="s2">&quot;kernelspec&quot;</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+
+    <span class="c1"># create an empty notebook</span>
+    <span class="n">nbf_version</span> <span class="o">=</span> <span class="n">nbf</span><span class="o">.</span><span class="n">v4</span>
+    <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;metadata&quot;</span><span class="p">:</span> <span class="n">nbf</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">metadata_nb</span><span class="p">)}</span>
+    <span class="n">notebook</span> <span class="o">=</span> <span class="n">nbf_version</span><span class="o">.</span><span class="n">new_notebook</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="n">source_map</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># this is a list of the starting line number for each cell</span>
+
+    <span class="k">def</span> <span class="nf">_flush_markdown</span><span class="p">(</span><span class="n">start_line</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">md_metadata</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;When we find a cell we check if there is preceding text.o&quot;&quot;&quot;</span>
+        <span class="n">endline</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">token</span> <span class="k">else</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+        <span class="n">md_source</span> <span class="o">=</span> <span class="n">_strip_blank_lines</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="n">start_line</span><span class="p">:</span><span class="n">endline</span><span class="p">]))</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">nbf</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">md_metadata</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">md_source</span><span class="p">:</span>
+            <span class="n">source_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">start_line</span><span class="p">)</span>
+            <span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">nbf_version</span><span class="o">.</span><span class="n">new_markdown_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">md_source</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="n">meta</span><span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="c1"># iterate through the tokens to identify notebook cells</span>
+    <span class="n">nesting_level</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">md_metadata</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+
+        <span class="n">nesting_level</span> <span class="o">+=</span> <span class="n">token</span><span class="o">.</span><span class="n">nesting</span>
+
+        <span class="k">if</span> <span class="n">nesting_level</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># we ignore fenced block that are nested, e.g. as part of lists, etc</span>
+            <span class="k">continue</span>
+
+        <span class="n">token_map</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">map</span> <span class="ow">or</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;fence&quot;</span> <span class="ow">and</span> <span class="n">token</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">code_directive</span><span class="p">):</span>
+            <span class="n">_flush_markdown</span><span class="p">(</span><span class="n">md_start_line</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">md_metadata</span><span class="p">)</span>
+            <span class="n">options</span><span class="p">,</span> <span class="n">body_lines</span> <span class="o">=</span> <span class="n">_read_fenced_cell</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">),</span> <span class="s2">&quot;Code&quot;</span><span class="p">)</span>
+            <span class="c1"># Parse :load: or load: tags and populate body with contents of file</span>
+            <span class="k">if</span> <span class="s2">&quot;load&quot;</span> <span class="ow">in</span> <span class="n">options</span><span class="p">:</span>
+                <span class="n">body_lines</span> <span class="o">=</span> <span class="n">_load_code_from_file</span><span class="p">(</span>
+                    <span class="n">path</span><span class="p">,</span> <span class="n">options</span><span class="p">[</span><span class="s2">&quot;load&quot;</span><span class="p">],</span> <span class="n">token</span><span class="p">,</span> <span class="n">body_lines</span>
+                <span class="p">)</span>
+            <span class="n">meta</span> <span class="o">=</span> <span class="n">nbf</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+            <span class="n">source_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token_map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">nbf_version</span><span class="o">.</span><span class="n">new_code_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">body_lines</span><span class="p">),</span> <span class="n">metadata</span><span class="o">=</span><span class="n">meta</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">md_metadata</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">md_start_line</span> <span class="o">=</span> <span class="n">token_map</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">elif</span> <span class="n">token</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;fence&quot;</span> <span class="ow">and</span> <span class="n">token</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">raw_directive</span><span class="p">):</span>
+            <span class="n">_flush_markdown</span><span class="p">(</span><span class="n">md_start_line</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">md_metadata</span><span class="p">)</span>
+            <span class="n">options</span><span class="p">,</span> <span class="n">body_lines</span> <span class="o">=</span> <span class="n">_read_fenced_cell</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">),</span> <span class="s2">&quot;Raw&quot;</span><span class="p">)</span>
+            <span class="n">meta</span> <span class="o">=</span> <span class="n">nbf</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+            <span class="n">source_map</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token_map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">nbf_version</span><span class="o">.</span><span class="n">new_raw_cell</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">body_lines</span><span class="p">),</span> <span class="n">metadata</span><span class="o">=</span><span class="n">meta</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">md_metadata</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">md_start_line</span> <span class="o">=</span> <span class="n">token_map</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="k">elif</span> <span class="n">token</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;myst_block_break&quot;</span><span class="p">:</span>
+            <span class="n">_flush_markdown</span><span class="p">(</span><span class="n">md_start_line</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">md_metadata</span><span class="p">)</span>
+            <span class="n">md_metadata</span> <span class="o">=</span> <span class="n">_read_cell_metadata</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">notebook</span><span class="o">.</span><span class="n">cells</span><span class="p">))</span>
+            <span class="n">md_start_line</span> <span class="o">=</span> <span class="n">token_map</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">_flush_markdown</span><span class="p">(</span><span class="n">md_start_line</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">md_metadata</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">add_source_map</span><span class="p">:</span>
+        <span class="n">notebook</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s2">&quot;source_map&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">source_map</span>
+    <span class="k">return</span> <span class="n">notebook</span></div>
+
+
+<span class="k">class</span> <span class="nc">MystMetadataParsingError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Error when parsing metadata from myst formatted text&quot;&quot;&quot;</span>
+
+
+<span class="k">class</span> <span class="nc">_LoadFileParsingError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Error when parsing files for code-blocks/code-cells&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">_strip_blank_lines</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">text</span> <span class="ow">and</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">):</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+
+<span class="k">class</span> <span class="nc">_MockDirective</span><span class="p">:</span>
+    <span class="n">option_spec</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;options&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
+    <span class="n">required_arguments</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">_read_fenced_cell</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">cell_index</span><span class="p">,</span> <span class="n">cell_type</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">myst_parser.parse_directives</span> <span class="kn">import</span> <span class="n">DirectiveParsingError</span><span class="p">,</span> <span class="n">parse_directive_text</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">body_lines</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">parse_directive_text</span><span class="p">(</span>
+            <span class="n">directive_class</span><span class="o">=</span><span class="n">_MockDirective</span><span class="p">,</span>
+            <span class="n">first_line</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="n">content</span><span class="o">=</span><span class="n">token</span><span class="o">.</span><span class="n">content</span><span class="p">,</span>
+            <span class="n">validate_options</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">DirectiveParsingError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">MystMetadataParsingError</span><span class="p">(</span>
+            <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> cell </span><span class="si">{}</span><span class="s2"> at line </span><span class="si">{}</span><span class="s2"> could not be read: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">cell_type</span><span class="p">,</span> <span class="n">cell_index</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">err</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">options</span><span class="p">,</span> <span class="n">body_lines</span>
+
+
+<span class="k">def</span> <span class="nf">_read_cell_metadata</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">cell_index</span><span class="p">):</span>
+    <span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">metadata</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">MystMetadataParsingError</span><span class="p">(</span>
+                <span class="s2">&quot;Markdown cell </span><span class="si">{}</span><span class="s2"> at line </span><span class="si">{}</span><span class="s2"> could not be read: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">cell_index</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">err</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">metadata</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">MystMetadataParsingError</span><span class="p">(</span>
+                <span class="s2">&quot;Markdown cell </span><span class="si">{}</span><span class="s2"> at line </span><span class="si">{}</span><span class="s2"> is not a dict&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">cell_index</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">map</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">metadata</span>
+
+
+<span class="k">def</span> <span class="nf">_load_code_from_file</span><span class="p">(</span>
+    <span class="n">nb_path</span><span class="p">:</span> <span class="kc">None</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">body_lines</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;load source code from a file.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">nb_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">_LoadFileParsingError</span><span class="p">(</span><span class="s2">&quot;path to notebook not supplied for :load:&quot;</span><span class="p">)</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">nb_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">body_lines</span><span class="p">):</span>
+        <span class="k">pass</span>  <span class="c1"># TODO this would make the reader dependent on sphinx</span>
+        <span class="c1"># line = token.map[0] if token.map else 0</span>
+        <span class="c1"># msg = (</span>
+        <span class="c1">#     f&quot;{nb_path}:{line} content of code-cell is being overwritten by &quot;</span>
+        <span class="c1">#     f&quot;:load: {file_name}&quot;</span>
+        <span class="c1"># )</span>
+        <span class="c1"># LOGGER.warning(msg)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">body_lines</span> <span class="o">=</span> <span class="n">file_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">_LoadFileParsingError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can&#39;t read file from :load: </span><span class="si">{</span><span class="n">file_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">body_lines</span>
+
+
+<span class="k">class</span> <span class="nc">UnexpectedCellDirective</span><span class="p">(</span><span class="n">Directive</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;The `{code-cell}`` and ``{raw-cell}`` directives, are special cases,</span>
+<span class="sd">    which are picked up by the MyST Markdown reader to convert them into notebooks.</span>
+
+<span class="sd">    If any are left in the parsed Markdown, it probably means that they were nested</span>
+<span class="sd">    inside another directive, which is not allowed.</span>
+
+<span class="sd">    Therefore, we log a warning if it is triggered, and discard it.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">optional_arguments</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">final_argument_whitespace</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">has_content</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Run the directive.&quot;&quot;&quot;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;Found an unexpected `code-cell` or `raw-cell` directive. &quot;</span>
+            <span class="s2">&quot;Either this file was not converted to a notebook, &quot;</span>
+            <span class="s2">&quot;because Jupytext header content was missing, &quot;</span>
+            <span class="s2">&quot;or the `code-cell` was not converted, because it is nested. &quot;</span>
+            <span class="s2">&quot;See https://myst-nb.readthedocs.io/en/latest/use/markdown.html &quot;</span>
+            <span class="s2">&quot;for more information.&quot;</span>
+        <span class="p">)</span>
+        <span class="n">document</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">document</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">settings</span><span class="p">,</span> <span class="s2">&quot;env&quot;</span><span class="p">):</span>
+            <span class="n">logger</span> <span class="o">=</span> <span class="n">SphinxDocLogger</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span> <span class="o">=</span> <span class="n">DocutilsDocLogger</span><span class="p">(</span><span class="n">document</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lineno</span><span class="p">,</span> <span class="n">subtype</span><span class="o">=</span><span class="s2">&quot;nbcell&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span>
+</pre></div>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

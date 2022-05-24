@@ -1,0 +1,790 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Single page builds</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Python API" href="reference/api.html" />
+    <link rel="prev" title="Configuration" href="configuration.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="authoring/index.html">
+   Authoring
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="authoring/basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="authoring/jupyter-notebooks.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="authoring/text-notebooks.html">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="authoring/custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="render/index.html">
+   Rendering
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="render/format_code_cells.html">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="render/hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="render/interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="render/inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="render/glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb/edit/master/docs/docutils.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/docutils.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Single page builds</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="single-page-builds">
+<span id="render-single-page"></span><h1>Single page builds<a class="headerlink" href="#single-page-builds" title="永久链接至标题">#</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">0.14.0 新版功能.</span></p>
+</div>
+<p>Sphinx, and thus MyST-NB, is built on top of the <a class="reference external" href="https://docutils.sourceforge.io/docs/">Docutils</a> package.
+MyST-NB offers a renderer, parser and CLI-interface for working directly with Docutils, independent of Sphinx, as described below.</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>Since these tools are independent of Sphinx, this means they cannot parse any Sphinx or Sphinx extensions specific roles or directives.</p>
+</div>
+<p>On installing MyST-NB, the following CLI-commands are made available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mystnb-docutils-html</span></code>: converts notebooks to HTML</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mystnb-docutils-html5</span></code>: converts notebooks to HTML5</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mystnb-docutils-latex</span></code>: converts notebooks to LaTeX</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mystnb-docutils-xml</span></code>: converts notebooks to docutils-native XML</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mystnb-docutils-pseudoxml</span></code>: converts notebooks to pseudo-XML (to visualise the AST structure)</p></li>
+</ul>
+<p>Each command can be piped stdin or take a file path as an argument:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mystnb-docutils-html --help
+<span class="gp">$ </span>mystnb-docutils-html --nb-execution-mode<span class="o">=</span><span class="s2">&quot;off&quot;</span> hello-world.ipynb
+<span class="gp">$ </span>mystnb-docutils-html --nb-read-as-md<span class="o">=</span><span class="s2">&quot;yes&quot;</span> hello-world.md
+</pre></div>
+</div>
+<p>The commands are based on the <a class="reference external" href="https://docutils.sourceforge.io/docs/user/tools.html">Docutils Front-End Tools</a>, and so follow the same argument and options structure, included many of the MyST NB specific options detailed in the <a class="reference internal" href="configuration.html#config-intro"><span class="std std-ref">Configuration</span></a> section.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Shared Docutils CLI Options<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Usage
+=====
+  mystnb-docutils-&lt;writer&gt; [options] [&lt;source&gt; [&lt;destination&gt;]]
+
+Options
+=======
+General Docutils Options
+------------------------
+--title=TITLE           Specify the document title as metadata.
+--generator, -g         Include a &quot;Generated by Docutils&quot; credit and link.
+--no-generator          Do not include a generator credit.
+--date, -d              Include the date at the end of the document (UTC).
+--time, -t              Include the time &amp; date (UTC).
+--no-datestamp          Do not include a datestamp of any kind.
+--source-link, -s       Include a &quot;View document source&quot; link.
+--source-url=&lt;URL&gt;      Use &lt;URL&gt; for a source link; implies --source-link.
+--no-source-link        Do not include a &quot;View document source&quot; link.
+--toc-entry-backlinks   Link from section headers to TOC entries.  (default)
+--toc-top-backlinks     Link from section headers to the top of the TOC.
+--no-toc-backlinks      Disable backlinks to the table of contents.
+--footnote-backlinks    Link from footnotes/citations to references. (default)
+--no-footnote-backlinks
+                        Disable backlinks from footnotes and citations.
+--section-numbering     Enable section numbering by Docutils.  (default)
+--no-section-numbering  Disable section numbering by Docutils.
+--strip-comments        Remove comment elements from the document tree.
+--leave-comments        Leave comment elements in the document tree. (default)
+--strip-elements-with-class=&lt;class&gt;
+                        Remove all elements with classes=&quot;&lt;class&gt;&quot; from the
+                        document tree. Warning: potentially dangerous; use
+                        with caution. (Multiple-use option.)
+--strip-class=&lt;class&gt;   Remove all classes=&quot;&lt;class&gt;&quot; attributes from elements
+                        in the document tree. Warning: potentially dangerous;
+                        use with caution. (Multiple-use option.)
+--report=&lt;level&gt;, -r &lt;level&gt;
+                        Report system messages at or higher than &lt;level&gt;:
+                        &quot;info&quot; or &quot;1&quot;, &quot;warning&quot;/&quot;2&quot; (default), &quot;error&quot;/&quot;3&quot;,
+                        &quot;severe&quot;/&quot;4&quot;, &quot;none&quot;/&quot;5&quot;
+--verbose, -v           Report all system messages.  (Same as &quot;--report=1&quot;.)
+--quiet, -q             Report no system messages.  (Same as &quot;--report=5&quot;.)
+--halt=&lt;level&gt;          Halt execution at system messages at or above &lt;level&gt;.
+                        Levels as in --report.  Default: 4 (severe).
+--strict                Halt at the slightest problem.  Same as &quot;--halt=info&quot;.
+--exit-status=&lt;level&gt;   Enable a non-zero exit status for non-halting system
+                        messages at or above &lt;level&gt;.  Default: 5 (disabled).
+--debug                 Enable debug-level system messages and diagnostics.
+--no-debug              Disable debug output.  (default)
+--warnings=&lt;file&gt;       Send the output of system messages to &lt;file&gt;.
+--traceback             Enable Python tracebacks when Docutils is halted.
+--no-traceback          Disable Python tracebacks.  (default)
+--input-encoding=&lt;name[:handler]&gt;, -i &lt;name[:handler]&gt;
+                        Specify the encoding and optionally the error handler
+                        of input text.  Default: &lt;locale-dependent&gt;:strict.
+--input-encoding-error-handler=INPUT_ENCODING_ERROR_HANDLER
+                        Specify the error handler for undecodable characters.
+                        Choices: &quot;strict&quot; (default), &quot;ignore&quot;, and &quot;replace&quot;.
+--output-encoding=&lt;name[:handler]&gt;, -o &lt;name[:handler]&gt;
+                        Specify the text encoding and optionally the error
+                        handler for output.  Default: UTF-8:strict.
+--output-encoding-error-handler=OUTPUT_ENCODING_ERROR_HANDLER
+                        Specify error handler for unencodable output
+                        characters; &quot;strict&quot; (default), &quot;ignore&quot;, &quot;replace&quot;,
+                        &quot;xmlcharrefreplace&quot;, &quot;backslashreplace&quot;.
+--error-encoding=&lt;name[:handler]&gt;, -e &lt;name[:handler]&gt;
+                        Specify text encoding and error handler for error
+                        output.  Default: utf-8:backslashreplace.
+--error-encoding-error-handler=ERROR_ENCODING_ERROR_HANDLER
+                        Specify the error handler for unencodable characters
+                        in error output.  Default: backslashreplace.
+--language=&lt;name&gt;, -l &lt;name&gt;
+                        Specify the language (as BCP 47 language tag).
+                        Default: en.
+--record-dependencies=&lt;file&gt;
+                        Write output file dependencies to &lt;file&gt;.
+--config=&lt;file&gt;         Read configuration settings from &lt;file&gt;, if it exists.
+--version, -V           Show this program&#39;s version number and exit.
+--help, -h              Show this help message and exit.
+
+MyST-NB options
+---------------
+--nb-read-as-md=&lt;boolean&gt;
+                        Read as the MyST Markdown format (default: False)
+--nb-metadata-key=&lt;str&gt;
+                        Notebook level metadata key for config overrides
+                        (default: &#39;mystnb&#39;)
+--nb-cell-metadata-key=&lt;str&gt;
+                        Cell level metadata key for config overrides (default:
+                        &#39;mystnb&#39;)
+--nb-execution-mode=&lt;&#39;off&#39;|&#39;force&#39;|&#39;auto&#39;|&#39;cache&#39;|&#39;inline&#39;&gt;
+                        Execution mode for notebooks (default: &#39;auto&#39;)
+--nb-execution-cache-path=&lt;str&gt;
+                        Path to folder for caching notebooks (default:
+                        &lt;outdir&gt;) (default: &#39;&#39;)
+--nb-execution-timeout=&lt;int&gt;
+                        Execution timeout (seconds) (default: 30)
+--nb-execution-in-temp=&lt;boolean&gt;
+                        Use temporary folder for the execution current working
+                        directory (default: False)
+--nb-execution-allow-errors=&lt;boolean&gt;
+                        Allow errors during execution (default: False)
+--nb-execution-raise-on-error=&lt;boolean&gt;
+                        Raise an exception on failed execution, rather than
+                        emitting a warning (default: False)
+--nb-execution-show-tb=&lt;boolean&gt;
+                        Print traceback to stderr on execution error (default:
+                        False)
+--nb-merge-streams=&lt;boolean&gt;
+                        Merge stdout/stderr execution output streams (default:
+                        False)
+--nb-render-plugin=&lt;str&gt;
+                        The entry point for the execution output render class
+                        (in group `myst_nb.output_renderer`) (default:
+                        &#39;default&#39;)
+--nb-remove-code-source=&lt;boolean&gt;
+                        Remove code cell source (default: False)
+--nb-remove-code-outputs=&lt;boolean&gt;
+                        Remove code cell outputs (default: False)
+--nb-number-source-lines=&lt;boolean&gt;
+                        Number code cell source lines (default: False)
+--nb-builder-name=&lt;str&gt;
+                        Builder name, to select render priority for mime types
+                        (default: &#39;html&#39;)
+--nb-output-stderr=&lt;&#39;show&#39;|&#39;remove&#39;|&#39;remove-warn&#39;|&#39;warn&#39;|&#39;error&#39;|&#39;severe&#39;&gt;
+                        Behaviour for stderr output (default: &#39;show&#39;)
+--nb-render-text-lexer=&lt;str&gt;
+                        Pygments lexer applied to stdout/stderr and text/plain
+                        outputs (default: &#39;myst-ansi&#39;)
+--nb-render-error-lexer=&lt;str&gt;
+                        Pygments lexer applied to error/traceback outputs
+                        (default: &#39;ipythontb&#39;)
+--nb-render-markdown-format=&lt;&#39;commonmark&#39;|&#39;gfm&#39;|&#39;myst&#39;&gt;
+                        The format to use for text/markdown rendering
+                        (default: &#39;commonmark&#39;)
+--nb-output-folder=&lt;str&gt;
+                        Folder for external outputs (like images), skipped if
+                        empty (default: &#39;build&#39;)
+--nb-append-css=&lt;boolean&gt;
+                        Add default MyST-NB CSS to HTML outputs (default:
+                        True)
+--nb-metadata-to-fm=&lt;boolean&gt;
+                        Convert unhandled metadata to frontmatter (default:
+                        False)
+
+MyST options
+------------
+--myst-commonmark-only=&lt;boolean&gt;
+                        Use strict CommonMark parser (default: False)
+--myst-gfm-only=&lt;boolean&gt;
+                        Use strict Github Flavoured Markdown parser (default:
+                        False)
+--myst-enable-extensions=&lt;comma-delimited&gt;
+                        Enable extensions (default: &#39;&#39;)
+--myst-linkify-fuzzy-links=&lt;boolean&gt;
+                        linkify: recognise URLs without schema prefixes
+                        (default: True)
+--myst-dmath-allow-labels=&lt;boolean&gt;
+                        Parse `$$...$$ (label)` (default: True)
+--myst-dmath-allow-space=&lt;boolean&gt;
+                        dollarmath: allow initial/final spaces in `$ ... $`
+                        (default: True)
+--myst-dmath-allow-digits=&lt;boolean&gt;
+                        dollarmath: allow initial/final digits `1$ ...$2`
+                        (default: True)
+--myst-dmath-double-inline=&lt;boolean&gt;
+                        dollarmath: parse inline `$$ ... $$` (default: False)
+--myst-disable-syntax=&lt;comma-delimited&gt;
+                        Disable syntax elements (default: &#39;&#39;)
+--myst-all-links-external=&lt;boolean&gt;
+                        Parse all links as simple hyperlinks (default: False)
+--myst-url-schemes=&lt;null|comma-delimited&gt;
+                        URL scheme prefixes identified as external links
+                        (default: &#39;http,https,mailto,ftp&#39;)
+--myst-highlight-code-blocks=&lt;boolean&gt;
+                        Syntax highlight code blocks with pygments (default:
+                        True)
+--myst-number-code-blocks=&lt;comma-delimited&gt;
+                        Add line numbers to code blocks with these languages
+                        (default: &#39;&#39;)
+--myst-title-to-header=&lt;boolean&gt;
+                        Convert a `title` field in the top-matter to a H1
+                        header (default: False)
+--myst-footnote-transition=&lt;boolean&gt;
+                        Place a transition before any footnotes (default:
+                        True)
+--myst-words-per-minute=&lt;int&gt;
+                        For reading speed calculations (default: 200)
+
+Generic Parser Options
+----------------------
+--no-file-insertion     Disable directives that insert the contents of an
+                        external file; replaced with a &quot;warning&quot; system
+                        message.
+--file-insertion-enabled
+                        Enable directives that insert the contents of an
+                        external file. (default)
+--no-raw                Disable the &quot;raw&quot; directive; replaced with a &quot;warning&quot;
+                        system message.
+--raw-enabled           Enable the &quot;raw&quot; directive. (default)
+--line-length-limit=&lt;length&gt;
+                        Maximal number of characters in an input line. Default
+                        10 000.
+
+reStructuredText Parser Options
+-------------------------------
+--pep-references        Recognize and link to standalone PEP references (like
+                        &quot;PEP 258&quot;).
+--pep-base-url=&lt;URL&gt;    Base URL for PEP references (default
+                        &quot;http://www.python.org/dev/peps/&quot;).
+--pep-file-url-template=&lt;URL&gt;
+                        Template for PEP file part of URL. (default
+                        &quot;pep-%04d&quot;)
+--rfc-references        Recognize and link to standalone RFC references (like
+                        &quot;RFC 822&quot;).
+--rfc-base-url=&lt;URL&gt;    Base URL for RFC references (default
+                        &quot;http://tools.ietf.org/html/&quot;).
+--tab-width=&lt;width&gt;     Set number of spaces for tab expansion (default 8).
+--trim-footnote-reference-space
+                        Remove spaces before footnote references.
+--leave-footnote-reference-space
+                        Leave spaces before footnote references.
+--syntax-highlight=&lt;format&gt;
+                        Token name set for parsing code with Pygments: one of
+                        &quot;long&quot;, &quot;short&quot;, or &quot;none&quot; (no parsing). Default is
+                        &quot;long&quot;.
+--smart-quotes=&lt;yes/no/alt&gt;
+                        Change straight quotation marks to typographic form:
+                        one of &quot;yes&quot;, &quot;no&quot;, &quot;alt[ernative]&quot; (default &quot;no&quot;).
+--smartquotes-locales=&lt;language:quotes[,language:quotes,...]&gt;
+                        Characters to use as &quot;smart quotes&quot; for &lt;language&gt;.
+--word-level-inline-markup
+                        Inline markup recognized at word boundaries only
+                        (adjacent to punctuation or whitespace). Force
+                        character-level inline markup recognition with &quot;\ &quot;
+                        (backslash + space). Default.
+--character-level-inline-markup
+                        Inline markup recognized anywhere, regardless of
+                        surrounding characters. Backslash-escapes must be used
+                        to avoid unwanted markup recognition. Useful for East
+                        Asian languages. Experimental.
+</pre></div>
+</div>
+</div>
+</details><p>The CLI commands can also utilise the <a class="reference external" href="https://docutils.sourceforge.io/docs/user/config.html"><code class="docutils literal notranslate"><span class="pre">docutils.conf</span></code> configuration file</a> to configure the behaviour of the CLI commands. For example:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1"># These entries affect all processing:</span><span class="w"></span>
+<span class="k">[general]</span><span class="w"></span>
+<span class="na">nb_execution_mode: off</span><span class="w"></span>
+
+<span class="c1"># These entries affect specific HTML output:</span><span class="w"></span>
+<span class="k">[html writers]</span><span class="w"></span>
+<span class="na">embed-stylesheet: no</span><span class="w"></span>
+
+<span class="k">[html5 writer]</span><span class="w"></span>
+<span class="na">stylesheet-dirs: path/to/html5_polyglot/</span><span class="w"></span>
+<span class="na">stylesheet-path: minimal.css, responsive.css</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can also use the <a class="reference internal" href="reference/api.html#myst_nb.docutils_.Parser" title="myst_nb.docutils_.Parser"><code class="xref py py-class docutils literal notranslate"><span class="pre">myst_nb.docutils_.Parser</span></code></a> class programmatically with the <a class="reference external" href="https://docutils.sourceforge.io/docs/api/publisher.html">Docutils publisher API</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">docutils.core</span> <span class="kn">import</span> <span class="n">publish_string</span>
+<span class="kn">from</span> <span class="nn">nbformat</span> <span class="kn">import</span> <span class="n">writes</span>
+<span class="kn">from</span> <span class="nn">nbformat.v4</span> <span class="kn">import</span> <span class="n">new_notebook</span>
+<span class="kn">from</span> <span class="nn">myst_nb.docutils_</span> <span class="kn">import</span> <span class="n">Parser</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="n">writes</span><span class="p">(</span><span class="n">new_notebook</span><span class="p">())</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">publish_string</span><span class="p">(</span>
+    <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span>
+    <span class="n">writer_name</span><span class="o">=</span><span class="s2">&quot;html5&quot;</span><span class="p">,</span>
+    <span class="n">settings_overrides</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;nb_execution_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;off&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;embed_stylesheet&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">parser</span><span class="o">=</span><span class="n">Parser</span><span class="p">(),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, you can include MyST Markdown files within a RestructuredText file, using the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#include"><code class="docutils literal notranslate"><span class="pre">include</span></code> directive</a>:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">include</span><span class="p">::</span> include.ipynb
+   <span class="nc">:parser:</span> myst_nb.docutils_
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">parser</span></code> option requires <code class="docutils literal notranslate"><span class="pre">docutils&gt;=0.17</span></code></p>
+</div>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="configuration.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Configuration</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="reference/api.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Python API</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

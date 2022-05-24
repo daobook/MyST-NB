@@ -1,0 +1,1331 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Format code cells</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="shortcut icon" href="../_static/logo-square.svg"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Hide cell contents" href="hiding.html" />
+    <link rel="prev" title="Rendering" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="zh_CN">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-wide.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    概述
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quickstart.html">
+   快速入门
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  指南
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../authoring/index.html">
+   Authoring
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/basics.html">
+     The basics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/jupyter-notebooks.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/text-notebooks.html">
+     Text-based Notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../authoring/custom-formats.html">
+     Custom Formats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../computation/index.html">
+   Computations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/execute.html">
+     Execute and cache
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../computation/coconut-lang.html">
+     Jupyter kernels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Rendering
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Format code cells
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hiding.html">
+     Hide cell contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive.html">
+     Widgets and interactive outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="inline.html">
+     Inline variable evaluation (eval)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="glue.html">
+     Saving variables to embed (glue)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../configuration.html">
+   Configuration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docutils.html">
+   Single page builds
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  参考
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/api.html">
+   Python API
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/changelog.html">
+   Change Log
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/contributing.html">
+   Contribute to MyST-NB
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/myst-nb/master?urlpath=tree/docs/render/format_code_cells.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/myst-nb/edit/master/docs/render/format_code_cells.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/render/format_code_cells.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/render/format_code_cells.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-source-lines">
+   Number source lines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stdout-and-stderr-outputs">
+   stdout and stderr outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-stdout-or-stderr">
+     Remove stdout or stderr
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#group-into-single-streams">
+     Group into single streams
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputs-mime-priority">
+   Outputs MIME priority
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images-and-figures">
+   Images and Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansi-outputs">
+   ANSI Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#customise-the-render-process">
+   Customise the render process
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Format code cells</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-source-lines">
+   Number source lines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stdout-and-stderr-outputs">
+   stdout and stderr outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-stdout-or-stderr">
+     Remove stdout or stderr
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#group-into-single-streams">
+     Group into single streams
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputs-mime-priority">
+   Outputs MIME priority
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images-and-figures">
+   Images and Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansi-outputs">
+   ANSI Outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#customise-the-render-process">
+   Customise the render process
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="format-code-cells">
+<span id="render-code-cells"></span><h1>Format code cells<a class="headerlink" href="#format-code-cells" title="永久链接至标题">#</a></h1>
+<p>Code cell rendering behaviour is controlled with configuration at a global, per-file, or per-cell level, as outlined in the <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">configuration section</span></a>.</p>
+<p>See the sections below for a description of these configuration option and their effect.</p>
+<section id="number-source-lines">
+<span id="render-input-number"></span><h2>Number source lines<a class="headerlink" href="#number-source-lines" title="永久链接至标题">#</a></h2>
+<p>You can control whether the number of source lines is displayed for code cells,
+globally with <code class="docutils literal notranslate"><span class="pre">nb_number_source_lines</span> <span class="pre">=</span> <span class="pre">True</span></code>, per-file with <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code> in the notebook metadata, or per-cell with <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code> in the cell metadata.
+For example:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
+<span class="gu">---</span>
+mystnb:
+<span class="gu">  number_source_lines: true</span>
+<span class="gu">---</span>
+a = 1
+b = 2
+c = 1
+```
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">2</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="linenos">3</span><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="stdout-and-stderr-outputs">
+<span id="render-output-stdout-stderr"></span><h2>stdout and stderr outputs<a class="headerlink" href="#stdout-and-stderr-outputs" title="永久链接至标题">#</a></h2>
+<section id="remove-stdout-or-stderr">
+<span id="render-output-stderr"></span><h3>Remove stdout or stderr<a class="headerlink" href="#remove-stdout-or-stderr" title="永久链接至标题">#</a></h3>
+<p>In some cases you may not wish to display stdout/stderr outputs in your final documentation,
+for example, if they are only for debugging purposes.</p>
+<p>You can tell MyST-NB to remove these outputs, per cell, using the <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags">cell tags</a>, like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+:tags: [remove-input,remove-stdout,remove-stderr]
+
+import pandas, sys
+print(&quot;this is some stdout&quot;)
+print(&quot;this is some stderr&quot;, file=sys.stderr)
+<span class="gh"># but what I really want to show is:</span>
+pandas.DataFrame({&quot;column 1&quot;: [1, 2, 3]})
+```
+</pre></div>
+</div>
+<div class="cell tag_remove-input tag_remove-stdout tag_remove-stderr docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>column 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Alternatively, you can configure how stdout is dealt with at a global configuration level, using the <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code> configuration value.
+This can be set to:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;show&quot;</span></code> (default): show all stderr (unless a <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> tag is present)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove&quot;</span></code>: remove all stderr</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove-warn&quot;</span></code>: remove all stderr, but log a warning to sphinx if any found</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;warn&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;error&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;severe&quot;</span></code>: log to sphinx, at a certain level, if any found.</p></li>
+</ul>
+</section>
+<section id="group-into-single-streams">
+<span id="render-output-group-stderr-stdout"></span><h3>Group into single streams<a class="headerlink" href="#group-into-single-streams" title="永久链接至标题">#</a></h3>
+<p>Cells may print multiple things to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.
+For example, if a cell prints status updates throughout its execution, each of these is often printed to <code class="docutils literal notranslate"><span class="pre">stdout</span></code>.
+By default, these outputs may be split across multiple items, and will be rendered as separate “chunks” in your built documentation.</p>
+<p>If you’d like each of the outputs in <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> to be merged into a single stream for each, use the following configuration:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_merge_streams</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p>This will ensure that all <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> outputs are merged into a single group.
+This also makes cell outputs more deterministic.
+Normally, slight differences in timing may result in different orders of <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> in the cell output, while this setting will sort them properly.</p>
+</section>
+</section>
+<section id="outputs-mime-priority">
+<span id="render-output-priority"></span><h2>Outputs MIME priority<a class="headerlink" href="#outputs-mime-priority" title="永久链接至标题">#</a></h2>
+<p>When Jupyter executes a code cell it can produce multiple outputs, and each of these outputs can contain multiple <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME media types</a>, for use by different output formats (like HTML or LaTeX).</p>
+<p>MyST-NB stores a base priority dictionary for most of the common <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">Sphinx builder names</a>,
+mapping MIME types to a priority number (lower is higher priority):</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">from</span> <span class="nn">myst_nb.core.render</span> <span class="kn">import</span> <span class="n">base_render_priority</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">base_render_priority</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>applehelp:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 50
+  image/jp2: 80
+  image/jpeg: 60
+  image/png: 40
+  image/svg+xml: 90
+  image/tiff: 70
+  text/html: 30
+  text/latex: 110
+  text/markdown: 100
+  text/plain: 120
+changes:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+devhelp:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 50
+  image/jpeg: 60
+  image/png: 40
+  text/html: 30
+  text/latex: 80
+  text/markdown: 70
+  text/plain: 90
+dirhtml:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+dummy:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+epub:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+gettext:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+html:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+htmlhelp:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 50
+  image/jpeg: 60
+  image/png: 40
+  text/html: 30
+  text/latex: 80
+  text/markdown: 70
+  text/plain: 90
+json:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+latex:
+  application/pdf: 10
+  image/jpeg: 30
+  image/png: 20
+  text/latex: 40
+  text/markdown: 50
+  text/plain: 60
+linkcheck:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+man:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+pickle:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+pseudoxml:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+qthelp:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+readthedocs:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+readthedocsdirhtml:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+readthedocssinglehtml:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+readthedocssinglehtmllocalmedia:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+singlehtml:
+  application/javascript: 20
+  application/vnd.jupyter.widget-view+json: 10
+  image/gif: 60
+  image/jpeg: 70
+  image/png: 50
+  image/svg+xml: 40
+  text/html: 30
+  text/latex: 90
+  text/markdown: 80
+  text/plain: 100
+texinfo:
+  image/gif: 30
+  image/jpeg: 20
+  image/png: 10
+  text/latex: 40
+  text/markdown: 50
+  text/plain: 60
+text:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+xml:
+  text/latex: 10
+  text/markdown: 20
+  text/plain: 30
+</pre></div>
+</div>
+</div>
+</div>
+<p>Items in this dictionary can be overridden by the <code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code> configuration option, in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.
+For example, the following configuration applies in order:</p>
+<ul class="simple">
+<li><p>Sets <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> as the highest priority for <code class="docutils literal notranslate"><span class="pre">html</span></code> output.</p></li>
+<li><p>Disables <code class="docutils literal notranslate"><span class="pre">image/jpeg</span></code> for <code class="docutils literal notranslate"><span class="pre">latex</span></code> output</p></li>
+<li><p>Adds a custom MIME type <code class="docutils literal notranslate"><span class="pre">customtype</span></code> for all builders (<code class="docutils literal notranslate"><span class="pre">*</span></code> applies to all builders)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_mime_priority_overrides</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;latex&#39;</span><span class="p">,</span> <span class="s1">&#39;image/jpeg&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;customtype&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">在 0.14.0 版更改: </span><code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code> replaces <code class="docutils literal notranslate"><span class="pre">nb_render_priority</span></code></p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p><a class="reference internal" href="#render-output-cutomise"><span class="std std-ref">Customise the render process</span></a>, for a more advanced means of customisation.</p>
+</div>
+</section>
+<section id="images-and-figures">
+<span id="render-output-images"></span><h2>Images and Figures<a class="headerlink" href="#images-and-figures" title="永久链接至标题">#</a></h2>
+<p>With the default renderer, for any image types output by the code, we can apply formatting <em>via</em> cell metadata.
+The top-level metadata key can be set using <code class="docutils literal notranslate"><span class="pre">nb_cell_metadata_key</span></code> in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, and is set to <code class="docutils literal notranslate"><span class="pre">render</span></code> by default.
+Then for the image we can apply all the variables of the standard <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image directive</a>:</p>
+<ul class="simple">
+<li><p><strong>width</strong>: length or percentage (%) of the current line width</p></li>
+<li><p><strong>height</strong>: length</p></li>
+<li><p><strong>scale</strong>: integer percentage (the “%” symbol is optional)</p></li>
+<li><p><strong>align</strong>: “top”, “middle”, “bottom”, “left”, “center”, or “right”</p></li>
+<li><p><strong>classes</strong>: space separated strings</p></li>
+<li><p><strong>alt</strong>: string</p></li>
+</ul>
+<p>Units of length are: ‘em’, ‘ex’, ‘px’, ‘in’, ‘cm’, ‘mm’, ‘pt’, ‘pc’</p>
+<p>You can also wrap the output in a <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure"><code class="docutils literal notranslate"><span class="pre">figure</span></code></a>, that can include:</p>
+<ul class="simple">
+<li><p><strong>align</strong>: “left”, “center”, or “right”</p></li>
+<li><p><strong>caption</strong>: a string, which must contain a single paragraph and is rendered as MyST Markdown (subsequent paragraphs are added as a legend)</p></li>
+<li><p><strong>caption_before</strong>: a boolean, if true, the caption is rendered before the figure (default is false)</p></li>
+<li><p><strong>name</strong>: by which to reference the figure</p></li>
+<li><p><strong>classes</strong>: space separated strings</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
+<span class="gu">---</span>
+mystnb:
+  image:
+    width: 200px
+    alt: fun-fish
+    classes: shadow bg-primary
+  figure:
+    caption: |
+      Hey everyone its <span class="gs">**party**</span> time!
+
+      (and I&#39;m a legend)
+<span class="gu">    name: fun-fish-ref</span>
+<span class="gu">---</span>
+from IPython.display import Image
+Image(&quot;images/fun-fish.png&quot;)
+```
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="s2">&quot;images/fun-fish.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<figure class="align-default" id="fun-fish-ref">
+<a class="shadow bg-primary reference internal image-reference" href="../_images/3eacaf6adad1a4305807616181bbee897bb29177e79e2092ddd0264b848ddb4e.png"><img alt="fun-fish" class="shadow bg-primary" src="../_images/3eacaf6adad1a4305807616181bbee897bb29177e79e2092ddd0264b848ddb4e.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">Hey everyone its <strong>party</strong> time!</span><a class="headerlink" href="#fun-fish-ref" title="永久链接至图片">#</a></p>
+<div class="legend">
+<p>(and I’m a legend)</p>
+</div>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Now we can link to the image from anywhere in our documentation: <a class="reference internal" href="#fun-fish-ref"><span class="std std-ref">swim to the fish</span></a></p>
+<p>You can create figures for any mime outputs, including tables:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
+<span class="gu">---</span>
+mystnb:
+  figure:
+    align: center
+    caption_before: true
+<span class="gu">    caption: This is my table caption, above the table</span>
+<span class="gu">---</span>
+import pandas
+df = pandas.DataFrame({&quot;column 1&quot;: [1, 2, 3]})
+df = df.style.set_table_attributes(&#39;class=&quot;dataframe align-center&quot;&#39;)
+df
+```
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;column 1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;class=&quot;dataframe align-center&quot;&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<figure class="align-center" id="id2">
+<figcaption>
+<p><span class="caption-text">This is my table caption, above the table</span><a class="headerlink" href="#id2" title="永久链接至图片">#</a></p>
+<div class="output text_html"><style type="text/css">
+</style>
+<table id="T_f04bf" class="dataframe align-center">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_f04bf_level0_col0" class="col_heading level0 col0" >column 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_f04bf_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_f04bf_row0_col0" class="data row0 col0" >1</td>
+    </tr>
+    <tr>
+      <th id="T_f04bf_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_f04bf_row1_col0" class="data row1 col0" >2</td>
+    </tr>
+    <tr>
+      <th id="T_f04bf_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_f04bf_row2_col0" class="data row2 col0" >3</td>
+    </tr>
+  </tbody>
+</table>
+</div></figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="markdown">
+<span id="render-output-markdown"></span><h2>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">#</a></h2>
+<p>The format of output <code class="docutils literal notranslate"><span class="pre">text/markdown</span></code> can be specified by <code class="docutils literal notranslate"><span class="pre">render_markdown_format</span></code> configuration:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">commonmark</span></code> (default): Restricted to the <a class="reference external" href="https://commonmark.org/">CommonMark specification</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gfm</span></code>: Restricted to the <a class="reference external" href="https://github.github.com/gfm/">GitHub-flavored markdown</a>.</p>
+<ul>
+<li><p>Note, this requires the installation of the <a class="reference external" href="https://pypi.org/project/linkify-it-py">linkify-it-py package</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myst</span></code>: Uses <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST parser</a> with the same configuration as the current document.</p></li>
+</ul>
+<p>CommonMark formatting will output basic Markdown syntax:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;**_some_ markdown** and an [a reference](https://example.com)!&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong><em>some</em> markdown</strong> and an <a class="reference external" href="https://example.com">a reference</a>!</p>
+</div>
+</div>
+<p>and even internal images can be rendered!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;![figure](../_static/logo-wide.svg)&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><img alt="figure" src="../_images/logo-wide.svg" /></p>
+</div>
+</div>
+<p>But setting the Markdown format to <code class="docutils literal notranslate"><span class="pre">myst</span></code> will allow for more advanced formatting,
+such as including internal references, tables, and even other directives, either using:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">myst_render_markdown_format</span> <span class="pre">=</span> <span class="pre">&quot;myst&quot;</span></code> in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> to set globally, or</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markdown_format</span></code> in the cell metadata to set per-cell.</p></li>
+</ul>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">````{code-cell} ipython3</span>
+<span class="gu">---</span>
+mystnb:
+<span class="gu">  markdown_format: myst</span>
+<span class="gu">---</span>
+display(Markdown(&#39;**_some_ markdown** and an [<span class="nt">internal reference</span>](<span class="na">render/output/markdown</span>)!&#39;))
+display(Markdown(&quot;&quot;&quot;
+| a | b | c |
+|---|---|---|
+| 1 | 2 | 3 |
+&quot;&quot;&quot;))
+display(Markdown(&quot;&quot;&quot;
+```{note}
+A note admonition!
+```
+&quot;&quot;&quot;))
+````
+</pre></div>
+</div>
+<p>The parsed Markdown is integrated into the wider documentation, and so it is possible, for example, to include internal references:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;**_some_ markdown** and an [internal reference](render/output/markdown)!&#39;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">| a | b | c |</span>
+<span class="s2">|---|---|---|</span>
+<span class="s2">| 1 | 2 | 3 |</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">```</span><span class="si">{note}</span><span class="s2"></span>
+<span class="s2">A note admonition!</span>
+<span class="s2">```</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong><em>some</em> markdown</strong> and an <a class="reference internal" href="#render-output-markdown"><span class="std std-ref">internal reference</span></a>!</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>a</p></th>
+<th class="head"><p>b</p></th>
+<th class="head"><p>c</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>A note admonition!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ansi-outputs">
+<span id="render-output-ansi"></span><h2>ANSI Outputs<a class="headerlink" href="#ansi-outputs" title="永久链接至标题">#</a></h2>
+<p>By default, the standard output/error streams and text/plain MIME outputs may contain ANSI escape sequences to change the text and background colors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BEWARE: </span><span class="se">\x1b</span><span class="s2">[1;33;41mugly colors</span><span class="se">\x1b</span><span class="s2">[m!&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AB</span><span class="se">\x1b</span><span class="s2">[43mCD</span><span class="se">\x1b</span><span class="s2">[35mEF</span><span class="se">\x1b</span><span class="s2">[1mGH</span><span class="se">\x1b</span><span class="s2">[4mIJ</span><span class="se">\x1b</span><span class="s2">[7m&quot;</span>
+      <span class="s2">&quot;KL</span><span class="se">\x1b</span><span class="s2">[49mMN</span><span class="se">\x1b</span><span class="s2">[39mOP</span><span class="se">\x1b</span><span class="s2">[22mQR</span><span class="se">\x1b</span><span class="s2">[24mST</span><span class="se">\x1b</span><span class="s2">[27mUV&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AB<span class=" -Color -Color-BGYellow">CD</span><span class=" -Color -Color-Magenta -Color-Magenta-BGYellow">EF</span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGYellow">GHIJKL</span><span class=" -Color -Color-Bold -Color-Bold-Magenta">MN</span><span class=" -Color -Color-Bold">OP</span>QRSTUV
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BEWARE: <span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGRed">ugly colors</span>!
+</pre></div>
+</div>
+</div>
+</div>
+<p>This uses the built-in <a class="reference internal" href="../reference/api.html#myst_nb.core.lexers.AnsiColorLexer" title="myst_nb.core.lexers.AnsiColorLexer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnsiColorLexer</span></code></a> <a class="reference external" href="https://pygments.org/">pygments lexer</a>.
+You can change the lexer used in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>, for example to turn off lexing:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_render_text_lexer</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
+</pre></div>
+</div>
+<p>The following code<a class="footnote-reference brackets" href="#acknowledge" id="id1">1</a> shows the 8 basic ANSI colors it is based on.
+Each of the 8 colors has an “intense” variation, which is used for bold text.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot; XYZ &quot;</span>
+<span class="n">formatstring</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[</span><span class="si">{}</span><span class="s2">m&quot;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[m&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">6</span>
+    <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;{:^</span><span class="si">{}</span><span class="s2">}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="k">for</span> <span class="n">bg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">48</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">fg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">38</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">bold</span> <span class="ow">in</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">fg_code</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1;&quot;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fg</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot; </span><span class="si">{:&gt;4}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">formatstring</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span><span class="p">)</span>
+            <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">formatstring</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span> <span class="o">+</span> <span class="s2">&quot;;&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">bg</span><span class="p">))</span> <span class="k">for</span> <span class="n">bg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            40   41   42   43   44   45   46   47  
+   30 <span class=" -Color -Color-Black"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGBlack"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGRed"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGGreen"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGYellow"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGBlue"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGMagenta"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGCyan"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGWhite"> XYZ </span>
+ 1;30 <span class=" -Color -Color-Bold -Color-Bold-Black"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGWhite"> XYZ </span>
+   31 <span class=" -Color -Color-Red"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGBlack"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGRed"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGGreen"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGYellow"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGBlue"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGMagenta"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGCyan"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGWhite"> XYZ </span>
+ 1;31 <span class=" -Color -Color-Bold -Color-Bold-Red"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGWhite"> XYZ </span>
+   32 <span class=" -Color -Color-Green"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGBlack"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGRed"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGGreen"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGYellow"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGBlue"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGMagenta"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGCyan"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGWhite"> XYZ </span>
+ 1;32 <span class=" -Color -Color-Bold -Color-Bold-Green"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGWhite"> XYZ </span>
+   33 <span class=" -Color -Color-Yellow"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGBlack"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGRed"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGGreen"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGYellow"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGBlue"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGMagenta"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGCyan"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGWhite"> XYZ </span>
+ 1;33 <span class=" -Color -Color-Bold -Color-Bold-Yellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGWhite"> XYZ </span>
+   34 <span class=" -Color -Color-Blue"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGBlack"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGRed"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGGreen"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGYellow"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGBlue"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGMagenta"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGCyan"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGWhite"> XYZ </span>
+ 1;34 <span class=" -Color -Color-Bold -Color-Bold-Blue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite"> XYZ </span>
+   35 <span class=" -Color -Color-Magenta"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGBlack"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGRed"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGGreen"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGYellow"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGBlue"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGMagenta"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGCyan"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGWhite"> XYZ </span>
+ 1;35 <span class=" -Color -Color-Bold -Color-Bold-Magenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGWhite"> XYZ </span>
+   36 <span class=" -Color -Color-Cyan"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGBlack"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGRed"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGGreen"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGYellow"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGBlue"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGMagenta"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGCyan"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGWhite"> XYZ </span>
+ 1;36 <span class=" -Color -Color-Bold -Color-Bold-Cyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGWhite"> XYZ </span>
+   37 <span class=" -Color -Color-White"> XYZ </span><span class=" -Color -Color-White -Color-White-BGBlack"> XYZ </span><span class=" -Color -Color-White -Color-White-BGRed"> XYZ </span><span class=" -Color -Color-White -Color-White-BGGreen"> XYZ </span><span class=" -Color -Color-White -Color-White-BGYellow"> XYZ </span><span class=" -Color -Color-White -Color-White-BGBlue"> XYZ </span><span class=" -Color -Color-White -Color-White-BGMagenta"> XYZ </span><span class=" -Color -Color-White -Color-White-BGCyan"> XYZ </span><span class=" -Color -Color-White -Color-White-BGWhite"> XYZ </span>
+ 1;37 <span class=" -Color -Color-Bold -Color-Bold-White"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGWhite"> XYZ </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>ANSI also supports a set of 256 indexed colors.
+This is currently not supported, but we hope to introduce it at a later date
+(raise an issue on the repository if you require it!).</p>
+</div>
+</section>
+<section id="customise-the-render-process">
+<span id="render-output-cutomise"></span><h2>Customise the render process<a class="headerlink" href="#customise-the-render-process" title="永久链接至标题">#</a></h2>
+<p>The render process is governed by subclasses of <a class="reference internal" href="../reference/api.html#myst_nb.core.render.NbElementRenderer" title="myst_nb.core.render.NbElementRenderer"><code class="xref py py-class docutils literal notranslate"><span class="pre">NbElementRenderer</span></code></a>, which dictate how to create the <code class="docutils literal notranslate"><span class="pre">docutils</span></code> AST nodes for elements of the notebook.</p>
+<p>Implementations are loaded <em>via</em> Python <a class="reference external" href="https://packaging.python.org/guides/distributing-packages-using-setuptools/#entry-points">entry points</a>, in the <code class="docutils literal notranslate"><span class="pre">myst_nb.renderers</span></code> group.
+So it is possible to inject your own subclass to fully override rendering.</p>
+<p>For example, the renderer loaded in this package is:</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[project.entry-points.&quot;myst_nb.renderers&quot;]</span><span class="w"></span>
+<span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;myst_nb.core.render:NbElementRenderer&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>You can then select the renderer plugin in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_render_plugin</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+</pre></div>
+</div>
+<p>Plugins can also override rendering of particular output MIME types,
+using the <code class="docutils literal notranslate"><span class="pre">myst_nb.mime_renderers</span></code> entry point group to supply functions with signature: <a class="reference internal" href="../reference/api.html#myst_nb.core.render.MimeRenderPlugin" title="myst_nb.core.render.MimeRenderPlugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">MimeRenderPlugin</span></code></a>.</p>
+<p>For example <a class="reference internal" href="../reference/api.html#myst_nb.core.render.ExampleMimeRenderPlugin" title="myst_nb.core.render.ExampleMimeRenderPlugin"><code class="xref py py-class docutils literal notranslate"><span class="pre">myst_nb.core.render.ExampleMimeRenderPlugin</span></code></a>, is loaded in this package:</p>
+<div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[project.entry-points.&quot;myst_nb.mime_renderers&quot;]</span><span class="w"></span>
+<span class="n">example</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;myst_nb.core.render:ExampleMimeRenderPlugin&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Meaning we can now render <code class="docutils literal notranslate"><span class="pre">custommimetype</span></code> in all output formats:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="n">display</span><span class="p">({</span><span class="s2">&quot;custommimetype&quot;</span><span class="p">:</span> <span class="s2">&quot;Some text&quot;</span><span class="p">},</span> <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p class="output text_plain">This is a custom mime type, with content: ‘Some text’</p>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="acknowledge"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Borrowed from <a class="reference external" href="https://nbsphinx.readthedocs.io/en/0.7.1/code-cells.html#ANSI-Colors">nbsphinx</a>!</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">Rendering</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="hiding.html" title="下一页 页">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">Hide cell contents</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Executable Book Project<br/>
+  
+      &copy; Copyright 2022, Executable Book Project.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
