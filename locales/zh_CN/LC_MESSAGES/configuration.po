@@ -1,0 +1,942 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 10:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../configuration.md:3
+msgid "Configuration"
+msgstr ""
+
+#: ../../configuration.md:5
+msgid ""
+"MyST-NB can be configured at three levels of specificity; globally, per "
+"file, and per notebook cell, with the most specific configuration taking "
+"precedence."
+msgstr ""
+
+#: ../../configuration.md:7
+msgid "Global configuration"
+msgstr ""
+
+#: ../../configuration.md:9
+msgid ""
+"Overriding the default configuration at the global level is achieved by "
+"specifying variables in the Sphinx `conf.py` file. All `myst_nb` "
+"configuration variables are prefixed with `nb_`, e.g."
+msgstr ""
+
+#: ../../configuration.md:16
+msgid "Reading"
+msgstr ""
+
+#: ../../configuration.md:18
+msgid "Control how files are read."
+msgstr ""
+
+#: ../../configuration.md:24 ../../configuration.md:33
+#: ../../configuration.md:42 ../../configuration.md:77
+#: ../../configuration.md:86 ../../configuration.md:121
+#: ../../configuration.md:160
+msgid "Name"
+msgstr ""
+
+#: ../../configuration.md:25 ../../configuration.md:34
+#: ../../configuration.md:43 ../../configuration.md:78
+#: ../../configuration.md:87 ../../configuration.md:122
+#: ../../configuration.md:161
+msgid "Type"
+msgstr ""
+
+#: ../../configuration.md:26 ../../configuration.md:35
+#: ../../configuration.md:44 ../../configuration.md:79
+#: ../../configuration.md:88 ../../configuration.md:123
+#: ../../configuration.md:162
+msgid "Default"
+msgstr ""
+
+#: ../../configuration.md:27 ../../configuration.md:36
+#: ../../configuration.md:45 ../../configuration.md:80
+#: ../../configuration.md:89 ../../configuration.md:118
+#: ../../configuration.md:124 ../../configuration.md:163
+msgid "Description"
+msgstr ""
+
+#: ../../configuration.md:28
+msgid "`nb_custom_formats`"
+msgstr ""
+
+#: ../../configuration.md:29
+msgid "`Dict[str, Tuple[str, dict, bool]]`"
+msgstr ""
+
+#: ../../configuration.md:30 ../../configuration.md:39
+#: ../../configuration.md:84 ../../configuration.md:88
+#: ../../configuration.md:128 ../../configuration.md:132
+#: ../../configuration.md:155 ../../configuration.md:159
+#: ../../configuration.md:242 ../../configuration.md:250
+msgid "`{}`"
+msgstr ""
+
+#: ../../configuration.md:31
+msgid "Custom formats for reading notebook; suffix -> reader"
+msgstr ""
+
+#: ../../configuration.md:25 ../../configuration.md:69
+msgid "Execution"
+msgstr ""
+
+#: ../../configuration.md:27 ../../configuration.md:71
+msgid ""
+"This configuration is used to control how Jupyter Notebooks are executed "
+"at build-time."
+msgstr ""
+
+#: ../../configuration.md:37
+msgid "`nb_kernel_rgx_aliases`"
+msgstr ""
+
+#: ../../configuration.md:38 ../../configuration.md:83
+#: ../../configuration.md:87 ../../configuration.md:127
+#: ../../configuration.md:131 ../../configuration.md:154
+#: ../../configuration.md:158 ../../configuration.md:241
+msgid "`Dict[str, str]`"
+msgstr ""
+
+#: ../../configuration.md:40
+msgid ""
+"Mapping of kernel name regex to replacement kernel name(applied before "
+"execution)"
+msgstr ""
+
+#: ../../configuration.md:41
+msgid "`nb_execution_mode`"
+msgstr ""
+
+#: ../../configuration.md:42 ../../configuration.md:82
+msgid "`Literal['off', 'force', 'auto', 'cache', 'inline']`"
+msgstr ""
+
+#: ../../configuration.md:43 ../../configuration.md:83
+msgid "`'auto'`"
+msgstr ""
+
+#: ../../configuration.md:44 ../../configuration.md:84
+msgid "Execution mode for notebooks"
+msgstr ""
+
+#: ../../configuration.md:45
+msgid "`nb_execution_cache_path`"
+msgstr ""
+
+#: ../../configuration.md:46 ../../configuration.md:51
+#: ../../configuration.md:75 ../../configuration.md:79
+#: ../../configuration.md:86 ../../configuration.md:95
+#: ../../configuration.md:119 ../../configuration.md:123
+#: ../../configuration.md:146 ../../configuration.md:150
+#: ../../configuration.md:201
+msgid "`str`"
+msgstr ""
+
+#: ../../configuration.md:47 ../../configuration.md:87
+msgid "`''`"
+msgstr ""
+
+#: ../../configuration.md:48 ../../configuration.md:88
+msgid "Path to folder for caching notebooks (default: <outdir>)"
+msgstr ""
+
+#: ../../configuration.md:49
+msgid "`nb_execution_excludepatterns`"
+msgstr ""
+
+#: ../../configuration.md:50 ../../configuration.md:173
+#: ../../configuration.md:225
+msgid "`Sequence[str]`"
+msgstr ""
+
+#: ../../configuration.md:51 ../../configuration.md:68
+#: ../../configuration.md:112
+msgid "`()`"
+msgstr ""
+
+#: ../../configuration.md:52
+msgid "Exclude (POSIX) glob patterns for notebooks"
+msgstr ""
+
+#: ../../configuration.md:53
+msgid "`nb_execution_timeout`"
+msgstr ""
+
+#: ../../configuration.md:54 ../../configuration.md:90
+#: ../../configuration.md:257
+msgid "`int`"
+msgstr ""
+
+#: ../../configuration.md:55 ../../configuration.md:91
+msgid "`30`"
+msgstr ""
+
+#: ../../configuration.md:56 ../../configuration.md:92
+msgid "Execution timeout (seconds)"
+msgstr ""
+
+#: ../../configuration.md:57
+msgid "`nb_execution_in_temp`"
+msgstr ""
+
+#: ../../configuration.md:47 ../../configuration.md:55
+#: ../../configuration.md:58 ../../configuration.md:59
+#: ../../configuration.md:62 ../../configuration.md:63
+#: ../../configuration.md:66 ../../configuration.md:70
+#: ../../configuration.md:91 ../../configuration.md:94
+#: ../../configuration.md:98 ../../configuration.md:99
+#: ../../configuration.md:102 ../../configuration.md:103
+#: ../../configuration.md:106 ../../configuration.md:107
+#: ../../configuration.md:126 ../../configuration.md:130
+#: ../../configuration.md:134 ../../configuration.md:138
+#: ../../configuration.md:165 ../../configuration.md:169
+#: ../../configuration.md:177 ../../configuration.md:181
+#: ../../configuration.md:185 ../../configuration.md:189
+#: ../../configuration.md:193 ../../configuration.md:197
+#: ../../configuration.md:209 ../../configuration.md:221
+#: ../../configuration.md:229 ../../configuration.md:245
+msgid "`bool`"
+msgstr ""
+
+#: ../../configuration.md:48 ../../configuration.md:56
+#: ../../configuration.md:59 ../../configuration.md:60
+#: ../../configuration.md:63 ../../configuration.md:64
+#: ../../configuration.md:67 ../../configuration.md:71
+#: ../../configuration.md:92 ../../configuration.md:95
+#: ../../configuration.md:99 ../../configuration.md:100
+#: ../../configuration.md:103 ../../configuration.md:104
+#: ../../configuration.md:107 ../../configuration.md:108
+#: ../../configuration.md:127 ../../configuration.md:131
+#: ../../configuration.md:135 ../../configuration.md:139
+#: ../../configuration.md:166 ../../configuration.md:170
+#: ../../configuration.md:194 ../../configuration.md:210
+#: ../../configuration.md:230
+msgid "`False`"
+msgstr ""
+
+#: ../../configuration.md:60 ../../configuration.md:96
+msgid "Use temporary folder for the execution current working directory"
+msgstr ""
+
+#: ../../configuration.md:61
+msgid "`nb_execution_allow_errors`"
+msgstr ""
+
+#: ../../configuration.md:64 ../../configuration.md:100
+msgid "Allow errors during execution"
+msgstr ""
+
+#: ../../configuration.md:65
+msgid "`nb_execution_raise_on_error`"
+msgstr ""
+
+#: ../../configuration.md:68 ../../configuration.md:104
+msgid "Raise an exception on failed execution, rather than emitting a warning"
+msgstr ""
+
+#: ../../configuration.md:69
+msgid "`nb_execution_show_tb`"
+msgstr ""
+
+#: ../../configuration.md:72 ../../configuration.md:108
+msgid "Print traceback to stderr on execution error"
+msgstr ""
+
+#: ../../configuration.md:34 ../../configuration.md:78
+msgid "Rendering"
+msgstr ""
+
+#: ../../configuration.md:36 ../../configuration.md:80
+msgid ""
+"These configuration options affect the look and feel of notebook parsing "
+"and output rendering."
+msgstr ""
+
+#: ../../configuration.md:46
+msgid "`nb_merge_streams`"
+msgstr ""
+
+#: ../../configuration.md:49 ../../configuration.md:93
+#: ../../configuration.md:128
+msgid "Merge stdout/stderr execution output streams"
+msgstr ""
+
+#: ../../configuration.md:50
+msgid "`nb_render_plugin`"
+msgstr ""
+
+#: ../../configuration.md:52 ../../configuration.md:96
+msgid "`'default'`"
+msgstr ""
+
+#: ../../configuration.md:53 ../../configuration.md:97
+msgid ""
+"The entry point for the execution output render class (in group "
+"`myst_nb.output_renderer`)"
+msgstr ""
+
+#: ../../configuration.md:54
+msgid "`nb_remove_code_source`"
+msgstr ""
+
+#: ../../configuration.md:57 ../../configuration.md:101
+#: ../../configuration.md:132
+msgid "Remove code cell source"
+msgstr ""
+
+#: ../../configuration.md:58
+msgid "`nb_remove_code_outputs`"
+msgstr ""
+
+#: ../../configuration.md:61 ../../configuration.md:105
+#: ../../configuration.md:136
+msgid "Remove code cell outputs"
+msgstr ""
+
+#: ../../configuration.md:62
+msgid "`nb_number_source_lines`"
+msgstr ""
+
+#: ../../configuration.md:65 ../../configuration.md:109
+#: ../../configuration.md:140
+msgid "Number code cell source lines"
+msgstr ""
+
+#: ../../configuration.md:66
+msgid "`nb_mime_priority_overrides`"
+msgstr ""
+
+#: ../../configuration.md:67 ../../configuration.md:111
+msgid "`Sequence[Tuple[str, str, Optional[int]]]`"
+msgstr ""
+
+#: ../../configuration.md:69 ../../configuration.md:113
+msgid ""
+"Overrides for the base render priority of mime types: list of (builder "
+"name, mime type, priority)"
+msgstr ""
+
+#: ../../configuration.md:70
+msgid "`nb_output_stderr`"
+msgstr ""
+
+#: ../../configuration.md:71 ../../configuration.md:115
+#: ../../configuration.md:142
+msgid "`Literal['show', 'remove', 'remove-warn', 'warn', 'error', 'severe']`"
+msgstr ""
+
+#: ../../configuration.md:72 ../../configuration.md:116
+#: ../../configuration.md:143
+msgid "`'show'`"
+msgstr ""
+
+#: ../../configuration.md:73 ../../configuration.md:117
+#: ../../configuration.md:144
+msgid "Behaviour for stderr output"
+msgstr ""
+
+#: ../../configuration.md:74
+msgid "`nb_render_text_lexer`"
+msgstr ""
+
+#: ../../configuration.md:76 ../../configuration.md:120
+#: ../../configuration.md:147
+msgid "`'myst-ansi'`"
+msgstr ""
+
+#: ../../configuration.md:77 ../../configuration.md:121
+#: ../../configuration.md:148
+msgid "Pygments lexer applied to stdout/stderr and text/plain outputs"
+msgstr ""
+
+#: ../../configuration.md:78
+msgid "`nb_render_error_lexer`"
+msgstr ""
+
+#: ../../configuration.md:80 ../../configuration.md:124
+#: ../../configuration.md:151
+msgid "`'ipythontb'`"
+msgstr ""
+
+#: ../../configuration.md:81 ../../configuration.md:125
+#: ../../configuration.md:152
+msgid "Pygments lexer applied to error/traceback outputs"
+msgstr ""
+
+#: ../../configuration.md:82
+msgid "`nb_render_image_options`"
+msgstr ""
+
+#: ../../configuration.md:85 ../../configuration.md:129
+#: ../../configuration.md:156
+msgid "Options for image outputs (class|alt|height|width|scale|align)"
+msgstr ""
+
+#: ../../configuration.md:86
+msgid "`nb_render_figure_options`"
+msgstr ""
+
+#: ../../configuration.md:89 ../../configuration.md:133
+#: ../../configuration.md:160
+msgid "Options for figure outputs (classes|name|caption|caption_before)"
+msgstr ""
+
+#: ../../configuration.md:90
+msgid "`nb_render_markdown_format`"
+msgstr ""
+
+#: ../../configuration.md:91 ../../configuration.md:135
+#: ../../configuration.md:162
+msgid "`Literal['commonmark', 'gfm', 'myst']`"
+msgstr ""
+
+#: ../../configuration.md:92 ../../configuration.md:136
+#: ../../configuration.md:163
+msgid "`'commonmark'`"
+msgstr ""
+
+#: ../../configuration.md:93 ../../configuration.md:137
+#: ../../configuration.md:164
+msgid "The format to use for text/markdown rendering"
+msgstr ""
+
+#: ../../configuration.md:94
+msgid "`nb_ipywidgets_js`"
+msgstr ""
+
+#: ../../configuration.md:95
+msgid "`Dict[str, Dict[str, str]]`"
+msgstr ""
+
+#: ../../configuration.md:96
+msgid "`{'https://cdnjs.clou...`"
+msgstr ""
+
+#: ../../configuration.md:97
+msgid "Javascript to be loaded on pages containing ipywidgets"
+msgstr ""
+
+#: ../../configuration.md:43
+msgid "File level configuration"
+msgstr ""
+
+#: ../../configuration.md:45
+msgid ""
+"Overriding the default configuration at a per-file level is achieved by "
+"specifying variables in the files metadata, under the `mystnb` key."
+msgstr ""
+
+#: ../../configuration.md:47
+msgid "In Jupyter notebooks, this is added in the notebook-level metadata, e.g."
+msgstr ""
+
+#: ../../configuration.md:59
+msgid "In text-based notebooks, this is added in the YAML top-matter, e.g."
+msgstr ""
+
+#: ../../configuration.md:81
+msgid "`execution_mode`"
+msgstr ""
+
+#: ../../configuration.md:85
+msgid "`execution_cache_path`"
+msgstr ""
+
+#: ../../configuration.md:89
+msgid "`execution_timeout`"
+msgstr ""
+
+#: ../../configuration.md:93
+msgid "`execution_in_temp`"
+msgstr ""
+
+#: ../../configuration.md:97
+msgid "`execution_allow_errors`"
+msgstr ""
+
+#: ../../configuration.md:101
+msgid "`execution_raise_on_error`"
+msgstr ""
+
+#: ../../configuration.md:105
+msgid "`execution_show_tb`"
+msgstr ""
+
+#: ../../configuration.md:90 ../../configuration.md:125
+msgid "`merge_streams`"
+msgstr ""
+
+#: ../../configuration.md:94
+msgid "`render_plugin`"
+msgstr ""
+
+#: ../../configuration.md:98 ../../configuration.md:129
+msgid "`remove_code_source`"
+msgstr ""
+
+#: ../../configuration.md:102 ../../configuration.md:133
+msgid "`remove_code_outputs`"
+msgstr ""
+
+#: ../../configuration.md:106 ../../configuration.md:137
+msgid "`number_source_lines`"
+msgstr ""
+
+#: ../../configuration.md:110
+msgid "`mime_priority_overrides`"
+msgstr ""
+
+#: ../../configuration.md:114 ../../configuration.md:141
+msgid "`output_stderr`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`render_text_lexer`"
+msgstr ""
+
+#: ../../configuration.md:122
+msgid "`render_error_lexer`"
+msgstr ""
+
+#: ../../configuration.md:126
+msgid "`render_image_options`"
+msgstr ""
+
+#: ../../configuration.md:130
+msgid "`render_figure_options`"
+msgstr ""
+
+#: ../../configuration.md:134
+msgid "`render_markdown_format`"
+msgstr ""
+
+#: ../../configuration.md:87
+msgid "Cell level configuration"
+msgstr ""
+
+#: ../../configuration.md:89
+msgid ""
+"Overriding the default configuration at a per-cell level is achieved by "
+"specifying variables in the cell metadata, under the `mystnb` key."
+msgstr ""
+
+#: ../../configuration.md:91
+msgid "In Jupyter notebooks, this is added in the cell-level metadata, e.g."
+msgstr ""
+
+#: ../../configuration.md:105
+msgid "In text-based notebooks, this is added in the code cell YAML, e.g."
+msgstr ""
+
+#: ../../configuration.md:145
+msgid "`text_lexer`"
+msgstr ""
+
+#: ../../configuration.md:149
+msgid "`error_lexer`"
+msgstr ""
+
+#: ../../configuration.md:153
+msgid "`image`"
+msgstr ""
+
+#: ../../configuration.md:157
+msgid "`figure`"
+msgstr ""
+
+#: ../../configuration.md:161
+msgid "`markdown_format`"
+msgstr ""
+
+#: ../../configuration.md:121
+msgid "Cell tags"
+msgstr ""
+
+#: ../../configuration.md:123
+msgid ""
+"As a convenience for users in Jupyter interfaces, some cell level "
+"configuration can be achieved by specifying tags in the cell metadata."
+msgstr ""
+
+#: ../../configuration.md:125
+msgid "Tags are a list of strings under the `tags` key in the cell metadata, e.g."
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Tag"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`remove-cell`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Remove the cell from the rendered output."
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`remove-input`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Remove the code cell input/source from the rendered output."
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`remove-output`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Remove the code cell output from the rendered output."
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`remove-stderr`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Remove the code cell output stderr from the rendered output."
+msgstr ""
+
+#: ../../configuration.md:144
+msgid ""
+"Additionally, for code execution, these tags are provided (via "
+"`nbclient`):"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`skip-execution`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Skip this cell, when executing the notebook"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "`raises-exception`"
+msgstr ""
+
+#: ../../configuration.md:118
+msgid "Expect the code cell to raise an Exception (and continue execution)"
+msgstr ""
+
+#: ../../configuration.md:151
+msgid "Markdown parsing configuration"
+msgstr ""
+
+#: ../../configuration.md:153
+msgid ""
+"The MyST-NB parser derives from {ref}`the base MyST-Parser <myst:intro"
+"/get-started>`, and so all the same configuration options are available. "
+"As referenced in {ref}`MyST configuration options <myst:sphinx/config-"
+"options>`, the full set of global options are:"
+msgstr ""
+
+#: ../../configuration.md:164
+msgid "`myst_commonmark_only`"
+msgstr ""
+
+#: ../../configuration.md:167
+msgid "Use strict CommonMark parser"
+msgstr ""
+
+#: ../../configuration.md:168
+msgid "`myst_gfm_only`"
+msgstr ""
+
+#: ../../configuration.md:171
+msgid "Use strict Github Flavoured Markdown parser"
+msgstr ""
+
+#: ../../configuration.md:172
+msgid "`myst_enable_extensions`"
+msgstr ""
+
+#: ../../configuration.md:174 ../../configuration.md:206
+#: ../../configuration.md:226
+msgid "`[]`"
+msgstr ""
+
+#: ../../configuration.md:175
+msgid "Enable extensions"
+msgstr ""
+
+#: ../../configuration.md:176
+msgid "`myst_linkify_fuzzy_links`"
+msgstr ""
+
+#: ../../configuration.md:178 ../../configuration.md:182
+#: ../../configuration.md:186 ../../configuration.md:190
+#: ../../configuration.md:198 ../../configuration.md:222
+#: ../../configuration.md:246
+msgid "`True`"
+msgstr ""
+
+#: ../../configuration.md:179
+msgid "linkify: recognise URLs without schema prefixes"
+msgstr ""
+
+#: ../../configuration.md:180
+msgid "`myst_dmath_allow_labels`"
+msgstr ""
+
+#: ../../configuration.md:183
+msgid "Parse `$$...$$ (label)`"
+msgstr ""
+
+#: ../../configuration.md:184
+msgid "`myst_dmath_allow_space`"
+msgstr ""
+
+#: ../../configuration.md:187
+msgid "dollarmath: allow initial/final spaces in `$ ... $`"
+msgstr ""
+
+#: ../../configuration.md:188
+msgid "`myst_dmath_allow_digits`"
+msgstr ""
+
+#: ../../configuration.md:191
+msgid "dollarmath: allow initial/final digits `1$ ...$2`"
+msgstr ""
+
+#: ../../configuration.md:192
+msgid "`myst_dmath_double_inline`"
+msgstr ""
+
+#: ../../configuration.md:195
+msgid "dollarmath: parse inline `$$ ... $$`"
+msgstr ""
+
+#: ../../configuration.md:196
+msgid "`myst_update_mathjax`"
+msgstr ""
+
+#: ../../configuration.md:199
+msgid "Update sphinx.ext.mathjax configuration"
+msgstr ""
+
+#: ../../configuration.md:200
+msgid "`myst_mathjax_classes`"
+msgstr ""
+
+#: ../../configuration.md:202
+msgid "`'tex2jax_process|mat...`"
+msgstr ""
+
+#: ../../configuration.md:203
+msgid "MathJax classes to add to math HTML"
+msgstr ""
+
+#: ../../configuration.md:204
+msgid "`myst_disable_syntax`"
+msgstr ""
+
+#: ../../configuration.md:205
+msgid "`Iterable[str]`"
+msgstr ""
+
+#: ../../configuration.md:207
+msgid "Disable syntax elements"
+msgstr ""
+
+#: ../../configuration.md:208
+msgid "`myst_all_links_external`"
+msgstr ""
+
+#: ../../configuration.md:211
+msgid "Parse all links as simple hyperlinks"
+msgstr ""
+
+#: ../../configuration.md:212
+msgid "`myst_url_schemes`"
+msgstr ""
+
+#: ../../configuration.md:213 ../../configuration.md:217
+msgid "`Optional[Iterable[str]]`"
+msgstr ""
+
+#: ../../configuration.md:214
+msgid "`('http', 'https', 'm...`"
+msgstr ""
+
+#: ../../configuration.md:215
+msgid "URL scheme prefixes identified as external links"
+msgstr ""
+
+#: ../../configuration.md:216
+msgid "`myst_ref_domains`"
+msgstr ""
+
+#: ../../configuration.md:218 ../../configuration.md:234
+#: ../../configuration.md:238
+msgid "`None`"
+msgstr ""
+
+#: ../../configuration.md:219
+msgid "Sphinx domain names to search in for references"
+msgstr ""
+
+#: ../../configuration.md:220
+msgid "`myst_highlight_code_blocks`"
+msgstr ""
+
+#: ../../configuration.md:223
+msgid "Syntax highlight code blocks with pygments"
+msgstr ""
+
+#: ../../configuration.md:224
+msgid "`myst_number_code_blocks`"
+msgstr ""
+
+#: ../../configuration.md:227
+msgid "Add line numbers to code blocks with these languages"
+msgstr ""
+
+#: ../../configuration.md:228
+msgid "`myst_title_to_header`"
+msgstr ""
+
+#: ../../configuration.md:231
+msgid "Convert a `title` field in the top-matter to a H1 header"
+msgstr ""
+
+#: ../../configuration.md:232
+msgid "`myst_heading_anchors`"
+msgstr ""
+
+#: ../../configuration.md:233
+msgid "`Optional[int]`"
+msgstr ""
+
+#: ../../configuration.md:235
+msgid "Heading level depth to assign HTML anchors"
+msgstr ""
+
+#: ../../configuration.md:236
+msgid "`myst_heading_slug_func`"
+msgstr ""
+
+#: ../../configuration.md:237
+msgid "`Optional[Callable[[str], str]]`"
+msgstr ""
+
+#: ../../configuration.md:239
+msgid "Function for creating heading anchors"
+msgstr ""
+
+#: ../../configuration.md:240
+msgid "`myst_html_meta`"
+msgstr ""
+
+#: ../../configuration.md:243
+msgid "HTML meta tags"
+msgstr ""
+
+#: ../../configuration.md:244
+msgid "`myst_footnote_transition`"
+msgstr ""
+
+#: ../../configuration.md:247
+msgid "Place a transition before any footnotes"
+msgstr ""
+
+#: ../../configuration.md:248
+msgid "`myst_substitutions`"
+msgstr ""
+
+#: ../../configuration.md:249
+msgid "`Dict[str, Union[str, int, float]]`"
+msgstr ""
+
+#: ../../configuration.md:251
+msgid "Substitutions"
+msgstr ""
+
+#: ../../configuration.md:252
+msgid "`myst_sub_delimiters`"
+msgstr ""
+
+#: ../../configuration.md:253
+msgid "`Tuple[str, str]`"
+msgstr ""
+
+#: ../../configuration.md:254
+msgid "`('{', '}')`"
+msgstr ""
+
+#: ../../configuration.md:255
+msgid "Substitution delimiters"
+msgstr ""
+
+#: ../../configuration.md:256
+msgid "`myst_words_per_minute`"
+msgstr ""
+
+#: ../../configuration.md:258
+msgid "`200`"
+msgstr ""
+
+#: ../../configuration.md:259
+msgid "For reading speed calculations"
+msgstr ""
+
+#: ../../configuration.md:161
+msgid "Warning suppression"
+msgstr ""
+
+#: ../../configuration.md:163
+msgid ""
+"When Sphinx encounters and error or raises a warning, it will print the "
+"location and source file of the text that generated that error. This "
+"works slightly differently depending on whether you use markdown files or"
+" Jupyter Notebook files."
+msgstr ""
+
+#: ../../configuration.md:166
+msgid ""
+"For markdown (`.md`) files, Sphinx will correctly report the line number "
+"that the error or warning is associated with:"
+msgstr ""
+
+#: ../../configuration.md:172
+msgid ""
+"For Jupyter Notebook (`.ipynb`) files, these errors also correspond to a "
+"cell index. To allow for this, we use a special format of line number "
+"corresponding to: `<CELL_INDEX> * 10000 + LINE_NUMBER`."
+msgstr ""
+
+#: ../../configuration.md:175
+msgid "For example, the following error corresponds to **Cell 1, line 4**:"
+msgstr ""
+
+#: ../../configuration.md:181
+msgid ""
+"In general, if your build logs any warnings, you should either fix them "
+"or raise an Issue if you think the warning is erroneous. However, in some"
+" circumstances if you wish to suppress the warning you can use the Sphinx"
+" [`suppress_warnings`](https://www.sphinx-"
+"doc.org/en/master/usage/configuration.html#confval-suppress_warnings) "
+"configuration option. All myst-nb warnings are prepended by their type, "
+"and can be suppressed by e.g."
+msgstr ""
+

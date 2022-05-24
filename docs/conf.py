@@ -9,6 +9,9 @@ copyright = "2022, Executable Book Project"
 author = "Executable Book Project"
 
 master_doc = "index"
+language = 'zh_CN'
+locale_dirs = ['../locales/']  # path is example but recommended.
+gettext_compact = False  # optional.
 
 # -- General configuration ---------------------------------------------------
 

@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 10:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../index.md:104
+msgid "Guides"
+msgstr "指南"
+
+#: ../../index.md:116
+msgid "Reference"
+msgstr "参考"
+
+#: ../../index.md:5
+msgid "Overview"
+msgstr "概述"
+
+#: ../../index.md
+msgid "Jupyter Notebook Publishing"
+msgstr "Jupyter Notebook 发布"
+
+#: ../../index.md:32
+msgid ""
+"A Sphinx and Docutils extension for compiling Jupyter Notebooks into high"
+" quality documentation formats."
+msgstr ""
+"用于编译 Jupyter 笔记本到高质量文档格式的 Sphinx 和 Docutils 扩展。"
+
+#: ../../index.md:34
+msgid "Get Started"
+msgstr "快速入门"
+
+#: ../../index.md:54
+msgid ""
+"Mix Jupyter notebooks with text-based notebooks, Markdown and RST "
+"documents.\\ Use MyST Markdown syntax to support technical authoring "
+"features such as cross-referencing, figures, and admonitions."
+msgstr ""
+"混合 Jupyter 笔记本与基于文本的笔记本，Markdown 和 RST 文档。"
+"使用 MyST Markdown 语法来支持技术创作功能，如交叉引用、图形和警告。"
+
+#: ../../index.md:58
+msgid "[Learn more »](authoring/intro)"
+msgstr "[了解更多 »](authoring/intro)"
+
+#: ../../index.md:65
+msgid ""
+"Generate dynamic outputs using Jupyter kernels, with configurable "
+"execution handling.\\ Cache execution outputs, for fast re-builds."
+msgstr ""
+"使用 Jupyter kernel 生成动态输出，带有可配置的执行处理。"
+"高速缓存执行输出，用于快速重建。"
+
+#: ../../index.md:69
+msgid "[Learn more »](execute/intro)"
+msgstr "[了解更多 »](execute/intro)"
+
+#: ../../index.md:76
+msgid ""
+"Convert Jupyter execution outputs to rich embedded content.\\ Insert "
+"computed variables within the document flow.\\ Build single or "
+"collections of documents into multiple formats (HTML, PDF, ...)."
+msgstr ""
+"将 Jupyter 执行输出转换为丰富的嵌入式内容。"
+"在文档流中插入已计算的变量。"
+"将单个或集合的文档构建为多种格式（HTML、PDF 等）。"
+
+#: ../../index.md:81
+msgid "[Learn more »](render/code-cells)"
+msgstr "[了解更多 »](render/code-cells)"
+
+#: ../../index.md:87
+msgid ""
+"MyST-NB is a module within the [Executable Books "
+"Project](https://executablebooks.org), an international collaboration to "
+"build open source tools that facilitate publishing computational "
+"narratives using the Jupyter ecosystem. It is also a core component of "
+"[Jupyter Book](jb:intro)."
+msgstr ""
+"MyST-NB 是 [可执行图书项目(Executable Books Project)](https://executablebooks.org) 中的模块，"
+"该项目是国际合作项目，旨在构建开源工具，使用 Jupyter 生态系统来促进出版计算叙事。"
+"它也是 [Jupyter Book](jb:intro) 的核心组成部分。"
+
+#: ../../index.md:91
+msgid ""
+"Check out the [Gallery of Jupyter "
+"Books](https://executablebooks.org/en/latest/gallery.html), for "
+"inspiration from across the community."
+msgstr ""
+"查看 [Jupyter 图书画廊](https://executablebooks.org/en/latest/gallery.html)，寻找来自整个社区的灵感。"
+
+#: ../../index.md:94
+msgid ""
+"See also, the [MyST-Markdown VS Code "
+"extension](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject"
+".myst-highlight) and [jupyterlab-myst](https://github.com/executablebooks"
+"/jupyterlab-myst), for editor tools to author your notebooks."
+msgstr ""
+"另外，还有 [MyST-Markdown VS Code](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject"
+".myst-highlight) 扩展和 [jupyterlab-myst](https://github.com/executablebooks"
+"/jupyterlab-myst)，这些编辑工具可以用来编辑你的笔记本。"

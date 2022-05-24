@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 10:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../render/hiding.md:7
+msgid "Hide cell contents"
+msgstr ""
+
+#: ../../render/hiding.md:9
+msgid ""
+"You can use Jupyter Notebook **cell tags** to control some of the "
+"behavior of the rendered notebook. This uses the [**`sphinx-"
+"togglebutton`**](https://sphinx-togglebutton.readthedocs.io/en/latest/) "
+"package to add a little button that toggles the visibility of "
+"content.[^download]"
+msgstr ""
+
+#: ../../render/hiding.md:18
+msgid "Hide code cells"
+msgstr ""
+
+#: ../../render/hiding.md:20
+msgid ""
+"You can use **cell tags** to control the content hidden with code cells "
+"at the cell level. Add the following tags to a cell's metadata to control"
+" what to hide in code cells:"
+msgstr ""
+
+#: ../../render/hiding.md:24
+msgid "**`hide-input`** tag to hide the cell inputs"
+msgstr ""
+
+#: ../../render/hiding.md:25
+msgid "**`hide-output`** to hide the cell outputs"
+msgstr ""
+
+#: ../../render/hiding.md:26
+msgid "**`hide-cell`** to hide the entire cell"
+msgstr ""
+
+#: ../../render/hiding.md:28
+msgid "For example, we'll show cells with each below."
+msgstr ""
+
+#: ../../render/hiding.md:38
+msgid ""
+"Here is a cell with a `hide-input` tag. Click the \"toggle\" button to "
+"the right to show it."
+msgstr ""
+
+#: ../../render/hiding.md:49
+msgid "Here's a cell with a `hide-output` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:59
+msgid "And the following cell has a `hide-cell` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:71
+msgid "Hide markdown cells"
+msgstr ""
+
+#: ../../render/hiding.md:73
+msgid ""
+"You cannot hide an entire markdown cell, but you can hide sections of "
+"markdown **content** by using roles and directives."
+msgstr ""
+
+#: ../../render/hiding.md:75
+msgid ""
+"For information on how to hide / toggle markdown content in Sphinx, see "
+"either [the `sphinx-togglebutton` documentation](https://sphinx-"
+"togglebutton.readthedocs.io/en/latest/) or the [`sphinx-design` dropdowns"
+" documentation](https://sphinx-"
+"design.readthedocs.io/en/latest/dropdowns.html)."
+msgstr ""
+
+#: ../../render/hiding.md:79
+msgid "Remove parts of cells"
+msgstr ""
+
+#: ../../render/hiding.md:81
+msgid ""
+"Sometimes, you want to entirely remove parts of a cell so that it doesn't"
+" make it into the output at all."
+msgstr ""
+
+#: ../../render/hiding.md:83
+msgid ""
+"To do this at the global level, use the `nb_remove_code_source` or "
+"`nb_remove_code_outputs` configuration options, or at a per-file level, "
+"e.g."
+msgstr ""
+
+#: ../../render/hiding.md:93
+msgid "See the [configuration section](config/intro) for more details."
+msgstr ""
+
+#: ../../render/hiding.md:95
+msgid ""
+"At a per-cell level you can use the same tag pattern described above, but"
+" with the word `remove_` instead of `hide_`. Use the following tags:"
+msgstr ""
+
+#: ../../render/hiding.md:98
+msgid "**`remove-input`** tag to remove the cell inputs"
+msgstr ""
+
+#: ../../render/hiding.md:99
+msgid "**`remove-output`** to remove the cell outputs"
+msgstr ""
+
+#: ../../render/hiding.md:100
+msgid "**`remove-cell`** to remove the entire cell"
+msgstr ""
+
+#: ../../render/hiding.md:104
+msgid ""
+"Here is a cell with a `remove-input` tag. The inputs will not make it "
+"into the page at all."
+msgstr ""
+
+#: ../../render/hiding.md:115
+msgid "Here's a cell with a `remove-output` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:125
+msgid ""
+"And the following cell has a `remove-cell` tag (there should be nothing "
+"below, since the cell will be gone)."
+msgstr ""
+
+#: ../../render/hiding.md:13
+msgid ""
+"This notebook can be downloaded as         **{nb-"
+"download}`hiding.ipynb`** and {download}`hiding.md`"
+msgstr ""
+

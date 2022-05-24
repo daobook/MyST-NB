@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 10:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../computation/execute.md:8
+msgid "Execute and cache"
+msgstr ""
+
+#: ../../computation/execute.md:10
+msgid ""
+"MyST-NB can automatically run and cache notebooks contained in your "
+"project using [jupyter-cache]. Notebooks can either be run each time the "
+"documentation is built, or cached locally so that re-runs occur only when"
+" code cells have changed."
+msgstr ""
+
+#: ../../computation/execute.md:13
+msgid ""
+"Execution and caching behaviour is controlled with configuration at a "
+"global or per-file level, as outlined in the [configuration "
+"section](config/intro). See the sections below for a description of each "
+"configuration option and their effect."
+msgstr ""
+
+#: ../../computation/execute.md:18
+msgid "Notebook execution modes"
+msgstr ""
+
+#: ../../computation/execute.md:20
+msgid ""
+"To trigger the execution of notebook pages, use the global "
+"`nb_execution_mode` configuration key, or per-file `execution_mode` key:"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Mode"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Description"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "`off`"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Do not execute the notebook"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "`force`"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Always execute the notebook (before parsing)"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "`auto`"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Execute notebooks with missing outputs (before parsing)"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "`cache`"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Execute notebook and store/retrieve outputs from a cache"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "`inline`"
+msgstr ""
+
+#: ../../computation/execute.md
+msgid "Execute the notebook during parsing (allows for variable evaluation)"
+msgstr ""
+
+#: ../../computation/execute.md:30
+msgid "By default this is set to:"
+msgstr ""
+
+#: ../../computation/execute.md:36
+msgid ""
+"This will only execute notebooks that are missing at least one output. If"
+" a notebook has *all* of its outputs populated, then it will not be "
+"executed."
+msgstr ""
+
+#: ../../computation/execute.md:39
+msgid ""
+"To force the execution of all notebooks, regardless of their outputs, "
+"change the above configuration value to:"
+msgstr ""
+
+#: ../../computation/execute.md:45
+msgid ""
+"To cache execution outputs with [jupyter-cache], change the above "
+"configuration value to:"
+msgstr ""
+
+#: ../../computation/execute.md:51
+msgid "See {ref}`execute/cache` for more information."
+msgstr ""
+
+#: ../../computation/execute.md:53
+msgid ""
+"To execute notebooks inline during parsing, change the above "
+"configuration value to:"
+msgstr ""
+
+#: ../../computation/execute.md:59
+msgid ""
+"This allows for the use of `eval` roles/directives to embed variables, "
+"evaluated from the execution kernel, inline of the Markdown."
+msgstr ""
+
+#: ../../computation/execute.md:61
+msgid "See {ref}`render/eval` for more information."
+msgstr ""
+
+#: ../../computation/execute.md:63
+msgid "To turn off notebook execution, change the above configuration value to:"
+msgstr ""
+
+#: ../../computation/execute.md:69
+msgid "Exclude notebooks from execution"
+msgstr ""
+
+#: ../../computation/execute.md:71
+msgid ""
+"To exclude certain file patterns from execution, use the following "
+"configuration:"
+msgstr ""
+
+#: ../../computation/execute.md:77
+msgid ""
+"Any file that matches one of the items in `nb_execution_excludepatterns` "
+"will not be executed."
+msgstr ""
+
+#: ../../computation/execute.md:80
+msgid "Cache execution outputs"
+msgstr ""
+
+#: ../../computation/execute.md:82
+msgid ""
+"As mentioned above, you can cache the results of executing a notebook "
+"page by setting:"
+msgstr ""
+
+#: ../../computation/execute.md:88
+msgid ""
+"In this case, when a page is executed, its outputs will be stored in a "
+"local database. This allows you to be sure that the outputs in your "
+"documentation are up-to-date, while saving time avoiding unnecessary re-"
+"execution. It also allows you to store your `.ipynb` files (or their "
+"`.md` equivalent) in your `git` repository *without their outputs*, but "
+"still leverage a cache to save time when building your site."
+msgstr ""
+
+#: ../../computation/execute.md:93
+msgid ""
+"You should only use this option when notebooks have deterministic "
+"execution outputs:"
+msgstr ""
+
+#: ../../computation/execute.md:95
+msgid ""
+"You use the same environment to run them (e.g. the same installed "
+"packages)"
+msgstr ""
+
+#: ../../computation/execute.md:96
+msgid "They run no non-deterministic code (e.g. random numbers)"
+msgstr ""
+
+#: ../../computation/execute.md:97
+msgid ""
+"They do not depend on external resources (e.g. files or network "
+"connections) that change over time"
+msgstr ""
+
+#: ../../computation/execute.md:100
+msgid "When you re-build your site, the following will happen:"
+msgstr ""
+
+#: ../../computation/execute.md:102
+msgid ""
+"Notebooks that have not seen changes to their **code cells** or "
+"**metadata** since the last build will not be re-executed. Instead, their"
+" outputs will be pulled from the cache and inserted into your site."
+msgstr ""
+
+#: ../../computation/execute.md:104
+msgid ""
+"Notebooks that **have any change to their code cells** will be re-"
+"executed, and the cache will be updated with the new outputs."
+msgstr ""
+
+#: ../../computation/execute.md:106
+msgid ""
+"By default, the cache will be placed in the parent of your build folder. "
+"Generally, this is in `_build/.jupyter_cache`, and it will also be "
+"specified in the build log, e.g."
+msgstr ""
+
+#: ../../computation/execute.md:113
+msgid ""
+"You may also specify a path to the location of a jupyter cache you'd like"
+" to use:"
+msgstr ""
+
+#: ../../computation/execute.md:119
+msgid ""
+"The path should point to an **empty folder**, or a folder where a "
+"**jupyter cache already exists**."
+msgstr ""
+
+#: ../../computation/execute.md:121
+msgid ""
+"Once you have run the documentation build, you can inspect the contents "
+"of the cache with the following command:"
+msgstr ""
+
+#: ../../computation/execute.md:127
+msgid "See [jupyter-cache] for more information."
+msgstr ""
+
+#: ../../computation/execute.md:131
+msgid "Execute with a different kernel name"
+msgstr ""
+
+#: ../../computation/execute.md:133
+msgid ""
+"If you require your notebooks to run with a different kernel, to those "
+"specified in the actual files, you can set global aliases with e.g."
+msgstr ""
+
+#: ../../computation/execute.md:139
+msgid ""
+"The mapping keys are [regular expressions](https://www.regular-"
+"expressions.info/) so, for example `oth.*` will match any kernel name "
+"starting with `oth`."
+msgstr ""
+
+#: ../../computation/execute.md:141
+msgid "Executing in temporary folders"
+msgstr ""
+
+#: ../../computation/execute.md:143
+msgid ""
+"By default, the command working directory (cwd) that a notebook runs in "
+"will be the directory it is located in. However, you can set "
+"`nb_execution_in_temp=True` in your `conf.py`, to change this behaviour "
+"such that, for each execution, a temporary directory will be created and "
+"used as the cwd."
+msgstr ""
+
+#: ../../computation/execute.md:147
+msgid "Execution timeout"
+msgstr ""
+
+#: ../../computation/execute.md:149
+msgid ""
+"The execution of notebooks is managed by {doc}`nbclient "
+"<nbclient:client>`."
+msgstr ""
+
+#: ../../computation/execute.md:151
+msgid ""
+"The `nb_execution_timeout` sphinx option defines the maximum time (in "
+"seconds) each notebook cell is allowed to run. If the execution takes "
+"longer an exception will be raised. The default is 30 s, so in cases of "
+"long-running cells you may want to specify an higher value. The timeout "
+"option can also be set to `None` or -1 to remove any restriction on "
+"execution time."
+msgstr ""
+
+#: ../../computation/execute.md:156
+msgid ""
+"This global value can also be overridden per notebook by adding this to "
+"you notebooks metadata:"
+msgstr ""
+
+#: ../../computation/execute.md:168
+msgid "Raise errors in code cells"
+msgstr ""
+
+#: ../../computation/execute.md:170
+msgid ""
+"In some cases, you may want to intentionally show code that doesn't work "
+"(e.g., to show the error message). You can achieve this at \"three "
+"levels\":"
+msgstr ""
+
+#: ../../computation/execute.md:173
+msgid "Globally, by setting `nb_execution_allow_errors=True` in your `conf.py`."
+msgstr ""
+
+#: ../../computation/execute.md:175
+msgid "Per notebook (overrides global), by adding this to you notebooks metadata:"
+msgstr ""
+
+#: ../../computation/execute.md:186
+msgid ""
+"Per cell, by adding a `raises-exception` tag to your code cell. This can "
+"be done via a Jupyter interface, or via the `{code-cell}` directive like "
+"so:"
+msgstr ""
+
+#: ../../computation/execute.md:197
+msgid "Which produces:"
+msgstr ""
+
+#: ../../computation/execute.md:207
+msgid "Error reporting: Warning vs. Failure"
+msgstr ""
+
+#: ../../computation/execute.md:209
+msgid ""
+"When an error occurs in a context where "
+"`nb_execution_allow_errors=False`, the default behaviour is for this to "
+"be reported as a warning. This warning will simply be logged and not "
+"cause the build to fail unless `sphinx-build` is run with the [`-W` "
+"option](https://www.sphinx-doc.org/en/master/man/sphinx-build.html"
+"#cmdoption-sphinx-build-W). If you would like unexpected execution errors"
+" to cause a build failure rather than a warning regardless of the `-W` "
+"option, you can achieve this by setting "
+"`nb_execution_raise_on_error=True` in your `conf.py`."
+msgstr ""
+
+#: ../../computation/execute.md:215
+msgid "Execution statistics"
+msgstr ""
+
+#: ../../computation/execute.md:217
+msgid ""
+"As notebooks are executed, certain statistics are stored in a dictionary,"
+" and saved on the [sphinx environment object](https://www.sphinx-"
+"doc.org/en/master/extdev/envapi.html#sphinx.environment.BuildEnvironment)"
+" in `env.metadata[docname]`."
+msgstr ""
+
+#: ../../computation/execute.md:219
+msgid ""
+"You can access this in a post-transform in your own sphinx extensions, or"
+" use the built-in `nb-exec-table` directive:"
+msgstr ""
+
+#: ../../computation/execute.md:226
+msgid "which produces:"
+msgstr ""
+

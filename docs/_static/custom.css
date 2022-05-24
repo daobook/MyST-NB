@@ -13,3 +13,7 @@ h3::before {
     counter-increment: subsubsection;
     content: counter(subsection) "." counter(subsubsection) ". ";
 }
+
+url {
+    color: aqua;
+}

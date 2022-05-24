@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-24 10:56+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../computation/coconut-lang.md:7
+msgid "Jupyter kernels"
+msgstr ""
+
+#: ../../computation/coconut-lang.md:9
+msgid ""
+"A Jupyter Notebook can utilise any program kernel that implements the "
+"[Jupyter messaging protocol](http://jupyter-"
+"client.readthedocs.io/en/latest/messaging.html) for executing code. There"
+" are kernels available for [Python](http://ipython.org/notebook.html), "
+"[Julia](https://github.com/JuliaLang/IJulia.jl), "
+"[Ruby](https://github.com/minad/iruby), "
+"[Haskell](https://github.com/gibiansky/IHaskell) and [many other "
+"languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)."
+msgstr ""
+
+#: ../../computation/coconut-lang.md:12
+msgid ""
+"In this notebook we demonstrate executing code with the [Coconut "
+"Programming Language](http://coconut-lang.org), a variant of Python built"
+" for *simple, elegant, Pythonic functional programming*."
+msgstr ""
+
+#: ../../computation/coconut-lang.md:14
+msgid ""
+"In the first example we will define a recursive `factorial` function, a "
+"fundamentally functional approach that doesn’t involve any state changes "
+"or loops:"
+msgstr ""
+
+#: ../../computation/coconut-lang.md:30
+msgid ""
+"Although this example is very basic, pattern-matching is both one of "
+"Coconut’s most powerful and most complicated features."
+msgstr ""
+
+#: ../../computation/coconut-lang.md:32
+msgid ""
+"In the second example, we implement the quick sort algorithm. This "
+"quick_sort algorithm works using a bunch of new constructs:"
+msgstr ""
+
+#: ../../computation/coconut-lang.md:48
+msgid "Finally, we see that exceptions are raised as one would expect:"
+msgstr ""
+
