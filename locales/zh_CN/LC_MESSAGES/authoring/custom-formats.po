@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../authoring/custom-formats.Rmd:20004
 msgid "Custom Formats"
-msgstr ""
+msgstr "自定义格式"
 
 #: ../../authoring/custom-formats.Rmd:20006
 msgid ""
@@ -27,18 +27,21 @@ msgid ""
 " then executed / parsed in the same manner as regular Notebooks, by "
 "adding the following configuration to your `conf.py`:"
 msgstr ""
+"你可以指定其他文件类型转换为笔记本，然后以与普通笔记本相同的方式执行/解析，通过添加以下配置到你的 `conf.py`："
 
 #: ../../authoring/custom-formats.Rmd:20014
 msgid ""
 "The string should be a Python function that will be loaded by `import "
 "mylibrary.converter_function`"
 msgstr ""
+"该字符串应该是 Python 函数，该函数将由 `import mylibrary.converter_function` 加载"
 
 #: ../../authoring/custom-formats.Rmd:20015
 msgid ""
 "The function should take a file's contents (as a `str`) and return an "
 "[nbformat.NotebookNode](nbformat:api)"
 msgstr ""
+"该函数应接受文件的内容（以 `str` 形式）并返回 [nbformat.NotebookNode](nbformat:api)"
 
 #: ../../authoring/custom-formats.Rmd:20017
 msgid ""
@@ -46,6 +49,7 @@ msgid ""
 "these as dictionary in a second argument. For example this is what the "
 "default conversion would look like:"
 msgstr ""
+"如果函数接受额外的关键字参数，那么你可以在第二个参数中将这些参数指定为字典。例如，这是默认转换的样子："
 
 #: ../../authoring/custom-formats.Rmd:20028
 msgid ""

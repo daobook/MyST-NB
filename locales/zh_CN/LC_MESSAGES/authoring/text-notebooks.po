@@ -28,6 +28,8 @@ msgid ""
 "you to store notebook metadata, Markdown, and cell inputs in a text-based"
 " format that is easy to read and use with text-based tools."
 msgstr ""
+"MyST Markdown 笔记本允许你完全使用 MyST Markdown 笔记本格式编写你的 Jupyter Notebook。"
+"这允许你以文本格式存储笔记本元数据、Markdown 和单元格输入，便于阅读和使用文本工具。"
 
 #: ../../authoring/text-notebooks.md:13
 msgid ""
@@ -37,40 +39,46 @@ msgid ""
 "installed). When used with `myst_nb`, MyST notebooks are also integrated "
 "directly into the {ref}`Execution and Caching <execute/cache>` machinery."
 msgstr ""
+"MyST 笔记本与 Jupyter 笔记本有一对一的映射关系，所以可以[转换为 `.ipynb` 文件](converting-ipynb) "
+"并 [在 Jupyter 界面中作为笔记本打开](myst-nb/jupyter-interfaces)(安装了 jupytext)。"
+"当与 `myst_nb` 一起使用时，MyST 笔记本也直接集成到 {ref}`执行和缓存 <execute/cache>` 机制中。"
 
 #: ../../authoring/text-notebooks.md:19
 msgid "The MyST notebook Structure"
-msgstr ""
+msgstr "MyST 笔记本结构"
 
 #: ../../authoring/text-notebooks.md:21
 msgid ""
 "MyST Markdown Notebooks (or MyST notebooks for short) have four main "
 "types of content:"
 msgstr ""
+"MyST Markdown 笔记本（或简称 MyST 笔记本）有四种主要的内容类型："
 
 #: ../../authoring/text-notebooks.md:23
 msgid "**cell/notebook level metadata** that are written as YAML wrapped in `---`"
-msgstr ""
+msgstr "**单元格/笔记本级元数据** 被写为 YAML 包装在 `---`"
 
 #: ../../authoring/text-notebooks.md:24
 msgid "**markdown cells** that can be written as CommonMark or MyST Markdown"
-msgstr ""
+msgstr "**markdown 单元格** 被写作 CommonMark 或者 MyST Markdown"
 
 #: ../../authoring/text-notebooks.md:25
 msgid ""
 "**code cells** that are written with the MyST Markdown `code-cell` "
 "directive syntax"
 msgstr ""
+"用 MyST Markdown `code-cell` 指令语法编写的 **代码单元格**"
 
 #: ../../authoring/text-notebooks.md:26
 msgid ""
 "**raw cells** that are written with the MyST Markdown `raw-cell` "
 "directive syntax"
 msgstr ""
+"使用 MyST Markdown `raw-cell` 指令语法编写的原始单元格"
 
 #: ../../authoring/text-notebooks.md:28
 msgid "Notebook-level metadata"
-msgstr ""
+msgstr "Notebook 级元数据"
 
 #: ../../authoring/text-notebooks.md:30
 msgid ""
@@ -79,6 +87,8 @@ msgid ""
 "**notebook-level metadata** for the resulting Jupyter Notebook. This "
 "metadata takes the following form:"
 msgstr ""
+"用 YAML top-matter 元数据开始 MyST 笔记本文件，至少包含 `file_format: mystnb` 符号。"
+"这将被用作生成的 Jupyter Notebook 的 **笔记本级元数据**。该元数据的形式如下："
 
 #: ../../authoring/text-notebooks.md:46
 msgid ""
@@ -88,10 +98,13 @@ msgid ""
 "installed in your environment and registered with Jupyter. If no kernel "
 "is given, then the default kernel will be used."
 msgstr ""
+"你的代码单元格使用的内核是由 `kernelspec.name` 字段确定的，"
+"应该与安装在你的环境中并在 Jupyter 上注册的 [Jupyter 内核](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) 有关。"
+"如果没有提供内核，则使用默认内核。"
 
 #: ../../authoring/text-notebooks.md:49
 msgid "Syntax for Markdown"
-msgstr ""
+msgstr "Markdown 语法"
 
 #: ../../authoring/text-notebooks.md:51
 msgid ""
@@ -101,12 +114,17 @@ msgid ""
 "However, note that most Jupyter notebook environments may not be able to "
 "render MyST Markdown syntax."
 msgstr ""
+"任何介于两者之间的代码单元格都将被视为 Markdown。"
+"你可以使用任何有效的 MyST Markdown。"
+"如果你使用带有 `myst_nb` Sphinx 扩展的 MyST 笔记本，你可以编写 Sphinx 指令和角色。"
+"然而，请注意，大多数 Jupyter 笔记本环境可能无法呈现 MyST Markdown 语法。"
 
 #: ../../authoring/text-notebooks.md:56
 msgid ""
 "**To denote a break between two markdown cells**, use the following "
 "syntax:"
 msgstr ""
+"**表示两个 markdown 单元格之间的中断**，使用以下语法："
 
 #: ../../authoring/text-notebooks.md:64
 msgid ""
@@ -114,16 +132,19 @@ msgid ""
 "key:val pairs specified in the `{}` brackets will be cell-level metadata "
 "in the second markdown cell."
 msgstr ""
+"这将在最终的笔记本中产生两个 markdown 单元。"
+"`{}` 括号中指定的 key:val 对将是第二个 markdown 单元格中的单元格级元数据。"
 
 #: ../../authoring/text-notebooks.md:67
 msgid "Syntax for code cells"
-msgstr ""
+msgstr "代码单元格语法"
 
 #: ../../authoring/text-notebooks.md:69
 msgid ""
 "When writing MyST notebooks, use the following syntax to define a code "
 "cell:"
 msgstr ""
+"在写 MyST 笔记时，使用下面的语法来定义代码单元格："
 
 #: ../../authoring/text-notebooks.md:79
 msgid ""
@@ -131,14 +152,16 @@ msgid ""
 "used for readability purposes. The content inside `{code-cell}` makes up "
 "the content of the cell, and will be executed at build time."
 msgstr ""
+"`{code-cell}` （上面是 `ipython3`）后面的参数是可选的，用于可读性目的。"
+"`{code-cell}` 内部的内容构成了单元格的内容，并将在构建时执行。"
 
 #: ../../authoring/text-notebooks.md:83
 msgid "This will result in the following output after building your site:"
-msgstr ""
+msgstr "这将导致以下输出后，构建您的网站："
 
 #: ../../authoring/text-notebooks.md:91
 msgid "Cell-level metadata"
-msgstr ""
+msgstr "单元格级别元数据"
 
 #: ../../authoring/text-notebooks.md:93
 msgid ""
@@ -147,32 +170,38 @@ msgid ""
 "metadata tags can be used as you would in a normal notebook, for example "
 "those discussed in {ref}`use/hiding/code`:"
 msgstr ""
+"您可以使用 top-matter 元数据开始 `code-cell` 块。"
+"这些将被用作 **代码单元格级元数据** 在生成的笔记本单元中。"
+"同样的元数据标记可以在普通的笔记本上使用，例如在 {ref}`use/hiding/code` 中讨论的例子："
 
 #: ../../authoring/text-notebooks.md:108
 msgid "Yields the following:"
-msgstr ""
+msgstr "输出如下："
 
 #: ../../authoring/text-notebooks.md:118
 msgid ""
 "There is also an **alternative short-hand syntax** for cell-level "
 "metadata. This takes the following form:"
 msgstr ""
+"对于单元格级元数据，还有 **可替代的简写语法**。它的形式如下："
 
 #: ../../authoring/text-notebooks.md:128
 msgid ""
 "For example, the following syntax adds a `raises-exception` tag to the "
 "cell, which means our code will execute without halting the kernel:"
 msgstr ""
+"例如，下面的语法向单元格添加了 `raises-exception` tag，这意味着代码将在不停止内核的情况下执行："
 
 #: ../../authoring/text-notebooks.md:146
 msgid "Convert between MyST notebooks and `.ipynb`"
-msgstr ""
+msgstr "MyST 笔记本和 `.ipynb` 之间的转换"
 
 #: ../../authoring/text-notebooks.md:148
 msgid ""
 "MyST notebooks can be converted to Jupyter notebooks using the `mystnb-"
 "to-jupyter` CLI command."
 msgstr ""
+"MyST 笔记本可以使用 `mystnb-to-jupyter` 命令转换为 Jupyter 笔记本。"
 
 #: ../../authoring/text-notebooks.md:155
 msgid ""
@@ -180,28 +209,33 @@ msgid ""
 "using [jupytext](https://jupytext.readthedocs.io), a Python library for "
 "two-way conversion of `ipynb` files with many text-based formats."
 msgstr ""
+"MyST 笔记本也可以使用 [jupytext](https://jupytext.readthedocs.io) 从 `ipynb` 文件来回转换，"
+"它是 Python 库，用于多种基于文本格式的 `ipynb` 文件的双向转换。"
 
 #: ../../authoring/text-notebooks.md:158
 msgid ""
 "To let jupytext know the format of the notebook, add the notebook top-"
 "matter similar to:"
 msgstr ""
+"为了让 jupytext 知道笔记本的格式，在笔记本 top-matter 添加类似于："
 
 #: ../../authoring/text-notebooks.md:174
 msgid "Then you can run:"
-msgstr ""
+msgstr "然后可以运行："
 
 #: ../../authoring/text-notebooks.md:176
 msgid ""
 "To convert `.ipynb` to a MyST notebook, run: `jupytext notebook.ipynb "
 "--to myst`"
 msgstr ""
+"转换 `.ipynb` 到 MyST 笔记本，运行 `jupytext notebook.ipynb --to myst`"
 
 #: ../../authoring/text-notebooks.md:177
 msgid ""
 "To convert a MyST notebook to `.ipynb`, run: `jupytext mystfile.md --to "
 "ipynb`"
 msgstr ""
+"把 MyST 的笔记本换成 `.ipynb`，执行 `jupytext mystfile.md --to ipynb`"
 
 #: ../../authoring/text-notebooks.md:180
 msgid ""
@@ -211,10 +245,12 @@ msgid ""
 "format](https://jupytext.readthedocs.io/en/latest/formats.html#myst-"
 "markdown)."
 msgstr ""
+"更多信息，请参阅 [Jupytext 文档](https://jupytext.readthedocs.io)，"
+"特别是 [MyST Markdown 格式](https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown)。"
 
 #: ../../authoring/text-notebooks.md:185
 msgid "MyST notebooks in Jupyter interfaces"
-msgstr ""
+msgstr "MyST 笔记本在 Jupyter 界面"
 
 #: ../../authoring/text-notebooks.md:187
 msgid ""
@@ -224,20 +260,25 @@ msgid ""
 "interface. For more information, see [the Jupytext "
 "documentation](https://jupytext.readthedocs.io)."
 msgstr ""
+"通过使用 Jupytext 扩展，你可以在 Jupyter 界面中使用 MyST 笔记本。"
+"这允许你打开 MyST Markdown 笔记本作为 “常规” Jupyter 笔记本在木星实验室和经典笔记本界面。"
+"要了解更多信息，请参阅 [Jupytext 文档](https://jupytext.readthedocs.io)。"
 
 #: ../../authoring/text-notebooks.md:193
 msgid "MyST notebooks in Jupyter Book"
-msgstr ""
+msgstr "MyST 笔记本在 Jupyter Book"
 
 #: ../../authoring/text-notebooks.md:195
 msgid ""
 "In addition to using MyST notebooks with Sphinx, you may also use them "
 "with the Jupyter Book project. See {doc}`jb:file-types/myst-notebooks`."
 msgstr ""
+"除了使用 MyST 笔记本与 Sphinx，你也可以使用它们与 Jupyter Book 项目。"
+"查阅 {doc}`jb:file-types/myst-notebooks`。"
 
 #: ../../authoring/text-notebooks.md:198
 msgid "Code from Files"
-msgstr ""
+msgstr "来自文件的代码"
 
 #: ../../authoring/text-notebooks.md:201
 msgid ""
@@ -245,6 +286,8 @@ msgid ""
 "markup specification, and may be removed in the future. Using `:load:` "
 "will also overwrite any code written into the directive."
 msgstr ""
+"这是实验性的特性，不是核心 `MyST` 标记规范的一部分，将来可能会被删除。"
+"使用 `:load:` 也会覆盖写入指令的任何代码。"
 
 #: ../../authoring/text-notebooks.md:204
 msgid ""
@@ -253,4 +296,6 @@ msgid ""
 "share code between documents. To do this you specify a `load` metadata "
 "attribute such as:"
 msgstr ""
-
+"`myst_nb` 提供了方便的特性，可以将可执行代码从文件导入到 `{code-cell}` 中。"
+"当您希望在文档之间共享代码时，这可能非常有用。"
+"要做到这一点，你需要指定 `load` 元数据属性，比如："

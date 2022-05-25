@@ -138,7 +138,7 @@ msgid ""
 "MyST-NB will also recognise [jupytext](https://jupytext.readthedocs.io) "
 "top-matter, such as:"
 msgstr ""
-"MyST-NB 也将认可 [jupytext](https://jupytext.readthedocs.io) 的顶级内容，比如："
+"MyST-NB 也将认可 [jupytext](https://jupytext.readthedocs.io) 的 top-matter，比如："
 
 #: ../../authoring/basics.md:112
 msgid "Code cells are then designated by the `code-cell` directive:"
