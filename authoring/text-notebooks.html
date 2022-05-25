@@ -468,54 +468,55 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-myst-notebook-structure">
-   The MyST notebook Structure
+   MyST 笔记本结构
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notebook-level-metadata">
-     Notebook-level metadata
+     Notebook 级元数据
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#syntax-for-markdown">
-     Syntax for Markdown
+     Markdown 语法
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#syntax-for-code-cells">
-     Syntax for code cells
+     代码单元格语法
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cell-level-metadata">
-     Cell-level metadata
+     单元格级别元数据
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convert-between-myst-notebooks-and-ipynb">
-   Convert between MyST notebooks and
+   MyST 笔记本和
    <code class="docutils literal notranslate">
     <span class="pre">
      .ipynb
     </span>
    </code>
+   之间的转换
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-interfaces">
-   MyST notebooks in Jupyter interfaces
+   MyST 笔记本在 Jupyter 界面
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-book">
-   MyST notebooks in Jupyter Book
+   MyST 笔记本在 Jupyter Book
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-from-files">
-   Code from Files
+   来自文件的代码
   </a>
  </li>
 </ul>
@@ -539,54 +540,55 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-myst-notebook-structure">
-   The MyST notebook Structure
+   MyST 笔记本结构
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notebook-level-metadata">
-     Notebook-level metadata
+     Notebook 级元数据
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#syntax-for-markdown">
-     Syntax for Markdown
+     Markdown 语法
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#syntax-for-code-cells">
-     Syntax for code cells
+     代码单元格语法
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#cell-level-metadata">
-     Cell-level metadata
+     单元格级别元数据
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#convert-between-myst-notebooks-and-ipynb">
-   Convert between MyST notebooks and
+   MyST 笔记本和
    <code class="docutils literal notranslate">
     <span class="pre">
      .ipynb
     </span>
    </code>
+   之间的转换
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-interfaces">
-   MyST notebooks in Jupyter interfaces
+   MyST 笔记本在 Jupyter 界面
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#myst-notebooks-in-jupyter-book">
-   MyST notebooks in Jupyter Book
+   MyST 笔记本在 Jupyter Book
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-from-files">
-   Code from Files
+   来自文件的代码
   </a>
  </li>
 </ul>
@@ -601,25 +603,20 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="text-based-notebooks">
 <span id="authoring-text-notebooks"></span><h1>基于文本的笔记本<a class="headerlink" href="#text-based-notebooks" title="永久链接至标题">#</a></h1>
-<p>MyST Markdown notebooks allow you to write your Jupyter Notebook entirely in markdown, utilising the MyST Markdown notebook format.
-This allows you to store notebook metadata, Markdown, and cell inputs in a text-based format that is easy to read and use with text-based tools.</p>
-<p>MyST notebooks have a 1-to-1 mapping with Jupyter notebook,
-so can be <a class="reference internal" href="#converting-ipynb"><span class="std std-ref">converted to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files</span></a> and <a class="reference internal" href="#myst-nb-jupyter-interfaces"><span class="std std-ref">opened as notebooks in Jupyter interfaces</span></a> (with jupytext installed).
-When used with <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code>, MyST notebooks are also integrated directly into the <a class="reference internal" href="../computation/execute.html#execute-cache"><span class="std std-ref">Execution and Caching</span></a> machinery.</p>
+<p>MyST Markdown 笔记本允许你完全使用 MyST Markdown 笔记本格式编写你的 Jupyter Notebook。这允许你以文本格式存储笔记本元数据、Markdown 和单元格输入，便于阅读和使用文本工具。</p>
+<p>MyST 笔记本与 Jupyter 笔记本有一对一的映射关系，所以可以<a class="reference internal" href="#converting-ipynb"><span class="std std-ref">转换为 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 文件</span></a> 并 <a class="reference internal" href="#myst-nb-jupyter-interfaces"><span class="std std-ref">在 Jupyter 界面中作为笔记本打开</span></a>(安装了 jupytext)。当与 <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> 一起使用时，MyST 笔记本也直接集成到 <a class="reference internal" href="../computation/execute.html#execute-cache"><span class="std std-ref">执行和缓存</span></a> 机制中。</p>
 <section id="the-myst-notebook-structure">
-<h2>The MyST notebook Structure<a class="headerlink" href="#the-myst-notebook-structure" title="永久链接至标题">#</a></h2>
-<p>MyST Markdown Notebooks (or MyST notebooks for short) have four main types of content:</p>
+<h2>MyST 笔记本结构<a class="headerlink" href="#the-myst-notebook-structure" title="永久链接至标题">#</a></h2>
+<p>MyST Markdown 笔记本（或简称 MyST 笔记本）有四种主要的内容类型：</p>
 <ul class="simple">
-<li><p><strong>cell/notebook level metadata</strong> that are written as YAML wrapped in <code class="docutils literal notranslate"><span class="pre">---</span></code></p></li>
-<li><p><strong>markdown cells</strong> that can be written as CommonMark or MyST Markdown</p></li>
-<li><p><strong>code cells</strong> that are written with the MyST Markdown <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> directive syntax</p></li>
-<li><p><strong>raw cells</strong> that are written with the MyST Markdown <code class="docutils literal notranslate"><span class="pre">raw-cell</span></code> directive syntax</p></li>
+<li><p><strong>单元格/笔记本级元数据</strong> 被写为 YAML 包装在 <code class="docutils literal notranslate"><span class="pre">---</span></code></p></li>
+<li><p><strong>markdown 单元格</strong> 被写作 CommonMark 或者 MyST Markdown</p></li>
+<li><p>用 MyST Markdown <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 指令语法编写的 <strong>代码单元格</strong></p></li>
+<li><p>使用 MyST Markdown <code class="docutils literal notranslate"><span class="pre">raw-cell</span></code> 指令语法编写的原始单元格</p></li>
 </ul>
 <section id="notebook-level-metadata">
-<h3>Notebook-level metadata<a class="headerlink" href="#notebook-level-metadata" title="永久链接至标题">#</a></h3>
-<p>Begin a MyST notebook file with YAML top-matter metadata, containing at least the <code class="docutils literal notranslate"><span class="pre">file_format:</span> <span class="pre">mystnb</span></code> signifier.
-This will be used as <strong>notebook-level metadata</strong> for the resulting Jupyter Notebook.
-This metadata takes the following form:</p>
+<h3>Notebook 级元数据<a class="headerlink" href="#notebook-level-metadata" title="永久链接至标题">#</a></h3>
+<p>用 YAML top-matter 元数据开始 MyST 笔记本文件，至少包含 <code class="docutils literal notranslate"><span class="pre">file_format:</span> <span class="pre">mystnb</span></code> 符号。这将被用作生成的 Jupyter Notebook 的 <strong>笔记本级元数据</strong>。该元数据的形式如下：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
 <span class="nt">file_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mystnb</span><span class="w"></span>
 <span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
@@ -631,27 +628,22 @@ This metadata takes the following form:</p>
 <span class="nn">...</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The kernel that your code cells use is determined by the <code class="docutils literal notranslate"><span class="pre">kernelspec.name</span></code> field, and  should relate to a <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter kernel</a> installed in your environment and registered with Jupyter.
-If no kernel is given, then the default kernel will be used.</p>
+<p>你的代码单元格使用的内核是由 <code class="docutils literal notranslate"><span class="pre">kernelspec.name</span></code> 字段确定的，应该与安装在你的环境中并在 Jupyter 上注册的 <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">Jupyter 内核</a> 有关。如果没有提供内核，则使用默认内核。</p>
 </section>
 <section id="syntax-for-markdown">
-<h3>Syntax for Markdown<a class="headerlink" href="#syntax-for-markdown" title="永久链接至标题">#</a></h3>
-<p>Anything in-between code cells will be treated as Markdown.
-You can use any Markdown that is valid MyST.
-If you are using MyST notebooks with the <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> Sphinx extension, you can write Sphinx directives and roles.
-However, note that most Jupyter notebook environments may not be able to render MyST Markdown syntax.</p>
-<p><strong>To denote a break between two markdown cells</strong>, use the following syntax:</p>
+<h3>Markdown 语法<a class="headerlink" href="#syntax-for-markdown" title="永久链接至标题">#</a></h3>
+<p>任何介于两者之间的代码单元格都将被视为 Markdown。你可以使用任何有效的 MyST Markdown。如果你使用带有 <code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> Sphinx 扩展的 MyST 笔记本，你可以编写 Sphinx 指令和角色。然而，请注意，大多数 Jupyter 笔记本环境可能无法呈现 MyST Markdown 语法。</p>
+<p><strong>表示两个 markdown 单元格之间的中断</strong>，使用以下语法：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Some</span> <span class="n">markdown</span>
 <span class="o">+++</span> <span class="p">{</span><span class="s2">&quot;optionalkey&quot;</span><span class="p">:</span> <span class="s2">&quot;val&quot;</span><span class="p">}</span>
 <span class="n">More</span> <span class="n">markdown</span>
 </pre></div>
 </div>
-<p>This will result in two markdown cells in the resulting notebook. The key:val pairs
-specified in the <code class="docutils literal notranslate"><span class="pre">{}</span></code> brackets will be cell-level metadata in the second markdown cell.</p>
+<p>这将在最终的笔记本中产生两个 markdown 单元。<code class="docutils literal notranslate"><span class="pre">{}</span></code> 括号中指定的 key:val 对将是第二个 markdown 单元格中的单元格级元数据。</p>
 </section>
 <section id="syntax-for-code-cells">
-<h3>Syntax for code cells<a class="headerlink" href="#syntax-for-code-cells" title="永久链接至标题">#</a></h3>
-<p>When writing MyST notebooks, use the following syntax to define a code cell:</p>
+<h3>代码单元格语法<a class="headerlink" href="#syntax-for-code-cells" title="永久链接至标题">#</a></h3>
+<p>在写 MyST 笔记时，使用下面的语法来定义代码单元格：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
 a = &quot;This is some&quot;
 b = &quot;Python code!&quot;
@@ -659,10 +651,8 @@ print(f&quot;{a} {b}&quot;)
 ```
 </pre></div>
 </div>
-<p>The argument after <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> (above, <code class="docutils literal notranslate"><span class="pre">ipython3</span></code>) is optional, and is used for
-readability purposes. The content inside <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> makes up the content of the cell,
-and will be executed at build time.</p>
-<p>This will result in the following output after building your site:</p>
+<p><code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> （上面是 <code class="docutils literal notranslate"><span class="pre">ipython3</span></code>）后面的参数是可选的，用于可读性目的。<code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> 内部的内容构成了单元格的内容，并将在构建时执行。</p>
+<p>这将导致以下输出后，构建您的网站：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;This is some&quot;</span>
@@ -679,11 +669,8 @@ and will be executed at build time.</p>
 </div>
 </section>
 <section id="cell-level-metadata">
-<h3>Cell-level metadata<a class="headerlink" href="#cell-level-metadata" title="永久链接至标题">#</a></h3>
-<p>You can begin <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> blocks with top-matter metadata. These will be used
-as <strong>cell-level metadata</strong> in the resulting notebook cell.
-The same metadata tags can be used as you would in a normal notebook,
-for example those discussed in <a class="reference internal" href="../render/hiding.html#use-hiding-code"><span class="std std-ref">Hide code cells</span></a>:</p>
+<h3>单元格级别元数据<a class="headerlink" href="#cell-level-metadata" title="永久链接至标题">#</a></h3>
+<p>您可以使用 top-matter 元数据开始 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 块。这些将被用作 <strong>代码单元格级元数据</strong> 在生成的笔记本单元中。同样的元数据标记可以在普通的笔记本上使用，例如在 <a class="reference internal" href="../render/hiding.html#use-hiding-code"><span class="std std-ref">Hide code cells</span></a> 中讨论的例子：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
 <span class="gu">---</span>
 <span class="gu">tags: [hide-output]</span>
@@ -693,7 +680,7 @@ for i in range(20):
 ```
 </pre></div>
 </div>
-<p>Yields the following:</p>
+<p>输出如下：</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
@@ -726,16 +713,14 @@ Millhouse did not test cootie positive
 </div>
 </div>
 </div>
-<p>There is also an <strong>alternative short-hand syntax</strong> for cell-level metadata. This takes
-the following form:</p>
+<p>对于单元格级元数据，还有 <strong>可替代的简写语法</strong>。它的形式如下：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
 :key: val
 print(&quot;hi&quot;)
 ```
 </pre></div>
 </div>
-<p>For example, the following syntax adds a <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> tag to the cell, which
-means our code will execute without halting the kernel:</p>
+<p>例如，下面的语法向单元格添加了 <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> tag，这意味着代码将在不停止内核的情况下执行：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
 :tags: [raises-exception]
 
@@ -763,15 +748,14 @@ raise ValueError(&quot;oopsie!&quot;)
 </section>
 </section>
 <section id="convert-between-myst-notebooks-and-ipynb">
-<span id="converting-ipynb"></span><h2>Convert between MyST notebooks and <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code><a class="headerlink" href="#convert-between-myst-notebooks-and-ipynb" title="永久链接至标题">#</a></h2>
-<p>MyST notebooks can be converted to Jupyter notebooks using the <code class="docutils literal notranslate"><span class="pre">mystnb-to-jupyter</span></code> CLI command.</p>
+<span id="converting-ipynb"></span><h2>MyST 笔记本和 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 之间的转换<a class="headerlink" href="#convert-between-myst-notebooks-and-ipynb" title="永久链接至标题">#</a></h2>
+<p>MyST 笔记本可以使用 <code class="docutils literal notranslate"><span class="pre">mystnb-to-jupyter</span></code> 命令转换为 Jupyter 笔记本。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mystnb-to-jupyter path/to/text-notebook.md
 <span class="go">Wrote notebook to: path/to/text-notebook.ipynb</span>
 </pre></div>
 </div>
-<p>MyST notebooks can also be converted back-and-forth from <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> files using <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a>,
-a Python library for two-way conversion of <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> files with many text-based formats.</p>
-<p>To let jupytext know the format of the notebook, add the notebook top-matter similar to:</p>
+<p>MyST 笔记本也可以使用 <a class="reference external" href="https://jupytext.readthedocs.io">jupytext</a> 从 <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> 文件来回转换，它是 Python 库，用于多种基于文本格式的 <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> 文件的双向转换。</p>
+<p>为了让 jupytext 知道笔记本的格式，在笔记本 top-matter 添加类似于：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span><span class="w"></span>
 <span class="nt">kernelspec</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python3</span><span class="w"></span>
@@ -785,38 +769,31 @@ a Python library for two-way conversion of <code class="docutils literal notrans
 <span class="nn">---</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Then you can run:</p>
+<p>然后可以运行：</p>
 <ul class="simple">
-<li><p>To convert <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> to a MyST notebook, run: <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">notebook.ipynb</span> <span class="pre">--to</span> <span class="pre">myst</span></code></p></li>
-<li><p>To convert a MyST notebook to <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, run: <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">mystfile.md</span> <span class="pre">--to</span> <span class="pre">ipynb</span></code></p></li>
+<li><p>转换 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 到 MyST 笔记本，运行 <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">notebook.ipynb</span> <span class="pre">--to</span> <span class="pre">myst</span></code></p></li>
+<li><p>把 MyST 的笔记本换成 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>，执行 <code class="docutils literal notranslate"><span class="pre">jupytext</span> <span class="pre">mystfile.md</span> <span class="pre">--to</span> <span class="pre">ipynb</span></code></p></li>
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>For more information, see the <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext Documentation</a>,
-and specifically the <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">MyST Markdown format</a>.</p>
+<p>更多信息，请参阅 <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext 文档</a>，特别是 <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">MyST Markdown 格式</a>。</p>
 </div>
 </section>
 <section id="myst-notebooks-in-jupyter-interfaces">
-<span id="myst-nb-jupyter-interfaces"></span><h2>MyST notebooks in Jupyter interfaces<a class="headerlink" href="#myst-notebooks-in-jupyter-interfaces" title="永久链接至标题">#</a></h2>
-<p>You can use MyST notebooks in Jupyter interfaces by using Jupytext extensions. This
-allows you to open a MyST Markdown Notebook as a “regular” Jupyter Notebook in
-Jupyter Lab and the Classic Notebook interface. For more information, see
-<a class="reference external" href="https://jupytext.readthedocs.io">the Jupytext documentation</a>.</p>
+<span id="myst-nb-jupyter-interfaces"></span><h2>MyST 笔记本在 Jupyter 界面<a class="headerlink" href="#myst-notebooks-in-jupyter-interfaces" title="永久链接至标题">#</a></h2>
+<p>通过使用 Jupytext 扩展，你可以在 Jupyter 界面中使用 MyST 笔记本。这允许你打开 MyST Markdown 笔记本作为 “常规” Jupyter 笔记本在木星实验室和经典笔记本界面。要了解更多信息，请参阅 <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext 文档</a>。</p>
 </section>
 <section id="myst-notebooks-in-jupyter-book">
-<span id="myst-nb-jupyter-book"></span><h2>MyST notebooks in Jupyter Book<a class="headerlink" href="#myst-notebooks-in-jupyter-book" title="永久链接至标题">#</a></h2>
-<p>In addition to using MyST notebooks with Sphinx, you may also use them with the
-Jupyter Book project. See <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/myst-notebooks.html" title="(在 Python)"><span>Notebooks written entirely in Markdown</span></a>.</p>
+<span id="myst-nb-jupyter-book"></span><h2>MyST 笔记本在 Jupyter Book<a class="headerlink" href="#myst-notebooks-in-jupyter-book" title="永久链接至标题">#</a></h2>
+<p>除了使用 MyST 笔记本与 Sphinx，你也可以使用它们与 Jupyter Book 项目。查阅 <a class="reference external" href="https://jupyterbook.org/en/stable/file-types/myst-notebooks.html" title="(在 Python)"><span>Notebooks written entirely in Markdown</span></a>。</p>
 </section>
 <section id="code-from-files">
-<h2>Code from Files<a class="headerlink" href="#code-from-files" title="永久链接至标题">#</a></h2>
+<h2>来自文件的代码<a class="headerlink" href="#code-from-files" title="永久链接至标题">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>This is an experimental feature that is <strong>not</strong> part of the core <code class="docutils literal notranslate"><span class="pre">MyST</span></code> markup specification, and may be removed in the future. Using <code class="docutils literal notranslate"><span class="pre">:load:</span></code> will also overwrite any code written into the directive.</p>
+<p>这是实验性的特性，不是核心 <code class="docutils literal notranslate"><span class="pre">MyST</span></code> 标记规范的一部分，将来可能会被删除。使用 <code class="docutils literal notranslate"><span class="pre">:load:</span></code> 也会覆盖写入指令的任何代码。</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> provides a convenience feature for importing executable code into a <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code>
-from a file. This can be useful when you want to share code between documents. To do this
-you specify a <code class="docutils literal notranslate"><span class="pre">load</span></code> metadata attribute such as:</p>
+<p><code class="docutils literal notranslate"><span class="pre">myst_nb</span></code> 提供了方便的特性，可以将可执行代码从文件导入到 <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> 中。当您希望在文档之间共享代码时，这可能非常有用。要做到这一点，你需要指定 <code class="docutils literal notranslate"><span class="pre">load</span></code> 元数据属性，比如：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
 :load: &lt;path&gt;
 ```

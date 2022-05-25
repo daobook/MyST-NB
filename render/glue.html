@@ -776,13 +776,13 @@ Below we’ll calculate a few statistics of interest, and <code class="docutils 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.998978380681862
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9988077694949724
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.986486317488377
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9862978848906305
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0113810845256594
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.011351340649854
 </pre></div>
 </div>
 </div>
@@ -819,8 +819,8 @@ Note that below, we also <em>overwrite</em> the value of <code class="docutils l
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" src="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" />
-<img alt="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" src="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" />
+<img alt="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" src="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" />
+<img alt="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" src="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" />
 </div>
 </div>
 <p>The same can be done for DataFrames (or other table-like objects) as well.</p>
@@ -859,33 +859,33 @@ Note that below, we also <em>overwrite</em> the value of <code class="docutils l
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.156554</td>
-      <td>3.137261</td>
-      <td>2.953239</td>
+      <td>3.148463</td>
+      <td>3.265956</td>
+      <td>2.740414</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.090323</td>
-      <td>3.418929</td>
-      <td>2.805126</td>
+      <td>3.335310</td>
+      <td>3.065459</td>
+      <td>3.065270</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.138961</td>
-      <td>2.835497</td>
-      <td>2.944536</td>
+      <td>2.894552</td>
+      <td>3.196336</td>
+      <td>3.207565</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.097743</td>
-      <td>2.949151</td>
-      <td>3.241945</td>
+      <td>3.269309</td>
+      <td>3.000257</td>
+      <td>3.320015</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.065192</td>
-      <td>3.006912</td>
-      <td>3.019464</td>
+      <td>2.910223</td>
+      <td>2.901953</td>
+      <td>2.841575</td>
     </tr>
   </tbody>
 </table>
@@ -920,17 +920,17 @@ Simply add:</p>
 </pre></div>
 </div>
 <p>Here’s how it looks:</p>
-<img alt="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" src="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" />
+<img alt="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" src="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" />
 <p>Or we can paste inline objects like so:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline text; {glue}`boot_mean`, and figure; {glue}`boot_fig`.
 </pre></div>
 </div>
-<p>Inline text; <span class="output text_plain">2.998978380681862</span>, and figure; <img alt="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" src="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" />.</p>
+<p>Inline text; <span class="output text_plain">2.9988077694949724</span>, and figure; <img alt="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" src="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" />.</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>We recommend using wider, shorter figures when plotting in-line, with a ratio
 around 6x2. For example, here’s is an in-line figure of sorted means
-from our bootstrap: <img alt="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" src="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" />.
+from our bootstrap: <img alt="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" src="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" />.
 It can be used to make a visual point that isn’t too complex! For more
 ideas, check out <a class="reference external" href="https://en.wikipedia.org/wiki/Sparkline">how sparklines are used</a>.</p>
 </div>
@@ -956,7 +956,7 @@ For example, the following text:</p>
 </pre></div>
 </div>
 <p>Is rendered as:</p>
-<p>The mean of the bootstrapped distribution was <span class="pasted-text">2.998978380681862</span> (95% confidence interval <span class="pasted-text">2.986486317488377</span>/<span class="pasted-text">3.0113810845256594</span>)</p>
+<p>The mean of the bootstrapped distribution was <span class="pasted-text">2.9988077694949724</span> (95% confidence interval <span class="pasted-text">2.9862978848906305</span>/<span class="pasted-text">3.011351340649854</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> output.</p>
@@ -1028,7 +1028,7 @@ This is a <span class="gs">**caption**</span>, with an embedded <span class="sb"
 </pre></div>
 </div>
 <figure class="align-default" id="fig-boot" style="width: 300px">
-<img alt="Alternative title" src="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" />
+<img alt="Alternative title" src="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" />
 <figcaption>
 <p><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="永久链接至图片">#</a></p>
 </figcaption>
@@ -1073,33 +1073,33 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.156554</td>
-      <td>3.137261</td>
-      <td>2.953239</td>
+      <td>3.148463</td>
+      <td>3.265956</td>
+      <td>2.740414</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.090323</td>
-      <td>3.418929</td>
-      <td>2.805126</td>
+      <td>3.335310</td>
+      <td>3.065459</td>
+      <td>3.065270</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.138961</td>
-      <td>2.835497</td>
-      <td>2.944536</td>
+      <td>2.894552</td>
+      <td>3.196336</td>
+      <td>3.207565</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.097743</td>
-      <td>2.949151</td>
-      <td>3.241945</td>
+      <td>3.269309</td>
+      <td>3.000257</td>
+      <td>3.320015</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.065192</td>
-      <td>3.006912</td>
-      <td>3.019464</td>
+      <td>2.910223</td>
+      <td>2.901953</td>
+      <td>2.841575</td>
     </tr>
   </tbody>
 </table>
@@ -1212,7 +1212,7 @@ Which we reference as Equation {eq}`eq-sym`
 ```
 </pre></div>
 </div>
-<p>Here is some inline <strong>markdown</strong> with a <a class="reference internal" href="#glue-main"><span class="std std-ref">link</span></a>, and a nested glue value: <span class="output text_plain">2.998978380681862</span>!</p>
+<p>Here is some inline <strong>markdown</strong> with a <a class="reference internal" href="#glue-main"><span class="std std-ref">link</span></a>, and a nested glue value: <span class="output text_plain">2.9988077694949724</span>!</p>
 <section id="a-heading">
 <h4>A heading<a class="headerlink" href="#a-heading" title="永久链接至标题">#</a></h4>
 <p>Then some text, and anything nested.</p>
@@ -1276,12 +1276,12 @@ that were generated in other notebooks. For example the following table:</p>
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p>histogram and raw text</p></td>
-<td class="text-center"><p><img alt="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" src="../_images/7abed0927998630d3a18c3a9c9b3cbbd2ef30c7c3c46595d486319a525475f22.png" /></p></td>
-<td><p><span class="output text_plain">2.998978380681862</span></p></td>
-<td><p><span class="output text_plain">2.986486317488377</span>-<span class="output text_plain">3.0113810845256594</span></p></td>
+<td class="text-center"><p><img alt="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" src="../_images/dae60beeb1b880502998b323491db3c9b8e9a05c2a37332dd38ce22788984b33.png" /></p></td>
+<td><p><span class="output text_plain">2.9988077694949724</span></p></td>
+<td><p><span class="output text_plain">2.9862978848906305</span>-<span class="output text_plain">3.011351340649854</span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>sorted means and formatted text</p></td>
-<td class="text-center"><p><img alt="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" src="../_images/54dea88ead7b871ee56d5b17e16d7bbf34be523a26e3edec3f10cc2593b7da31.png" /></p></td>
+<td class="text-center"><p><img alt="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" src="../_images/52b2861fbff4c82f1d33a82d8bb14ea9135be020bb9933dc5a87adec2c320310.png" /></p></td>
 <td><p><span class="pasted-text">2.999</span></p></td>
 <td><p><span class="pasted-text">2.986</span>-<span class="pasted-text">3.011</span></p></td>
 </tr>
