@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../computation/coconut-lang.md:7
 msgid "Jupyter kernels"
-msgstr ""
+msgstr "Jupyter 内核"
 
 #: ../../computation/coconut-lang.md:9
 msgid ""
@@ -32,6 +32,10 @@ msgid ""
 "[Haskell](https://github.com/gibiansky/IHaskell) and [many other "
 "languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)."
 msgstr ""
+"Jupyter Notebook 可以利用任何实现了 Jupyter 消息传递协议的程序内核来执行代码。"
+"[Python](http://ipython.org/notebook.html)、[Julia](https://github.com/JuliaLang/IJulia.jl)、"
+"[Ruby](https://github.com/minad/iruby)、[Haskell](https://github.com/gibiansky/IHaskell) 和 "
+"[许多其他语言](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) 都有可用的内核。"
 
 #: ../../computation/coconut-lang.md:12
 msgid ""
@@ -39,6 +43,8 @@ msgid ""
 "Programming Language](http://coconut-lang.org), a variant of Python built"
 " for *simple, elegant, Pythonic functional programming*."
 msgstr ""
+"在本手册中，将演示如何使用 [Coconut 编程语言](http://coconut-lang.org) 执行代码，"
+"这是 Python 的变体，用于简单、优雅的 Python 函数编程。"
 
 #: ../../computation/coconut-lang.md:14
 msgid ""
@@ -46,20 +52,23 @@ msgid ""
 "fundamentally functional approach that doesn’t involve any state changes "
 "or loops:"
 msgstr ""
+"在第一个示例中，将定义递归阶乘函数，这是基本的函数方法，它不涉及任何状态更改或循环："
 
 #: ../../computation/coconut-lang.md:30
 msgid ""
 "Although this example is very basic, pattern-matching is both one of "
 "Coconut’s most powerful and most complicated features."
 msgstr ""
+"尽管这个例子非常基础，但模式匹配是 Coconut 最强大也是最复杂的功能之一。"
 
 #: ../../computation/coconut-lang.md:32
 msgid ""
 "In the second example, we implement the quick sort algorithm. This "
 "quick_sort algorithm works using a bunch of new constructs:"
 msgstr ""
+"在第二个例子中，实现了快速排序算法。这个 `quick_sort` 算法使用了一些新的结构："
 
 #: ../../computation/coconut-lang.md:48
 msgid "Finally, we see that exceptions are raised as one would expect:"
-msgstr ""
+msgstr "最后，看到异常会像预期的那样被抛出："
 

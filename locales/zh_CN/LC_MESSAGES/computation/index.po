@@ -19,9 +19,9 @@ msgstr ""
 
 #: ../../computation/index.md:1
 msgid "Computations"
-msgstr ""
+msgstr "计算"
 
 #: ../../computation/index.md:3
 msgid "Execute code and cache its output."
-msgstr ""
+msgstr "执行代码并缓存其输出。"
 

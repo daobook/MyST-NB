@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../render/format_code_cells.md:8
 msgid "Format code cells"
-msgstr ""
+msgstr "格式化代码单元格"
 
 #: ../../render/format_code_cells.md:10
 msgid ""
@@ -27,16 +27,18 @@ msgid ""
 "global, per-file, or per-cell level, as outlined in the [configuration "
 "section](config/intro)."
 msgstr ""
+"代码单元的呈现行为是由全局、每个文件或每个单元级别的配置来控制的，如 [配置节](config/intro) 中所述。"
 
 #: ../../render/format_code_cells.md:12
 msgid ""
 "See the sections below for a description of these configuration option "
 "and their effect."
 msgstr ""
+"有关这些配置选项及其效果的描述，请参阅下面的部分。"
 
 #: ../../render/format_code_cells.md:15
 msgid "Number source lines"
-msgstr ""
+msgstr "源代码行数"
 
 #: ../../render/format_code_cells.md:17
 msgid ""
@@ -45,14 +47,16 @@ msgid ""
 "`number_source_lines` in the notebook metadata, or per-cell with "
 "`number_source_lines` in the cell metadata. For example:"
 msgstr ""
+"您可以控制是否显示代码单元格的源代码行数，全局使用 `nb_number_source_lines = True`，"
+"在每个笔记本文件的元数据中使用 `number_source_lines`，或者在每个单元格元数据中使用 `number_source_lines`。例如："
 
 #: ../../render/format_code_cells.md:44
 msgid "stdout and stderr outputs"
-msgstr ""
+msgstr "stdout 和 stderr 输出"
 
 #: ../../render/format_code_cells.md:47
 msgid "Remove stdout or stderr"
-msgstr ""
+msgstr "移除 stdout 或 stderr"
 
 #: ../../render/format_code_cells.md:49
 msgid ""
@@ -60,6 +64,7 @@ msgid ""
 "final documentation, for example, if they are only for debugging "
 "purposes."
 msgstr ""
+"在某些情况下，您可能不希望在最终文档中显示 stdout/stderr 输出，例如，如果它们只是用于调试目的。"
 
 #: ../../render/format_code_cells.md:52
 msgid ""
@@ -67,6 +72,8 @@ msgid ""
 "`remove-stdout` and `remove-stderr` [cell tags](https://jupyter-"
 "notebook.readthedocs.io/en/stable/changelog.html#cell-tags), like so:"
 msgstr ""
+"可以告诉 MyST-NB 移除这些输出，每个单元格，"
+"使用 `remove-stdout` 和 `remove-stderr` 单元格标签，像这样："
 
 #: ../../render/format_code_cells.md:76
 msgid ""
@@ -74,32 +81,37 @@ msgid ""
 "configuration level, using the `nb_output_stderr` configuration value. "
 "This can be set to:"
 msgstr ""
+"或者，您可以使用 `nb_output_stderr` 配置值在全局配置级别配置如何处理 stdout。"
+"这个可以设置为："
 
 #: ../../render/format_code_cells.md:79
 msgid ""
 "`\"show\"` (default): show all stderr (unless a `remove-stderr` tag is "
 "present)"
 msgstr ""
+"`\"show\"`（默认）：显示全部 stderr（除非 `remove-stderr` 标记存在）"
 
 #: ../../render/format_code_cells.md:80
 msgid "`\"remove\"`: remove all stderr"
-msgstr ""
+msgstr "`\"remove\"`：移除全部 stderr"
 
 #: ../../render/format_code_cells.md:81
 msgid ""
 "`\"remove-warn\"`: remove all stderr, but log a warning to sphinx if any "
 "found"
 msgstr ""
+"`\"remove-warn\"`：删除所有标准错误，但如果发现任何错误，则将警告记录到 sphinx"
 
 #: ../../render/format_code_cells.md:82
 msgid ""
 "`\"warn\"`, `\"error\"` or `\"severe\"`: log to sphinx, at a certain "
 "level, if any found."
 msgstr ""
+"`\"warn\"`、`\"error\"` 或 `\"severe\"`：如果有任何发现，在一定程度上记录到 sphinx。"
 
 #: ../../render/format_code_cells.md:85
 msgid "Group into single streams"
-msgstr ""
+msgstr "分组成单个流"
 
 #: ../../render/format_code_cells.md:87
 msgid ""
@@ -109,12 +121,16 @@ msgid ""
 "multiple items, and will be rendered as separate \"chunks\" in your built"
 " documentation."
 msgstr ""
+"单元格可以将多个内容打印到 `stdout` 和 `stderr`。"
+"例如，如果单元格在其执行过程中打印状态更新，这些更新通常打印到 `stdout`。"
+"默认情况下，这些输出可以跨多个项目分割，并将在构建的文档中呈现为单独的 \"chunks\" 。"
 
 #: ../../render/format_code_cells.md:91
 msgid ""
 "If you'd like each of the outputs in `stderr` and `stdout` to be merged "
 "into a single stream for each, use the following configuration:"
 msgstr ""
+"如果你想将 `stderr` 和 `stdout` 中的每个输出合并成单个流，请使用以下配置："
 
 #: ../../render/format_code_cells.md:97
 msgid ""
@@ -124,10 +140,13 @@ msgid ""
 "and `stdout` in the cell output, while this setting will sort them "
 "properly."
 msgstr ""
+"这将确保所有 `stderr` 和 `stdout` 输出被合并到一个组中。"
+"这也使单元格输出更具确定性。"
+"通常，计时上的细微差异可能导致单元输出中 `stderr` 和 `stdout` 的顺序不同，而此设置将对它们进行正确排序。"
 
 #: ../../render/format_code_cells.md:102
 msgid "Outputs MIME priority"
-msgstr ""
+msgstr "输出 MIME 优先级"
 
 #: ../../render/format_code_cells.md:104
 msgid ""
@@ -137,6 +156,8 @@ msgid ""
 "US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), for use by different output "
 "formats (like HTML or LaTeX)."
 msgstr ""
+"当 Jupyter 执行代码单元格时，它可以产生多个输出，每个输出可以包含多个 [MIME 媒体类型](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，供不同的输出格式（如 HTML 或 LaTeX）使用。"
 
 #: ../../render/format_code_cells.md:106
 msgid ""
@@ -145,6 +166,9 @@ msgid ""
 "doc.org/en/master/usage/builders/index.html), mapping MIME types to a "
 "priority number (lower is higher priority):"
 msgstr ""
+"MyST-NB 为大多数常见的 [Sphinx 构建器名称](https://www.sphinx-"
+"doc.org/en/master/usage/builders/index.html) 存储了基本优先级字典，"
+"将 MIME 类型映射到优先级编号（低的为高优先级）："
 
 #: ../../render/format_code_cells.md:117
 msgid ""
@@ -152,28 +176,31 @@ msgid ""
 "`nb_mime_priority_overrides` configuration option, in your `conf.py`. For"
 " example, the following configuration applies in order:"
 msgstr ""
+"这个字典中的条目可以被 `conf.py` 中的 `nb_mime_priority_override` 配置选项覆盖。"
+"例如，以下配置顺序如下："
 
 #: ../../render/format_code_cells.md:120
 msgid "Sets `text/plain` as the highest priority for `html` output."
-msgstr ""
+msgstr "将 `text/plain` 设置为 `html` 输出的最高优先级。"
 
 #: ../../render/format_code_cells.md:121
 msgid "Disables `image/jpeg` for `latex` output"
-msgstr ""
+msgstr "对 `latex` 输出禁用 `image/jpeg`"
 
 #: ../../render/format_code_cells.md:122
 msgid ""
 "Adds a custom MIME type `customtype` for all builders (`*` applies to all"
 " builders)"
 msgstr ""
+"为所有构建器添加自定义 MIME 类型 `customtype` （`*` 适用于所有构建器）"
 
 #: ../../render/format_code_cells.md:133
 msgid "`nb_mime_priority_overrides` replaces `nb_render_priority`"
-msgstr ""
+msgstr "`nb_mime_priority_overrides` 替换了 `nb_render_priority`"
 
 #: ../../render/format_code_cells.md:137
 msgid "[](render/output/cutomise), for a more advanced means of customisation."
-msgstr ""
+msgstr "[](render/output/cutomise)，更高级的定制方式。"
 
 #: ../../render/format_code_cells.md:141
 msgid "Images and Figures"

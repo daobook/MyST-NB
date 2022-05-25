@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../configuration.md:3
 msgid "Configuration"
-msgstr ""
+msgstr "配置"
 
 #: ../../configuration.md:5
 msgid ""
@@ -27,10 +27,11 @@ msgid ""
 "file, and per notebook cell, with the most specific configuration taking "
 "precedence."
 msgstr ""
+"MyST-NB 可以在三个特异性水平上配置；在全局上，每个文件和每个笔记本单元，最特定的配置优先。"
 
 #: ../../configuration.md:7
 msgid "Global configuration"
-msgstr ""
+msgstr "全局配置"
 
 #: ../../configuration.md:9
 msgid ""
@@ -38,42 +39,44 @@ msgid ""
 "specifying variables in the Sphinx `conf.py` file. All `myst_nb` "
 "configuration variables are prefixed with `nb_`, e.g."
 msgstr ""
+"通过在Sphinx `conf.py` 文件中指定变量，可以在全局级别上重写默认配置。"
+"所有 `myst_nb` 配置变量都以 `nb_` 作为前缀，例如"
 
 #: ../../configuration.md:16
 msgid "Reading"
-msgstr ""
+msgstr "阅读"
 
 #: ../../configuration.md:18
 msgid "Control how files are read."
-msgstr ""
+msgstr "控制如何读取文件。"
 
 #: ../../configuration.md:24 ../../configuration.md:33
 #: ../../configuration.md:42 ../../configuration.md:77
 #: ../../configuration.md:86 ../../configuration.md:121
 #: ../../configuration.md:160
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #: ../../configuration.md:25 ../../configuration.md:34
 #: ../../configuration.md:43 ../../configuration.md:78
 #: ../../configuration.md:87 ../../configuration.md:122
 #: ../../configuration.md:161
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../configuration.md:26 ../../configuration.md:35
 #: ../../configuration.md:44 ../../configuration.md:79
 #: ../../configuration.md:88 ../../configuration.md:123
 #: ../../configuration.md:162
 msgid "Default"
-msgstr ""
+msgstr "默认值"
 
 #: ../../configuration.md:27 ../../configuration.md:36
 #: ../../configuration.md:45 ../../configuration.md:80
 #: ../../configuration.md:89 ../../configuration.md:118
 #: ../../configuration.md:124 ../../configuration.md:163
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../configuration.md:28
 msgid "`nb_custom_formats`"
@@ -93,17 +96,18 @@ msgstr ""
 
 #: ../../configuration.md:31
 msgid "Custom formats for reading notebook; suffix -> reader"
-msgstr ""
+msgstr "自定义格式阅读笔记本；suffix -> reader"
 
 #: ../../configuration.md:25 ../../configuration.md:69
 msgid "Execution"
-msgstr ""
+msgstr "执行"
 
 #: ../../configuration.md:27 ../../configuration.md:71
 msgid ""
 "This configuration is used to control how Jupyter Notebooks are executed "
 "at build-time."
 msgstr ""
+"此配置用于控制在构建时如何执行 Jupyter notebook。"
 
 #: ../../configuration.md:37
 msgid "`nb_kernel_rgx_aliases`"
@@ -121,6 +125,7 @@ msgid ""
 "Mapping of kernel name regex to replacement kernel name(applied before "
 "execution)"
 msgstr ""
+"内核名称 regex 映射到替换内核名称（在执行之前应用）"
 
 #: ../../configuration.md:41
 msgid "`nb_execution_mode`"
@@ -136,7 +141,7 @@ msgstr ""
 
 #: ../../configuration.md:44 ../../configuration.md:84
 msgid "Execution mode for notebooks"
-msgstr ""
+msgstr "笔记本执行模式"
 
 #: ../../configuration.md:45
 msgid "`nb_execution_cache_path`"
@@ -157,7 +162,7 @@ msgstr ""
 
 #: ../../configuration.md:48 ../../configuration.md:88
 msgid "Path to folder for caching notebooks (default: <outdir>)"
-msgstr ""
+msgstr "缓存笔记本的文件夹路径（默认：<outdir>）"
 
 #: ../../configuration.md:49
 msgid "`nb_execution_excludepatterns`"
@@ -175,7 +180,7 @@ msgstr ""
 
 #: ../../configuration.md:52
 msgid "Exclude (POSIX) glob patterns for notebooks"
-msgstr ""
+msgstr "为笔记本排除（POSIX） glob 模式"
 
 #: ../../configuration.md:53
 msgid "`nb_execution_timeout`"
@@ -192,7 +197,7 @@ msgstr ""
 
 #: ../../configuration.md:56 ../../configuration.md:92
 msgid "Execution timeout (seconds)"
-msgstr ""
+msgstr "执行超时（秒）"
 
 #: ../../configuration.md:57
 msgid "`nb_execution_in_temp`"
@@ -235,7 +240,7 @@ msgstr ""
 
 #: ../../configuration.md:60 ../../configuration.md:96
 msgid "Use temporary folder for the execution current working directory"
-msgstr ""
+msgstr "使用临时文件夹执行当前工作目录"
 
 #: ../../configuration.md:61
 msgid "`nb_execution_allow_errors`"
@@ -243,7 +248,7 @@ msgstr ""
 
 #: ../../configuration.md:64 ../../configuration.md:100
 msgid "Allow errors during execution"
-msgstr ""
+msgstr "允许执行过程中出现错误"
 
 #: ../../configuration.md:65
 msgid "`nb_execution_raise_on_error`"
@@ -251,7 +256,7 @@ msgstr ""
 
 #: ../../configuration.md:68 ../../configuration.md:104
 msgid "Raise an exception on failed execution, rather than emitting a warning"
-msgstr ""
+msgstr "执行失败时抛出异常，而不是发出警告"
 
 #: ../../configuration.md:69
 msgid "`nb_execution_show_tb`"
@@ -259,17 +264,18 @@ msgstr ""
 
 #: ../../configuration.md:72 ../../configuration.md:108
 msgid "Print traceback to stderr on execution error"
-msgstr ""
+msgstr "执行错误时将回溯信息打印到stderr"
 
 #: ../../configuration.md:34 ../../configuration.md:78
 msgid "Rendering"
-msgstr ""
+msgstr "渲染"
 
 #: ../../configuration.md:36 ../../configuration.md:80
 msgid ""
 "These configuration options affect the look and feel of notebook parsing "
 "and output rendering."
 msgstr ""
+"这些配置选项影响笔记本解析和输出呈现的外观和感觉。"
 
 #: ../../configuration.md:46
 msgid "`nb_merge_streams`"
@@ -278,7 +284,7 @@ msgstr ""
 #: ../../configuration.md:49 ../../configuration.md:93
 #: ../../configuration.md:128
 msgid "Merge stdout/stderr execution output streams"
-msgstr ""
+msgstr "合并 stdout/stderr 执行输出流"
 
 #: ../../configuration.md:50
 msgid "`nb_render_plugin`"

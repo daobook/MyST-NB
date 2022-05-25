@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../../render/index.md:1
 msgid "Rendering"
-msgstr ""
+msgstr "渲染"
 
 #: ../../render/index.md:3
 msgid ""
 "Convert Jupyter execution outputs to embedded content, and build output "
 "formats."
 msgstr ""
-
+"将 Jupyter 执行输出转换为嵌入内容，并构建输出格式。"

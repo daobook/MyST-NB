@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../computation/execute.md:8
 msgid "Execute and cache"
-msgstr ""
+msgstr "执行和缓存"
 
 #: ../../computation/execute.md:10
 msgid ""
@@ -28,6 +28,8 @@ msgid ""
 "documentation is built, or cached locally so that re-runs occur only when"
 " code cells have changed."
 msgstr ""
+"MyST-NB 可以使用 [jupyter-cache] 自动运行和缓存包含在你的项目中的笔记本。"
+"笔记本可以在每次构建文档时运行，或者缓存在本地，这样只有当代码单元发生变化时才会重新运行。"
 
 #: ../../computation/execute.md:13
 msgid ""
@@ -36,24 +38,27 @@ msgid ""
 "section](config/intro). See the sections below for a description of each "
 "configuration option and their effect."
 msgstr ""
+"执行和缓存行为是通过全局或每个文件级别的配置来控制的，如 [配置节](config/intro) 所述。"
+"有关每个配置选项及其效果的描述，请参阅下面的章节。"
 
 #: ../../computation/execute.md:18
 msgid "Notebook execution modes"
-msgstr ""
+msgstr "笔记本执行模式"
 
 #: ../../computation/execute.md:20
 msgid ""
 "To trigger the execution of notebook pages, use the global "
 "`nb_execution_mode` configuration key, or per-file `execution_mode` key:"
 msgstr ""
+"为了触发笔记本页面的执行，使用全局的 `nb_execution_mode` 配置键，或每个文件的 `execution_mode` 键："
 
 #: ../../computation/execute.md
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: ../../computation/execute.md
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../computation/execute.md
 msgid "`off`"
@@ -61,7 +66,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Do not execute the notebook"
-msgstr ""
+msgstr "不执行笔记本"
 
 #: ../../computation/execute.md
 msgid "`force`"
@@ -69,7 +74,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Always execute the notebook (before parsing)"
-msgstr ""
+msgstr "总是执行笔记本（在解析之前）"
 
 #: ../../computation/execute.md
 msgid "`auto`"
@@ -77,7 +82,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute notebooks with missing outputs (before parsing)"
-msgstr ""
+msgstr "执行缺少输出的笔记本（在解析之前）"
 
 #: ../../computation/execute.md
 msgid "`cache`"
@@ -85,7 +90,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute notebook and store/retrieve outputs from a cache"
-msgstr ""
+msgstr "执行笔记本，并从缓存中存储/检索输出"
 
 #: ../../computation/execute.md
 msgid "`inline`"
@@ -93,11 +98,11 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute the notebook during parsing (allows for variable evaluation)"
-msgstr ""
+msgstr "在解析期间执行笔记本（允许变量计算）"
 
 #: ../../computation/execute.md:30
 msgid "By default this is set to:"
-msgstr ""
+msgstr "默认设置"
 
 #: ../../computation/execute.md:36
 msgid ""
@@ -105,28 +110,33 @@ msgid ""
 " a notebook has *all* of its outputs populated, then it will not be "
 "executed."
 msgstr ""
+"这将只执行缺少至少一个输出的笔记本。"
+"如果笔记本已经填充了它的所有输出，那么它将不会被执行。"
 
 #: ../../computation/execute.md:39
 msgid ""
 "To force the execution of all notebooks, regardless of their outputs, "
 "change the above configuration value to:"
 msgstr ""
+"要强制执行所有笔记本电脑，无论其输出如何，请将上述配置值更改为："
 
 #: ../../computation/execute.md:45
 msgid ""
 "To cache execution outputs with [jupyter-cache], change the above "
 "configuration value to:"
 msgstr ""
+"要用 [jupyter-cache] 缓存执行输出，将上面的配置值改为："
 
 #: ../../computation/execute.md:51
 msgid "See {ref}`execute/cache` for more information."
-msgstr ""
+msgstr "参阅 {ref}`execute/cache` 了解更多信息。"
 
 #: ../../computation/execute.md:53
 msgid ""
 "To execute notebooks inline during parsing, change the above "
 "configuration value to:"
 msgstr ""
+"要在解析期间内联执行笔记本，请将上述配置值更改为："
 
 #: ../../computation/execute.md:59
 msgid ""
