@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Execute and cache</title>
+    <title>执行和缓存</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,8 +48,8 @@
     <link rel="shortcut icon" href="../_static/logo-square.svg"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Jupyter kernels" href="coconut-lang.html" />
-    <link rel="prev" title="Computations" href="index.html" />
+    <link rel="next" title="Jupyter 内核" href="coconut-lang.html" />
+    <link rel="prev" title="计算" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -154,7 +154,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Computations
+   计算
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -164,19 +164,19 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Execute and cache
+     执行和缓存
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="coconut-lang.html">
-     Jupyter kernels
+     Jupyter 内核
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../render/index.html">
-   Rendering
+   渲染
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -186,7 +186,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../render/format_code_cells.html">
-     Format code cells
+     格式化代码单元格
     </a>
    </li>
    <li class="toctree-l2">
@@ -213,7 +213,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../configuration.html">
-   Configuration
+   配置
   </a>
  </li>
  <li class="toctree-l1">
@@ -468,7 +468,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notebook-execution-modes">
-   Notebook execution modes
+   笔记本执行模式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -520,7 +520,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Execute and cache</h1>
+                <h1>执行和缓存</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -532,7 +532,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#notebook-execution-modes">
-   Notebook execution modes
+   笔记本执行模式
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -586,54 +586,51 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="execute-and-cache">
-<span id="execute-intro"></span><h1>Execute and cache<a class="headerlink" href="#execute-and-cache" title="永久链接至标题">#</a></h1>
-<p>MyST-NB can automatically run and cache notebooks contained in your project using <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a>.
-Notebooks can either be run each time the documentation is built, or cached locally so that re-runs occur only when code cells have changed.</p>
-<p>Execution and caching behaviour is controlled with configuration at a global or per-file level, as outlined in the <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">configuration section</span></a>.
-See the sections below for a description of each configuration option and their effect.</p>
+<span id="execute-intro"></span><h1>执行和缓存<a class="headerlink" href="#execute-and-cache" title="永久链接至标题">#</a></h1>
+<p>MyST-NB 可以使用 [jupyter-cache] 自动运行和缓存包含在你的项目中的笔记本。笔记本可以在每次构建文档时运行，或者缓存在本地，这样只有当代码单元发生变化时才会重新运行。</p>
+<p>执行和缓存行为是通过全局或每个文件级别的配置来控制的，如 <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">配置节</span></a> 所述。有关每个配置选项及其效果的描述，请参阅下面的章节。</p>
 <section id="notebook-execution-modes">
-<span id="execute-modes"></span><h2>Notebook execution modes<a class="headerlink" href="#notebook-execution-modes" title="永久链接至标题">#</a></h2>
-<p>To trigger the execution of notebook pages, use the global <code class="docutils literal notranslate"><span class="pre">nb_execution_mode</span></code> configuration key, or per-file <code class="docutils literal notranslate"><span class="pre">execution_mode</span></code> key:</p>
+<span id="execute-modes"></span><h2>笔记本执行模式<a class="headerlink" href="#notebook-execution-modes" title="永久链接至标题">#</a></h2>
+<p>为了触发笔记本页面的执行，使用全局的 <code class="docutils literal notranslate"><span class="pre">nb_execution_mode</span></code> 配置键，或每个文件的 <code class="docutils literal notranslate"><span class="pre">execution_mode</span></code> 键：</p>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Mode</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="head"><p>模式</p></th>
+<th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">off</span></code></p></td>
-<td><p>Do not execute the notebook</p></td>
+<td><p>不执行笔记本</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">force</span></code></p></td>
-<td><p>Always execute the notebook (before parsing)</p></td>
+<td><p>总是执行笔记本（在解析之前）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">auto</span></code></p></td>
-<td><p>Execute notebooks with missing outputs (before parsing)</p></td>
+<td><p>执行缺少输出的笔记本（在解析之前）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cache</span></code></p></td>
-<td><p>Execute notebook and store/retrieve outputs from a cache</p></td>
+<td><p>执行笔记本，并从缓存中存储/检索输出</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">inline</span></code></p></td>
-<td><p>Execute the notebook during parsing (allows for variable evaluation)</p></td>
+<td><p>在解析期间执行笔记本（允许变量计算）</p></td>
 </tr>
 </tbody>
 </table>
-<p>By default this is set to:</p>
+<p>默认设置</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_execution_mode</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span>
 </pre></div>
 </div>
-<p>This will only execute notebooks that are missing at least one output.
-If a notebook has <em>all</em> of its outputs populated, then it will not be executed.</p>
-<p>To force the execution of all notebooks, regardless of their outputs, change the above configuration value to:</p>
+<p>这将只执行缺少至少一个输出的笔记本。如果笔记本已经填充了它的所有输出，那么它将不会被执行。</p>
+<p>要强制执行所有笔记本电脑，无论其输出如何，请将上述配置值更改为：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_execution_mode</span> <span class="o">=</span> <span class="s2">&quot;force&quot;</span>
 </pre></div>
 </div>
-<p>To cache execution outputs with <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a>, change the above configuration value to:</p>
+<p>要用 [jupyter-cache] 缓存执行输出，将上面的配置值改为：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_execution_mode</span> <span class="o">=</span> <span class="s2">&quot;cache&quot;</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="#execute-cache"><span class="std std-ref">Cache execution outputs</span></a> for more information.</p>
-<p>To execute notebooks inline during parsing, change the above configuration value to:</p>
+<p>参阅 <a class="reference internal" href="#execute-cache"><span class="std std-ref">Cache execution outputs</span></a> 了解更多信息。</p>
+<p>要在解析期间内联执行笔记本，请将上述配置值更改为：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_execution_mode</span> <span class="o">=</span> <span class="s2">&quot;inline&quot;</span>
 </pre></div>
 </div>
@@ -791,69 +788,69 @@ If you would like unexpected execution errors to cause a build failure rather th
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="../authoring/custom-formats.html"><span class="doc">authoring/custom-formats</span></a></p></td>
-<td><p>2022-05-25 09:33</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>1.09</p></td>
+<td><p>1.06</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="xref doc reference internal" href="../authoring/jupyter-notebooks.html"><span class="doc">authoring/jupyter-notebooks</span></a></p></td>
-<td><p>2022-05-25 09:33</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>2.54</p></td>
+<td><p>3.13</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="../authoring/text-notebooks.html"><span class="doc">authoring/text-notebooks</span></a></p></td>
-<td><p>2022-05-25 09:33</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
 <td><p>1.7</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="xref doc reference internal" href="coconut-lang.html"><span class="doc">computation/coconut-lang</span></a></p></td>
-<td><p>2022-05-25 09:33</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>7.08</p></td>
+<td><p>8.63</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="#"><span class="doc">computation/execute</span></a></p></td>
-<td><p>2022-05-25 09:33</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>1.58</p></td>
+<td><p>1.73</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="xref doc reference internal" href="../render/format_code_cells.html"><span class="doc">render/format_code_cells</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>2.52</p></td>
+<td><p>3.15</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="../render/glue.html"><span class="doc">render/glue</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>3.36</p></td>
+<td><p>4.36</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="xref doc reference internal" href="../render/hiding.html"><span class="doc">render/hiding</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>2.21</p></td>
+<td><p>3.1</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="../render/inline.html"><span class="doc">render/inline</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>inline</p></td>
-<td><p>1.93</p></td>
+<td><p>2.43</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="xref doc reference internal" href="../render/interactive.html"><span class="doc">render/interactive</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>2.24</p></td>
+<td><p>3.11</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="xref doc reference internal" href="../render/orphaned_nb.html"><span class="doc">render/orphaned_nb</span></a></p></td>
-<td><p>2022-05-25 09:34</p></td>
+<td><p>2022-05-25 11:21</p></td>
 <td><p>cache</p></td>
-<td><p>1.01</p></td>
+<td><p>1.24</p></td>
 <td><p>✅</p></td>
 </tr>
 </tbody>
@@ -873,13 +870,13 @@ If you would like unexpected execution errors to cause a build failure rather th
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Computations</p>
+            <p class="prev-next-title">计算</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="coconut-lang.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Jupyter kernels</p>
+        <p class="prev-next-title">Jupyter 内核</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

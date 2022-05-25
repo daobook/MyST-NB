@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Jupyter kernels</title>
+    <title>Jupyter 内核</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -48,8 +48,8 @@
     <link rel="shortcut icon" href="../_static/logo-square.svg"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Rendering" href="../render/index.html" />
-    <link rel="prev" title="Execute and cache" href="execute.html" />
+    <link rel="next" title="渲染" href="../render/index.html" />
+    <link rel="prev" title="执行和缓存" href="execute.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -154,7 +154,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Computations
+   计算
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -164,19 +164,19 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="execute.html">
-     Execute and cache
+     执行和缓存
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Jupyter kernels
+     Jupyter 内核
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../render/index.html">
-   Rendering
+   渲染
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -186,7 +186,7 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../render/format_code_cells.html">
-     Format code cells
+     格式化代码单元格
     </a>
    </li>
    <li class="toctree-l2">
@@ -213,7 +213,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../configuration.html">
-   Configuration
+   配置
   </a>
  </li>
  <li class="toctree-l1">
@@ -456,7 +456,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Jupyter kernels</h1>
+                <h1>Jupyter 内核</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -469,11 +469,10 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="jupyter-kernels">
-<h1>Jupyter kernels<a class="headerlink" href="#jupyter-kernels" title="永久链接至标题">#</a></h1>
-<p>A Jupyter Notebook can utilise any program kernel that implements the <a class="reference external" href="http://jupyter-client.readthedocs.io/en/latest/messaging.html">Jupyter messaging protocol</a> for executing code.
-There are kernels available for <a class="reference external" href="http://ipython.org/notebook.html">Python</a>, <a class="reference external" href="https://github.com/JuliaLang/IJulia.jl">Julia</a>, <a class="reference external" href="https://github.com/minad/iruby">Ruby</a>, <a class="reference external" href="https://github.com/gibiansky/IHaskell">Haskell</a> and <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">many other languages</a>.</p>
-<p>In this notebook we demonstrate executing code with the <a class="reference external" href="http://coconut-lang.org">Coconut Programming Language</a>, a variant of Python built for <em>simple, elegant, Pythonic functional programming</em>.</p>
-<p>In the first example we will define a recursive <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function, a fundamentally functional approach that doesn’t involve any state changes or loops:</p>
+<h1>Jupyter 内核<a class="headerlink" href="#jupyter-kernels" title="永久链接至标题">#</a></h1>
+<p>Jupyter Notebook 可以利用任何实现了 Jupyter 消息传递协议的程序内核来执行代码。<a class="reference external" href="http://ipython.org/notebook.html">Python</a>、<a class="reference external" href="https://github.com/JuliaLang/IJulia.jl">Julia</a>、<a class="reference external" href="https://github.com/minad/iruby">Ruby</a>、<a class="reference external" href="https://github.com/gibiansky/IHaskell">Haskell</a> 和 <a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">许多其他语言</a> 都有可用的内核。</p>
+<p>在本手册中，将演示如何使用 <a class="reference external" href="http://coconut-lang.org">Coconut 编程语言</a> 执行代码，这是 Python 的变体，用于简单、优雅的 Python 函数编程。</p>
+<p>在第一个示例中，将定义递归阶乘函数，这是基本的函数方法，它不涉及任何状态更改或循环：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-coconut notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -496,9 +495,8 @@ There are kernels available for <a class="reference external" href="http://ipyth
 </div>
 </div>
 </div>
-<p>Although this example is very basic, pattern-matching is both one of Coconut’s most powerful and most complicated features.</p>
-<p>In the second example, we implement the quick sort algorithm.
-This quick_sort algorithm works using a bunch of new constructs:</p>
+<p>尽管这个例子非常基础，但模式匹配是 Coconut 最强大也是最复杂的功能之一。</p>
+<p>在第二个例子中，实现了快速排序算法。这个 <code class="docutils literal notranslate"><span class="pre">quick_sort</span></code> 算法使用了一些新的结构：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-coconut notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quick_sort</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
@@ -520,7 +518,7 @@ This quick_sort algorithm works using a bunch of new constructs:</p>
 </div>
 </div>
 </div>
-<p>Finally, we see that exceptions are raised as one would expect:</p>
+<p>最后，看到异常会像预期的那样被抛出：</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-coconut notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
@@ -552,13 +550,13 @@ This quick_sort algorithm works using a bunch of new constructs:</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Execute and cache</p>
+            <p class="prev-next-title">执行和缓存</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../render/index.html" title="下一页 页">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">下一页</p>
-        <p class="prev-next-title">Rendering</p>
+        <p class="prev-next-title">渲染</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

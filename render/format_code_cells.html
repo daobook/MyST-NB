@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Format code cells</title>
+    <title>格式化代码单元格</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -49,7 +49,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Hide cell contents" href="hiding.html" />
-    <link rel="prev" title="Rendering" href="index.html" />
+    <link rel="prev" title="渲染" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="zh_CN">
     
@@ -154,7 +154,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../computation/index.html">
-   Computations
+   计算
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -164,19 +164,19 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../computation/execute.html">
-     Execute and cache
+     执行和缓存
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../computation/coconut-lang.html">
-     Jupyter kernels
+     Jupyter 内核
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Rendering
+   渲染
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -186,7 +186,7 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Format code cells
+     格式化代码单元格
     </a>
    </li>
    <li class="toctree-l2">
@@ -213,7 +213,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../configuration.html">
-   Configuration
+   配置
   </a>
  </li>
  <li class="toctree-l1">
@@ -468,29 +468,29 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#number-source-lines">
-   Number source lines
+   源代码行数
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stdout-and-stderr-outputs">
-   stdout and stderr outputs
+   stdout 和 stderr 输出
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-stdout-or-stderr">
-     Remove stdout or stderr
+     移除 stdout 或 stderr
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#group-into-single-streams">
-     Group into single streams
+     分组成单个流
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outputs-mime-priority">
-   Outputs MIME priority
+   输出 MIME 优先级
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -522,7 +522,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Format code cells</h1>
+                <h1>格式化代码单元格</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -534,29 +534,29 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#number-source-lines">
-   Number source lines
+   源代码行数
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stdout-and-stderr-outputs">
-   stdout and stderr outputs
+   stdout 和 stderr 输出
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#remove-stdout-or-stderr">
-     Remove stdout or stderr
+     移除 stdout 或 stderr
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#group-into-single-streams">
-     Group into single streams
+     分组成单个流
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#outputs-mime-priority">
-   Outputs MIME priority
+   输出 MIME 优先级
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -590,14 +590,12 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="format-code-cells">
-<span id="render-code-cells"></span><h1>Format code cells<a class="headerlink" href="#format-code-cells" title="永久链接至标题">#</a></h1>
-<p>Code cell rendering behaviour is controlled with configuration at a global, per-file, or per-cell level, as outlined in the <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">configuration section</span></a>.</p>
-<p>See the sections below for a description of these configuration option and their effect.</p>
+<span id="render-code-cells"></span><h1>格式化代码单元格<a class="headerlink" href="#format-code-cells" title="永久链接至标题">#</a></h1>
+<p>代码单元的呈现行为是由全局、每个文件或每个单元级别的配置来控制的，如 <a class="reference internal" href="../configuration.html#config-intro"><span class="std std-ref">配置节</span></a> 中所述。</p>
+<p>有关这些配置选项及其效果的描述，请参阅下面的部分。</p>
 <section id="number-source-lines">
-<span id="render-input-number"></span><h2>Number source lines<a class="headerlink" href="#number-source-lines" title="永久链接至标题">#</a></h2>
-<p>You can control whether the number of source lines is displayed for code cells,
-globally with <code class="docutils literal notranslate"><span class="pre">nb_number_source_lines</span> <span class="pre">=</span> <span class="pre">True</span></code>, per-file with <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code> in the notebook metadata, or per-cell with <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code> in the cell metadata.
-For example:</p>
+<span id="render-input-number"></span><h2>源代码行数<a class="headerlink" href="#number-source-lines" title="永久链接至标题">#</a></h2>
+<p>您可以控制是否显示代码单元格的源代码行数，全局使用 <code class="docutils literal notranslate"><span class="pre">nb_number_source_lines</span> <span class="pre">=</span> <span class="pre">True</span></code>，在每个笔记本文件的元数据中使用 <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code>，或者在每个单元格元数据中使用 <code class="docutils literal notranslate"><span class="pre">number_source_lines</span></code>。例如：</p>
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell} ipython3</span>
 <span class="gu">---</span>
 mystnb:
@@ -620,12 +618,11 @@ c = 1
 </div>
 </section>
 <section id="stdout-and-stderr-outputs">
-<span id="render-output-stdout-stderr"></span><h2>stdout and stderr outputs<a class="headerlink" href="#stdout-and-stderr-outputs" title="永久链接至标题">#</a></h2>
+<span id="render-output-stdout-stderr"></span><h2>stdout 和 stderr 输出<a class="headerlink" href="#stdout-and-stderr-outputs" title="永久链接至标题">#</a></h2>
 <section id="remove-stdout-or-stderr">
-<span id="render-output-stderr"></span><h3>Remove stdout or stderr<a class="headerlink" href="#remove-stdout-or-stderr" title="永久链接至标题">#</a></h3>
-<p>In some cases you may not wish to display stdout/stderr outputs in your final documentation,
-for example, if they are only for debugging purposes.</p>
-<p>You can tell MyST-NB to remove these outputs, per cell, using the <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags">cell tags</a>, like so:</p>
+<span id="render-output-stderr"></span><h3>移除 stdout 或 stderr<a class="headerlink" href="#remove-stdout-or-stderr" title="永久链接至标题">#</a></h3>
+<p>在某些情况下，您可能不希望在最终文档中显示 stdout/stderr 输出，例如，如果它们只是用于调试目的。</p>
+<p>可以告诉 MyST-NB 移除这些输出，每个单元格，使用 <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> 和 <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> 单元格标签，像这样：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
 :tags: [remove-input,remove-stdout,remove-stderr]
 
@@ -677,34 +674,28 @@ pandas.DataFrame({&quot;column 1&quot;: [1, 2, 3]})
 </table>
 </div></div></div>
 </div>
-<p>Alternatively, you can configure how stdout is dealt with at a global configuration level, using the <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code> configuration value.
-This can be set to:</p>
+<p>或者，您可以使用 <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code> 配置值在全局配置级别配置如何处理 stdout。这个可以设置为：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;show&quot;</span></code> (default): show all stderr (unless a <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> tag is present)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove&quot;</span></code>: remove all stderr</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove-warn&quot;</span></code>: remove all stderr, but log a warning to sphinx if any found</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;warn&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;error&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;severe&quot;</span></code>: log to sphinx, at a certain level, if any found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;show&quot;</span></code>（默认）：显示全部 stderr（除非 <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> 标记存在）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove&quot;</span></code>：移除全部 stderr</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove-warn&quot;</span></code>：删除所有标准错误，但如果发现任何错误，则将警告记录到 sphinx</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;warn&quot;</span></code>、<code class="docutils literal notranslate"><span class="pre">&quot;error&quot;</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&quot;severe&quot;</span></code>：如果有任何发现，在一定程度上记录到 sphinx。</p></li>
 </ul>
 </section>
 <section id="group-into-single-streams">
-<span id="render-output-group-stderr-stdout"></span><h3>Group into single streams<a class="headerlink" href="#group-into-single-streams" title="永久链接至标题">#</a></h3>
-<p>Cells may print multiple things to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.
-For example, if a cell prints status updates throughout its execution, each of these is often printed to <code class="docutils literal notranslate"><span class="pre">stdout</span></code>.
-By default, these outputs may be split across multiple items, and will be rendered as separate “chunks” in your built documentation.</p>
-<p>If you’d like each of the outputs in <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> to be merged into a single stream for each, use the following configuration:</p>
+<span id="render-output-group-stderr-stdout"></span><h3>分组成单个流<a class="headerlink" href="#group-into-single-streams" title="永久链接至标题">#</a></h3>
+<p>单元格可以将多个内容打印到 <code class="docutils literal notranslate"><span class="pre">stdout</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stderr</span></code>。例如，如果单元格在其执行过程中打印状态更新，这些更新通常打印到 <code class="docutils literal notranslate"><span class="pre">stdout</span></code>。默认情况下，这些输出可以跨多个项目分割，并将在构建的文档中呈现为单独的 “chunks” 。</p>
+<p>如果你想将 <code class="docutils literal notranslate"><span class="pre">stderr</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stdout</span></code> 中的每个输出合并成单个流，请使用以下配置：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_merge_streams</span> <span class="o">=</span> <span class="kc">True</span>
 </pre></div>
 </div>
-<p>This will ensure that all <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> outputs are merged into a single group.
-This also makes cell outputs more deterministic.
-Normally, slight differences in timing may result in different orders of <code class="docutils literal notranslate"><span class="pre">stderr</span></code> and <code class="docutils literal notranslate"><span class="pre">stdout</span></code> in the cell output, while this setting will sort them properly.</p>
+<p>这将确保所有 <code class="docutils literal notranslate"><span class="pre">stderr</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stdout</span></code> 输出被合并到一个组中。这也使单元格输出更具确定性。通常，计时上的细微差异可能导致单元输出中 <code class="docutils literal notranslate"><span class="pre">stderr</span></code> 和 <code class="docutils literal notranslate"><span class="pre">stdout</span></code> 的顺序不同，而此设置将对它们进行正确排序。</p>
 </section>
 </section>
 <section id="outputs-mime-priority">
-<span id="render-output-priority"></span><h2>Outputs MIME priority<a class="headerlink" href="#outputs-mime-priority" title="永久链接至标题">#</a></h2>
-<p>When Jupyter executes a code cell it can produce multiple outputs, and each of these outputs can contain multiple <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME media types</a>, for use by different output formats (like HTML or LaTeX).</p>
-<p>MyST-NB stores a base priority dictionary for most of the common <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">Sphinx builder names</a>,
-mapping MIME types to a priority number (lower is higher priority):</p>
+<span id="render-output-priority"></span><h2>输出 MIME 优先级<a class="headerlink" href="#outputs-mime-priority" title="永久链接至标题">#</a></h2>
+<p>当 Jupyter 执行代码单元格时，它可以产生多个输出，每个输出可以包含多个 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME 媒体类型</a>，供不同的输出格式（如 HTML 或 LaTeX）使用。</p>
+<p>MyST-NB 为大多数常见的 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">Sphinx 构建器名称</a> 存储了基本优先级字典，将 MIME 类型映射到优先级编号（低的为高优先级）：</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">yaml</span>
@@ -918,12 +909,11 @@ xml:
 </div>
 </div>
 </div>
-<p>Items in this dictionary can be overridden by the <code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code> configuration option, in your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code>.
-For example, the following configuration applies in order:</p>
+<p>这个字典中的条目可以被 <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">nb_mime_priority_override</span></code> 配置选项覆盖。例如，以下配置顺序如下：</p>
 <ul class="simple">
-<li><p>Sets <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> as the highest priority for <code class="docutils literal notranslate"><span class="pre">html</span></code> output.</p></li>
-<li><p>Disables <code class="docutils literal notranslate"><span class="pre">image/jpeg</span></code> for <code class="docutils literal notranslate"><span class="pre">latex</span></code> output</p></li>
-<li><p>Adds a custom MIME type <code class="docutils literal notranslate"><span class="pre">customtype</span></code> for all builders (<code class="docutils literal notranslate"><span class="pre">*</span></code> applies to all builders)</p></li>
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">html</span></code> 输出的最高优先级。</p></li>
+<li><p>对 <code class="docutils literal notranslate"><span class="pre">latex</span></code> 输出禁用 <code class="docutils literal notranslate"><span class="pre">image/jpeg</span></code></p></li>
+<li><p>为所有构建器添加自定义 MIME 类型 <code class="docutils literal notranslate"><span class="pre">customtype</span></code> （<code class="docutils literal notranslate"><span class="pre">*</span></code> 适用于所有构建器）</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb_mime_priority_overrides</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">(</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
@@ -933,11 +923,11 @@ For example, the following configuration applies in order:</p>
 </pre></div>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 0.14.0 版更改: </span><code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code> replaces <code class="docutils literal notranslate"><span class="pre">nb_render_priority</span></code></p>
+<p><span class="versionmodified changed">在 0.14.0 版更改: </span><code class="docutils literal notranslate"><span class="pre">nb_mime_priority_overrides</span></code> 替换了 <code class="docutils literal notranslate"><span class="pre">nb_render_priority</span></code></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p><a class="reference internal" href="#render-output-cutomise"><span class="std std-ref">Customise the render process</span></a>, for a more advanced means of customisation.</p>
+<p><a class="reference internal" href="#render-output-cutomise"><span class="std std-ref">Customise the render process</span></a>，更高级的定制方式。</p>
 </div>
 </section>
 <section id="images-and-figures">
@@ -1032,25 +1022,25 @@ df
 <p><span class="caption-text">This is my table caption, above the table</span><a class="headerlink" href="#id2" title="永久链接至图片">#</a></p>
 <div class="output text_html"><style type="text/css">
 </style>
-<table id="T_a023f" class="dataframe align-center">
+<table id="T_f729d" class="dataframe align-center">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_a023f_level0_col0" class="col_heading level0 col0" >column 1</th>
+      <th id="T_f729d_level0_col0" class="col_heading level0 col0" >column 1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_a023f_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_a023f_row0_col0" class="data row0 col0" >1</td>
+      <th id="T_f729d_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_f729d_row0_col0" class="data row0 col0" >1</td>
     </tr>
     <tr>
-      <th id="T_a023f_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_a023f_row1_col0" class="data row1 col0" >2</td>
+      <th id="T_f729d_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_f729d_row1_col0" class="data row1 col0" >2</td>
     </tr>
     <tr>
-      <th id="T_a023f_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_a023f_row2_col0" class="data row2 col0" >3</td>
+      <th id="T_f729d_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_f729d_row2_col0" class="data row2 col0" >3</td>
     </tr>
   </tbody>
 </table>
@@ -1293,7 +1283,7 @@ using the <code class="docutils literal notranslate"><span class="pre">myst_nb.m
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">上一页</p>
-            <p class="prev-next-title">Rendering</p>
+            <p class="prev-next-title">渲染</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="hiding.html" title="下一页 页">
