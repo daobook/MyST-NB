@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-19 17:17+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../index.md:104
+msgid "Guides"
+msgstr "指南"
+
+#: ../../index.md:116
+msgid "Reference"
+msgstr "参考资料"
+
+#: ../../index.md:5
+msgid "Overview"
+msgstr "概览"
+
+#: ../../index.md
+msgid "Jupyter Notebook Publishing"
+msgstr "Jupyter Notebook 发布"
+
+#: ../../index.md:32
+msgid ""
+"A Sphinx and Docutils extension for compiling Jupyter Notebooks into high"
+" quality documentation formats."
+msgstr ""
+"用于将 Jupyter 笔记本编译为高质量文档格式的 Sphinx 和 Docutils 扩展。"
+
+#: ../../index.md:34
+msgid "Get Started"
+msgstr "开始使用"
+
+#: ../../index.md:50
+msgid ""
+"<svg version=\"4.0.0.63c5cb3\" width=\"2.0em\" height=\"2.0em\" class"
+"=\"sd-material-icon sd-material-icon-edit_note\" viewBox=\"0 0 24 24\" "
+"aria-hidden=\"true\"><rect fill=\"none\" height=\"24\" "
+"width=\"24\"></rect><path d=\"M3,10h11v2H3V10z M3,8h11V6H3V8z M3,16h7v-"
+"2H3V16z M18.01,12.87l0.71-0.71c0.39-0.39,1.02-0.39,1.41,0l0.71,0.71 "
+"c0.39,0.39,0.39,1.02,0,1.41l-0.71,0.71L18.01,12.87z "
+"M17.3,13.58l-5.3,5.3V21h2.12l5.3-5.3L17.3,13.58z\"></path></svg> Write"
+msgstr ""
+
+#: ../../index.md:54
+msgid ""
+"Mix Jupyter notebooks with text-based notebooks, Markdown and RST "
+"documents.\\ Use MyST Markdown syntax to support technical authoring "
+"features such as cross-referencing, figures, and admonitions."
+msgstr ""
+"将 Jupyter 笔记本与基于文本的笔记本、Markdown 和 RST 文档混合使用。\\ 使用 MyST Markdown 语法支持技术写作功能，如交叉引用、图像和警告。"
+
+#: ../../index.md:58
+msgid "[Learn more »](authoring/intro)"
+msgstr "[了解更多 »](authoring/intro)"
+
+#: ../../index.md:61
+msgid ""
+"<svg version=\"4.0.0.63c5cb3\" width=\"2.0em\" height=\"2.0em\" class"
+"=\"sd-material-icon sd-material-icon-published_with_changes\" viewBox=\"0"
+" 0 24 24\" aria-hidden=\"true\"><rect fill=\"none\" height=\"24\" "
+"width=\"24\"></rect><path "
+"d=\"M17.66,9.53l-7.07,7.07l-4.24-4.24l1.41-1.41l2.83,2.83l5.66-5.66L17.66,9.53z"
+" M4,12c0-2.33,1.02-4.42,2.62-5.88L9,8.5v-6H3 "
+"l2.2,2.2C3.24,6.52,2,9.11,2,12c0,5.19,3.95,9.45,9,9.95v-2.02C7.06,19.44,4,16.07,4,12z"
+" M22,12c0-5.19-3.95-9.45-9-9.95v2.02 "
+"c3.94,0.49,7,3.86,7,7.93c0,2.33-1.02,4.42-2.62,5.88L15,15.5v6h6l-2.2-2.2C20.76,17.48,22,14.89,22,12z\"></path></svg>"
+" Compute"
+msgstr ""
+
+#: ../../index.md:65
+msgid ""
+"Generate dynamic outputs using Jupyter kernels, with configurable "
+"execution handling.\\ Cache execution outputs, for fast re-builds."
+msgstr ""
+"使用 Jupyter 内核生成动态输出，具有可配置的执行处理。\\ 缓存执行输出，以进行快速重建。"
+
+#: ../../index.md:69
+msgid "[Learn more »](execute/intro)"
+msgstr "[了解更多 »](execute/intro)"
+
+#: ../../index.md:72
+msgid ""
+"<svg version=\"4.0.0.63c5cb3\" width=\"2.0em\" height=\"2.0em\" class"
+"=\"sd-material-icon sd-material-icon-preview\" viewBox=\"0 0 24 24\" "
+"aria-hidden=\"true\"><g><rect fill=\"none\" height=\"24\" "
+"width=\"24\"></rect><path "
+"d=\"M19,3H5C3.89,3,3,3.9,3,5v14c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.11,3,19,3z"
+" M19,19H5V7h14V19z M13.5,13 "
+"c0,0.83-0.67,1.5-1.5,1.5s-1.5-0.67-1.5-1.5c0-0.83,0.67-1.5,1.5-1.5S13.5,12.17,13.5,13z"
+" M12,9c-2.73,0-5.06,1.66-6,4 "
+"c0.94,2.34,3.27,4,6,4s5.06-1.66,6-4C17.06,10.66,14.73,9,12,9z "
+"M12,15.5c-1.38,0-2.5-1.12-2.5-2.5c0-1.38,1.12-2.5,2.5-2.5 "
+"c1.38,0,2.5,1.12,2.5,2.5C14.5,14.38,13.38,15.5,12,15.5z\"></path></g></svg>"
+" Render"
+msgstr ""
+
+#: ../../index.md:76
+msgid ""
+"Convert Jupyter execution outputs to rich embedded content.\\ Insert "
+"computed variables within the document flow.\\ Build single or "
+"collections of documents into multiple formats (HTML, PDF, ...)."
+msgstr ""
+"将 Jupyter 执行输出转换为丰富的嵌入式内容。\\ 在文档流中插入计算变量。\\ 将单个或多个文档构建为多种格式（HTML、PDF 等）。"
+
+#: ../../index.md:81
+msgid "[Learn more »](render/code-cells)"
+msgstr "[了解更多 »](render/code-cells)"
+
+#: ../../index.md:87
+msgid ""
+"MyST-NB is a module within the [Executable Books "
+"Project](https://executablebooks.org), an international collaboration to "
+"build open source tools that facilitate publishing computational "
+"narratives using the Jupyter ecosystem. It is also a core component of "
+"[Jupyter Book](inv:jb#intro)."
+msgstr ""
+"MyST-NB 是 [Executable Books 项目](https://executablebooks.org) 中的模块，这是国际合作项目，旨在构建开源工具，"
+"以促进使用 Jupyter 生态系统发布计算叙事。它也是 [Jupyter Book](inv:jb#intro) 的核心组件之一。"
+
+#: ../../index.md:91
+msgid ""
+"Check out the [Gallery of Jupyter "
+"Books](https://executablebooks.org/en/latest/gallery), for inspiration "
+"from across the community."
+msgstr ""
+"查看 [Jupyter Books 画廊](https://executablebooks.org/en/latest/gallery)，获取来自社区的灵感。"
+
+#: ../../index.md:94
+msgid ""
+"See also, the [MyST-Markdown VS Code "
+"extension](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject"
+".myst-highlight) and [jupyterlab-myst](https://github.com/executablebooks"
+"/jupyterlab-myst), for editor tools to author your notebooks."
+msgstr ""
+"另请参阅 [MyST-Markdown VS Code 扩展](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight) "
+"和 [jupyterlab-myst](https://github.com/executablebooks/jupyterlab-myst)，这些编辑器工具可用于编写您的笔记本。"

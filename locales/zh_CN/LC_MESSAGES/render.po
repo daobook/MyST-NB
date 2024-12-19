@@ -1,0 +1,1321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-19 17:17+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../render/format_code_cells.md:8
+msgid "Format code cells"
+msgstr ""
+
+#: ../../render/format_code_cells.md:10
+msgid ""
+"Code cell rendering behaviour is controlled with configuration at a "
+"global, per-file, or per-cell level, as outlined in the [configuration "
+"section](config/intro)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:12
+msgid ""
+"See the sections below for a description of these configuration option "
+"and their effect."
+msgstr ""
+
+#: ../../render/format_code_cells.md:15
+msgid "Number source lines"
+msgstr ""
+
+#: ../../render/format_code_cells.md:17
+msgid ""
+"You can control whether the number of source lines is displayed for code "
+"cells, globally with `nb_number_source_lines = True`, per-file with "
+"`number_source_lines` in the notebook metadata, or per-cell with "
+"`number_source_lines` in the cell metadata. For example:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:44
+msgid "stdout and stderr outputs"
+msgstr ""
+
+#: ../../render/format_code_cells.md:47
+msgid "Remove stdout or stderr"
+msgstr ""
+
+#: ../../render/format_code_cells.md:49
+msgid ""
+"In some cases you may not wish to display stdout/stderr outputs in your "
+"final documentation, for example, if they are only for debugging "
+"purposes."
+msgstr ""
+
+#: ../../render/format_code_cells.md:52
+msgid ""
+"You can tell MyST-NB to remove these outputs, per cell, using the "
+"`remove-stdout` and `remove-stderr` [cell tags](https://jupyter-"
+"notebook.readthedocs.io/en/stable/changelog.html#cell-tags), like so:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:76
+msgid ""
+"Alternatively, you can configure how stdout is dealt with at a global "
+"configuration level, using the `nb_output_stderr` configuration value. "
+"This can be set to:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:79
+msgid ""
+"`\"show\"` (default): show all stderr (unless a `remove-stderr` tag is "
+"present)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:80
+msgid "`\"remove\"`: remove all stderr"
+msgstr ""
+
+#: ../../render/format_code_cells.md:81
+msgid ""
+"`\"remove-warn\"`: remove all stderr, but log a warning to sphinx if any "
+"found"
+msgstr ""
+
+#: ../../render/format_code_cells.md:82
+msgid ""
+"`\"warn\"`, `\"error\"` or `\"severe\"`: log to sphinx, at a certain "
+"level, if any found."
+msgstr ""
+
+#: ../../render/format_code_cells.md:85
+msgid "Group into single streams"
+msgstr ""
+
+#: ../../render/format_code_cells.md:87
+msgid ""
+"Cells may print multiple things to `stdout` and `stderr`. For example, if"
+" a cell prints status updates throughout its execution, each of these is "
+"often printed to `stdout`. By default, these outputs may be split across "
+"multiple items, and will be rendered as separate \"chunks\" in your built"
+" documentation."
+msgstr ""
+
+#: ../../render/format_code_cells.md:91
+msgid ""
+"If you'd like each of the outputs in `stderr` and `stdout` to be merged "
+"into a single stream for each, use the following configuration:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:97
+msgid ""
+"This will ensure that all `stderr` and `stdout` outputs are merged into a"
+" single group. This also makes cell outputs more deterministic. Normally,"
+" slight differences in timing may result in different orders of `stderr` "
+"and `stdout` in the cell output, while this setting will sort them "
+"properly."
+msgstr ""
+
+#: ../../render/format_code_cells.md:102
+msgid "Outputs MIME priority"
+msgstr ""
+
+#: ../../render/format_code_cells.md:104
+msgid ""
+"When Jupyter executes a code cell it can produce multiple outputs, and "
+"each of these outputs can contain multiple [MIME media "
+"types](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), for use by different output "
+"formats (like HTML or LaTeX)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:106
+msgid ""
+"MyST-NB stores a base priority dictionary for most of the common [Sphinx "
+"builder names](https://www.sphinx-"
+"doc.org/en/master/usage/builders/index.html), mapping MIME types to a "
+"priority number (lower is higher priority):"
+msgstr ""
+
+#: ../../render/format_code_cells.md:117
+msgid ""
+"Items in this dictionary can be overridden by the "
+"`nb_mime_priority_overrides` configuration option, in your `conf.py`. For"
+" example, the following configuration applies in order:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:120
+msgid "Sets `text/plain` as the highest priority for `html` output."
+msgstr ""
+
+#: ../../render/format_code_cells.md:121
+msgid "Disables `image/jpeg` for `latex` output"
+msgstr ""
+
+#: ../../render/format_code_cells.md:122
+msgid ""
+"Adds a custom MIME type `customtype` for all builders (`*` applies to all"
+" builders)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:133
+msgid "`nb_mime_priority_overrides` replaces `nb_render_priority`"
+msgstr ""
+
+#: ../../render/format_code_cells.md:137
+msgid "[](render/output/customise), for a more advanced means of customisation."
+msgstr ""
+
+#: ../../render/format_code_cells.md:141
+msgid "Images and Figures"
+msgstr ""
+
+#: ../../render/format_code_cells.md:143
+msgid ""
+"With the default renderer, for any image types output by the code, we can"
+" apply formatting *via* cell metadata. The top-level metadata key can be "
+"set using `nb_cell_metadata_key` in your `conf.py`, and is set to "
+"`mystnb` by default. Then for the image we can apply all the variables of"
+" the standard [image "
+"directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image):"
+msgstr ""
+
+#: ../../render/format_code_cells.md:147
+msgid "**width**: length or percentage (%) of the current line width"
+msgstr ""
+
+#: ../../render/format_code_cells.md:148
+msgid "**height**: length"
+msgstr ""
+
+#: ../../render/format_code_cells.md:149
+msgid "**scale**: integer percentage (the \"%\" symbol is optional)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:150
+msgid ""
+"**align**: \"top\", \"middle\", \"bottom\", \"left\", \"center\", or "
+"\"right\""
+msgstr ""
+
+#: ../../render/format_code_cells.md:151 ../../render/format_code_cells.md:162
+msgid "**classes**: space separated strings"
+msgstr ""
+
+#: ../../render/format_code_cells.md:152
+msgid "**alt**: string"
+msgstr ""
+
+#: ../../render/format_code_cells.md:154
+msgid "Units of length are: 'em', 'ex', 'px', 'in', 'cm', 'mm', 'pt', 'pc'"
+msgstr ""
+
+#: ../../render/format_code_cells.md:156
+msgid ""
+"You can also wrap the output in a "
+"[`figure`](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure),"
+" that can include:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:158
+msgid "**align**: \"left\", \"center\", or \"right\""
+msgstr ""
+
+#: ../../render/format_code_cells.md:159
+msgid ""
+"**caption**: a string, which must contain a single paragraph and is "
+"rendered as MyST Markdown (subsequent paragraphs are added as a legend)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:160
+msgid ""
+"**caption_before**: a boolean, if true, the caption is rendered before "
+"the figure (default is false)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:161
+msgid "**name**: by which to reference the figure"
+msgstr ""
+
+#: ../../render/format_code_cells.md:186
+msgid "Hey everyone its **party** time!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:189
+msgid "(and I'm a legend)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:202
+msgid ""
+"Now we can link to the image from anywhere in our documentation: [swim to"
+" the fish](fun-fish-ref)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:204
+msgid "You can create figures for any mime outputs, including tables:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:224
+msgid "This is my table caption, above the table"
+msgstr ""
+
+#: ../../render/format_code_cells.md:237
+msgid "Markdown"
+msgstr ""
+
+#: ../../render/format_code_cells.md:239
+msgid ""
+"The format of output `text/markdown` can be specified by "
+"`render_markdown_format` configuration:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:241 ../../render/glue.md:379
+msgid ""
+"`commonmark` (default): Restricted to the [CommonMark "
+"specification](https://commonmark.org/)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:242 ../../render/glue.md:380
+msgid ""
+"`gfm`: Restricted to the [GitHub-flavored "
+"markdown](https://github.github.com/gfm/)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:243 ../../render/glue.md:381
+msgid ""
+"Note, this requires the installation of the [linkify-it-py "
+"package](https://pypi.org/project/linkify-it-py)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:244
+msgid ""
+"`myst`: Uses [the MyST parser](https://myst-"
+"parser.readthedocs.io/en/latest/) with the same configuration as the "
+"current document."
+msgstr ""
+
+#: ../../render/format_code_cells.md:246
+msgid "CommonMark formatting will output basic Markdown syntax:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:250
+msgid "**_some_ markdown** and an [a reference](https://example.com)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:253
+msgid "and even internal images can be rendered!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:257
+msgid "![figure](../_static/logo-wide.svg)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:257
+msgid "figure"
+msgstr ""
+
+#: ../../render/format_code_cells.md:259
+msgid ""
+"But setting the Markdown format to `myst` will allow for more advanced "
+"formatting, such as including internal references, tables, and even other"
+" directives, either using:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:262
+msgid ""
+"`myst_render_markdown_format = \"myst\"` in the `conf.py` to set "
+"globally, or"
+msgstr ""
+
+#: ../../render/format_code_cells.md:263
+msgid "`markdown_format` in the cell metadata to set per-cell."
+msgstr ""
+
+#: ../../render/format_code_cells.md:285
+msgid ""
+"The parsed Markdown is integrated into the wider documentation, and so it"
+" is possible, for example, to include internal references:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "**_some_ markdown** and an [internal reference](render/output/markdown)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "a"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "b"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "c"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "1"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "2"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "3"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "A note admonition!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:306
+msgid "ANSI Outputs"
+msgstr ""
+
+#: ../../render/format_code_cells.md:308
+msgid ""
+"By default, the standard output/error streams and text/plain MIME outputs"
+" may contain ANSI escape sequences to change the text and background "
+"colors."
+msgstr ""
+
+#: ../../render/format_code_cells.md:317
+msgid ""
+"This uses the built-in {py:class}`~myst_nb.core.lexers.AnsiColorLexer` "
+"[pygments lexer](https://pygments.org/). You can change the lexer used in"
+" the `conf.py`, for example to turn off lexing:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:324
+msgid ""
+"The following code[^acknowledge] shows the 8 basic ANSI colors it is "
+"based on. Each of the 8 colors has an “intense” variation, which is used "
+"for bold text."
+msgstr ""
+
+#: ../../render/format_code_cells.md:351
+msgid ""
+"ANSI also supports a set of 256 indexed colors. This is currently not "
+"supported, but we hope to introduce it at a later date (raise an issue on"
+" the repository if you require it!)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:357
+msgid "Customise the render process"
+msgstr ""
+
+#: ../../render/format_code_cells.md:359
+msgid ""
+"The render process is governed by subclasses of "
+"{py:class}`~myst_nb.core.render.NbElementRenderer`, which dictate how to "
+"create the `docutils` AST nodes for elements of the notebook."
+msgstr ""
+
+#: ../../render/format_code_cells.md:361
+msgid ""
+"Implementations are loaded *via* Python [entry "
+"points](https://packaging.python.org/guides/distributing-packages-using-"
+"setuptools/#entry-points), in the `myst_nb.renderers` group. So it is "
+"possible to inject your own subclass to fully override rendering."
+msgstr ""
+
+#: ../../render/format_code_cells.md:364
+msgid "For example, the renderer loaded in this package is:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:371
+msgid "You can then select the renderer plugin in your `conf.py`:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:377
+msgid ""
+"Plugins can also override rendering of particular output MIME types, "
+"using the `myst_nb.mime_renderers` entry point group to supply functions "
+"with signature: {py:class}`~myst_nb.core.render.MimeRenderPlugin`."
+msgstr ""
+
+#: ../../render/format_code_cells.md:380
+msgid ""
+"For example {py:class}`myst_nb.core.render.ExampleMimeRenderPlugin`, is "
+"loaded in this package:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:387
+msgid "Meaning we can now render `custommimetype` in all output formats:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:391
+msgid "This is a custom mime type, with content: 'Some text'"
+msgstr ""
+
+#: ../../render/format_code_cells.md:327
+msgid ""
+"Borrowed from [nbsphinx](https://nbsphinx.readthedocs.io/en/0.7.1/code-"
+"cells.html#ANSI-Colors)!"
+msgstr ""
+
+#: ../../render/glue.md:9
+msgid "Saving variables to embed (glue)"
+msgstr ""
+
+#: ../../render/glue.md:11
+msgid ""
+"The `glue` submodule allows you to store variables in the notebooks "
+"outputs, by keys, then reference those keys to embed the outputs inline "
+"of your text content.[^download]"
+msgstr ""
+
+#: ../../render/glue.md:17
+msgid ""
+"The `glue` roles and directives now only identify keys in the same "
+"notebook, by default. To glue keys from other notebooks, see "
+"{ref}`glue/crossdoc`."
+msgstr ""
+
+#: ../../render/glue.md:25
+msgid "Save variables in code cells"
+msgstr ""
+
+#: ../../render/glue.md:27
+msgid ""
+"You can use `myst_nb.glue()` to assign the output of a variable to a key "
+"of your choice. `glue` will store all of the information that is normally"
+" used to display that variable (that is, whatever happens when you "
+"display the variable by putting it at the end of a cell). Choose a key "
+"that you will remember, as you will use it later."
+msgstr ""
+
+#: ../../render/glue.md:31
+msgid "The following code glues a variable inside the notebook:"
+msgstr ""
+
+#: ../../render/glue.md:39
+msgid "You can then insert it into your text like so: {glue}`my_variable`."
+msgstr ""
+
+#: ../../render/glue.md:41
+msgid "That was accomplished with the following code: `` {glue}`my_variable` ``."
+msgstr ""
+
+#: ../../render/glue.md:43
+msgid "Saving different variable types"
+msgstr ""
+
+#: ../../render/glue.md:45
+msgid ""
+"You can glue anything in your notebook and display it later with "
+"`{glue}`. Here we'll show how to glue and paste **numbers and images**. "
+"We'll simulate some data and run a simple bootstrap on it. We'll hide "
+"most of this process below, to focus on the glueing part."
+msgstr ""
+
+#: ../../render/glue.md:69
+msgid ""
+"In the cell below, `data` contains our data, and `bootstrap_indices` is a"
+" collection of sample indices in each bootstrap. Below we'll calculate a "
+"few statistics of interest, and `glue()` them into the notebook."
+msgstr ""
+
+#: ../../render/glue.md:84
+msgid ""
+"By default, `glue` will display the value of the variable you are gluing."
+" This is useful for sanity-checking its value at glue-time. If you'd like"
+" to **prevent display**, use the `display=False` option. Note that below,"
+" we also *overwrite* the value of `boot_chi` (but using the same value):"
+msgstr ""
+
+#: ../../render/glue.md:93
+msgid ""
+"You can also glue visualizations, such as matplotlib figures (here we use"
+" `display=False` to ensure that the figure isn't plotted twice):"
+msgstr ""
+
+#: ../../render/glue.md:112
+msgid "The same can be done for DataFrames (or other table-like objects) as well."
+msgstr ""
+
+#: ../../render/glue.md:121
+msgid ""
+"Since we are going to paste this figure into our document at a later "
+"point, you may wish to remove the output here, using the `remove-output` "
+"tag (see {ref}`use/removing`)."
+msgstr ""
+
+#: ../../render/glue.md:130
+msgid "Embedding variables in the page"
+msgstr ""
+
+#: ../../render/glue.md:132
+msgid ""
+"Once you have glued variables into a notebook, you can then **paste** "
+"those variables into your text in your book anywhere you like (even on "
+"other pages). These variables can be pasted using one of the roles or "
+"directives in the `glue:` *family*."
+msgstr ""
+
+#: ../../render/glue.md:138
+msgid "The `glue` role/directive"
+msgstr ""
+
+#: ../../render/glue.md:140
+msgid ""
+"The simplest role and directive are `glue` (also known as `glue:any`), "
+"which paste the glued output inline or as a block respectively, with no "
+"additional formatting. Simply add:"
+msgstr ""
+
+#: ../../render/glue.md:150
+msgid ""
+"For example, we'll paste the plot we generated above with the following "
+"text:"
+msgstr ""
+
+#: ../../render/glue.md:157
+msgid "Here's how it looks:"
+msgstr ""
+
+#: ../../render/glue.md:162
+msgid "Or we can paste inline objects like so:"
+msgstr ""
+
+#: ../../render/glue.md:168
+msgid "Inline text; {glue}`boot_mean`, and figure; {glue}`boot_fig`."
+msgstr ""
+
+#: ../../render/glue.md:171
+msgid ""
+"We recommend using wider, shorter figures when plotting in-line, with a "
+"ratio around 6x2. For example, here's is an in-line figure of sorted "
+"means from our bootstrap: {glue}`sorted_means_fig`. It can be used to "
+"make a visual point that isn't too complex! For more ideas, check out "
+"[how sparklines are used](https://en.wikipedia.org/wiki/Sparkline)."
+msgstr ""
+
+#: ../../render/glue.md:178
+msgid ""
+"Next we'll cover some more specific pasting functionality, which gives "
+"you more control over how the outputs look in your pages."
+msgstr ""
+
+#: ../../render/glue.md:183
+msgid "Controlling the output format"
+msgstr ""
+
+#: ../../render/glue.md:185
+msgid ""
+"You can control the pasted outputs by using a sub-command of `{glue}`. "
+"These are called like so: `` {glue:subcommand}`key` ``. These subcommands"
+" allow you to control more of the look, feel, and content of the pasted "
+"output."
+msgstr ""
+
+#: ../../render/glue.md:190
+msgid ""
+"When you use `{glue}` you are actually using a short-hand for "
+"`{glue:any}`. This is a generic command that doesn't make many "
+"assumptions about what you are gluing."
+msgstr ""
+
+#: ../../render/glue.md:196
+msgid "The `glue:text` role"
+msgstr ""
+
+#: ../../render/glue.md:198
+msgid ""
+"The `glue:text` role, is specific to `text/plain` outputs. For example, "
+"the following text:"
+msgstr ""
+
+#: ../../render/glue.md:205
+msgid "Is rendered as:"
+msgstr ""
+
+#: ../../render/glue.md:207
+#, python-format
+msgid ""
+"The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95%"
+" confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`)"
+msgstr ""
+
+#: ../../render/glue.md:210
+msgid ""
+"`glue:text` only works with glued variables that contain a `text/plain` "
+"output."
+msgstr ""
+
+#: ../../render/glue.md:213
+msgid ""
+"With `glue:text` we can add formatting to the output, by specifying a "
+"format spec string after a `:`: `` {glue:text}`mykey:<format_spec>` ``"
+msgstr ""
+
+#: ../../render/glue.md:215
+msgid ""
+"The `<format_spec>` should be a valid [Python format "
+"specifier](https://docs.python.org/3/library/string.html#format-"
+"specification-mini-language)."
+msgstr ""
+
+#: ../../render/glue.md:217
+msgid ""
+"This is particularly useful if you are displaying numbers and want to "
+"round the results. For example, the following: ``My rounded mean: "
+"{glue:text}`boot_mean:.2f` `` will be rendered like this:"
+msgstr ""
+
+#: ../../render/glue.md:220
+msgid ""
+"My rounded mean: {glue:text}`boot_mean:.2f` (95% CI: "
+"{glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`)."
+msgstr ""
+
+#: ../../render/glue.md:223
+msgid ""
+"As of NumPy 2.0, the `text/plain` representation of [NumPy objects has "
+"changed](https://numpy.org/devdocs/release/2.0.0-notes.html"
+"#representation-of-numpy-scalars-changed). Using text formatting with "
+"NumPy>=2.0 will give warnings like:"
+msgstr ""
+
+#: ../../render/glue.md:230
+msgid ""
+"This can be resolved by either formatting the number before glueing or by"
+" setting NumPy to use legacy print options, as shown below."
+msgstr ""
+
+#: ../../render/glue.md:245
+msgid "The `glue:figure` directive"
+msgstr ""
+
+#: ../../render/glue.md:247
+msgid ""
+"With `glue:figure` you can apply more formatting to figure like objects, "
+"such as giving them a caption and referenceable label:"
+msgstr ""
+
+#: ../../render/glue.md:250
+msgid "`glue:figure` directive options"
+msgstr ""
+
+#: ../../render/glue.md:279
+msgid ""
+"This is a **caption**, with an embedded `{glue:text}` element: "
+"{glue:text}`boot_mean:.2f`!"
+msgstr ""
+
+#: ../../render/glue.md:286
+msgid "Here is a {ref}`reference to the figure <fig-boot>`"
+msgstr ""
+
+#: ../../render/glue.md:290
+msgid "Here's a table:"
+msgstr ""
+
+#: ../../render/glue.md:305
+msgid "A caption for a pandas table."
+msgstr ""
+
+#: ../../render/glue.md:310
+msgid "The `glue:math` directive"
+msgstr ""
+
+#: ../../render/glue.md:312
+msgid ""
+"The `glue:math` directive, is specific to latex math outputs (glued "
+"variables that contain a `text/latex` mimetype), and works similarly to "
+"the [sphinx math directive](https://www.sphinx-"
+"doc.org/en/1.8/usage/restructuredtext/directives.html#math)."
+msgstr ""
+
+#: ../../render/glue.md:316
+msgid "`glue:math` directive options"
+msgstr ""
+
+#: ../../render/glue.md:326 ../../render/glue.md:345
+msgid ""
+"\\displaystyle \\left(\\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} -"
+" \\frac{2 \\sqrt{5} i}{5}\\right) + \\left(- \\sqrt{5} "
+"i\\right)^{\\alpha} \\left(\\frac{1}{2} + \\frac{2 \\sqrt{5} "
+"i}{5}\\right)"
+msgstr ""
+
+#: ../../render/glue.md:343
+msgid "Insert the equation here:"
+msgstr ""
+
+#: ../../render/glue.md:349
+msgid "Which we reference as Equation {eq}`eq-sym`."
+msgstr ""
+
+#: ../../render/glue.md:352
+msgid ""
+"`glue:math` only works with glued variables that contain a `text/latex` "
+"output."
+msgstr ""
+
+#: ../../render/glue.md:355
+msgid "The `glue:md` role/directive"
+msgstr ""
+
+#: ../../render/glue.md:357
+msgid ""
+"With `glue:md`, you can output `text/markdown`, that will be integrated "
+"into your page."
+msgstr ""
+
+#: ../../render/glue.md:377
+msgid "The format of the markdown can be specified as:"
+msgstr ""
+
+#: ../../render/glue.md:382
+msgid "`myst`: The MyST parser configuration for the the current document."
+msgstr ""
+
+#: ../../render/glue.md:384
+msgid ""
+"For example, the following role/directive will glue inline/block MyST "
+"Markdown, as if it was part of the original document."
+msgstr ""
+
+#: ../../render/glue.md:394
+msgid "Here is some {glue:md}`inline_md:myst`!"
+msgstr ""
+
+#: ../../render/glue.md:396
+msgid "A heading"
+msgstr ""
+
+#: ../../render/glue.md:396
+msgid "Then some text, and anything nested."
+msgstr ""
+
+#: ../../render/glue.md:403
+msgid "Embedding outputs from other pages"
+msgstr ""
+
+#: ../../render/glue.md:405
+msgid ""
+"Certain `glue` roles and directives can be used to paste content from "
+"other notebooks, by specifying the (relative) path to them."
+msgstr ""
+
+#: ../../render/glue.md:409
+msgid ""
+"Sometimes you'd like to use variables from notebooks that are not meant "
+"to be shown to users. In this case, you should bundle the notebook with "
+"the rest of your content pages, but include `orphan: true` in the "
+"metadata of the notebook."
+msgstr ""
+
+#: ../../render/glue.md:413
+msgid ""
+"For example, the following example pastes glue variables from {ref"
+"}`orphaned-nb`:"
+msgstr ""
+
+#: ../../render/glue.md:426
+msgid "A cross-pasted `any` role: {glue}`orphaned_nb.ipynb::var_text`"
+msgstr ""
+
+#: ../../render/glue.md:427
+msgid "A cross-pasted `text` role: {glue:text}`orphaned_nb.ipynb::var_float:.2E`"
+msgstr ""
+
+#: ../../render/glue.md:429
+msgid "A cross-pasted `any` directive:"
+msgstr ""
+
+#: ../../render/glue.md:437
+msgid "Advanced use-cases"
+msgstr ""
+
+#: ../../render/glue.md:439
+msgid "Here are a few more specific and advanced uses of the `glue` submodule."
+msgstr ""
+
+#: ../../render/glue.md:441
+msgid "Embedding into tables"
+msgstr ""
+
+#: ../../render/glue.md:443
+msgid ""
+"In addition to pasting blocks of outputs, or in-line with text, you can "
+"also paste directly into tables. This allows you to compose complex "
+"collections of structured data using outputs that were generated in other"
+" notebooks. For example the following table:"
+msgstr ""
+
+#: ../../render/glue.md:454
+msgid "Results in:"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "name"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "plot"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "mean"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "ci"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "histogram and raw text"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_fig`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_mean`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_clo`-{glue}`boot_chi`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "sorted means and formatted text"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`sorted_means_fig`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue:text}`boot_mean:.3f`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue:text}`boot_clo:.3f`-{glue:text}`boot_chi:.3f`"
+msgstr ""
+
+#: ../../render/glue.md:14
+msgid ""
+"This notebook can be downloaded as **{nb-download}`glue.ipynb`** and "
+"{download}`glue.md`"
+msgstr ""
+
+#: ../../render/hiding.md:7
+msgid "Hide cell contents"
+msgstr ""
+
+#: ../../render/hiding.md:9
+msgid ""
+"You can use Jupyter Notebook **cell tags** to control some of the "
+"behavior of the rendered notebook.[^download] If you are using cell tags "
+"for the first time, you can read more about them in this tutorial "
+"<https://jupyterbook.org/en/stable/content/metadata.html#add-metadata-to-"
+"notebooks>"
+msgstr ""
+
+#: ../../render/hiding.md:18
+msgid "Hide code cells"
+msgstr ""
+
+#: ../../render/hiding.md:20
+msgid ""
+"You can use **cell tags** to control the content hidden with code cells "
+"at the cell level. Add the following tags to a cell's metadata to control"
+" what to hide in code cells:"
+msgstr ""
+
+#: ../../render/hiding.md:24
+msgid "**`hide-input`** tag to hide the cell inputs"
+msgstr ""
+
+#: ../../render/hiding.md:25
+msgid "**`hide-output`** to hide the cell outputs"
+msgstr ""
+
+#: ../../render/hiding.md:26
+msgid "**`hide-cell`** to hide the entire cell"
+msgstr ""
+
+#: ../../render/hiding.md:28
+msgid "For example, we'll show cells with each below."
+msgstr ""
+
+#: ../../render/hiding.md:38
+msgid "Here is a cell with a `hide-input` tag."
+msgstr ""
+
+#: ../../render/hiding.md:48
+msgid "Here's a cell with a `hide-output` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:58
+msgid "Here's a cell with both `hide-input` and `hide-output` tags:"
+msgstr ""
+
+#: ../../render/hiding.md:68
+msgid "Here's a cell with a `hide-cell` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:78
+msgid ""
+"Finally, a cell with both `remove-input` (see below) and `hide-output` "
+"tags:"
+msgstr ""
+
+#: ../../render/hiding.md:87
+msgid ""
+"You can control the hide/show prompts by using the `code_prompt_show` and"
+" `code_prompt_hide` configuration options. The optional `{type}` "
+"placeholder will be replaced with `content`, `source`, or `outputs`, "
+"depending on the hide tag. See the {ref}`config/intro` section for more "
+"details."
+msgstr ""
+
+#: ../../render/hiding.md:114
+msgid "Hide markdown cells"
+msgstr ""
+
+#: ../../render/hiding.md:116
+msgid ""
+"You cannot hide an entire markdown cell, but you can hide sections of "
+"markdown **content** by using roles and directives."
+msgstr ""
+
+#: ../../render/hiding.md:118
+msgid ""
+"For information on how to hide / toggle markdown content in Sphinx, see "
+"either [the `sphinx-togglebutton` documentation](https://sphinx-"
+"togglebutton.readthedocs.io/en/latest/) or the [`sphinx-design` dropdowns"
+" documentation](https://sphinx-"
+"design.readthedocs.io/en/latest/dropdowns.html)."
+msgstr ""
+
+#: ../../render/hiding.md:122
+msgid "Remove parts of cells"
+msgstr ""
+
+#: ../../render/hiding.md:124
+msgid ""
+"Sometimes, you want to entirely remove parts of a cell so that it doesn't"
+" make it into the output at all."
+msgstr ""
+
+#: ../../render/hiding.md:126
+msgid ""
+"To do this at the global level, use the `nb_remove_code_source` or "
+"`nb_remove_code_outputs` configuration options, or at a per-file level, "
+"e.g."
+msgstr ""
+
+#: ../../render/hiding.md:136
+msgid "See the [configuration section](config/intro) for more details."
+msgstr ""
+
+#: ../../render/hiding.md:138
+msgid ""
+"At a per-cell level you can use the same tag pattern described above, but"
+" with the word `remove_` instead of `hide_`. Use the following tags:"
+msgstr ""
+
+#: ../../render/hiding.md:141
+msgid "**`remove-input`** tag to remove the cell inputs"
+msgstr ""
+
+#: ../../render/hiding.md:142
+msgid "**`remove-output`** to remove the cell outputs"
+msgstr ""
+
+#: ../../render/hiding.md:143
+msgid "**`remove-cell`** to remove the entire cell"
+msgstr ""
+
+#: ../../render/hiding.md:147
+msgid ""
+"Here is a cell with a `remove-input` tag. The inputs will not make it "
+"into the page at all."
+msgstr ""
+
+#: ../../render/hiding.md:157
+msgid "Here's a cell with a `remove-output` tag:"
+msgstr ""
+
+#: ../../render/hiding.md:166
+msgid ""
+"And the following cell has a `remove-cell` tag (there should be nothing "
+"below, since the cell will be gone)."
+msgstr ""
+
+#: ../../render/hiding.md:13
+msgid ""
+"This notebook can be downloaded as         **{nb-"
+"download}`hiding.ipynb`** and {download}`hiding.md`"
+msgstr ""
+
+#: ../../render/index.md:1
+msgid "Rendering"
+msgstr ""
+
+#: ../../render/index.md:3
+msgid ""
+"Convert Jupyter execution outputs to embedded content, and build output "
+"formats."
+msgstr ""
+
+#: ../../render/inline.md:11
+msgid "Inline variable evaluation (eval)"
+msgstr ""
+
+#: ../../render/inline.md:16
+msgid ""
+"The `eval` submodule allows you to insert code variables directly into "
+"the text flow of your documentation."
+msgstr ""
+
+#: ../../render/inline.md:18
+msgid ""
+"Use of `eval` requires that the [notebook execution mode](execute/modes) "
+"is set to `inline`, since the variables are evaluated by the notebook "
+"kernel. For example, using the [top-matter](authoring/text-notebooks):"
+msgstr ""
+
+#: ../../render/inline.md:31
+msgid "Basic example"
+msgstr ""
+
+#: ../../render/inline.md:33
+msgid "Below we set a variable `v1` within a code cell."
+msgstr ""
+
+#: ../../render/inline.md:39
+msgid ""
+"Using the `eval` role, we can insert the variable `v1` into the text of a"
+" paragraph:"
+msgstr ""
+
+#: ../../render/inline.md:41 ../../render/inline.md:49
+msgid "`` {eval}`v1` `` -> {eval}`v1`"
+msgstr ""
+
+#: ../../render/inline.md:43
+msgid ""
+"If we update the variable, we can see the change reflected in subsequent "
+"evaluation:"
+msgstr ""
+
+#: ../../render/inline.md:52
+msgid "Variable names must match the regex `[a-zA-Z][a-zA-Z0-9_]*`"
+msgstr ""
+
+#: ../../render/inline.md:55
+msgid "Inserting different output types"
+msgstr ""
+
+#: ../../render/inline.md:57
+msgid ""
+"Any variable type can be inserted into the text flow using the `eval` "
+"role, and the most suitable output type will be used, based on the output"
+" format (see {ref}`render/output/priority` for more information). For "
+"example:"
+msgstr ""
+
+#: ../../render/inline.md:66
+msgid "An inline slider (`` {eval}`slider` ``): {eval}`slider`"
+msgstr ""
+
+#: ../../render/inline.md:68
+msgid "You can also use the `eval` directive to insert variables as blocks:"
+msgstr ""
+
+#: ../../render/inline.md:79
+msgid "using:"
+msgstr ""
+
+#: ../../render/inline.md:86
+msgid "gives:"
+msgstr ""
+
+#: ../../render/inline.md:91
+msgid "Embedding outputs in figures"
+msgstr ""
+
+#: ../../render/inline.md:93
+msgid ""
+"The `eval:figure` directive allows you to embed outputs in a figure, with"
+" an optional caption and other formatting options."
+msgstr ""
+
+#: ../../render/inline.md:96
+msgid "For example, we can embed the output of the above plot in a figure:"
+msgstr ""
+
+#: ../../render/inline.md:105
+msgid "which gives:"
+msgstr ""
+
+#: ../../render/inline.md:109
+msgid "My plot with a mean value of {eval}`mean`."
+msgstr ""
+
+#: ../../render/inline.md:112
+msgid "That can be referenced with `` {ref}`myplot` ``: {ref}`myplot`"
+msgstr ""
+
+#: ../../render/inline.md:114
+msgid "The following directive options are available:"
+msgstr ""
+
+#: ../../render/inline.md:116
+msgid "`eval:figure` directive options"
+msgstr ""
+
+#: ../../render/interactive.md:7
+msgid "Widgets and interactive outputs"
+msgstr ""
+
+#: ../../render/interactive.md:9
+msgid ""
+"Jupyter Notebooks have support for many kinds of interactive outputs. "
+"These should all be supported in MyST-NB by passing the output HTML "
+"through automatically. This page has a few common examples.[^download]"
+msgstr ""
+
+#: ../../render/interactive.md:15
+msgid "First off, we'll download a little bit of data and show its structure:"
+msgstr ""
+
+#: ../../render/interactive.md:23
+msgid "Plotting libraries"
+msgstr ""
+
+#: ../../render/interactive.md:25
+msgid "Altair"
+msgstr ""
+
+#: ../../render/interactive.md:27
+msgid ""
+"Interactive outputs will work under the assumption that the outputs they "
+"produce have self-contained HTML that works without requiring any "
+"external dependencies to load. See the [`Altair` installation "
+"instructions](https://altair-"
+"viz.github.io/getting_started/installation.html#installation) to get set "
+"up with Altair. Below is some example output."
+msgstr ""
+
+#: ../../render/interactive.md:42
+msgid "Plotly"
+msgstr ""
+
+#: ../../render/interactive.md:44
+msgid ""
+"Plotly is another interactive plotting library that provides a high-level"
+" API for visualization. See the [Plotly JupyterLab "
+"documentation](https://plotly.com/python/getting-started/#jupyterlab-"
+"support-python-35) to get started with Plotly in the notebook."
+msgstr ""
+
+#: ../../render/interactive.md:47 ../../render/interactive.md:75
+msgid "Below is some example output."
+msgstr ""
+
+#: ../../render/interactive.md:61
+msgid ""
+"You may need to supply the `require.js` for plotly to display; in your "
+"`conf.py`:"
+msgstr ""
+
+#: ../../render/interactive.md:69
+msgid "Bokeh"
+msgstr ""
+
+#: ../../render/interactive.md:71
+msgid ""
+"Bokeh provides several options for interactive visualizations, and is "
+"part of the PyViz ecosystem. See [the Bokeh with Jupyter "
+"documentation](https://docs.bokeh.org/en/latest/docs/user_guide/jupyter.html"
+"#userguide-jupyter) to get started."
+msgstr ""
+
+#: ../../render/interactive.md:91
+msgid "ipywidgets"
+msgstr ""
+
+#: ../../render/interactive.md:94
+msgid ""
+"IPyWidgets uses a special JS package `@jupyter-widgets/html-manager` for "
+"rendering Jupyter widgets outside notebooks. `myst-nb` loads a specific "
+"version of this package, which may be incompatible with your installation"
+" of IPyWidgets. If this is the case, you might need to specify the "
+"appropriate `nb_ipywidgets_js` config value, e.g. for `0.20.0`"
+msgstr ""
+
+#: ../../render/interactive.md:106
+msgid ""
+"To determine which version of `@jupyter-widgets/html-manager` is "
+"required, find the `html-manager` JS package in the [`ipywidgets` "
+"repo](https://github.com/jupyter-widgets/ipywidgets), and identify its "
+"version."
+msgstr ""
+
+#: ../../render/interactive.md:109
+msgid ""
+"You may also run code for Jupyter Widgets in your document, and the "
+"interactive HTML outputs will embed themselves in your side. See [the "
+"ipywidgets "
+"documentation](https://ipywidgets.readthedocs.io/en/latest/user_install.html)"
+" for how to get set up in your own environment."
+msgstr ""
+
+#: ../../render/interactive.md:113
+msgid "Widgets often need a kernel"
+msgstr ""
+
+#: ../../render/interactive.md:114
+msgid ""
+"Note that `ipywidgets` tend to behave differently from other interactive "
+"viz libraries. They interact both with Javascript, and with Python. Some "
+"functionality in `ipywidgets` may not work in rendered pages (because no "
+"Python kernel is running). You may be able to get around this with tools "
+"for remote kernels, like [thebelab](https://thebelab.readthedocs.org)."
+msgstr ""
+
+#: ../../render/interactive.md:120
+msgid "Here are some simple widget elements rendered below."
+msgstr ""
+
+#: ../../render/interactive.md:148
+#, python-format
+msgid ""
+"You can find [a list of possible Jupyter "
+"Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html)"
+" in the jupyter-widgets documentation."
+msgstr ""
+
+#: ../../render/interactive.md:13
+msgid ""
+"This notebook can be downloaded as **{nb-download}`interactive.ipynb`** "
+"and {download}`interactive.md`"
+msgstr ""
+
+#: ../../render/orphaned_nb.ipynb:10004
+msgid "An orphaned notebook"
+msgstr ""
+
+#: ../../render/orphaned_nb.ipynb:10006
+msgid "This defines a variable that we'll re-use in another notebook."
+msgstr ""
+

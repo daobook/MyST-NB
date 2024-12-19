@@ -1,0 +1,2839 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-19 17:17+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../reference/api.rst:4
+msgid "Python API"
+msgstr ""
+
+#: ../../reference/api.rst:6
+msgid ""
+"The parsing of a notebook consists of a number of stages, with each stage"
+" separated into a separate module:"
+msgstr ""
+
+#: ../../reference/api.rst:8
+msgid "The configuration is set (from a file or CLI)"
+msgstr ""
+
+#: ../../reference/api.rst:9
+msgid "The parser is called with an input string and source"
+msgstr ""
+
+#: ../../reference/api.rst:10
+msgid "The parser reads the input string to a notebook node"
+msgstr ""
+
+#: ../../reference/api.rst:11
+msgid "The notebook is converted to a Markdown-It tokens syntax tree"
+msgstr ""
+
+#: ../../reference/api.rst:12
+msgid ""
+"The notebook code outputs are potentially updated, via execution or from "
+"a cache"
+msgstr ""
+
+#: ../../reference/api.rst:13
+msgid ""
+"The syntax tree is transformed to a docutils document AST (calling the "
+"renderer plugin)"
+msgstr ""
+
+#: ../../reference/api.rst:14
+msgid ""
+"The docutils document is processed by docutils/sphinx, to create the "
+"desired output format(s)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:246 ../../reference/api.rst:17
+msgid "Configuration"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig:1 of
+msgid "Global configuration options for the MyST-NB parser."
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig:3 of
+msgid ""
+"Note: in the docutils/sphinx configuration, these option names are "
+"prepended with ``nb_``"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.as_triple:1 of
+msgid "Yield triples of (name, value, field)."
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.copy:1 of
+msgid "Return a copy of the configuration with optional changes applied."
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:1 of
+msgid "Get a configuration value at the cell level."
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:3 of
+msgid ""
+"Takes the highest priority configuration from: `cell > document > global "
+"> default`"
+msgstr ""
+
+#: ../../reference/api.rst myst_nb.core.read.read_myst_markdown_notebook of
+msgid "Parameters"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:6 of
+msgid "the field name to get the value for"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:7 of
+msgid "the metadata for the cell"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:8 of
+msgid "a callback to use to warn about issues (msg, subtype)"
+msgstr ""
+
+#: ../../reference/api.rst
+msgid "Raises"
+msgstr ""
+
+#: myst_nb.core.config.NbParserConfig.get_cell_level_config:10 of
+msgid "if the field is not found"
+msgstr ""
+
+#: ../../reference/api.rst:23
+msgid "Parsers"
+msgstr ""
+
+#: myst_nb.docutils_.Parser:1 of
+msgid "Docutils parser for Jupyter Notebooks, containing MyST Markdown."
+msgstr ""
+
+#: ../../../docstring myst_nb.docutils_.Parser.config_section:1
+#: myst_nb.sphinx_.Parser.config_section:1 of
+msgid ""
+"The name of the config file section specific to this component "
+"(lowercase, no brackets).  Override in subclasses."
+msgstr ""
+
+#: myst_nb.docutils_.Parser.parse:1 myst_nb.sphinx_.Parser.parse:1 of
+msgid "Parse source text."
+msgstr ""
+
+#: myst_nb.docutils_.Parser.parse:3 myst_nb.sphinx_.Parser.parse:3 of
+msgid "The source string to parse"
+msgstr ""
+
+#: myst_nb.docutils_.Parser.parse:4 myst_nb.sphinx_.Parser.parse:4 of
+msgid "The root docutils node to add AST elements to"
+msgstr ""
+
+#: ../../../docstring myst_nb.docutils_.Parser.settings_spec:1 of
+msgid "Runtime settings specification."
+msgstr ""
+
+#: ../../../docstring myst_nb.docutils_.Parser.supported:1
+#: myst_nb.sphinx_.Parser.supported:1 of
+msgid "Aliases this parser supports."
+msgstr ""
+
+#: myst_nb.sphinx_.Parser:1 of
+msgid "Sphinx parser for Jupyter Notebook formats, containing MyST Markdown."
+msgstr ""
+
+#: ../../../docstring myst_nb.sphinx_.Parser.config_section_dependencies:1 of
+msgid ""
+"A list of names of config file sections that are to be applied before "
+"`config_section`, in order (from general to specific).  In other words, "
+"the settings in `config_section` are to be overlaid on top of the "
+"settings from these sections.  The \"general\" section is assumed "
+"implicitly. Override in subclasses."
+msgstr ""
+
+#: ../../../docstring myst_nb.sphinx_.Parser.env:1 of
+msgid "The environment object"
+msgstr ""
+
+#: ../../reference/api.rst:32
+msgid "Read"
+msgstr ""
+
+#: myst_nb.core.read.NbReader:1 of
+msgid "A data class for reading a notebook format."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.read.NbReader.md_config:1 of
+msgid "The configuration for parsing markdown cells."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.read.NbReader.read:1 of
+msgid "The function to read a notebook from a (utf8) string."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.read.NbReader.read_fmt:1 of
+msgid "The type of the reader, if known."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:1 of
+msgid "Create a notebook reader, given a string, source path and configuration."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:3 of
+msgid ""
+"Note, we do not directly parse to a notebook, since jupyter-cache "
+"functionality requires the reader."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:6 of
+msgid "Path to the input source being processed."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:7 of
+msgid "The  configuration for parsing Notebooks."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:8 of
+msgid "The default configuration for parsing Markown."
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:9 of
+msgid "The input string (optionally used to check for text-based notebooks)"
+msgstr ""
+
+#: ../../reference/api.rst
+msgid "Returns"
+msgstr ""
+
+#: myst_nb.core.read.create_nb_reader:11 of
+msgid ""
+"the notebook reader, and the (potentially modified) MdParserConfig, or "
+"None if the input cannot be read as a notebook."
+msgstr ""
+
+#: myst_nb.core.read.is_myst_markdown_notebook:1 of
+msgid "Check if the input is a MyST Markdown notebook."
+msgstr ""
+
+#: myst_nb.core.read.is_myst_markdown_notebook:3 of
+msgid ""
+"This is identified by the presence of a top-matter section, containing "
+"either::"
+msgstr ""
+
+#: myst_nb.core.read.is_myst_markdown_notebook:9 of
+msgid "or::"
+msgstr ""
+
+#: myst_nb.core.read.is_myst_markdown_notebook:17 of
+msgid "The input text."
+msgstr ""
+
+#: myst_nb.core.read.is_myst_markdown_notebook:18 of
+msgid "True if the input is a markdown notebook."
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:1 of
+msgid "Convert text written in the myst format to a notebook."
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:3 of
+msgid "the file text"
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:4 of
+msgid "the name of the directive to search for containing code cells"
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:5 of
+msgid "the name of the directive to search for containing raw cells"
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:6 of
+msgid ""
+"add a `source_map` key to the notebook metadata, which is a list of the "
+"starting source line number for each cell."
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:8 of
+msgid "path to notebook (required for :load:)"
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:10 of
+msgid ""
+":raises MystMetadataParsingError if the metadata block is not valid "
+"JSON/YAML"
+msgstr ""
+
+#: myst_nb.core.read.read_myst_markdown_notebook:12 of
+msgid ""
+"NOTE: we assume here that all of these directives are at the top-level, "
+"i.e. not nested in other directives."
+msgstr ""
+
+#: ../../reference/api.rst:44
+msgid "Execute"
+msgstr ""
+
+#: myst_nb.core.execute.create_client:1 of
+msgid "Create a notebook execution client, to update its outputs."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:3 of
+msgid ""
+"This function may execute the notebook if necessary, to update its "
+"outputs, or populate from a cache."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:6 of
+msgid "The notebook to update."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:7 of
+msgid "Path to or description of the input source being processed."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:8 of
+msgid "The configuration for the notebook parser."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:9 of
+msgid "The logger to use."
+msgstr ""
+
+#: myst_nb.core.execute.create_client:10 of
+msgid "The format of the input source (to parse to jupyter cache)"
+msgstr ""
+
+#: myst_nb.core.execute.create_client:12 of
+msgid "The updated notebook, and the (optional) execution metadata."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase:1 of
+msgid "A base client for interacting with Jupyter notebooks."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase:3 of
+msgid ""
+"This class is intended to be used as a context manager, and should only "
+"be entered once."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase:6 of
+msgid "Subclasses should override the `start_client` and `close_client` methods."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.cell_line:1 of
+msgid "Get the source line number of a cell."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.close_client:1 of
+msgid "Close the client."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.code_cell_outputs:1 of
+msgid "Get the outputs of a cell."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.code_cell_outputs:3 of
+msgid "a tuple of the execution_count and the outputs"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.code_cell_outputs:4 of
+msgid "if the cell index is out of range"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.eval_variable:1 of
+msgid "Retrieve the value of a variable from the kernel."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.eval_variable:3 of
+msgid "the name of the variable, must match the regex `[a-zA-Z][a-zA-Z0-9_]*`"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.eval_variable:6 of
+msgid "code cell outputs"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.eval_variable:7 of
+msgid "if the execution mode does not support this feature"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.eval_variable:8 of
+msgid "if the variable name is invalid"
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.exec_metadata:1 of
+msgid "Get the execution metadata."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.finalise_client:1 of
+msgid "Finalise the client."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.finalise_client:3 of
+msgid ""
+"This is called before final rendering and should be used, for example, to"
+" finalise the widget state on the metadata."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.glue_data:1 of
+msgid "Get the glue data."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.logger:1 of
+msgid "Get the logger."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.nb_config:1 of
+msgid "Get the notebook configuration."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.nb_metadata:1 of
+msgid "Get the notebook level metadata."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.nb_source_code_lexer:1 of
+msgid "Get the lexer for the notebook source code."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.notebook:1 of
+msgid "Get the notebook."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.path:1 of
+msgid "Get the notebook path."
+msgstr ""
+
+#: myst_nb.core.execute.base.NotebookClientBase.start_client:1 of
+msgid "Start the client."
+msgstr ""
+
+#: myst_nb.core.execute.direct.NotebookClientDirect:1 of
+msgid ""
+"A notebook client that executes the notebook directly, on entrance of the"
+" context."
+msgstr ""
+
+#: myst_nb.core.execute.cache.NotebookClientCache:1 of
+msgid ""
+"A notebook client that retrieves notebook outputs from the cache, or "
+"executes the notebook and adds them to the cache, on entrance of the "
+"context."
+msgstr ""
+
+#: myst_nb.core.execute.inline.NotebookClientInline:1 of
+msgid ""
+"A notebook client that executes the notebook inline, i.e. during the "
+"render."
+msgstr ""
+
+#: myst_nb.core.execute.inline.NotebookClientInline:4 of
+msgid ""
+"This allows for the client to be called in-between code cell executions, "
+"in order to extract variable state."
+msgstr ""
+
+#: myst_nb.core.execute.base.ExecutionError:1 of
+msgid "An exception for failed execution and `execution_raise_on_error` is true."
+msgstr ""
+
+#: myst_nb.core.execute.base.EvalNameError:1 of
+msgid "An exception for if an evaluation variable name is invalid."
+msgstr ""
+
+#: myst_nb.core.execute.base.ExecutionResult:1 of
+msgid "Result of executing a notebook."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.error:1 of
+msgid "error type if the notebook failed to execute"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.method:1 of
+msgid "method used to execute the notebook"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.mtime:1 of
+msgid "POSIX timestamp of the execution time"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.runtime:1 of
+msgid "runtime in seconds"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.succeeded:1 of
+msgid "True if the notebook executed successfully"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.execute.base.ExecutionResult.traceback:1 of
+msgid "traceback if the notebook failed"
+msgstr ""
+
+#: ../../reference/api.rst:65
+msgid "Render plugin"
+msgstr ""
+
+#: myst_nb.core.render.MimeData:1 of
+msgid "Mime data from an execution output (display_data / execute_result)"
+msgstr ""
+
+#: myst_nb.core.render.MimeData:3 of
+msgid "e.g. notebook.cells[0].outputs[0].data['text/plain'] = \"Hello, world!\""
+msgstr ""
+
+#: myst_nb.core.render.MimeData:5 of
+msgid ""
+"see: https://nbformat.readthedocs.io/en/5.1.3/format_description.html"
+"#display-data"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.cell_index:1 of
+msgid "Index of the cell in the notebook"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.cell_metadata:1 of
+msgid "Cell level metadata of the output"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.content:1 of
+msgid "Data value of the output.data"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.line:1 of
+msgid "Source line of the cell"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.mime_type:1 of
+msgid "Mime type key of the output.data"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.output_index:1 of
+msgid "Index of the output in the cell"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.render.MimeData.output_metadata:1 of
+msgid "Output level metadata of the output"
+msgstr ""
+
+#: myst_nb.core.render.MimeData.string:1 of
+msgid "Get the content as a string."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer:1 of
+msgid "A class for rendering notebook elements."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.add_js_file:1 of
+msgid "Register a JavaScript file to include in the HTML output of this document."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.add_js_file:3 of
+msgid "the key to use for referencing the file"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.add_js_file:4 of
+msgid ""
+"the URI to the file, or None and supply the file contents in "
+"kwargs['body']"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.config:1 of
+msgid "The notebook parser config"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.logger:1 of
+msgid "The logger for this renderer."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.logger:3 of
+msgid ""
+"In extension to a standard logger, this logger also for `line` and "
+"`subtype` kwargs to the `log` methods."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:1 of
+msgid "Render a notebook error output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:3 of
+msgid "https://nbformat.readthedocs.io/en/5.1.3/format_description.html#error"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:5
+#: myst_nb.core.render.NbElementRenderer.render_stderr:5
+#: myst_nb.core.render.NbElementRenderer.render_stdout:5 of
+msgid "the output node"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:6
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:6
+#: myst_nb.core.render.NbElementRenderer.render_stderr:6
+#: myst_nb.core.render.NbElementRenderer.render_stdout:6 of
+msgid "the cell level metadata"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:7
+#: myst_nb.core.render.NbElementRenderer.render_stderr:7
+#: myst_nb.core.render.NbElementRenderer.render_stdout:7 of
+msgid "the index of the cell containing the output"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_error:8
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:8
+#: myst_nb.core.render.NbElementRenderer.render_stderr:8
+#: myst_nb.core.render.NbElementRenderer.render_stdout:8 of
+msgid "the line number of the cell in the source document"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_image:1
+#: myst_nb.core.render.NbElementRenderer.render_image_inline:1 of
+msgid "Render a notebook image mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_javascript:1
+#: myst_nb.core.render.NbElementRenderer.render_javascript_inline:1 of
+msgid "Render a notebook application/javascript mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_markdown:1
+#: myst_nb.core.render.NbElementRenderer.render_markdown_inline:1 of
+msgid "Render a notebook text/markdown mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_mime_type:1 of
+msgid "Render a notebook mime output, as a block level element."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_mime_type_inline:1 of
+msgid "Render a notebook mime output, as an inline level element."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_nb_finalise:1 of
+msgid "Finalise the render of the notebook metadata."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:1 of
+msgid "Render a raw cell."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:3 of
+msgid ""
+"https://nbformat.readthedocs.io/en/5.1.3/format_description.html#raw-"
+"nbconvert-cells"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:5 of
+msgid "the raw cell content"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_raw_cell:7 of
+msgid "the index of the cell"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_stderr:1 of
+msgid "Render a notebook stderr output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_stderr:3
+#: myst_nb.core.render.NbElementRenderer.render_stdout:3 of
+msgid ""
+"https://nbformat.readthedocs.io/en/5.1.3/format_description.html#stream-"
+"output"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_stdout:1 of
+msgid "Render a notebook stdout output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_text_html:1
+#: myst_nb.core.render.NbElementRenderer.render_text_html_inline:1 of
+msgid "Render a notebook text/html mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_text_latex:1
+#: myst_nb.core.render.NbElementRenderer.render_text_latex_inline:1 of
+msgid "Render a notebook text/latex mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_text_plain:1
+#: myst_nb.core.render.NbElementRenderer.render_text_plain_inline:1 of
+msgid "Render a notebook text/plain mime data output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_unhandled:1
+#: myst_nb.core.render.NbElementRenderer.render_unhandled_inline:1 of
+msgid "Render a notebook output of unknown mime type."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.render_widget_view:1
+#: myst_nb.core.render.NbElementRenderer.render_widget_view_inline:1 of
+msgid "Render a notebook application/vnd.jupyter.widget-view+json mime output."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.renderer:1 of
+msgid "The renderer this output renderer is associated with."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.source:1 of
+msgid "The source of the notebook."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:1 of
+msgid "Write a file to the external output folder."
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:3 of
+msgid "the path to write the file to, relative to the output folder"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:4 of
+msgid "the content to write to the file"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:5 of
+msgid "whether to overwrite an existing file"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:6 of
+msgid "whether to ignore an existing file if overwrite is False"
+msgstr ""
+
+#: myst_nb.core.render.NbElementRenderer.write_file:8 of
+msgid "URI to use for referencing the file"
+msgstr ""
+
+#: myst_nb.core.render.MimeRenderPlugin:1 of
+msgid "Protocol for a mime renderer plugin."
+msgstr ""
+
+#: myst_nb.core.render.ExampleMimeRenderPlugin.handle_mime:1
+#: myst_nb.core.render.MimeRenderPlugin.handle_mime:1 of
+msgid ""
+"A function that renders a mime type to docutils nodes, or returns None to"
+" reject."
+msgstr ""
+
+#: ../../../docstring
+#: myst_nb.core.render.ExampleMimeRenderPlugin.mime_priority_overrides:1
+#: myst_nb.core.render.MimeRenderPlugin.mime_priority_overrides:1 of
+msgid "A list of (builder name, mime type, priority)."
+msgstr ""
+
+#: myst_nb.core.render.ExampleMimeRenderPlugin:1 of
+msgid "Example mime renderer for `custommimetype`."
+msgstr ""
+
+#: ../../reference/api.rst:82
+msgid "Lexers"
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer:1 of
+msgid "Bases: :py:class:`~pygments.lexer.RegexLexer`"
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer:1 of
+msgid "Pygments lexer for text containing ANSI color codes."
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer:3 of
+msgid "Adapted from https://github.com/chriskuehl/pygments-ansi-color"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.aliases:1 of
+msgid ""
+"A list of short, unique identifiers that can be used to look up the lexer"
+" from a list, e.g., using `get_lexer_by_name()`."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.flags:1 of
+msgid "Flags for compiling the regular expressions. Defaults to MULTILINE."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.name:1 of
+msgid "Full name of the lexer, in human-readable form"
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer.process:1 of
+msgid "Produce the next token and bit of text."
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer.process:3 of
+msgid ""
+"Interprets the ANSI code (which may be a color code or some other code), "
+"changing the lexer state and producing a new token. If it's not a color "
+"code, we just strip it out and move on."
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer.process:7 of
+msgid "Some useful reference for ANSI codes:"
+msgstr ""
+
+#: myst_nb.core.lexers.AnsiColorLexer.process:8 of
+msgid "http://ascii-table.com/ansi-escape-sequences.php"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.tokens:1 of
+msgid ""
+"At all time there is a stack of states. Initially, the stack contains a "
+"single state 'root'. The top of the stack is called \"the current "
+"state\"."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.tokens:4 of
+msgid "Dict of ``{'state': [(regex, tokentype, new_state), ...], ...}``"
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.tokens:6 of
+msgid ""
+"``new_state`` can be omitted to signify no state transition. If "
+"``new_state`` is a string, it is pushed on the stack. This ensure the new"
+" current state is ``new_state``. If ``new_state`` is a tuple of strings, "
+"all of those strings are pushed on the stack and the current state will "
+"be the last element of the list. ``new_state`` can also be "
+"``combined('state1', 'state2', ...)`` to signify a new, anonymous state "
+"combined from the rules of two or more existing ones. Furthermore, it can"
+" be '#pop' to signify going back one step in the state stack, or '#push' "
+"to push the current state on the stack again. Note that if you push while"
+" in a combined state, the combined state itself is pushed, and not only "
+"the state in which the rule is defined."
+msgstr ""
+
+#: ../../../docstring myst_nb.core.lexers.AnsiColorLexer.tokens:20 of
+msgid ""
+"The tuple can also be replaced with ``include('state')``, in which case "
+"the rules from the state named by the string are included in the current "
+"one."
+msgstr ""
+
+#: ../../reference/api.rst:90
+msgid "Loggers"
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger:1
+#: myst_nb.core.loggers.SphinxDocLogger:1 of
+msgid "Bases: :py:class:`~logging.LoggerAdapter`"
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger:1 of
+msgid "A logger which routes messages to the docutils document reporter."
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger:3 of
+msgid ""
+"The document path and message type are automatically included in the "
+"message, and ``line`` is allowed as a keyword argument. The standard "
+"sphinx logger keywords are allowed but ignored: ``subtype``, ``color``, "
+"``once``, ``nonl``."
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger:8 of
+msgid "``type.subtype`` are also appended to the end of messages."
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger.process:1
+#: myst_nb.core.loggers.SphinxDocLogger.process:1 of
+msgid ""
+"Process the logging message and keyword arguments passed in to a logging "
+"call to insert contextual information. You can either manipulate the "
+"message itself, the keyword args or both. Return the message and kwargs "
+"modified (or not) to suit your needs."
+msgstr ""
+
+#: myst_nb.core.loggers.DocutilsDocLogger.process:6
+#: myst_nb.core.loggers.SphinxDocLogger.process:6 of
+msgid ""
+"Normally, you'll only need to override this one method in a LoggerAdapter"
+" subclass for your specific needs."
+msgstr ""
+
+#: myst_nb.core.loggers.SphinxDocLogger:1 of
+msgid ""
+"Wraps a Sphinx logger, which routes messages to the docutils document "
+"reporter."
+msgstr ""
+
+#: myst_nb.core.loggers.SphinxDocLogger:3 of
+msgid ""
+"The document path and message type are automatically included in the "
+"message, and ``line`` is allowed as a keyword argument, as well as the "
+"standard sphinx logger keywords: ``subtype``, ``color``, ``once``, "
+"``nonl``."
+msgstr ""
+
+#: myst_nb.core.loggers.SphinxDocLogger:8 of
+msgid ""
+"As per the sphinx logger, warnings are suppressed, if their "
+"``type.subtype`` are included in the ``suppress_warnings`` configuration."
+" These are also appended to the end of messages."
+msgstr ""
+
+#: ../../../CHANGELOG.md:2
+msgid "Change Log"
+msgstr ""
+
+#: ../../../CHANGELOG.md:4
+msgid "v1.1.2 - 2024-09-24"
+msgstr ""
+
+#: ../../../CHANGELOG.md:6
+msgid ""
+"([full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v1.1.1...c6a2d4b61205c2b20943391a656f01a4cc446076))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:8 ../../../CHANGELOG.md:39 ../../../CHANGELOG.md:105
+msgid "Bugs fixed"
+msgstr ""
+
+#: ../../../CHANGELOG.md:10
+msgid ""
+"Fix incorrect output from prints originating from different processes "
+"[#604](https://github.com/executablebooks/MyST-NB/pull/604) "
+"([@basnijholt](https://github.com/basnijholt))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:12 ../../../CHANGELOG.md:45 ../../../CHANGELOG.md:78
+#: ../../../CHANGELOG.md:111 ../../../CHANGELOG.md:169
+msgid "Maintenance and upkeep improvements"
+msgstr ""
+
+#: ../../../CHANGELOG.md:14
+msgid ""
+"MAINT: removing version pinnings for testing and rtd "
+"[#634](https://github.com/executablebooks/MyST-NB/pull/634) "
+"([@bsipocz](https://github.com/bsipocz))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:15
+msgid ""
+"MAINT: only doing monthly pre-commit update "
+"[#627](https://github.com/executablebooks/MyST-NB/pull/627) "
+"([@bsipocz](https://github.com/bsipocz))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:16
+msgid ""
+"MAINT: no need for weekly dependabot "
+"[#626](https://github.com/executablebooks/MyST-NB/pull/626) "
+"([@bsipocz](https://github.com/bsipocz))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:17
+msgid ""
+"MAINT: fix sphinx 8.0 compatibility "
+"[#620](https://github.com/executablebooks/MyST-NB/pull/620) "
+"([@bsipocz](https://github.com/bsipocz))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:18 ../../../CHANGELOG.md:47
+msgid ""
+"MAINT: bump version [#614](https://github.com/executablebooks/MyST-"
+"NB/pull/614) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:20 ../../../CHANGELOG.md:55 ../../../CHANGELOG.md:122
+#: ../../../CHANGELOG.md:175
+msgid "Documentation improvements"
+msgstr ""
+
+#: ../../../CHANGELOG.md:22
+msgid ""
+"DOC: adding changelog for 1.1.0 and 1.1.1 "
+"[#625](https://github.com/executablebooks/MyST-NB/pull/625) "
+"([@bsipocz](https://github.com/bsipocz))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:23
+msgid ""
+"Update glueing docs for NumPy >=2.0 "
+"[#615](https://github.com/executablebooks/MyST-NB/pull/615) "
+"([@bryanwweber](https://github.com/bryanwweber))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:25 ../../../CHANGELOG.md:86 ../../../CHANGELOG.md:132
+msgid "Other merged PRs"
+msgstr ""
+
+#: ../../../CHANGELOG.md:27
+msgid ""
+"build(deps): bump codecov/codecov-action from 3.1.4 to 4.5.0 in the "
+"actions group [#630](https://github.com/executablebooks/MyST-NB/pull/630)"
+" ([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:29 ../../../CHANGELOG.md:63 ../../../CHANGELOG.md:90
+#: ../../../CHANGELOG.md:158 ../../../CHANGELOG.md:188
+msgid "Contributors to this release"
+msgstr ""
+
+#: ../../../CHANGELOG.md:31
+msgid ""
+"([GitHub contributors page for this "
+"release](https://github.com/executablebooks/MyST-"
+"NB/graphs/contributors?from=2024-06-27&to=2024-09-24&type=c))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:33
+#, python-format
+msgid ""
+"[@agoose77](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aagoose77+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@basnijholt](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Abasnijholt+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@bryanwweber](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Abryanwweber+updated%3A2024-06-27..2024-09-24&type=Issues) |"
+" [@bsipocz](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Absipocz+updated%4A2024-06-27..2024-09-24&type=Issues) | "
+"[@choldgraf](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acholdgraf+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@chrisjsewell](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Achrisjsewell+updated%3A2024-06-27..2024-09-24&type=Issues) "
+"| [@dependabot](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Adependabot+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@LecrisUT](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3ALecrisUT+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@OriolAbril](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3AOriolAbril+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@tupui](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Atupui+updated%3A2024-06-27..2024-09-24&type=Issues) | "
+"[@welcome](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Awelcome+updated%3A2024-06-27..2024-09-24&type=Issues)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:35
+msgid "v1.1.1 - 2024-06-27"
+msgstr ""
+
+#: ../../../CHANGELOG.md:37
+msgid ""
+"([full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v1.1.0...6ce30cd41fa82543e0f315ac8bbee82669b0cc82))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:41
+msgid ""
+"FIX: output metadata overwrites image size for all following images "
+"[#609](https://github.com/executablebooks/MyST-NB/pull/609) "
+"([@aeisenbarth](https://github.com/aeisenbarth))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:43
+msgid ""
+"FIX: remove incorrect license classifier "
+"[#603](https://github.com/executablebooks/MyST-NB/pull/603) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:49
+msgid ""
+"MAINT: appease mypy [#612](https://github.com/executablebooks/MyST-"
+"NB/pull/612) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:51
+msgid ""
+"MAINT: fix specs for CI matrix [#611](https://github.com/executablebooks"
+"/MyST-NB/pull/611) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:53 ../../../CHANGELOG.md:80
+msgid ""
+"MAINT: bump version [#592](https://github.com/executablebooks/MyST-"
+"NB/pull/592) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:57
+msgid ""
+"DOCS: set printoptions to disable modern scalar printing "
+"[#613](https://github.com/executablebooks/MyST-NB/pull/613) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:59
+msgid ""
+"DOCS: extra comma forgotten [#606](https://github.com/executablebooks"
+"/MyST-NB/pull/606) ([@jeertmans](https://github.com/jeertmans))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:61
+msgid ""
+"DOCS: update shown code to match source "
+"[#598](https://github.com/executablebooks/MyST-NB/pull/598) "
+"([@OriolAbril](https://github.com/OriolAbril))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:65
+msgid ""
+"([GitHub contributors page for this "
+"release](https://github.com/executablebooks/MyST-"
+"NB/graphs/contributors?from=2024-04-12&to=2024-06-27&type=c))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:67
+#, python-format
+msgid ""
+"[@aeisenbarth](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aaeisenbarth+updated%3A2024-04-12..2024-06-27&type=Issues) |"
+" [@agoose77](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aagoose77+updated%3A2024-04-12..2024-06-27&type=Issues) | "
+"[@jeertmans](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ajeertmans+updated%3A2024-04-12..2024-06-27&type=Issues) | "
+"[@OriolAbril](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3AOriolAbril+updated%3A2024-04-12..2024-06-27&type=Issues) | "
+"[@sstroemer](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Asstroemer+updated%3A2024-04-12..2024-06-27&type=Issues) | "
+"[@welcome](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Awelcome+updated%3A2024-04-12..2024-06-27&type=Issues)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:70
+msgid "v1.1.0 - 2024-04-12"
+msgstr ""
+
+#: ../../../CHANGELOG.md:72
+msgid ""
+"([full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v1.0.0...9943ec214c35844c4535d0184f7840574fc7ab03))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:74
+msgid "Enhancements made"
+msgstr ""
+
+#: ../../../CHANGELOG.md:76
+msgid ""
+"ENH: pass-through image metadata "
+"[#588](https://github.com/executablebooks/MyST-NB/pull/588) ([@flying-"
+"sheep](https://github.com/flying-sheep))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:82
+msgid ""
+"MAINT: use `findall` instead of `traverse` "
+"[#585](https://github.com/executablebooks/MyST-NB/pull/585) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:84
+msgid ""
+"MAINT: restore default line length "
+"[#577](https://github.com/executablebooks/MyST-NB/pull/577) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:88
+msgid ""
+"build(deps): bump actions/setup-python from 4 to 5 "
+"[#576](https://github.com/executablebooks/MyST-NB/pull/576) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:92
+msgid ""
+"([GitHub contributors page for this "
+"release](https://github.com/executablebooks/MyST-"
+"NB/graphs/contributors?from=2023-11-08&to=2024-04-12&type=c))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:94
+#, python-format
+msgid ""
+"[@agoose77](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aagoose77+updated%3A2023-11-08..2024-04-12&type=Issues) | "
+"[@cisaacstern](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acisaacstern+updated%3A2023-11-08..2024-04-12&type=Issues) |"
+" [@dependabot](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Adependabot+updated%3A2023-11-08..2024-04-12&type=Issues) | "
+"[@flying-sheep](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-NB+involves%3Aflying-"
+"sheep+updated%3A2023-11-08..2024-04-12&type=Issues) | [@ma-"
+"sadeghi](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ama-sadeghi+updated%3A2023-11-08..2024-04-12&type=Issues) | "
+"[@peytondmurray](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Apeytondmurray+updated%3A2023-11-08..2024-04-12&type=Issues)"
+" | [@PhilipVinc](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3APhilipVinc+updated%3A2023-11-08..2024-04-12&type=Issues) | "
+"[@sphuber](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Asphuber+updated%3A2023-11-08..2024-04-12&type=Issues) | "
+"[@welcome](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Awelcome+updated%3A2023-11-08..2024-04-12&type=Issues)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:97
+msgid "v1.0.0 - 2023-11-08"
+msgstr ""
+
+#: ../../../CHANGELOG.md:99
+msgid ""
+"([full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/e8fd165...48edb5d852eb73b09eae962c7518045f836633d5))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:101
+msgid "New features added"
+msgstr ""
+
+#: ../../../CHANGELOG.md:103
+msgid ""
+"FEAT: allow any value for expr [#429](https://github.com/executablebooks"
+"/MyST-NB/pull/429) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:107
+msgid ""
+"FIX: update tests for newer matplotlib "
+"[#559](https://github.com/executablebooks/MyST-NB/pull/559) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:108
+msgid ""
+"FIX: remove warnings for 3.11+ [#547](https://github.com/executablebooks"
+"/MyST-NB/pull/547) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:109
+msgid ""
+"FIX: Show traceback before raising ExecutionError "
+"[#531](https://github.com/executablebooks/MyST-NB/pull/531) "
+"([@paugier](https://github.com/paugier))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:113
+msgid ""
+"MAINT: uncap nbformat [#568](https://github.com/executablebooks/MyST-"
+"NB/pull/568) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:114
+msgid ""
+"MAINT: unpin jupyer-cache [#567](https://github.com/executablebooks/MyST-"
+"NB/pull/567) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:115
+msgid ""
+"MAINT: bump minimum Python version "
+"[#566](https://github.com/executablebooks/MyST-NB/pull/566) "
+"([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:116
+msgid ""
+"MAINT: enable ruff formatter [#565](https://github.com/executablebooks"
+"/MyST-NB/pull/565) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:117
+msgid ""
+"MAINT: test wider matrix [#552](https://github.com/executablebooks/MyST-"
+"NB/pull/552) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:118
+msgid ""
+"MAINT: update linting [#551](https://github.com/executablebooks/MyST-"
+"NB/pull/551) ([@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:119
+msgid ""
+"MAINT: Patch `file_regression` fixture for Sphinx backwards compatibility"
+" [#536](https://github.com/executablebooks/MyST-NB/pull/536) ([@je-"
+"cook](https://github.com/je-cook))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:120
+msgid ""
+"MAINT: remove python=3.7 as EOL is June 2023 "
+"[#516](https://github.com/executablebooks/MyST-NB/pull/516) "
+"([@mmcky](https://github.com/mmcky))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:124
+msgid ""
+"DOCS: Fix broken pytest fixture [#546](https://github.com/executablebooks"
+"/MyST-NB/pull/546) ([@peytondmurray](https://github.com/peytondmurray))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:125
+msgid ""
+"📚 DOCS: Fix typos and add codespell pre-commit hook "
+"[#475](https://github.com/executablebooks/MyST-NB/pull/475) "
+"([@kianmeng](https://github.com/kianmeng))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:127
+msgid "API and Breaking Changes"
+msgstr ""
+
+#: ../../../CHANGELOG.md:129
+msgid ""
+"UPGRADE: Support Sphinx 7 [#524](https://github.com/executablebooks/MyST-"
+"NB/pull/524) ([@LecrisUT](https://github.com/LecrisUT))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:130
+msgid ""
+"UPGRADE: myst-parser 1.0 [#479](https://github.com/executablebooks/MyST-"
+"NB/pull/479) ([@aleivag](https://github.com/aleivag))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:134
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#564](https://github.com/executablebooks/MyST-NB/pull/564) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:135
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#561](https://github.com/executablebooks/MyST-NB/pull/561) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:136
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#556](https://github.com/executablebooks/MyST-NB/pull/556) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:137
+msgid ""
+"Update readthedocs Config File to fix Test Error "
+"[#554](https://github.com/executablebooks/MyST-NB/pull/554) "
+"([@michaelweinold](https://github.com/michaelweinold))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:138
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#553](https://github.com/executablebooks/MyST-NB/pull/553) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:139
+msgid ""
+"build(deps): update ipython requirement from <=8.16.0 to <=8.16.1 "
+"[#550](https://github.com/executablebooks/MyST-NB/pull/550) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:140
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#549](https://github.com/executablebooks/MyST-NB/pull/549) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:141
+msgid ""
+"build(deps): update ipython requirement from !=8.1.0,<8.16 to "
+"!=8.1.0,<8.17 [#548](https://github.com/executablebooks/MyST-NB/pull/548)"
+" ([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:142
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#542](https://github.com/executablebooks/MyST-NB/pull/542) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:143
+msgid ""
+"build(deps): bump actions/checkout from 3 to 4 "
+"[#539](https://github.com/executablebooks/MyST-NB/pull/539) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:144
+msgid ""
+"build(deps): update ipython requirement from !=8.1.0,<8.15 to "
+"!=8.1.0,<8.16 [#538](https://github.com/executablebooks/MyST-NB/pull/538)"
+" ([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:145
+msgid ""
+"Update copyright year to 2023 [#537](https://github.com/executablebooks"
+"/MyST-NB/pull/537) ([@GlobalMin](https://github.com/GlobalMin))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:146
+msgid ""
+"build(deps-dev): update jupytext requirement from <1.15.0,>=1.11.2 to "
+">=1.11.2,<1.16.0 [#534](https://github.com/executablebooks/MyST-"
+"NB/pull/534) ([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:147
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#529](https://github.com/executablebooks/MyST-NB/pull/529) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:148
+msgid ""
+"build(deps-dev): update coconut requirement from <2.3.0,>=1.4.3 to "
+">=1.4.3,<3.1.0 [#527](https://github.com/executablebooks/MyST-"
+"NB/pull/527) ([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:149
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#526](https://github.com/executablebooks/MyST-NB/pull/526) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:150
+msgid ""
+"Update ipython requirement from !=8.1.0,<8.5 to !=8.1.0,<8.15 "
+"[#521](https://github.com/executablebooks/MyST-NB/pull/521) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:151
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#518](https://github.com/executablebooks/MyST-NB/pull/518) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:152
+msgid ""
+"Update coconut requirement from <2.3.0,>=1.4.3 to >=1.4.3,<3.1.0 "
+"[#517](https://github.com/executablebooks/MyST-NB/pull/517) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:153
+msgid ""
+"[pre-commit.ci] pre-commit autoupdate "
+"[#515](https://github.com/executablebooks/MyST-NB/pull/515) ([@pre-"
+"commit-ci](https://github.com/pre-commit-ci))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:154
+msgid ""
+"Update ipykernel requirement from ~=5.5 to >=5.5,<7.0 "
+"[#512](https://github.com/executablebooks/MyST-NB/pull/512) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:155
+msgid ""
+"Update sphinx-book-theme requirement from ~=0.3.0 to >=0.3,<1.1 "
+"[#510](https://github.com/executablebooks/MyST-NB/pull/510) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:156
+msgid ""
+"Update jupytext requirement from ~=1.11.2 to >=1.11.2,<1.15.0 "
+"[#509](https://github.com/executablebooks/MyST-NB/pull/509) "
+"([@dependabot](https://github.com/dependabot))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:160
+msgid ""
+"([GitHub contributors page for this "
+"release](https://github.com/executablebooks/MyST-"
+"NB/graphs/contributors?from=2023-04-24&to=2023-11-29&type=c))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:162
+#, python-format
+msgid ""
+"[@agoose77](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aagoose77+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@aleivag](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aaleivag+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@choldgraf](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acholdgraf+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@chrisjsewell](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Achrisjsewell+updated%3A2023-04-24..2023-11-29&type=Issues) "
+"| [@cisaacstern](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Acisaacstern+updated%3A2023-04-24..2023-11-29&type=Issues) |"
+" [@codecov](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acodecov+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@dependabot](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Adependabot+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@GlobalMin](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3AGlobalMin+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@je-cook](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aje-cook+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@joeldodson](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ajoeldodson+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@kianmeng](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Akianmeng+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@kloczek](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Akloczek+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@LecrisUT](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3ALecrisUT+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@michaelweinold](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Amichaelweinold+updated%3A2023-04-24..2023-11-29&type=Issues)"
+" | [@mmcky](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ammcky+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@paugier](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Apaugier+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@peytondmurray](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Apeytondmurray+updated%3A2023-04-24..2023-11-29&type=Issues)"
+" | [@PhilipVinc](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3APhilipVinc+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@pre-commit-ci](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-NB+involves%3Apre-commit-"
+"ci+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@rowanc1](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Arowanc1+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@sphuber](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Asphuber+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@tupui](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Atupui+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@WarrenWeckesser](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3AWarrenWeckesser+updated%3A2023-04-24..2023-11-29&type=Issues)"
+" | [@welcome](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Awelcome+updated%3A2023-04-24..2023-11-29&type=Issues) | "
+"[@Yoshanuikabundi](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3AYoshanuikabundi+updated%3A2023-04-24..2023-11-29&type=Issues)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:165
+msgid "v0.17.2 - 2023-04-21"
+msgstr ""
+
+#: ../../../CHANGELOG.md:167
+msgid ""
+"This is primarily a maintenance release to support newer versions of "
+"dependencies and fix a few bugs."
+msgstr ""
+
+#: ../../../CHANGELOG.md:171
+msgid ""
+"MAINT: Create dependabot.yml [#499](https://github.com/executablebooks"
+"/MyST-NB/pull/499) ([@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:172
+msgid ""
+"MAINT: Fix codecov jobs and update pre-commit "
+"[#460](https://github.com/executablebooks/MyST-NB/pull/460) "
+"([@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:173
+msgid ""
+"UPDATE: jupyter-cache v0.6.0 [#498](https://github.com/executablebooks"
+"/MyST-NB/pull/498) ([@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:177
+msgid ""
+"DOCS: Hint to avoid Extension error in sphinx-build "
+"[#494](https://github.com/executablebooks/MyST-NB/pull/494) "
+"([@kolibril13](https://github.com/kolibril13), "
+"[@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:178
+msgid ""
+"DOCS: fix link to gallery [#483](https://github.com/executablebooks/MyST-"
+"NB/pull/483) ([@michaelaye](https://github.com/michaelaye), "
+"[@choldgraf](https://github.com/choldgraf), "
+"[@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:179
+msgid ""
+"Add note about how to use cell tags "
+"[#490](https://github.com/executablebooks/MyST-NB/pull/490) "
+"([@kolibril13](https://github.com/kolibril13), "
+"[@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:180
+msgid ""
+"Update quickstart.md to include docs folder "
+"[#489](https://github.com/executablebooks/MyST-NB/pull/489) "
+"([@kolibril13](https://github.com/kolibril13), "
+"[@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:181
+msgid ""
+"docs: update to latest `sphinx-design` "
+"[#486](https://github.com/executablebooks/MyST-NB/pull/486) "
+"([@agoose77](https://github.com/agoose77), "
+"[@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:183
+msgid "Bug fixes"
+msgstr ""
+
+#: ../../../CHANGELOG.md:185
+msgid ""
+"fix: use jsdelivr CDN for ipywidgets "
+"[#491](https://github.com/executablebooks/MyST-NB/pull/491) "
+"([@agoose77](https://github.com/agoose77), "
+"[@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:186
+msgid ""
+"Add ipywidgets javascript [#469](https://github.com/executablebooks/MyST-"
+"NB/pull/469) ([@OriolAbril](https://github.com/OriolAbril), "
+"[@agoose77](https://github.com/agoose77))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:190
+msgid ""
+"The following people contributed discussions, new ideas, code and "
+"documentation contributions, and review. See [our definition of "
+"contributors](https://github-activity.readthedocs.io/en/latest/#how-does-"
+"this-tool-define-contributions-in-the-reports)."
+msgstr ""
+
+#: ../../../CHANGELOG.md:193
+msgid ""
+"([GitHub contributors page for this "
+"release](https://github.com/executablebooks/MyST-"
+"NB/graphs/contributors?from=2022-09-30&to=2023-04-21&type=c))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:195
+#, python-format
+msgid ""
+"@agoose77 ([activity](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Aagoose77+updated%3A2022-09-30..2023-04-21&type=Issues)) | "
+"@choldgraf ([activity](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Acholdgraf+updated%3A2022-09-30..2023-04-21&type=Issues)) | "
+"@chrisjsewell "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Achrisjsewell+updated%3A2022-09-30..2023-04-21&type=Issues))"
+" | @dependabot "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Adependabot+updated%3A2022-09-30..2023-04-21&type=Issues)) |"
+" @kolibril13 "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Akolibril13+updated%3A2022-09-30..2023-04-21&type=Issues)) |"
+" @michaelaye "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Amichaelaye+updated%3A2022-09-30..2023-04-21&type=Issues)) |"
+" @OriolAbril "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3AOriolAbril+updated%3A2022-09-30..2023-04-21&type=Issues)) |"
+" @pre-commit-ci "
+"([activity](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Apre-commit-"
+"ci+updated%3A2022-09-30..2023-04-21&type=Issues))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:197
+msgid "v0.17.1 - 2022-30-09"
+msgstr ""
+
+#: ../../../CHANGELOG.md:199
+msgid ""
+"[Full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v0.17.0...v0.17.1)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:201
+msgid ""
+"👌 IMPROVE: `hide-output` button (#450) This now uses the same margin "
+"color as the cell source and, when the cell source is present, is "
+"\"connected\" to that, to form a single element. See [Hide cell "
+"contents](docs/render/hiding.md) for more information."
+msgstr ""
+
+#: ../../../CHANGELOG.md:205
+msgid "v0.17.0 - 2022-29-09"
+msgstr ""
+
+#: ../../../CHANGELOG.md:207
+msgid ""
+"[Full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v0.16.0...v0.17.0)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:209
+msgid ""
+"👌 IMPROVE: Replace sphinx-togglebutton with built-in functionality (#446)"
+" This allows for tighter integration with myst-nb:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:212
+msgid "Nicer rendering of the hidden content buttons"
+msgstr ""
+
+#: ../../../CHANGELOG.md:213
+msgid "Customisation of the hide/show prompts"
+msgstr ""
+
+#: ../../../CHANGELOG.md:215
+msgid "See [Hide cell contents](docs/render/hiding.md) for more information."
+msgstr ""
+
+#: ../../../CHANGELOG.md:217
+msgid ""
+"🐛 FIX: Inline exec variables with multiple outputs (#440) Previously, it "
+"was assumed that a variable evaluation would only ever create 0 or 1 "
+"outputs. Multiple are now allowed."
+msgstr ""
+
+#: ../../../CHANGELOG.md:221
+msgid "👌 IMPROVE: cache bust changes to CSS (#447)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:222
+msgid "👌 IMPROVE: Move CSS colors to variables (#448)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:224
+msgid "v0.16.0 - 2022-06-13"
+msgstr ""
+
+#: ../../../CHANGELOG.md:226
+msgid ""
+"[Full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v0.15.0...v0.16.0)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:228
+msgid ""
+"⬆️ UPGRADE: Sphinx v5 and drop v3 (see [changelog](https://www.sphinx-"
+"doc.org/en/master/changes.html)), myst-parser v0.18 (see "
+"[changelog](https://myst-"
+"parser.readthedocs.io/en/latest/develop/_changelog.html))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:229
+msgid "⬆️ UPGRADE: Add Python 3.10 support"
+msgstr ""
+
+#: ../../../CHANGELOG.md:231
+msgid "v0.15.0 - 2022-05-05"
+msgstr ""
+
+#: ../../../CHANGELOG.md:233
+msgid ""
+"[Full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v0.14.0...v0.15.0)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:235
+msgid ""
+"✨ NEW: Add `inline` execution mode and `eval` role/directive, for "
+"inserting code variables directly into the text flow of your "
+"documentation! See [Inline variable evaluation](docs/render/inline.md) "
+"for more information."
+msgstr ""
+
+#: ../../../CHANGELOG.md:238
+msgid "v0.14.0 - 2022-04-27"
+msgstr ""
+
+#: ../../../CHANGELOG.md:240
+msgid ""
+"[Full changelog](https://github.com/executablebooks/MyST-"
+"NB/compare/v0.13.2...v0.14.0)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:242
+msgid ""
+"This release encompasses a **major** rewrite of the entire library and "
+"its documentation, primarily in [#380](https://github.com/executablebooks"
+"/MyST-NB/pull/380) and [#405](https://github.com/executablebooks/MyST-"
+"NB/pull/405)."
+msgstr ""
+
+#: ../../../CHANGELOG.md:244
+msgid "Breaking Changes ‼️"
+msgstr ""
+
+#: ../../../CHANGELOG.md:248
+msgid ""
+"A number of configuration option names have been changed, such that they "
+"now share the `nb_` prefix. Most of the deprecated names will be auto-"
+"converted at the start of the build, emitting a warning such as:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:255
+msgid ""
+"`nb_render_priority` has been removed and replaced by "
+"`nb_mime_priority_overrides`, which has a different format and is more "
+"flexible. See [Outputs MIME priority](docs/render/format_code_cells.md) "
+"for more information."
+msgstr ""
+
+#: ../../../CHANGELOG.md:257
+msgid ""
+"As per the changes in [`myst_parser`](inv:myst#develop/_changelog), the "
+"`dollarmath` syntax extension is no longer included by default. To re-add"
+" this extension, ensure that it is specified in your `conf.py`: "
+"`myst_enable_extensions = [\"dollarmath\"]`."
+msgstr ""
+
+#: ../../../CHANGELOG.md:260
+msgid ""
+"For cell-level configuration the top-level key `render` has now been "
+"deprecated for `mystnb`. For example, replace:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:274
+msgid "with:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:287
+msgid ""
+"`render` will currently still be read, if present, and will issue a "
+"`[mystnb.cell_metadata_key]` warning."
+msgstr ""
+
+#: ../../../CHANGELOG.md:289
+msgid ""
+"The `jupyter_sphinx_require_url` and `jupyter_sphinx_embed_url` "
+"configuration options are no longer used by this package, and are "
+"replaced by `nb_ipywidgets_js`."
+msgstr ""
+
+#: ../../../CHANGELOG.md:291 ../../../CHANGELOG.md:343
+msgid "See the [configuration section](docs/configuration.md) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:293
+msgid "Dependencies"
+msgstr ""
+
+#: ../../../CHANGELOG.md:295
+msgid ""
+"The [ipywidgets](https://ipywidgets.readthedocs.io) package has been "
+"removed from the requirements. If required, please install it "
+"specifically."
+msgstr ""
+
+#: ../../../CHANGELOG.md:298
+msgid "AST structure and rendering plugins"
+msgstr ""
+
+#: ../../../CHANGELOG.md:300
+msgid ""
+"The structure of the docutils AST and nodes produced by MyST-NB has been "
+"fully changed, for compatibility with the new [docutils only "
+"functionality](docs/docutils.md). See [the API "
+"documentation](docs/reference/api.rst) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:303
+msgid ""
+"The renderer plugin system (used by the `myst_nb.renderers` entry point) "
+"has also been completely rewritten, so any current existing renderers "
+"will no longer work. There is also now a new `myst_nb.mime_renderers` "
+"entry point, to allow for targeted rendering of specific code-cell output"
+" MIME types. See [Customise the render "
+"process](docs/render/format_code_cells.md) for more information."
+msgstr ""
+
+#: ../../../CHANGELOG.md:308
+msgid "Glue functionality"
+msgstr ""
+
+#: ../../../CHANGELOG.md:310
+msgid ""
+"By default, `glue` roles and directives now only work for keys within the"
+" same document. To reference glued content in a different document, the "
+"`glue:any` directive allows for a `doc` option and `glue:any`/`glue:text`"
+" roles allow the (relative) doc path to be added, for example:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:321
+msgid ""
+"This cross-document functionality is currently restricted to only "
+"`text/plain` and `text/html` output MIME types, not images."
+msgstr ""
+
+#: ../../../CHANGELOG.md:323
+msgid ""
+"See [Embedding outputs as variables](docs/render/glue.md) for more "
+"details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:325
+msgid "Dependency changes ⬆️"
+msgstr ""
+
+#: ../../../CHANGELOG.md:327
+msgid "Removed:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:328
+msgid "`ipywidgets`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:329
+msgid "`jupyter_sphinx`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:330
+msgid "`nbconvert`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:331
+msgid "Updated:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:332
+msgid "`Python`: `3.6+ -> 3.7+`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:333
+msgid "`myst_parser`: [`0.15 -> 0.17`](inv:myst#develop/_changelog)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:334
+msgid ""
+"`jupyter-cache`: [`0.4 -> 0.5`](https://github.com/executablebooks"
+"/jupyter-cache/blob/master/CHANGELOG.md)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:335
+msgid ""
+"`sphinx-togglebutton`: [`0.1 -> 0.3`](https://sphinx-"
+"togglebutton.readthedocs.io/en/latest/changelog.html)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:337
+msgid "New and improved ✨"
+msgstr ""
+
+#: ../../../CHANGELOG.md:339
+msgid ""
+"The following is a non-exhaustive list of new features and improvements, "
+"see the rest of the documentation for all the changes."
+msgstr ""
+
+#: ../../../CHANGELOG.md:341
+msgid ""
+"Multi-level configuration (global (`conf.py`) < notebook level metadata <"
+" cell level metadata)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:342
+msgid ""
+"Plus new config options including: `nb_number_source_lines`, "
+"`nb_remove_code_source`, `nb_remove_code_outputs`, "
+"`nb_render_error_lexer`, `nb_execution_raise_on_error`, "
+"`nb_kernel_rgx_aliases`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:345
+msgid "Added `mystnb-quickstart` and `mystnb-to-jupyter` CLI commands."
+msgstr ""
+
+#: ../../../CHANGELOG.md:347
+msgid "MyST text-based notebooks can now be specified by just:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:357
+msgid ""
+"as opposed to the alternative jupytext top-matter. See [Text-based "
+"Notebooks](docs/authoring/text-notebooks.md) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:360
+msgid "docutils API/CLI with command line tools, e.g. `mystnb-docutils-html`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:361
+msgid "Includes `glue` roles and directives"
+msgstr ""
+
+#: ../../../CHANGELOG.md:362
+msgid "See [single page builds](docs/docutils.md) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:364
+msgid ""
+"Parallel friendly (e.g. `sphinx-build -j 4` can execute four notebooks in"
+" parallel)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:366
+msgid ""
+"Page specific loading of ipywidgets JavaScript, i.e. only when ipywidgets"
+" are present in the notebook."
+msgstr ""
+
+#: ../../../CHANGELOG.md:368
+msgid ""
+"Added raw cell rendering, with the `raw-cell` directive. See [Raw cells "
+"authoring](docs/authoring/jupyter-notebooks.md) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:371
+msgid ""
+"Added MIME render plugins. See [Customise the render "
+"process](docs/render/format_code_cells.md) for more details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:373
+msgid ""
+"Better log info/warnings, with `type.subtype` specifiers for warning "
+"suppression. See [Warning suppression](docs/configuration.md) for more "
+"details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:376
+msgid ""
+"Reworked jupyter-cache integration to be easier to use (including "
+"parallel execution)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:378
+msgid "Added image options to `glue:figure`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:380
+msgid ""
+"New `glue:md` role/directive includes nested parsing of MyST Markdown. "
+"See [Embedding outputs as variables](docs/render/glue.md) for more "
+"details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:383
+msgid "Improved `nb-exec-table` directive (includes links to documents, etc)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:385
+msgid "Additional Pull Requests"
+msgstr ""
+
+#: ../../../CHANGELOG.md:387
+msgid ""
+"👌 IMPROVE: Update ANSI CSS colors by @saulshanabrook in "
+"[#384](https://github.com/executablebooks/MyST-NB/pull/384)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:388
+msgid ""
+"✨ NEW: Add `nb_execution_raise_on_error` config by @chrisjsewell in "
+"[#404](https://github.com/executablebooks/MyST-NB/pull/404)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:389
+msgid ""
+"👌 IMPROVE: Add image options to `glue:figure` by @chrisjsewell in "
+"[#403](https://github.com/executablebooks/MyST-NB/pull/403)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:391
+msgid "v0.13.2 - 2022-02-10"
+msgstr ""
+
+#: ../../../CHANGELOG.md:393
+msgid ""
+"This release improves for cell outputs and brings UI improvements for "
+"toggling cell inputs and outputs. It also includes several bugfixes."
+msgstr ""
+
+#: ../../../CHANGELOG.md:396
+msgid ""
+"Add CSS support for 8-bit ANSI colours "
+"[#379](https://github.com/executablebooks/MyST-NB/pull/379) "
+"([@thiippal](https://github.com/thiippal))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:397
+msgid ""
+"Use configured `nb_render_plugin` for glue nodes "
+"[#337](https://github.com/executablebooks/MyST-NB/pull/337) "
+"([@bryanwweber](https://github.com/bryanwweber))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:398
+msgid ""
+"UPGRADE: sphinx-togglebutton v0.3.0 "
+"[#390](https://github.com/executablebooks/MyST-NB/pull/390) "
+"([@choldgraf](https://github.com/choldgraf))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:400
+msgid "0.13.1 - 2021-10-04"
+msgstr ""
+
+#: ../../../CHANGELOG.md:402
+msgid ""
+"✨ NEW: `nb_merge_streams` configuration  [[PR "
+"#364](https://github.com/executablebooks/MyST-NB/pull/364)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:404
+msgid ""
+"If `nb_merge_streams=True`, all stdout / stderr output streams are merged"
+" into single outputs. This ensures deterministic outputs."
+msgstr ""
+
+#: ../../../CHANGELOG.md:406
+msgid "0.13.0 - 2021-09-02"
+msgstr ""
+
+#: ../../../CHANGELOG.md:408
+msgid "Upgraded to `sphinx` v4 ⬆️"
+msgstr ""
+
+#: ../../../CHANGELOG.md:410
+msgid ""
+"The primary change in this release is to update the requirements of myst-"
+"nb from `sphinx>=2,<4` to `sphinx>=3,<5` to support `sphinx>=4` [[PR "
+"#356](https://github.com/executablebooks/MyST-NB/pull/356)]."
+msgstr ""
+
+#: ../../../CHANGELOG.md:413
+msgid ""
+"👌 IMPROVE: Allows more complex suffixes in notebooks [[PR "
+"#328](https://github.com/executablebooks/MyST-NB/pull/328)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:414
+msgid ""
+"⬆️ UPDATE: myst-parser to `0.15.2` [[PR "
+"#353](https://github.com/executablebooks/MyST-NB/pull/353)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:415
+msgid ""
+"⬆️ UPGRADE: nbconvert 6 support [[PR "
+"#326](https://github.com/executablebooks/MyST-NB/pull/326)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:416
+msgid ""
+"⬆️ UPGRADE: markdown-it-py v1.0 [[PR "
+"#320](https://github.com/executablebooks/MyST-NB/pull/320)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:417
+msgid ""
+"🔧 MAINT: Pin ipykernel to ~v5.5 [[PR "
+"#347](https://github.com/executablebooks/MyST-NB/pull/347)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:418
+msgid ""
+"🔧 MAINT: Make a more specific selector for no-border [[PR "
+"#344](https://github.com/executablebooks/MyST-NB/pull/344)]"
+msgstr ""
+
+#: ../../../CHANGELOG.md:420
+msgid ""
+"Many thanks to @akhmerov, @bollwyvl, @choldgraf, @chrisjsewell, "
+"@juhuebner, @mmcky"
+msgstr ""
+
+#: ../../../CHANGELOG.md:422
+msgid "0.12.1 - 2021-04-25"
+msgstr ""
+
+#: ../../../CHANGELOG.md:424
+msgid ""
+"⬆️ UPDATE: jupyter_sphinx to `0.3.2`: fixes `Notebook code has no file "
+"extension metadata` warning)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:425
+msgid ""
+"⬆️ UPDATE: importlib_metadata to `3.6`: to use new entry point loading "
+"interface"
+msgstr ""
+
+#: ../../../CHANGELOG.md:426
+msgid "Official support for Python 3.9"
+msgstr ""
+
+#: ../../../CHANGELOG.md:428
+msgid ""
+"(`0.12.2` and `0.12.3` fix a regression, when working with the entry "
+"point loading interface)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:430
+msgid "0.12.0 - 2021-02-23"
+msgstr ""
+
+#: ../../../CHANGELOG.md:432
+msgid ""
+"This release adds an experimental MyST-NB feature to enable loading of "
+"code from a file for `code-cell` directives using a `:load: <file>` "
+"option."
+msgstr ""
+
+#: ../../../CHANGELOG.md:435
+msgid ""
+"Usage information is available in the [docs](https://myst-"
+"nb.readthedocs.io/en/latest/use/markdown.html#syntax-for-code-cells)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:437
+msgid "0.11.1 - 2021-01-20"
+msgstr ""
+
+#: ../../../CHANGELOG.md:439
+msgid "Minor update to handle MyST-Parser `v0.13.3` and `v4.5` notebooks."
+msgstr ""
+
+#: ../../../CHANGELOG.md:441
+msgid "0.11.0 - 2021-01-12"
+msgstr ""
+
+#: ../../../CHANGELOG.md:443
+msgid ""
+"This release updates MyST-Parser to `v0.13`, which is detailed in the "
+"[myst-parser changelog](https://myst-"
+"parser.readthedocs.io/en/latest/develop/_changelog.html)."
+msgstr ""
+
+#: ../../../CHANGELOG.md:446
+msgid ""
+"The primary change is to the extension system, with extensions now all "
+"loaded *via* `myst_enable_extensions = [\"dollarmath\", ...]`, and a "
+"number of extensions added or improved."
+msgstr ""
+
+#: ../../../CHANGELOG.md:449
+msgid "0.10.2 - 2021-01-12"
+msgstr ""
+
+#: ../../../CHANGELOG.md:451
+msgid "Minor fixes:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:453
+msgid "🐛 FIX: empty myst file read"
+msgstr ""
+
+#: ../../../CHANGELOG.md:454
+msgid "🐛 FIX: remove cell background-color CSS for cells"
+msgstr ""
+
+#: ../../../CHANGELOG.md:455
+msgid "🔧 MAINTAIN: Pin jupyter-sphinx version"
+msgstr ""
+
+#: ../../../CHANGELOG.md:457
+msgid "0.10.1 - 2020-09-08"
+msgstr ""
+
+#: ../../../CHANGELOG.md:459
+msgid "⬆️ UPGRADE: myst-parser v0.12.9"
+msgstr ""
+
+#: ../../../CHANGELOG.md:461
+msgid "Minor bug fixes and enhancements / new features"
+msgstr ""
+
+#: ../../../CHANGELOG.md:463
+msgid "0.10.0 - 2020-08-28"
+msgstr ""
+
+#: ../../../CHANGELOG.md:465
+msgid "⬆️ UPGRADE: jupyter-sphinx v0.3, jupyter-cache v0.4.1 and nbclient v0.5."
+msgstr ""
+
+#: ../../../CHANGELOG.md:467
+msgid ""
+"These upgrades allow for full Windows OS compatibility, and improve the "
+"stability of notebook execution on small machines."
+msgstr ""
+
+#: ../../../CHANGELOG.md:469
+msgid ""
+"👌 IMPROVE: Formatting of stderr is now similar to stdout, but with a "
+"slight red background."
+msgstr ""
+
+#: ../../../CHANGELOG.md:471
+msgid "🧪 TESTS: Add Windows CI"
+msgstr ""
+
+#: ../../../CHANGELOG.md:473
+msgid "0.9.2 - 2020-08-27"
+msgstr ""
+
+#: ../../../CHANGELOG.md:475
+msgid "⬆️ UPGRADE: myst-parser patch version"
+msgstr ""
+
+#: ../../../CHANGELOG.md:477
+msgid ""
+"to ensure a few new features and bug fixes are incorporated (see its "
+"[CHANGELOG.md](https://github.com/executablebooks/MyST-"
+"Parser/blob/master/CHANGELOG.md))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:479
+msgid "0.9.1 - 2020-08-24"
+msgstr ""
+
+#: ../../../CHANGELOG.md:481
+msgid "More configuration!"
+msgstr ""
+
+#: ../../../CHANGELOG.md:483
+msgid ""
+"✨ NEW: Add stderr global configuration: `nb_output_stderr` (see [removing"
+" stderr](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#removing-stdout-"
+"and-stderr))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:485
+msgid ""
+"✨ NEW: Add `nb_render_key` configuration (see [formatting outputs](https"
+"://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#images))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:487
+msgid ""
+"🐛 FIX: `auto` execution not recognising (and skipping) notebooks with "
+"existing outputs"
+msgstr ""
+
+#: ../../../CHANGELOG.md:489
+msgid "0.9.0 - 2020-08-24"
+msgstr ""
+
+#: ../../../CHANGELOG.md:491
+msgid ""
+"This versions see's many great changes; utilising the ⬆️ upgrade to "
+"`myst-parser=v0.12` and accompanying ⬆️ upgrade to `sphinx=v3`, as well "
+"as major refactors to the execution "
+"([#236](https://github.com/executablebooks/MyST-"
+"NB/commit/2bc0c11cedbad6206f70546819fad85d779ce449)) and code output "
+"rendering ([#243](https://github.com/executablebooks/MyST-"
+"NB/commit/04f3bbb928cf1794e140de6a919fb58578753300)). Plus much more "
+"configuration options, to allow for a more configurable workflow (the "
+"defaults work great as well!)."
+msgstr ""
+
+#: ../../../CHANGELOG.md:496
+msgid ""
+"Below is a summary of the changes, and you can also check out many "
+"examples in the documentation, <https://myst-nb.readthedocs.io/>, and the"
+" MyST-Parser Changelog for all the new Markdown parsing features "
+"available: <https://github.com/executablebooks/MyST-Parser>."
+msgstr ""
+
+#: ../../../CHANGELOG.md:499
+msgid "New ✨"
+msgstr ""
+
+#: ../../../CHANGELOG.md:501
+msgid "Custom notebook formats:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:503
+msgid ""
+"Configuration and logic has been added for designating additional file "
+"types to be converted to Notebooks, which are then executed & parsed in "
+"the same manner as regular Notebooks. See [Custom Notebook Formats](https"
+"://myst-nb.readthedocs.io/en/latest/examples/custom-formats.html) for "
+"details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:506
+msgid ""
+"Allow for configuration of render priority (per output format) with "
+"`nb_render_priority`."
+msgstr ""
+
+#: ../../../CHANGELOG.md:508
+msgid ""
+"The code cell output renderer class is now loaded from an entry-point, "
+"with a configurable name, meaning that anyone can provide their own "
+"renderer subclass. See [Customise the render process](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#customise-the-"
+"render-process) for details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:512
+msgid ""
+"Assignment of metadata tags `remove-stdout` and `remove-stderr` for "
+"removal of the relevant outputs ([see here](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#removing-stdout-"
+"and-stderr))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:514
+msgid ""
+"Render `text/markdown` MIME types with an integrated CommonMark parser "
+"([see here](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#markdown))."
+msgstr ""
+
+#: ../../../CHANGELOG.md:516
+msgid ""
+"Add code output image formatting, *via* cell metadata, including size, "
+"captions and labelling ([see here](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#images))."
+msgstr ""
+
+#: ../../../CHANGELOG.md:518
+msgid ""
+"Notebook outputs ANSI lexer which is applied to stdout/stderr and "
+"text/plain outputs, and is configurable *via* `nb_render_text_lexer` "
+"([see here](https://myst-"
+"nb.readthedocs.io/en/latest/use/formatting_outputs.html#ansi-outputs))."
+msgstr ""
+
+#: ../../../CHANGELOG.md:520
+msgid ""
+"Capture execution data in sphinx env, which can be output into the "
+"documentation, with the `nb-exec-table` directive. See [Execution "
+"statistics](https://myst-nb.readthedocs.io/en/latest/use/execute.html"
+"#execution-statistics) for details."
+msgstr ""
+
+#: ../../../CHANGELOG.md:522 ../../../CHANGELOG.md:557
+msgid "Improved 👌"
+msgstr ""
+
+#: ../../../CHANGELOG.md:524
+msgid "Standardise auto/cache execution"
+msgstr ""
+
+#: ../../../CHANGELOG.md:526
+msgid ""
+"Both now call the same underlying function (from `jupyter-cache`) and act"
+" the same.   This improves `auto`, by making it output error reports and "
+"not raising an exception on an error.   Additional config has also been "
+"added: `execution_allow_errors` and `execution_in_temp`.   As for for "
+"`timeout`, `allow_errors` can also be set in the notebook "
+"`metadata.execution.allow_errors`   This presents one breaking change, in"
+" that `cache` will now by default execute in a the local folder as the "
+"CWD (not a temporary one)."
+msgstr ""
+
+#: ../../../CHANGELOG.md:532 ../../../CHANGELOG.md:561
+msgid "Fixed 🐛"
+msgstr ""
+
+#: ../../../CHANGELOG.md:534
+msgid ""
+"Code cell source code is now assigned the correct lexer when using custom"
+" kernels ([39c1bb9](https://github.com/executablebooks/MyST-"
+"NB/commit/39c1bb99e73b35812474366f2f1760850fe40a57))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:536 ../../../CHANGELOG.md:570
+msgid "Documented 📚"
+msgstr ""
+
+#: ../../../CHANGELOG.md:538
+msgid ""
+"Add example of using kernels other than Python "
+"([676eb2c](https://github.com/executablebooks/MyST-"
+"NB/commit/676eb2c46b1ca605980180479c845b43ec64c5fb))"
+msgstr ""
+
+#: ../../../CHANGELOG.md:540
+msgid "Refactored ♻️"
+msgstr ""
+
+#: ../../../CHANGELOG.md:542
+msgid "Add more signature typing and docstrings"
+msgstr ""
+
+#: ../../../CHANGELOG.md:543
+msgid "Move config value validation to separate function"
+msgstr ""
+
+#: ../../../CHANGELOG.md:544
+msgid "Rename functions in cache.py and improve their logical flow"
+msgstr ""
+
+#: ../../../CHANGELOG.md:545
+msgid "Rename variable stored in sphinx environment, to share same suffix:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:546
+msgid "`path_to_cache` -> `nb_path_to_cache`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:547
+msgid "`allowed_nb_exec_suffixes` -> `nb_allowed_exec_suffixes`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:548
+msgid "`excluded_nb_exec_paths` -> `nb_excluded_exec_paths`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:549
+msgid "Initial Nb output rendering:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:550
+msgid ""
+"Ensure source (path, lineno) are correctly propagated to "
+"`CellOutputBundleNode`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:551
+msgid "Capture cell level metadata in `CellOutputBundleNode`"
+msgstr ""
+
+#: ../../../CHANGELOG.md:552
+msgid "New `CellOutputRenderer` class to contain render methods"
+msgstr ""
+
+#: ../../../CHANGELOG.md:553
+msgid ""
+"Simplify test code, using sphinx `get_doctree` and "
+"`get_and_resolve_doctree` methods"
+msgstr ""
+
+#: ../../../CHANGELOG.md:555
+msgid "0.8.5 - 2020-08-11"
+msgstr ""
+
+#: ../../../CHANGELOG.md:559
+msgid "Add configuration for traceback in stderr (#218)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:563
+msgid "MIME render priority lookup"
+msgstr ""
+
+#: ../../../CHANGELOG.md:565
+msgid "Upgrades ⬆️"
+msgstr ""
+
+#: ../../../CHANGELOG.md:567
+msgid "myst-parser -> 0.9"
+msgstr ""
+
+#: ../../../CHANGELOG.md:568
+msgid "jupyter-cache to v0.3.0"
+msgstr ""
+
+#: ../../../CHANGELOG.md:572
+msgid "More explanation of myst notebooks (#213)"
+msgstr ""
+
+#: ../../../CHANGELOG.md:573
+msgid "Update contributing guide"
+msgstr ""
+
+#: ../../../CHANGELOG.md:575
+msgid "Contributors for previously releases"
+msgstr ""
+
+#: ../../../CHANGELOG.md:577
+msgid "Thanks to all these contributors 🙏:"
+msgstr ""
+
+#: ../../../CHANGELOG.md:579
+#, python-format
+msgid ""
+"[@AakashGfude](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3AAakashGfude+updated%3A2020-03-28..2020-08-11&type=Issues) |"
+" [@akhmerov](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aakhmerov+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@amueller](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aamueller+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@choldgraf](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acholdgraf+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@chrisjsewell](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3Achrisjsewell+updated%3A2020-03-28..2020-08-11&type=Issues) "
+"| [@codecov](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Acodecov+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@consideRatio](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-"
+"NB+involves%3AconsideRatio+updated%3A2020-03-28..2020-08-11&type=Issues) "
+"| [@jstac](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ajstac+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@matthew-brett](https://github.com/search?q=repo%3Aexecutablebooks"
+"%2FMyST-NB+involves%3Amatthew-"
+"brett+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@mmcky](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Ammcky+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@phaustin](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aphaustin+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@rossbar](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Arossbar+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@rowanc1](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Arowanc1+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@seanpue](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Aseanpue+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@stefanv](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Astefanv+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@TomDonoghue](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3ATomDonoghue+updated%3A2020-03-28..2020-08-11&type=Issues) |"
+" [@tonyfast](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Atonyfast+updated%3A2020-03-28..2020-08-11&type=Issues) | "
+"[@welcome](https://github.com/search?q=repo%3Aexecutablebooks%2FMyST-"
+"NB+involves%3Awelcome+updated%3A2020-03-28..2020-08-11&type=Issues)"
+msgstr ""
+
+#: ../../reference/contributing.md:1
+msgid "Contribute to MyST-NB"
+msgstr ""
+
+#: ../../reference/contributing.md:3
+msgid ""
+"[![Github-CI][github-ci]][github-link] [![Coverage Status][codecov-badge"
+"]][codecov-link] [![Documentation Status][rtd-badge]][rtd-link] [![Code "
+"style: black][black-badge]][black-link]"
+msgstr ""
+
+#: ../../reference/contributing.md:3
+msgid "Github-CI"
+msgstr ""
+
+#: ../../reference/contributing.md:3
+msgid "Coverage Status"
+msgstr ""
+
+#: ../../reference/contributing.md:3
+msgid "Documentation Status"
+msgstr ""
+
+#: ../../reference/contributing.md:3
+msgid "Code style: black"
+msgstr ""
+
+#: ../../reference/contributing.md:8
+msgid ""
+"We welcome all contributions! See the [EBP Contributing "
+"Guide](https://executablebooks.org/en/latest/contributing.html) for "
+"general details, and below for guidance specific to MyST-NB."
+msgstr ""
+
+#: ../../reference/contributing.md:11
+msgid "Installation"
+msgstr ""
+
+#: ../../reference/contributing.md:13
+msgid ""
+"To install `MyST-NB` for package development (you will need a recent "
+"version of pip (>=22.0)):"
+msgstr ""
+
+#: ../../reference/contributing.md:22
+msgid "How the Jupyter Notebook parser works"
+msgstr ""
+
+#: ../../reference/contributing.md:24
+msgid ""
+"MyST-NB is built on top of the MyST markdown parser. This is a flavor of "
+"markdown designed to work with the Sphinx ecosystem. It is a combination "
+"of CommonMark markdown, with a few extra syntax pieces added for use in "
+"Sphinx (for example, roles and directives)."
+msgstr ""
+
+#: ../../reference/contributing.md:29
+msgid "MyST-NB will do the following:"
+msgstr ""
+
+#: ../../reference/contributing.md:31
+msgid ""
+"Check for any pages in your documentation folder that end in `.ipynb`. "
+"For each one:"
+msgstr ""
+
+#: ../../reference/contributing.md:32
+msgid ""
+"Loop through the notebook's cells, converting cell contents into the "
+"Sphinx AST."
+msgstr ""
+
+#: ../../reference/contributing.md:33
+msgid ""
+"If it finds executable code cells, include their outputs in-line with the"
+" code."
+msgstr ""
+
+#: ../../reference/contributing.md:34
+msgid ""
+"If it finds markdown cells, use the MyST parser to convert them into "
+"Sphinx."
+msgstr ""
+
+#: ../../reference/contributing.md:36
+msgid ""
+"Eventually, it will also provide support for writing pure-markdown "
+"versions of notebooks that can be executed and read into Sphinx."
+msgstr ""
+
+#: ../../reference/contributing.md:39
+msgid "Code Style"
+msgstr ""
+
+#: ../../reference/contributing.md:41
+msgid ""
+"Code style is tested using [ruff](https://docs.astral.sh/ruff), with the "
+"configuration set in `pyproject.toml`, and code formatted with "
+"[black](https://github.com/ambv/black)."
+msgstr ""
+
+#: ../../reference/contributing.md:45
+msgid ""
+"Installing with `myst-nb[code_style]` makes the [pre-commit](https://pre-"
+"commit.com/) package available, which will ensure this style is met "
+"before commits are submitted, by reformatting the code and testing for "
+"lint errors. It can be setup by:"
+msgstr ""
+
+#: ../../reference/contributing.md:55
+msgid "Optionally you can run `black` and `ruff` separately:"
+msgstr ""
+
+#: ../../reference/contributing.md:62
+msgid ""
+"Editors like VS Code also have automatic code reformat utilities, which "
+"can adhere to this standard."
+msgstr ""
+
+#: ../../reference/contributing.md:64
+msgid ""
+"All functions and class methods should be annotated with types and "
+"include a docstring. The preferred docstring format is outlined in `MyST-"
+"NB/docstring.fmt.mustache` and can be used automatically with the "
+"[autodocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)"
+" VS Code extension."
+msgstr ""
+
+#: ../../reference/contributing.md:67
+msgid "Testing"
+msgstr ""
+
+#: ../../reference/contributing.md:69
+msgid "For code tests, MyST-NB uses [pytest](https://docs.pytest.org)):"
+msgstr ""
+
+#: ../../reference/contributing.md:76
+msgid ""
+"You can also use [tox](https://tox.readthedocs.io), to run the tests in "
+"multiple isolated environments (see the `tox.ini` file for available test"
+" environments):"
+msgstr ""
+
+#: ../../reference/contributing.md:83
+msgid "For documentation build tests:"
+msgstr ""
+
+#: ../../reference/contributing.md:90
+msgid "or"
+msgstr ""
+
+#: ../../reference/contributing.md:98
+msgid "Unit Testing"
+msgstr ""
+
+#: ../../reference/contributing.md:100
+msgid ""
+"Testing is one of the most important aspects of your PR. You should write"
+" test cases and verify your implementation by following the testing guide"
+" above. If you modify code related to existing unit tests, you must run "
+"appropriate commands and confirm that the tests still pass."
+msgstr ""
+
+#: ../../reference/contributing.md:102
+msgid ""
+"Note that we are using [pytest](https://docs.pytest.org/en/latest/) for "
+"testing, [pytest-regression](https://pytest-"
+"regressions.readthedocs.io/en/latest/) to self-generate/re-generate "
+"expected outcomes of test and [pytest-cov](https://pytest-"
+"cov.readthedocs.io/en/latest/) for checking coverage."
+msgstr ""
+
+#: ../../reference/contributing.md:104
+msgid "To run tests along with coverage:"
+msgstr ""
+
+#: ../../reference/contributing.md:110
+msgid "To run tests along with generation of an html coverage report:"
+msgstr ""
+
+#: ../../reference/contributing.md:117
+msgid "Test File and Directory Naming Conventions"
+msgstr ""
+
+#: ../../reference/contributing.md:119
+msgid ""
+"Tests are found in the [tests](https://github.com/executablebooks/MyST-"
+"NB/tree/master/tests) directory. In order for `pytest` to find the test "
+"scripts correctly, the name of each test script should start with `test_`"
+" prefix."
+msgstr ""
+
+#: ../../reference/contributing.md:121
+msgid "How to Write Tests"
+msgstr ""
+
+#: ../../reference/contributing.md:123
+msgid ""
+"There are many examples of unit tests under the "
+"[tests](https://github.com/executablebooks/MyST-NB/tree/master/tests) "
+"directory, so reading some of them is a good and recommended way. Prefer "
+"using the `fixtures` and the classes defined in "
+"[conftest.py](https://github.com/executablebooks/MyST-"
+"NB/blob/master/tests/conftest.py) as much as possible."
+msgstr ""
+
+#: ../../reference/contributing.md:125
+msgid ""
+"If using [pytest-regression](https://pytest-"
+"regressions.readthedocs.io/en/latest/), a new directory with `test_` "
+"prefix is expected to be created in the first test run. This will store "
+"your expected output against which subsequent test outputs will be "
+"compared."
+msgstr ""
+
+#: ../../reference/contributing.md:127
+msgid "Code Coverage report"
+msgstr ""
+
+#: ../../reference/contributing.md:129
+msgid ""
+"[pytest-cov](https://pytest-cov.readthedocs.io/en/latest/) is used to "
+"generate code coverage report. Make sure that your test cases cover most "
+"of the code written by you."
+msgstr ""
+
