@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../authoring/text-notebooks.md:8
+msgid "Text-based Notebooks"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:10
+msgid ""
+"MyST Markdown notebooks allow you to write your Jupyter Notebook entirely"
+" in markdown, utilising the MyST Markdown notebook format. This allows "
+"you to store notebook metadata, Markdown, and cell inputs in a text-based"
+" format that is easy to read and use with text-based tools."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:13
+msgid ""
+"MyST notebooks have a 1-to-1 mapping with Jupyter notebook, so can be "
+"[converted to `.ipynb` files](converting-ipynb) and [opened as notebooks "
+"in Jupyter interfaces](myst-nb/jupyter-interfaces) (with jupytext "
+"installed). When used with `myst_nb`, MyST notebooks are also integrated "
+"directly into the {ref}`Execution and Caching <execute/cache>` "
+"machinery.[^download]"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:19
+msgid "The MyST notebook Structure"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:21
+msgid ""
+"MyST Markdown Notebooks (or MyST notebooks for short) have four main "
+"types of content:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:23
+msgid "**cell/notebook level metadata** that are written as YAML wrapped in `---`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:24
+msgid "**markdown cells** that can be written as CommonMark or MyST Markdown"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:25
+msgid ""
+"**code cells** that are written with the MyST Markdown `code-cell` "
+"directive syntax"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:26
+msgid ""
+"**raw cells** that are written with the MyST Markdown `raw-cell` "
+"directive syntax"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:28
+msgid "Notebook-level metadata"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:30
+msgid ""
+"Begin a MyST notebook file with YAML top-matter metadata, containing at "
+"least the `file_format: mystnb` signifier. This will be used as "
+"**notebook-level metadata** for the resulting Jupyter Notebook. This "
+"metadata takes the following form:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:46
+msgid ""
+"The kernel that your code cells use is determined by the "
+"`kernelspec.name` field, and  should relate to a [Jupyter "
+"kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) "
+"installed in your environment and registered with Jupyter. If no kernel "
+"is given, then the default kernel will be used."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:49
+msgid "Syntax for Markdown"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:51
+msgid ""
+"Anything in-between code cells will be treated as Markdown. You can use "
+"any Markdown that is valid MyST. If you are using MyST notebooks with the"
+" `myst_nb` Sphinx extension, you can write Sphinx directives and roles. "
+"However, note that most Jupyter notebook environments may not be able to "
+"render MyST Markdown syntax."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:56
+msgid ""
+"**To denote a break between two markdown cells**, use the following "
+"syntax:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:64
+msgid ""
+"This will result in two markdown cells in the resulting notebook. The "
+"key:val pairs specified in the `{}` brackets will be cell-level metadata "
+"in the second markdown cell."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:67
+msgid "Syntax for code cells"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:69
+msgid ""
+"When writing MyST notebooks, use the following syntax to define a code "
+"cell:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:79
+msgid ""
+"The argument after `{code-cell}` (above, `ipython3`) is optional, and is "
+"used for readability purposes. The content inside `{code-cell}` makes up "
+"the content of the cell, and will be executed at build time."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:83
+msgid "This will result in the following output after building your site:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:91
+msgid "Cell-level metadata"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:93
+msgid ""
+"You can begin `code-cell` blocks with top-matter metadata. These will be "
+"used as **cell-level metadata** in the resulting notebook cell. The same "
+"metadata tags can be used as you would in a normal notebook, for example "
+"those discussed in {ref}`use/hiding/code`:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:108
+msgid "Yields the following:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:118
+msgid ""
+"There is also an **alternative short-hand syntax** for cell-level "
+"metadata. This takes the following form:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:128
+msgid ""
+"For example, the following syntax adds a `raises-exception` tag to the "
+"cell, which means our code will execute without halting the kernel:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:146
+msgid "Convert between MyST notebooks and `.ipynb`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:148
+msgid ""
+"MyST notebooks can be converted to Jupyter notebooks using the `mystnb-"
+"to-jupyter` CLI command."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:155
+msgid ""
+"MyST notebooks can also be converted back-and-forth from `ipynb` files "
+"using [jupytext](https://jupytext.readthedocs.io), a Python library for "
+"two-way conversion of `ipynb` files with many text-based formats."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:158
+msgid ""
+"To let jupytext know the format of the notebook, add the notebook top-"
+"matter similar to:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:174
+msgid "Then you can run:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:176
+msgid ""
+"To convert `.ipynb` to a MyST notebook, run: `jupytext notebook.ipynb "
+"--to myst`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:177
+msgid ""
+"To convert a MyST notebook to `.ipynb`, run: `jupytext mystfile.md --to "
+"ipynb`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:180
+msgid ""
+"For more information, see the [Jupytext "
+"Documentation](https://jupytext.readthedocs.io), and specifically the "
+"[MyST Markdown "
+"format](https://jupytext.readthedocs.io/en/latest/formats.html#myst-"
+"markdown)."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:185
+msgid "MyST notebooks in Jupyter interfaces"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:187
+msgid ""
+"You can use MyST notebooks in Jupyter interfaces by using Jupytext "
+"extensions. This allows you to open a MyST Markdown Notebook as a "
+"\"regular\" Jupyter Notebook in Jupyter Lab and the Classic Notebook "
+"interface. For more information, see [the Jupytext "
+"documentation](https://jupytext.readthedocs.io)."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:193
+msgid "MyST notebooks in Jupyter Book"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:195
+msgid ""
+"In addition to using MyST notebooks with Sphinx, you may also use them "
+"with the Jupyter Book project. See {doc}`jb:file-types/myst-notebooks`."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:198
+msgid "Code from Files"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:201
+msgid ""
+"This is an experimental feature that is **not** part of the core `MyST` "
+"markup specification, and may be removed in the future. Using `:load:` "
+"will also overwrite any code written into the directive."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:204
+msgid ""
+"`myst_nb` provides a convenience feature for importing executable code "
+"into a `{code-cell}` from a file. This can be useful when you want to "
+"share code between documents. To do this you specify a `load` metadata "
+"attribute such as:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:17
+msgid ""
+"This notebook can be downloaded as **{nb-download}`text-"
+"notebooks.ipynb`** and {download}`text-notebooks.md`"
+msgstr ""
+

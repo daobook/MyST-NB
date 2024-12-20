@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../render/format_code_cells.md:8
+msgid "Format code cells"
+msgstr ""
+
+#: ../../render/format_code_cells.md:10
+msgid ""
+"Code cell rendering behaviour is controlled with configuration at a "
+"global, per-file, or per-cell level, as outlined in the [configuration "
+"section](config/intro)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:12
+msgid ""
+"See the sections below for a description of these configuration option "
+"and their effect."
+msgstr ""
+
+#: ../../render/format_code_cells.md:15
+msgid "Number source lines"
+msgstr ""
+
+#: ../../render/format_code_cells.md:17
+msgid ""
+"You can control whether the number of source lines is displayed for code "
+"cells, globally with `nb_number_source_lines = True`, per-file with "
+"`number_source_lines` in the notebook metadata, or per-cell with "
+"`number_source_lines` in the cell metadata. For example:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:44
+msgid "stdout and stderr outputs"
+msgstr ""
+
+#: ../../render/format_code_cells.md:47
+msgid "Remove stdout or stderr"
+msgstr ""
+
+#: ../../render/format_code_cells.md:49
+msgid ""
+"In some cases you may not wish to display stdout/stderr outputs in your "
+"final documentation, for example, if they are only for debugging "
+"purposes."
+msgstr ""
+
+#: ../../render/format_code_cells.md:52
+msgid ""
+"You can tell MyST-NB to remove these outputs, per cell, using the "
+"`remove-stdout` and `remove-stderr` [cell tags](https://jupyter-"
+"notebook.readthedocs.io/en/stable/changelog.html#cell-tags), like so:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:76
+msgid ""
+"Alternatively, you can configure how stdout is dealt with at a global "
+"configuration level, using the `nb_output_stderr` configuration value. "
+"This can be set to:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:79
+msgid ""
+"`\"show\"` (default): show all stderr (unless a `remove-stderr` tag is "
+"present)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:80
+msgid "`\"remove\"`: remove all stderr"
+msgstr ""
+
+#: ../../render/format_code_cells.md:81
+msgid ""
+"`\"remove-warn\"`: remove all stderr, but log a warning to sphinx if any "
+"found"
+msgstr ""
+
+#: ../../render/format_code_cells.md:82
+msgid ""
+"`\"warn\"`, `\"error\"` or `\"severe\"`: log to sphinx, at a certain "
+"level, if any found."
+msgstr ""
+
+#: ../../render/format_code_cells.md:85
+msgid "Group into single streams"
+msgstr ""
+
+#: ../../render/format_code_cells.md:87
+msgid ""
+"Cells may print multiple things to `stdout` and `stderr`. For example, if"
+" a cell prints status updates throughout its execution, each of these is "
+"often printed to `stdout`. By default, these outputs may be split across "
+"multiple items, and will be rendered as separate \"chunks\" in your built"
+" documentation."
+msgstr ""
+
+#: ../../render/format_code_cells.md:91
+msgid ""
+"If you'd like each of the outputs in `stderr` and `stdout` to be merged "
+"into a single stream for each, use the following configuration:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:97
+msgid ""
+"This will ensure that all `stderr` and `stdout` outputs are merged into a"
+" single group. This also makes cell outputs more deterministic. Normally,"
+" slight differences in timing may result in different orders of `stderr` "
+"and `stdout` in the cell output, while this setting will sort them "
+"properly."
+msgstr ""
+
+#: ../../render/format_code_cells.md:102
+msgid "Outputs MIME priority"
+msgstr ""
+
+#: ../../render/format_code_cells.md:104
+msgid ""
+"When Jupyter executes a code cell it can produce multiple outputs, and "
+"each of these outputs can contain multiple [MIME media "
+"types](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), for use by different output "
+"formats (like HTML or LaTeX)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:106
+msgid ""
+"MyST-NB stores a base priority dictionary for most of the common [Sphinx "
+"builder names](https://www.sphinx-"
+"doc.org/en/master/usage/builders/index.html), mapping MIME types to a "
+"priority number (lower is higher priority):"
+msgstr ""
+
+#: ../../render/format_code_cells.md:117
+msgid ""
+"Items in this dictionary can be overridden by the "
+"`nb_mime_priority_overrides` configuration option, in your `conf.py`. For"
+" example, the following configuration applies in order:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:120
+msgid "Sets `text/plain` as the highest priority for `html` output."
+msgstr ""
+
+#: ../../render/format_code_cells.md:121
+msgid "Disables `image/jpeg` for `latex` output"
+msgstr ""
+
+#: ../../render/format_code_cells.md:122
+msgid ""
+"Adds a custom MIME type `customtype` for all builders (`*` applies to all"
+" builders)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:133
+msgid "`nb_mime_priority_overrides` replaces `nb_render_priority`"
+msgstr ""
+
+#: ../../render/format_code_cells.md:137
+msgid "[](render/output/customise), for a more advanced means of customisation."
+msgstr ""
+
+#: ../../render/format_code_cells.md:141
+msgid "Images and Figures"
+msgstr ""
+
+#: ../../render/format_code_cells.md:143
+msgid ""
+"With the default renderer, for any image types output by the code, we can"
+" apply formatting *via* cell metadata. The top-level metadata key can be "
+"set using `nb_cell_metadata_key` in your `conf.py`, and is set to "
+"`mystnb` by default. Then for the image we can apply all the variables of"
+" the standard [image "
+"directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image):"
+msgstr ""
+
+#: ../../render/format_code_cells.md:147
+msgid "**width**: length or percentage (%) of the current line width"
+msgstr ""
+
+#: ../../render/format_code_cells.md:148
+msgid "**height**: length"
+msgstr ""
+
+#: ../../render/format_code_cells.md:149
+msgid "**scale**: integer percentage (the \"%\" symbol is optional)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:150
+msgid ""
+"**align**: \"top\", \"middle\", \"bottom\", \"left\", \"center\", or "
+"\"right\""
+msgstr ""
+
+#: ../../render/format_code_cells.md:151 ../../render/format_code_cells.md:162
+msgid "**classes**: space separated strings"
+msgstr ""
+
+#: ../../render/format_code_cells.md:152
+msgid "**alt**: string"
+msgstr ""
+
+#: ../../render/format_code_cells.md:154
+msgid "Units of length are: 'em', 'ex', 'px', 'in', 'cm', 'mm', 'pt', 'pc'"
+msgstr ""
+
+#: ../../render/format_code_cells.md:156
+msgid ""
+"You can also wrap the output in a "
+"[`figure`](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure),"
+" that can include:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:158
+msgid "**align**: \"left\", \"center\", or \"right\""
+msgstr ""
+
+#: ../../render/format_code_cells.md:159
+msgid ""
+"**caption**: a string, which must contain a single paragraph and is "
+"rendered as MyST Markdown (subsequent paragraphs are added as a legend)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:160
+msgid ""
+"**caption_before**: a boolean, if true, the caption is rendered before "
+"the figure (default is false)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:161
+msgid "**name**: by which to reference the figure"
+msgstr ""
+
+#: ../../render/format_code_cells.md:186
+msgid "Hey everyone its **party** time!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:189
+msgid "(and I'm a legend)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:202
+msgid ""
+"Now we can link to the image from anywhere in our documentation: [swim to"
+" the fish](fun-fish-ref)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:204
+msgid "You can create figures for any mime outputs, including tables:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:224
+msgid "This is my table caption, above the table"
+msgstr ""
+
+#: ../../render/format_code_cells.md:237
+msgid "Markdown"
+msgstr ""
+
+#: ../../render/format_code_cells.md:239
+msgid ""
+"The format of output `text/markdown` can be specified by "
+"`render_markdown_format` configuration:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:241
+msgid ""
+"`commonmark` (default): Restricted to the [CommonMark "
+"specification](https://commonmark.org/)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:242
+msgid ""
+"`gfm`: Restricted to the [GitHub-flavored "
+"markdown](https://github.github.com/gfm/)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:243
+msgid ""
+"Note, this requires the installation of the [linkify-it-py "
+"package](https://pypi.org/project/linkify-it-py)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:244
+msgid ""
+"`myst`: Uses [the MyST parser](https://myst-"
+"parser.readthedocs.io/en/latest/) with the same configuration as the "
+"current document."
+msgstr ""
+
+#: ../../render/format_code_cells.md:246
+msgid "CommonMark formatting will output basic Markdown syntax:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:250
+msgid "**_some_ markdown** and an [a reference](https://example.com)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:253
+msgid "and even internal images can be rendered!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:257
+msgid "![figure](../_static/logo-wide.svg)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:257
+msgid "figure"
+msgstr ""
+
+#: ../../render/format_code_cells.md:259
+msgid ""
+"But setting the Markdown format to `myst` will allow for more advanced "
+"formatting, such as including internal references, tables, and even other"
+" directives, either using:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:262
+msgid ""
+"`myst_render_markdown_format = \"myst\"` in the `conf.py` to set "
+"globally, or"
+msgstr ""
+
+#: ../../render/format_code_cells.md:263
+msgid "`markdown_format` in the cell metadata to set per-cell."
+msgstr ""
+
+#: ../../render/format_code_cells.md:285
+msgid ""
+"The parsed Markdown is integrated into the wider documentation, and so it"
+" is possible, for example, to include internal references:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "**_some_ markdown** and an [internal reference](render/output/markdown)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "a"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "b"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "c"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "1"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "2"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "3"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "A note admonition!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:306
+msgid "ANSI Outputs"
+msgstr ""
+
+#: ../../render/format_code_cells.md:308
+msgid ""
+"By default, the standard output/error streams and text/plain MIME outputs"
+" may contain ANSI escape sequences to change the text and background "
+"colors."
+msgstr ""
+
+#: ../../render/format_code_cells.md:317
+msgid ""
+"This uses the built-in {py:class}`~myst_nb.core.lexers.AnsiColorLexer` "
+"[pygments lexer](https://pygments.org/). You can change the lexer used in"
+" the `conf.py`, for example to turn off lexing:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:324
+msgid ""
+"The following code[^acknowledge] shows the 8 basic ANSI colors it is "
+"based on. Each of the 8 colors has an “intense” variation, which is used "
+"for bold text."
+msgstr ""
+
+#: ../../render/format_code_cells.md:351
+msgid ""
+"ANSI also supports a set of 256 indexed colors. This is currently not "
+"supported, but we hope to introduce it at a later date (raise an issue on"
+" the repository if you require it!)."
+msgstr ""
+
+#: ../../render/format_code_cells.md:357
+msgid "Customise the render process"
+msgstr ""
+
+#: ../../render/format_code_cells.md:359
+msgid ""
+"The render process is governed by subclasses of "
+"{py:class}`~myst_nb.core.render.NbElementRenderer`, which dictate how to "
+"create the `docutils` AST nodes for elements of the notebook."
+msgstr ""
+
+#: ../../render/format_code_cells.md:361
+msgid ""
+"Implementations are loaded *via* Python [entry "
+"points](https://packaging.python.org/guides/distributing-packages-using-"
+"setuptools/#entry-points), in the `myst_nb.renderers` group. So it is "
+"possible to inject your own subclass to fully override rendering."
+msgstr ""
+
+#: ../../render/format_code_cells.md:364
+msgid "For example, the renderer loaded in this package is:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:371
+msgid "You can then select the renderer plugin in your `conf.py`:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:377
+msgid ""
+"Plugins can also override rendering of particular output MIME types, "
+"using the `myst_nb.mime_renderers` entry point group to supply functions "
+"with signature: {py:class}`~myst_nb.core.render.MimeRenderPlugin`."
+msgstr ""
+
+#: ../../render/format_code_cells.md:380
+msgid ""
+"For example {py:class}`myst_nb.core.render.ExampleMimeRenderPlugin`, is "
+"loaded in this package:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:387
+msgid "Meaning we can now render `custommimetype` in all output formats:"
+msgstr ""
+
+#: ../../render/format_code_cells.md:391
+msgid "This is a custom mime type, with content: 'Some text'"
+msgstr ""
+
+#: ../../render/format_code_cells.md:327
+msgid ""
+"Borrowed from [nbsphinx](https://nbsphinx.readthedocs.io/en/0.7.1/code-"
+"cells.html#ANSI-Colors)!"
+msgstr ""
+

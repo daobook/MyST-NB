@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../render/inline.md:11
+msgid "Inline variable evaluation (eval)"
+msgstr ""
+
+#: ../../render/inline.md:16
+msgid ""
+"The `eval` submodule allows you to insert code variables directly into "
+"the text flow of your documentation."
+msgstr ""
+
+#: ../../render/inline.md:18
+msgid ""
+"Use of `eval` requires that the [notebook execution mode](execute/modes) "
+"is set to `inline`, since the variables are evaluated by the notebook "
+"kernel. For example, using the [top-matter](authoring/text-notebooks):"
+msgstr ""
+
+#: ../../render/inline.md:31
+msgid "Basic example"
+msgstr ""
+
+#: ../../render/inline.md:33
+msgid "Below we set a variable `v1` within a code cell."
+msgstr ""
+
+#: ../../render/inline.md:39
+msgid ""
+"Using the `eval` role, we can insert the variable `v1` into the text of a"
+" paragraph:"
+msgstr ""
+
+#: ../../render/inline.md:41 ../../render/inline.md:49
+msgid "`` {eval}`v1` `` -> {eval}`v1`"
+msgstr ""
+
+#: ../../render/inline.md:43
+msgid ""
+"If we update the variable, we can see the change reflected in subsequent "
+"evaluation:"
+msgstr ""
+
+#: ../../render/inline.md:52
+msgid "Variable names must match the regex `[a-zA-Z][a-zA-Z0-9_]*`"
+msgstr ""
+
+#: ../../render/inline.md:55
+msgid "Inserting different output types"
+msgstr ""
+
+#: ../../render/inline.md:57
+msgid ""
+"Any variable type can be inserted into the text flow using the `eval` "
+"role, and the most suitable output type will be used, based on the output"
+" format (see {ref}`render/output/priority` for more information). For "
+"example:"
+msgstr ""
+
+#: ../../render/inline.md:66
+msgid "An inline slider (`` {eval}`slider` ``): {eval}`slider`"
+msgstr ""
+
+#: ../../render/inline.md:68
+msgid "You can also use the `eval` directive to insert variables as blocks:"
+msgstr ""
+
+#: ../../render/inline.md:79
+msgid "using:"
+msgstr ""
+
+#: ../../render/inline.md:86
+msgid "gives:"
+msgstr ""
+
+#: ../../render/inline.md:91
+msgid "Embedding outputs in figures"
+msgstr ""
+
+#: ../../render/inline.md:93
+msgid ""
+"The `eval:figure` directive allows you to embed outputs in a figure, with"
+" an optional caption and other formatting options."
+msgstr ""
+
+#: ../../render/inline.md:96
+msgid "For example, we can embed the output of the above plot in a figure:"
+msgstr ""
+
+#: ../../render/inline.md:105
+msgid "which gives:"
+msgstr ""
+
+#: ../../render/inline.md:109
+msgid "My plot with a mean value of {eval}`mean`."
+msgstr ""
+
+#: ../../render/inline.md:112
+msgid "That can be referenced with `` {ref}`myplot` ``: {ref}`myplot`"
+msgstr ""
+
+#: ../../render/inline.md:114
+msgid "The following directive options are available:"
+msgstr ""
+
+#: ../../render/inline.md:116
+msgid "`eval:figure` directive options"
+msgstr ""
+

@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../authoring/basics.md:3
+msgid "The basics"
+msgstr ""
+
+#: ../../authoring/basics.md:5
+msgid "Default file formats"
+msgstr ""
+
+#: ../../authoring/basics.md:7
+msgid ""
+"As well as writing in the Sphinx default format, "
+"[RestructuredText](https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html) (`.rst`), loading "
+"`myst_nb` will also parse:"
+msgstr ""
+
+#: ../../authoring/basics.md:9
+msgid "Markdown files (`.md`)"
+msgstr ""
+
+#: ../../authoring/basics.md:10
+msgid "Jupyter notebooks (`.ipynb`)"
+msgstr ""
+
+#: ../../authoring/basics.md:11
+msgid "MyST-NB text-based notebooks (`.md` + top-matter)"
+msgstr ""
+
+#: ../../authoring/basics.md:13
+msgid "Custom file extensions"
+msgstr ""
+
+#: ../../authoring/basics.md:15
+msgid ""
+"You can change which file extensions are parsed by MyST-NB using the "
+"[source_suffix](https://www.sphinx-"
+"doc.org/en/master/usage/configuration.html#confval-source_suffix) option "
+"in your `conf.py`, e.g.:"
+msgstr ""
+
+#: ../../authoring/basics.md:27
+msgid "Other notebook formats"
+msgstr ""
+
+#: ../../authoring/basics.md:29
+msgid ""
+"See the [](write/custom_formats) section, for how to integrate other "
+"Notebook formats into your build, and integration with "
+"[jupytext](https://github.com/mwouts/jupytext)."
+msgstr ""
+
+#: ../../authoring/basics.md:31 ../../authoring/basics.md:58
+msgid "MyST Markdown"
+msgstr ""
+
+#: ../../authoring/basics.md:33
+msgid ""
+"For all file formats, Markdown authoring is the backbone of MyST-NB. By "
+"default, the MyST flavour of Markdown is enabled, which extends "
+"[CommonMark](https://commonmark.org/) with RST inspired syntaxes to "
+"provide the additional functionality required for technical writing."
+msgstr ""
+
+#: ../../authoring/basics.md:37
+msgid ""
+"In particular MyST adds targets, roles and directives syntax, allowing "
+"you to utilise all available Docutils/Sphinx features:"
+msgstr ""
+
+#: ../../authoring/basics.md:42
+msgid "RestructuredText"
+msgstr ""
+
+#: ../../authoring/basics.md:76
+msgid ""
+"See the [](authoring/jupyter-notebooks) section, for more details on how "
+"to author Jupyter notebooks."
+msgstr ""
+
+#: ../../authoring/basics.md:79
+msgid "Text-based notebooks"
+msgstr ""
+
+#: ../../authoring/basics.md:81
+msgid ""
+"MyST-NB text-based notebooks are a special format for storing Jupyter "
+"notebooks in a text file. They map directly to a Notebook file, without "
+"directly storing the code execution outputs."
+msgstr ""
+
+#: ../../authoring/basics.md:84
+msgid ""
+"To designate a Markdown file as a text-based notebook, add the following "
+"top-matter to the start of the file:"
+msgstr ""
+
+#: ../../authoring/basics.md:94
+msgid ""
+"The `kernelspec.name` should relate to a [Jupyter "
+"kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) "
+"installed in your environment."
+msgstr ""
+
+#: ../../authoring/basics.md:96
+msgid ""
+"MyST-NB will also recognise [jupytext](https://jupytext.readthedocs.io) "
+"top-matter, such as:"
+msgstr ""
+
+#: ../../authoring/basics.md:112
+msgid "Code cells are then designated by the `code-cell` directive:"
+msgstr ""
+
+#: ../../authoring/basics.md:122
+msgid "and Markdown can be split into cells by the `+++` break syntax:"
+msgstr ""
+
+#: ../../authoring/basics.md:133
+msgid ""
+"See the [](authoring/text-notebooks) section, for more details on text-"
+"based notebooks, and integration with "
+"[jupytext](https://jupytext.readthedocs.io)."
+msgstr ""
+
+#: ../../authoring/basics.md:136
+msgid "Configuration"
+msgstr ""
+
+#: ../../authoring/basics.md:138
+msgid ""
+"MyST-NB parsing, execution and rendering can be configured at three "
+"levels of specificity; globally, per file, and per notebook cell, with "
+"the most specific configuration taking precedence."
+msgstr ""
+
+#: ../../authoring/basics.md:140
+msgid ""
+"See the [](config/intro) section, for more details on how to configure "
+"MyST-NB."
+msgstr ""
+

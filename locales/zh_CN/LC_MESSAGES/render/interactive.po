@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../render/interactive.md:7
+msgid "Widgets and interactive outputs"
+msgstr ""
+
+#: ../../render/interactive.md:9
+msgid ""
+"Jupyter Notebooks have support for many kinds of interactive outputs. "
+"These should all be supported in MyST-NB by passing the output HTML "
+"through automatically. This page has a few common examples.[^download]"
+msgstr ""
+
+#: ../../render/interactive.md:15
+msgid "First off, we'll download a little bit of data and show its structure:"
+msgstr ""
+
+#: ../../render/interactive.md:23
+msgid "Plotting libraries"
+msgstr ""
+
+#: ../../render/interactive.md:25
+msgid "Altair"
+msgstr ""
+
+#: ../../render/interactive.md:27
+msgid ""
+"Interactive outputs will work under the assumption that the outputs they "
+"produce have self-contained HTML that works without requiring any "
+"external dependencies to load. See the [`Altair` installation "
+"instructions](https://altair-"
+"viz.github.io/getting_started/installation.html#installation) to get set "
+"up with Altair. Below is some example output."
+msgstr ""
+
+#: ../../render/interactive.md:42
+msgid "Plotly"
+msgstr ""
+
+#: ../../render/interactive.md:44
+msgid ""
+"Plotly is another interactive plotting library that provides a high-level"
+" API for visualization. See the [Plotly JupyterLab "
+"documentation](https://plotly.com/python/getting-started/#jupyterlab-"
+"support-python-35) to get started with Plotly in the notebook."
+msgstr ""
+
+#: ../../render/interactive.md:47 ../../render/interactive.md:75
+msgid "Below is some example output."
+msgstr ""
+
+#: ../../render/interactive.md:61
+msgid ""
+"You may need to supply the `require.js` for plotly to display; in your "
+"`conf.py`:"
+msgstr ""
+
+#: ../../render/interactive.md:69
+msgid "Bokeh"
+msgstr ""
+
+#: ../../render/interactive.md:71
+msgid ""
+"Bokeh provides several options for interactive visualizations, and is "
+"part of the PyViz ecosystem. See [the Bokeh with Jupyter "
+"documentation](https://docs.bokeh.org/en/latest/docs/user_guide/jupyter.html"
+"#userguide-jupyter) to get started."
+msgstr ""
+
+#: ../../render/interactive.md:91
+msgid "ipywidgets"
+msgstr ""
+
+#: ../../render/interactive.md:94
+msgid ""
+"IPyWidgets uses a special JS package `@jupyter-widgets/html-manager` for "
+"rendering Jupyter widgets outside notebooks. `myst-nb` loads a specific "
+"version of this package, which may be incompatible with your installation"
+" of IPyWidgets. If this is the case, you might need to specify the "
+"appropriate `nb_ipywidgets_js` config value, e.g. for `0.20.0`"
+msgstr ""
+
+#: ../../render/interactive.md:106
+msgid ""
+"To determine which version of `@jupyter-widgets/html-manager` is "
+"required, find the `html-manager` JS package in the [`ipywidgets` "
+"repo](https://github.com/jupyter-widgets/ipywidgets), and identify its "
+"version."
+msgstr ""
+
+#: ../../render/interactive.md:109
+msgid ""
+"You may also run code for Jupyter Widgets in your document, and the "
+"interactive HTML outputs will embed themselves in your side. See [the "
+"ipywidgets "
+"documentation](https://ipywidgets.readthedocs.io/en/latest/user_install.html)"
+" for how to get set up in your own environment."
+msgstr ""
+
+#: ../../render/interactive.md:113
+msgid "Widgets often need a kernel"
+msgstr ""
+
+#: ../../render/interactive.md:114
+msgid ""
+"Note that `ipywidgets` tend to behave differently from other interactive "
+"viz libraries. They interact both with Javascript, and with Python. Some "
+"functionality in `ipywidgets` may not work in rendered pages (because no "
+"Python kernel is running). You may be able to get around this with tools "
+"for remote kernels, like [thebelab](https://thebelab.readthedocs.org)."
+msgstr ""
+
+#: ../../render/interactive.md:120
+msgid "Here are some simple widget elements rendered below."
+msgstr ""
+
+#: ../../render/interactive.md:148
+#, python-format
+msgid ""
+"You can find [a list of possible Jupyter "
+"Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html)"
+" in the jupyter-widgets documentation."
+msgstr ""
+
+#: ../../render/interactive.md:13
+msgid ""
+"This notebook can be downloaded as **{nb-download}`interactive.ipynb`** "
+"and {download}`interactive.md`"
+msgstr ""
+

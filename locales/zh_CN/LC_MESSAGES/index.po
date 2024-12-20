@@ -44,7 +44,7 @@ msgstr ""
 
 #: ../../index.md:34
 msgid "Get Started"
-msgstr "开始使用"
+msgstr ""
 
 #: ../../index.md:50
 msgid ""
@@ -63,7 +63,7 @@ msgid ""
 "documents.\\ Use MyST Markdown syntax to support technical authoring "
 "features such as cross-referencing, figures, and admonitions."
 msgstr ""
-"将 Jupyter 笔记本与基于文本的笔记本、Markdown 和 RST 文档混合使用。\\ 使用 MyST Markdown 语法支持技术写作功能，如交叉引用、图像和警告。"
+"将 Jupyter 笔记本与基于文本的笔记本、Markdown 和 RST 文档混合使用。使用 MyST Markdown 语法支持技术写作功能，如交叉引用、图像和警告。"
 
 #: ../../index.md:58
 msgid "[Learn more »](authoring/intro)"
@@ -88,7 +88,7 @@ msgid ""
 "Generate dynamic outputs using Jupyter kernels, with configurable "
 "execution handling.\\ Cache execution outputs, for fast re-builds."
 msgstr ""
-"使用 Jupyter 内核生成动态输出，具有可配置的执行处理。\\ 缓存执行输出，以进行快速重建。"
+"使用 Jupyter 内核生成动态输出，具有可配置的执行处理。 缓存执行输出，以进行快速重建。"
 
 #: ../../index.md:69
 msgid "[Learn more »](execute/intro)"
@@ -116,7 +116,7 @@ msgid ""
 "computed variables within the document flow.\\ Build single or "
 "collections of documents into multiple formats (HTML, PDF, ...)."
 msgstr ""
-"将 Jupyter 执行输出转换为丰富的嵌入式内容。\\ 在文档流中插入计算变量。\\ 将单个或多个文档构建为多种格式（HTML、PDF 等）。"
+"将 Jupyter 执行输出转换为丰富的嵌入式内容。在文档流中插入计算变量。将单个或多个文档构建为多种格式（HTML、PDF 等）。"
 
 #: ../../index.md:81
 msgid "[Learn more »](render/code-cells)"
