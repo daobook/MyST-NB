@@ -1,0 +1,738 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-27 13:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../authoring/basics.md:3
+msgid "The basics"
+msgstr "基础"
+
+#: ../../authoring/basics.md:5
+msgid "Default file formats"
+msgstr "默认文件格式"
+
+#: ../../authoring/basics.md:7
+msgid ""
+"As well as writing in the Sphinx default format, "
+"[RestructuredText](https://www.sphinx-"
+"doc.org/en/master/usage/restructuredtext/basics.html) (`.rst`), loading "
+"`myst_nb` will also parse:"
+msgstr ""
+"除了以 Sphinx 默认格式 [RestructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) (`.rst`) 编写外，加载 `myst_nb` 还将解析："
+
+#: ../../authoring/basics.md:9
+msgid "Markdown files (`.md`)"
+msgstr "Markdown 文件 (`.md`)"
+
+#: ../../authoring/basics.md:10
+msgid "Jupyter notebooks (`.ipynb`)"
+msgstr ""
+
+#: ../../authoring/basics.md:11
+msgid "MyST-NB text-based notebooks (`.md` + top-matter)"
+msgstr "MyST-NB 基于文本的笔记本（`.md` + top-matter）"
+
+#: ../../authoring/basics.md:13
+msgid "Custom file extensions"
+msgstr "自定义文件扩展名"
+
+#: ../../authoring/basics.md:15
+msgid ""
+"You can change which file extensions are parsed by MyST-NB using the "
+"[source_suffix](https://www.sphinx-"
+"doc.org/en/master/usage/configuration.html#confval-source_suffix) option "
+"in your `conf.py`, e.g.:"
+msgstr ""
+"您可以使用 `conf.py` 中的 [source_suffix](https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-source_suffix) 选项更改 MyST-NB 解析的文件扩展名，例如："
+
+#: ../../authoring/basics.md:27
+msgid "Other notebook formats"
+msgstr "其他笔记本格式"
+
+#: ../../authoring/basics.md:29
+msgid ""
+"See the [](write/custom_formats) section, for how to integrate other "
+"Notebook formats into your build, and integration with "
+"[jupytext](https://github.com/mwouts/jupytext)."
+msgstr ""
+"请参阅 [](write/custom_formats) 部分，了解如何将其他笔记本格式集成到您的构建中，以及与 [jupytext](https://github.com/mwouts/jupytext) 的集成。"
+
+#: ../../authoring/basics.md:31 ../../authoring/basics.md:58
+msgid "MyST Markdown"
+msgstr ""
+
+#: ../../authoring/basics.md:33
+msgid ""
+"For all file formats, Markdown authoring is the backbone of MyST-NB. By "
+"default, the MyST flavour of Markdown is enabled, which extends "
+"[CommonMark](https://commonmark.org/) with RST inspired syntaxes to "
+"provide the additional functionality required for technical writing."
+msgstr ""
+"对于所有文件格式，Markdown 编写是 MyST-NB 的支柱。"
+"默认情况下，启用了 MyST 风格的 Markdown，它扩展了 [CommonMark](https://commonmark.org/)，并提供了受 RST 启发的语法，以满足技术写作所需的额外功能。"
+
+#: ../../authoring/basics.md:37
+msgid ""
+"In particular MyST adds targets, roles and directives syntax, allowing "
+"you to utilise all available Docutils/Sphinx features:"
+msgstr ""
+"特别是 MyST 添加了目标、角色和指令语法，允许您利用所有可用的 Docutils/Sphinx 功能："
+
+#: ../../authoring/basics.md:42
+msgid "RestructuredText"
+msgstr ""
+
+#: ../../authoring/basics.md:76
+msgid ""
+"See the [](authoring/jupyter-notebooks) section, for more details on how "
+"to author Jupyter notebooks."
+msgstr ""
+"请参阅 [](authoring/jupyter-notebooks) 部分，了解有关如何编写 Jupyter 笔记本的更多详细信息。"
+
+#: ../../authoring/basics.md:79
+msgid "Text-based notebooks"
+msgstr "基于文本的笔记本"
+
+#: ../../authoring/basics.md:81
+msgid ""
+"MyST-NB text-based notebooks are a special format for storing Jupyter "
+"notebooks in a text file. They map directly to a Notebook file, without "
+"directly storing the code execution outputs."
+msgstr ""
+"MyST-NB 基于文本的笔记本是一种特殊格式，用于将 Jupyter 笔记本存储在文本文件中。它们直接映射到笔记本文件，而不直接存储代码执行输出。"
+
+#: ../../authoring/basics.md:84
+msgid ""
+"To designate a Markdown file as a text-based notebook, add the following "
+"top-matter to the start of the file:"
+msgstr ""
+"要将 Markdown 文件指定为基于文本的笔记本，请将以下 top-matter 添加到文件的开头："
+
+#: ../../authoring/basics.md:94
+msgid ""
+"The `kernelspec.name` should relate to a [Jupyter "
+"kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) "
+"installed in your environment."
+msgstr ""
+"`kernelspec.name` 应与环境中安装的 [Jupyter 内核](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) 相关。"
+
+#: ../../authoring/basics.md:96
+msgid ""
+"MyST-NB will also recognise [jupytext](https://jupytext.readthedocs.io) "
+"top-matter, such as:"
+msgstr ""
+"MyST-NB 还将识别 [jupytext](https://jupytext.readthedocs.io) top-matter，例如："
+
+#: ../../authoring/basics.md:112
+msgid "Code cells are then designated by the `code-cell` directive:"
+msgstr "然后通过 `code-cell` 指令指定代码单元："
+
+#: ../../authoring/basics.md:122
+msgid "and Markdown can be split into cells by the `+++` break syntax:"
+msgstr "并且可以通过 `+++` 分隔符语法将 Markdown 拆分为单元："
+
+#: ../../authoring/basics.md:133
+msgid ""
+"See the [](authoring/text-notebooks) section, for more details on text-"
+"based notebooks, and integration with "
+"[jupytext](https://jupytext.readthedocs.io)."
+msgstr ""
+"请参阅 [](authoring/text-notebooks) 部分，了解有关基于文本的笔记本以及与 [jupytext](https://jupytext.readthedocs.io) 集成的更多详细信息。"
+
+#: ../../authoring/basics.md:136 ../../authoring/jupyter-notebooks.md:22
+msgid "Configuration"
+msgstr "配置"
+
+#: ../../authoring/basics.md:138
+msgid ""
+"MyST-NB parsing, execution and rendering can be configured at three "
+"levels of specificity; globally, per file, and per notebook cell, with "
+"the most specific configuration taking precedence."
+msgstr ""
+"MyST-NB 的解析、执行和渲染可以在三个级别的特异性上进行配置；全局、每个文件和每个笔记本单元，最具体的配置优先。"
+
+#: ../../authoring/basics.md:140
+msgid ""
+"See the [](config/intro) section, for more details on how to configure "
+"MyST-NB."
+msgstr ""
+"请参阅 [](config/intro) 部分，了解有关如何配置 MyST-NB 的更多详细信息。"
+
+#: ../../authoring/custom-formats.Rmd:20004
+msgid "Custom Formats"
+msgstr "定制格式"
+
+#: ../../authoring/custom-formats.Rmd:20006
+msgid ""
+"You can designate additional file types to be converted to Notebooks, and"
+" then executed / parsed in the same manner as regular Notebooks, by "
+"adding the following configuration to your `conf.py`:"
+msgstr ""
+"您可以通过将以下配置添加到 `conf.py` 中，指定其他文件类型转换为笔记本，然后以与常规笔记本相同的方式执行/解析："
+
+#: ../../authoring/custom-formats.Rmd:20014
+msgid ""
+"The string should be a Python function that will be loaded by `import "
+"mylibrary.converter_function`"
+msgstr ""
+"字符串应是 Python 函数，将通过 `import mylibrary.converter_function` 加载"
+
+#: ../../authoring/custom-formats.Rmd:20015
+msgid ""
+"The function should take a file's contents (as a `str`) and return an "
+"[nbformat.NotebookNode](inv:nbformat#api)"
+msgstr ""
+"该函数应接受文件内容（作为 `str`）并返回 [nbformat.NotebookNode](inv:nbformat#api)"
+
+#: ../../authoring/custom-formats.Rmd:20017
+msgid ""
+"If the function takes additional keyword arguments, then you can specify "
+"these as dictionary in a second argument. For example this is what the "
+"default conversion would look like:"
+msgstr ""
+"如果该函数接受其他关键字参数，则可以在第二个参数中将其指定为字典。例如，默认转换如下所示："
+
+#: ../../authoring/custom-formats.Rmd:20028
+msgid ""
+"By default, Markdown cells in the Notebook will be parsed using the same "
+"MyST parser configuration as for other Markdown files ([see available "
+"configuration options](config/intro))."
+msgstr ""
+"默认情况下，笔记本中的 Markdown 单元将使用与其他 Markdown 文件相同的 MyST 解析器配置进行解析（[参见可用配置选项](config/intro)）。"
+
+#: ../../authoring/custom-formats.Rmd:20030
+msgid ""
+"But, if this is incompatible with your file format, then you can specify "
+"for the Markdown to be parsed as **strictly CommonMark**, using a third "
+"argument:"
+msgstr ""
+"但是，如果这与您的文件格式不兼容，则可以使用第三个参数指定将 Markdown 解析为 **严格 CommonMark**："
+
+#: ../../authoring/custom-formats.Rmd:20040
+msgid ""
+"Finally, for text-based formats, MyST-NB also searches for an optional "
+"`source_map` key in the output Notebook's metadata. This key should be a "
+"list mapping each cell to the starting line number in the original source"
+" file, for example for a notebook with three cells:"
+msgstr ""
+"最后，对于基于文本的格式，MyST-NB 还会在输出笔记本的元数据中搜索可选的 `source_map` 键。"
+"该键应是列表，将每个单元映射到原始源文件中的起始行号，例如对于具有三个单元的笔记本："
+
+#: ../../authoring/custom-formats.Rmd:20051
+msgid ""
+"This mapping allows for \"true\" error reporting, as described in [](myst"
+"/error-reporting)."
+msgstr ""
+"此映射允许‘真实’错误报告，如 [](myst/error-reporting) 中所述。"
+
+#: ../../authoring/custom-formats.Rmd:20053
+msgid "Using Jupytext"
+msgstr "使用 Jupytext"
+
+#: ../../authoring/custom-formats.Rmd:20055
+msgid ""
+"A common conversion tool is "
+"[jupytext](https://github.com/mwouts/jupytext), which has been used to "
+"convert this very `.Rmd` file to a notebook!"
+msgstr ""
+"常见的转换工具是 [jupytext](https://github.com/mwouts/jupytext)，它已被用于将此 `.Rmd` 文件转换为笔记本！"
+
+#: ../../authoring/custom-formats.Rmd:20057
+msgid "The configuration looks like:"
+msgstr "配置如下："
+
+#: ../../authoring/custom-formats.Rmd:20066
+msgid "For full compatibility with `myst-nb`, `jupytext>=1.11.2` should be used."
+msgstr "为了与 `myst-nb` 完全兼容，应使用 `jupytext>=1.11.2`。"
+
+#: ../../authoring/custom-formats.Rmd:20069
+msgid "For example:"
+msgstr "示例："
+
+#: ../../authoring/custom-formats.Rmd:60002
+msgid "Acknowledgements"
+msgstr "致谢"
+
+#: ../../authoring/custom-formats.Rmd:60004
+msgid ""
+"Thanks to [nbsphinx](https://nbsphinx.readthedocs.io), for providing the "
+"initial implementation which this was built on."
+msgstr ""
+"感谢 [nbsphinx](https://nbsphinx.readthedocs.io) 提供了此功能的基础实现。"
+
+#: ../../authoring/index.md:1
+msgid "Authoring"
+msgstr "编写"
+
+#: ../../authoring/index.md:3
+msgid "Create content in one or more formats."
+msgstr "以一种或多种格式创建内容。"
+
+#: ../../authoring/jupyter-notebooks.md:8
+msgid "Jupyter Notebooks"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:10
+msgid ""
+"This notebook is a demonstration of directly-parsing Jupyter Notebooks "
+"into Sphinx using the MyST parser.[^download]"
+msgstr ""
+"此笔记本展示了使用 MyST 解析器将 Jupyter 笔记本直接解析到 Sphinx 中的过程。[^download]"
+
+#: ../../authoring/jupyter-notebooks.md:15
+msgid "Markdown"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:18
+msgid ""
+"For more information about what you can write with MyST Markdown, see the"
+" [MyST Parser documentation](inv:myst#intro/get-started)."
+msgstr ""
+"有关您可以使用 MyST Markdown 编写的内容的更多信息，请参阅 [MyST 解析器文档](inv:myst#intro/get-started)。"
+
+#: ../../authoring/jupyter-notebooks.md:24
+msgid ""
+"The MyST-NB parser derives from [the base MyST-Parser](inv:myst#intro"
+"/get-started), and so all the same configuration options are available. "
+"See the [MyST configuration options](inv:myst#sphinx/config-options) for "
+"the full set of options, and [MyST syntax guide](inv:myst#syntax/core) "
+"for all the syntax options."
+msgstr ""
+"MyST-NB 解析器源自 [基础 MyST 解析器](inv:myst#intro/get-started)，因此所有相同的配置选项都可用。"
+"有关完整选项集，请参阅 [MyST 配置选项](inv:myst#sphinx/config-options)，有关所有语法选项，请参阅 [MyST 语法指南](inv:myst#syntax/core)。"
+
+#: ../../authoring/jupyter-notebooks.md:27
+msgid "To build documentation from this notebook, the following options are set:"
+msgstr "要从此笔记本构建文档，设置了以下选项："
+
+#: ../../authoring/jupyter-notebooks.md:41
+msgid ""
+"Loading the `myst_nb` extension also activates the "
+"[`myst_parser`](inv:myst#index) extension, for enabling the MyST flavour "
+"of Markdown. It is not required to add this explicitly in the list of "
+"`extensions`."
+msgstr ""
+"加载 `myst_nb` 扩展还会激活 [`myst_parser`](inv:myst#index) 扩展，以启用 MyST 风格的 Markdown。不需要在 `extensions` 列表中显式添加此扩展。"
+
+#: ../../authoring/jupyter-notebooks.md:45
+msgid "Syntax"
+msgstr "语法"
+
+#: ../../authoring/jupyter-notebooks.md:47
+msgid ""
+"As you can see, markdown is parsed as expected. Embedding images should "
+"work as expected. For example, here's the MyST-NB logo:"
+msgstr ""
+"如您所见，Markdown 按预期解析。嵌入图像应按预期工作。例如，这是 MyST-NB 徽标："
+
+#: ../../authoring/jupyter-notebooks.md:54
+msgid "![myst-nb logo](../_static/logo-wide.svg)"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:54
+msgid "myst-nb logo"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:56
+msgid ""
+"By adding `\"html_image\"` to the `myst_enable_extensions` list in the "
+"sphinx configuration ([see here](inv:myst#syntax/images)), you can even "
+"add HTML `img` tags with attributes:"
+msgstr ""
+"通过将 `\"html_image\"` 添加到 sphinx 配置中的 `myst_enable_extensions` 列表（[参见此处](inv:myst#syntax/images)），您甚至可以添加带有属性的 HTML `img` 标签："
+
+#: ../../authoring/jupyter-notebooks.md:62
+msgid "logo"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:64
+msgid ""
+"Because MyST-NB is using the MyST-markdown parser, you can include rich "
+"markdown with Sphinx in your notebook. For example, here's a note "
+"admonition block:"
+msgstr ""
+"由于 MyST-NB 使用 MyST-markdown 解析器，您可以在笔记本中包含带有 Sphinx 的丰富 Markdown。例如，这是注释警告块："
+
+#: ../../authoring/jupyter-notebooks.md:68
+msgid ""
+"**Wow**, a note! It was generated with this code ([as explained "
+"here](inv:myst:std:label#syntax/admonitions)):"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:79
+msgid ""
+"If you wish to use \"bare\" LaTeX equations, then you should add "
+"`\"amsmath\"` to the `myst_enable_extensions` list in the sphinx "
+"configuration. This is [explained "
+"here](inv:myst:std:label#syntax/amsmath), and works as such:"
+msgstr ""
+"如果您希望使用‘裸’LaTeX 方程，则应将 `\"amsmath\"` 添加到 sphinx 配置中的 `myst_enable_extensions` 列表中。这在 [此处](inv:myst:std:label#syntax/amsmath) 有解释，并且如下工作："
+
+#: ../../authoring/jupyter-notebooks.md:93
+msgid ""
+"\\begin{equation}\n"
+"\\frac {\\partial u}{\\partial x} + \\frac{\\partial v}{\\partial y} = - "
+"\\, \\frac{\\partial w}{\\partial z}\n"
+"\\end{equation}"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:97
+msgid ""
+"\\begin{align*}\n"
+"2x - 5y &=  8 \\\\\n"
+"3x + 9y &=  -12\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:102
+msgid ""
+"Also you can use features like **equation numbering** and referencing in "
+"the notebooks:"
+msgstr ""
+"还可以在笔记本中使用**方程编号**和引用等功能："
+
+#: ../../authoring/jupyter-notebooks.md:108
+msgid "e^{i\\pi} + 1 = 0"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:110
+msgid ""
+"Euler's identity, equation {math:numref}`euler`, was elected one of the "
+"most beautiful mathematical formulas."
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:113
+msgid ""
+"You can see the syntax used for this example [here in the MyST "
+"documentation](inv:myst:std:label#syntax/math)."
+msgstr ""
+"您可以在 [MyST 文档](inv:myst:std:label#syntax/math) 中查看此示例使用的语法。"
+
+#: ../../authoring/jupyter-notebooks.md:115
+msgid "Code cells and outputs"
+msgstr "代码单元和输出"
+
+#: ../../authoring/jupyter-notebooks.md:117
+msgid ""
+"You can run cells, and the cell outputs will be captured and inserted "
+"into the resulting Sphinx site."
+msgstr ""
+"可以运行单元，单元输出将被捕获并插入到生成的 Sphinx 站点中。"
+
+#: ../../authoring/jupyter-notebooks.md:120
+msgid "`__repr__` and HTML outputs"
+msgstr "`__repr__` 和 HTML 输出"
+
+#: ../../authoring/jupyter-notebooks.md:122
+msgid "For example, here's some simple Python:"
+msgstr "例如，这是一些简单的 Python 代码："
+
+#: ../../authoring/jupyter-notebooks.md:131
+msgid "This will also work with HTML outputs"
+msgstr "这也适用于 HTML 输出"
+
+#: ../../authoring/jupyter-notebooks.md:139
+msgid "as well as math outputs"
+msgstr "以及数学输出"
+
+#: ../../authoring/jupyter-notebooks.md:143
+msgid "\\displaystyle \\sum_{i=0}^n i^2 = \\frac{(n^2+n)(2n+1)}{6}"
+msgstr ""
+
+#: ../../authoring/jupyter-notebooks.md:146
+msgid "This works for error messages as well:"
+msgstr "这也适用于错误消息："
+
+#: ../../authoring/jupyter-notebooks.md:155
+msgid "Images"
+msgstr "图像"
+
+#: ../../authoring/jupyter-notebooks.md:157
+msgid ""
+"Images that are generated from your code (e.g., with Matplotlib) will "
+"also be embedded."
+msgstr ""
+"从代码生成的图像（例如，使用 Matplotlib）也将被嵌入。"
+
+#: ../../authoring/jupyter-notebooks.md:165
+msgid "Raw cells"
+msgstr "原始单元"
+
+#: ../../authoring/jupyter-notebooks.md:167
+msgid ""
+"The [raw cell "
+"type](https://nbformat.readthedocs.io/en/latest/format_description.html"
+"#raw-nbconvert-cells) can be used to specifically render the content as a"
+" specific [MIME media type](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)."
+msgstr ""
+"[原始单元类型](https://nbformat.readthedocs.io/en/latest/format_description.html#raw-nbconvert-cells) 可用于将内容专门渲染为特定的 "
+"[MIME 媒体类型](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。"
+
+#: ../../authoring/jupyter-notebooks.md:13
+msgid ""
+"This notebook can be downloaded as **{nb-download}`jupyter-"
+"notebooks.ipynb`** and {download}`jupyter-notebooks.md`"
+msgstr ""
+"此笔记本可以下载为 **{nb-download}`jupyter-notebooks.ipynb`** 和 {download}`jupyter-notebooks.md`"
+
+#: ../../authoring/text-notebooks.md:8
+msgid "Text-based Notebooks"
+msgstr "基于文本的笔记本"
+
+#: ../../authoring/text-notebooks.md:10
+msgid ""
+"MyST Markdown notebooks allow you to write your Jupyter Notebook entirely"
+" in markdown, utilising the MyST Markdown notebook format. This allows "
+"you to store notebook metadata, Markdown, and cell inputs in a text-based"
+" format that is easy to read and use with text-based tools."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:13
+msgid ""
+"MyST notebooks have a 1-to-1 mapping with Jupyter notebook, so can be "
+"[converted to `.ipynb` files](converting-ipynb) and [opened as notebooks "
+"in Jupyter interfaces](myst-nb/jupyter-interfaces) (with jupytext "
+"installed). When used with `myst_nb`, MyST notebooks are also integrated "
+"directly into the {ref}`Execution and Caching <execute/cache>` "
+"machinery.[^download]"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:19
+msgid "The MyST notebook Structure"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:21
+msgid ""
+"MyST Markdown Notebooks (or MyST notebooks for short) have four main "
+"types of content:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:23
+msgid "**cell/notebook level metadata** that are written as YAML wrapped in `---`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:24
+msgid "**markdown cells** that can be written as CommonMark or MyST Markdown"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:25
+msgid ""
+"**code cells** that are written with the MyST Markdown `code-cell` "
+"directive syntax"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:26
+msgid ""
+"**raw cells** that are written with the MyST Markdown `raw-cell` "
+"directive syntax"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:28
+msgid "Notebook-level metadata"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:30
+msgid ""
+"Begin a MyST notebook file with YAML top-matter metadata, containing at "
+"least the `file_format: mystnb` signifier. This will be used as "
+"**notebook-level metadata** for the resulting Jupyter Notebook. This "
+"metadata takes the following form:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:46
+msgid ""
+"The kernel that your code cells use is determined by the "
+"`kernelspec.name` field, and  should relate to a [Jupyter "
+"kernel](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) "
+"installed in your environment and registered with Jupyter. If no kernel "
+"is given, then the default kernel will be used."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:49
+msgid "Syntax for Markdown"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:51
+msgid ""
+"Anything in-between code cells will be treated as Markdown. You can use "
+"any Markdown that is valid MyST. If you are using MyST notebooks with the"
+" `myst_nb` Sphinx extension, you can write Sphinx directives and roles. "
+"However, note that most Jupyter notebook environments may not be able to "
+"render MyST Markdown syntax."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:56
+msgid ""
+"**To denote a break between two markdown cells**, use the following "
+"syntax:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:64
+msgid ""
+"This will result in two markdown cells in the resulting notebook. The "
+"key:val pairs specified in the `{}` brackets will be cell-level metadata "
+"in the second markdown cell."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:67
+msgid "Syntax for code cells"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:69
+msgid ""
+"When writing MyST notebooks, use the following syntax to define a code "
+"cell:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:79
+msgid ""
+"The argument after `{code-cell}` (above, `ipython3`) is optional, and is "
+"used for readability purposes. The content inside `{code-cell}` makes up "
+"the content of the cell, and will be executed at build time."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:83
+msgid "This will result in the following output after building your site:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:91
+msgid "Cell-level metadata"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:93
+msgid ""
+"You can begin `code-cell` blocks with top-matter metadata. These will be "
+"used as **cell-level metadata** in the resulting notebook cell. The same "
+"metadata tags can be used as you would in a normal notebook, for example "
+"those discussed in {ref}`use/hiding/code`:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:108
+msgid "Yields the following:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:118
+msgid ""
+"There is also an **alternative short-hand syntax** for cell-level "
+"metadata. This takes the following form:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:128
+msgid ""
+"For example, the following syntax adds a `raises-exception` tag to the "
+"cell, which means our code will execute without halting the kernel:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:146
+msgid "Convert between MyST notebooks and `.ipynb`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:148
+msgid ""
+"MyST notebooks can be converted to Jupyter notebooks using the `mystnb-"
+"to-jupyter` CLI command."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:155
+msgid ""
+"MyST notebooks can also be converted back-and-forth from `ipynb` files "
+"using [jupytext](https://jupytext.readthedocs.io), a Python library for "
+"two-way conversion of `ipynb` files with many text-based formats."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:158
+msgid ""
+"To let jupytext know the format of the notebook, add the notebook top-"
+"matter similar to:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:174
+msgid "Then you can run:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:176
+msgid ""
+"To convert `.ipynb` to a MyST notebook, run: `jupytext notebook.ipynb "
+"--to myst`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:177
+msgid ""
+"To convert a MyST notebook to `.ipynb`, run: `jupytext mystfile.md --to "
+"ipynb`"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:180
+msgid ""
+"For more information, see the [Jupytext "
+"Documentation](https://jupytext.readthedocs.io), and specifically the "
+"[MyST Markdown "
+"format](https://jupytext.readthedocs.io/en/latest/formats.html#myst-"
+"markdown)."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:185
+msgid "MyST notebooks in Jupyter interfaces"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:187
+msgid ""
+"You can use MyST notebooks in Jupyter interfaces by using Jupytext "
+"extensions. This allows you to open a MyST Markdown Notebook as a "
+"\"regular\" Jupyter Notebook in Jupyter Lab and the Classic Notebook "
+"interface. For more information, see [the Jupytext "
+"documentation](https://jupytext.readthedocs.io)."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:193
+msgid "MyST notebooks in Jupyter Book"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:195
+msgid ""
+"In addition to using MyST notebooks with Sphinx, you may also use them "
+"with the Jupyter Book project. See {doc}`jb:file-types/myst-notebooks`."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:198
+msgid "Code from Files"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:201
+msgid ""
+"This is an experimental feature that is **not** part of the core `MyST` "
+"markup specification, and may be removed in the future. Using `:load:` "
+"will also overwrite any code written into the directive."
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:204
+msgid ""
+"`myst_nb` provides a convenience feature for importing executable code "
+"into a `{code-cell}` from a file. This can be useful when you want to "
+"share code between documents. To do this you specify a `load` metadata "
+"attribute such as:"
+msgstr ""
+
+#: ../../authoring/text-notebooks.md:17
+msgid ""
+"This notebook can be downloaded as **{nb-download}`text-"
+"notebooks.ipynb`** and {download}`text-notebooks.md`"
+msgstr ""
+

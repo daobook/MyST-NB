@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MyST-NB \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"POT-Creation-Date: 2024-12-27 13:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -19,9 +19,64 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
+#: ../../computation/coconut-lang.md:7
+msgid "Jupyter kernels"
+msgstr "Jupyter 内核"
+
+#: ../../computation/coconut-lang.md:9
+msgid ""
+"A Jupyter Notebook can utilise any program kernel that implements the "
+"[Jupyter messaging protocol](http://jupyter-"
+"client.readthedocs.io/en/latest/messaging.html) for executing code. There"
+" are kernels available for [Python](http://ipython.org/notebook.html), "
+"[Julia](https://github.com/JuliaLang/IJulia.jl), "
+"[Ruby](https://github.com/minad/iruby), "
+"[Haskell](https://github.com/gibiansky/IHaskell) and [many other "
+"languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)."
+msgstr ""
+"Jupyter Notebook 可以利用任何实现了 [Jupyter 消息协议](http://jupyter-client.readthedocs.io/en/latest/messaging.html) 的程序内核来执行代码。"
+"目前已有适用于 [Python](http://ipython.org/notebook.html)、[Julia](https://github.com/JuliaLang/IJulia.jl)、"
+"[Ruby](https://github.com/minad/iruby)、[Haskell](https://github.com/gibiansky/IHaskell) "
+"以及 [许多其他语言](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) 的内核。"
+
+#: ../../computation/coconut-lang.md:12
+msgid ""
+"In this notebook we demonstrate executing code with the [Coconut "
+"Programming Language](http://coconut-lang.org), a variant of Python built"
+" for *simple, elegant, Pythonic functional programming*."
+msgstr ""
+"在本笔记本中，演示如何使用 [Coconut 编程语言](http://coconut-lang.org) 执行代码。"
+"Coconut 是 Python 的变体，专为 *简洁、优雅、Pythonic 的函数式编程* 而构建。"
+
+#: ../../computation/coconut-lang.md:14
+msgid ""
+"In the first example we will define a recursive `factorial` function, a "
+"fundamentally functional approach that doesn’t involve any state changes "
+"or loops:"
+msgstr ""
+"在第一个示例中，将定义递归的 `factorial` 函数，这是一种根本上的函数式方法，不涉及任何状态变化或循环："
+
+#: ../../computation/coconut-lang.md:30
+msgid ""
+"Although this example is very basic, pattern-matching is both one of "
+"Coconut’s most powerful and most complicated features."
+msgstr ""
+"尽管这个示例非常简单，但模式匹配是 Coconut 最强大且最复杂的功能之一。"
+
+#: ../../computation/coconut-lang.md:32
+msgid ""
+"In the second example, we implement the quick sort algorithm. This "
+"quick_sort algorithm works using a bunch of new constructs:"
+msgstr ""
+"在第二个示例中，实现了快速排序算法。这个 `quick_sort` 算法使用了一系列新的语法结构："
+
+#: ../../computation/coconut-lang.md:48
+msgid "Finally, we see that exceptions are raised as one would expect:"
+msgstr "最后，看到异常是如何被引发的：
+
 #: ../../computation/execute.md:8
 msgid "Execute and cache"
-msgstr ""
+msgstr "执行并缓存"
 
 #: ../../computation/execute.md:10
 msgid ""
@@ -30,6 +85,7 @@ msgid ""
 "documentation is built, or cached locally so that re-runs occur only when"
 " code cells have changed."
 msgstr ""
+"MyST-NB 可以通过 [jupyter-cache] 自动运行并缓存项目中包含的笔记本。笔记本可以在每次构建文档时运行，也可以在本地缓存，以便仅在代码单元格发生变化时重新运行。"
 
 #: ../../computation/execute.md:13
 msgid ""
@@ -38,24 +94,26 @@ msgid ""
 "section](config/intro). See the sections below for a description of each "
 "configuration option and their effect."
 msgstr ""
+"执行和缓存行为可以通过全局或文件级别的配置进行控制，如 [配置部分](config/intro) 所述。请参阅以下部分，了解每个配置选项及其作用的详细说明。"
 
 #: ../../computation/execute.md:18
 msgid "Notebook execution modes"
-msgstr ""
+msgstr "笔记本执行模式"
 
 #: ../../computation/execute.md:20
 msgid ""
 "To trigger the execution of notebook pages, use the global "
 "`nb_execution_mode` configuration key, or per-file `execution_mode` key:"
 msgstr ""
+"要触发笔记本页面的执行，可以使用全局的 `nb_execution_mode` 配置项，或针对单个文件的 `execution_mode` 配置项："
 
 #: ../../computation/execute.md
 msgid "Mode"
-msgstr ""
+msgstr "模式"
 
 #: ../../computation/execute.md
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../computation/execute.md
 msgid "`off`"
@@ -63,7 +121,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Do not execute the notebook"
-msgstr ""
+msgstr "不执行笔记本"
 
 #: ../../computation/execute.md
 msgid "`force`"
@@ -71,7 +129,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Always execute the notebook (before parsing)"
-msgstr ""
+msgstr "始终执行笔记本（在解析之前）"
 
 #: ../../computation/execute.md
 msgid "`auto`"
@@ -79,7 +137,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute notebooks with missing outputs (before parsing)"
-msgstr ""
+msgstr "执行缺少输出的笔记本（在解析之前）"
 
 #: ../../computation/execute.md
 msgid "`cache`"
@@ -87,7 +145,7 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute notebook and store/retrieve outputs from a cache"
-msgstr ""
+msgstr "执行笔记本并从缓存中存储/检索输出"
 
 #: ../../computation/execute.md
 msgid "`inline`"
@@ -95,11 +153,11 @@ msgstr ""
 
 #: ../../computation/execute.md
 msgid "Execute the notebook during parsing (allows for variable evaluation)"
-msgstr ""
+msgstr "在解析期间执行笔记本（允许变量评估）"
 
 #: ../../computation/execute.md:30
 msgid "By default this is set to:"
-msgstr ""
+msgstr "默认情况下，此项设置为："
 
 #: ../../computation/execute.md:36
 msgid ""
@@ -107,68 +165,76 @@ msgid ""
 " a notebook has *all* of its outputs populated, then it will not be "
 "executed."
 msgstr ""
+"这只会执行至少缺少一个输出的笔记本。如果笔记本的 *所有* 输出都已填充，则不会执行它。"
 
 #: ../../computation/execute.md:39
 msgid ""
 "To force the execution of all notebooks, regardless of their outputs, "
 "change the above configuration value to:"
 msgstr ""
+"要强制执行所有笔记本，无论其输出如何，请将上述配置值更改为："
 
 #: ../../computation/execute.md:45
 msgid ""
 "To cache execution outputs with [jupyter-cache], change the above "
 "configuration value to:"
 msgstr ""
+"要使用 [jupyter-cache] 缓存执行输出，请将上述配置值更改为："
 
 #: ../../computation/execute.md:51
 msgid "See {ref}`execute/cache` for more information."
-msgstr ""
+msgstr "查看 {ref}`execute/cache` 了解更多信息。"
 
 #: ../../computation/execute.md:53
 msgid ""
 "To execute notebooks inline during parsing, change the above "
 "configuration value to:"
 msgstr ""
+"要在解析期间内联执行笔记本，请将上述配置值更改为："
 
 #: ../../computation/execute.md:59
 msgid ""
 "This allows for the use of `eval` roles/directives to embed variables, "
 "evaluated from the execution kernel, inline of the Markdown."
 msgstr ""
+"这允许使用 `eval` 角色/指令来嵌入变量，这些变量从执行内核中评估，并内联到 Markdown 中。"
 
 #: ../../computation/execute.md:61
 msgid "See {ref}`render/eval` for more information."
-msgstr ""
+msgstr "查看 {ref}`render/eval` 了解更多信息。"
 
 #: ../../computation/execute.md:63
 msgid "To turn off notebook execution, change the above configuration value to:"
-msgstr ""
+msgstr "要关闭笔记本执行，请将上述配置值更改为："
 
 #: ../../computation/execute.md:69
 msgid "Exclude notebooks from execution"
-msgstr ""
+msgstr "排除笔记本不执行"
 
 #: ../../computation/execute.md:71
 msgid ""
 "To exclude certain file patterns from execution, use the following "
 "configuration:"
 msgstr ""
+"要排除某些文件模式不执行，请使用以下配置："
 
 #: ../../computation/execute.md:77
 msgid ""
 "Any file that matches one of the items in `nb_execution_excludepatterns` "
 "will not be executed."
 msgstr ""
+"任何与 `nb_execution_excludepatterns` 中某一项匹配的文件都不会被执行。"
 
 #: ../../computation/execute.md:80
 msgid "Cache execution outputs"
-msgstr ""
+msgstr "缓存执行结果"
 
 #: ../../computation/execute.md:82
 msgid ""
 "As mentioned above, you can cache the results of executing a notebook "
 "page by setting:"
 msgstr ""
+"如上所述，您可以通过设置以下选项来缓存执行笔记本页面的结果："
 
 #: ../../computation/execute.md:88
 msgid ""
@@ -179,32 +245,38 @@ msgid ""
 "`.md` equivalent) in your `git` repository *without their outputs*, but "
 "still leverage a cache to save time when building your site."
 msgstr ""
+"在这种情况下，当页面被执行时，其输出将存储在本地数据库中。这可以确保文档中的输出是最新的，同时通过避免不必要的重新执行来节省时间。"
+"它还允许您将 `.ipynb` 文件（或其等效的 `.md` 文件）存储在 `git` 仓库中 *而不包含其输出*，但在构建站点时仍然可以利用缓存来节省时间。"
 
 #: ../../computation/execute.md:93
 msgid ""
 "You should only use this option when notebooks have deterministic "
 "execution outputs:"
 msgstr ""
+"您应仅在笔记本具有确定性执行输出时使用此选项："
 
 #: ../../computation/execute.md:95
 msgid ""
 "You use the same environment to run them (e.g. the same installed "
 "packages)"
 msgstr ""
+"您使用相同的环境来运行它们（例如，安装的软件包相同）"
 
 #: ../../computation/execute.md:96
 msgid "They run no non-deterministic code (e.g. random numbers)"
 msgstr ""
+"它们不运行非确定性代码（例如，随机数）"
 
 #: ../../computation/execute.md:97
 msgid ""
 "They do not depend on external resources (e.g. files or network "
 "connections) that change over time"
 msgstr ""
+"它们不依赖于随时间变化的外部资源（例如，文件或网络连接）"
 
 #: ../../computation/execute.md:100
 msgid "When you re-build your site, the following will happen:"
-msgstr ""
+msgstr "当您重新构建站点时，将会发生以下情况："
 
 #: ../../computation/execute.md:102
 msgid ""
@@ -212,12 +284,14 @@ msgid ""
 "**metadata** since the last build will not be re-executed. Instead, their"
 " outputs will be pulled from the cache and inserted into your site."
 msgstr ""
+"自上次构建以来，**代码单元格** 或 **元数据** 未发生变化的笔记本将不会重新执行。相反，它们的输出将从缓存中提取并插入到您的站点中。"
 
 #: ../../computation/execute.md:104
 msgid ""
 "Notebooks that **have any change to their code cells** will be re-"
 "executed, and the cache will be updated with the new outputs."
 msgstr ""
+"**代码单元格发生任何变化** 的笔记本将被重新执行，缓存将更新为新的输出。"
 
 #: ../../computation/execute.md:106
 msgid ""
@@ -225,38 +299,43 @@ msgid ""
 "Generally, this is in `_build/.jupyter_cache`, and it will also be "
 "specified in the build log, e.g."
 msgstr ""
+"默认情况下，缓存将放置在构建文件夹的父目录中。通常，它位于 `_build/.jupyter_cache` 中，并且也会在构建日志中指定，例如："
 
 #: ../../computation/execute.md:113
 msgid ""
 "You may also specify a path to the location of a jupyter cache you'd like"
 " to use:"
 msgstr ""
+"您还可以指定要使用的 jupyter 缓存位置的路径："
 
 #: ../../computation/execute.md:119
 msgid ""
 "The path should point to an **empty folder**, or a folder where a "
 "**jupyter cache already exists**."
 msgstr ""
+"该路径应指向**空文件夹**，或者**已存在 jupyter 缓存**的文件夹。"
 
 #: ../../computation/execute.md:121
 msgid ""
 "Once you have run the documentation build, you can inspect the contents "
 "of the cache with the following command:"
 msgstr ""
+"运行文档构建后，您可以使用以下命令检查缓存的内容："
 
 #: ../../computation/execute.md:127
 msgid "See [jupyter-cache] for more information."
-msgstr ""
+msgstr "阅读 [jupyter-cache] 了解更多信息。"
 
 #: ../../computation/execute.md:131
 msgid "Execute with a different kernel name"
-msgstr ""
+msgstr "使用不同的内核名称执行"
 
 #: ../../computation/execute.md:133
 msgid ""
 "If you require your notebooks to run with a different kernel, to those "
 "specified in the actual files, you can set global aliases with e.g."
 msgstr ""
+"如果您需要笔记本使用与实际文件中指定的不同的内核运行，您可以设置全局别名，例如："
 
 #: ../../computation/execute.md:139
 msgid ""
@@ -264,10 +343,11 @@ msgid ""
 "expressions.info/) so, for example `oth.*` will match any kernel name "
 "starting with `oth`."
 msgstr ""
+"映射键是[正则表达式](https://www.regular-expressions.info/)，因此例如 `oth.*` 将匹配任何以 `oth` 开头的内核名称。"
 
 #: ../../computation/execute.md:141
 msgid "Executing in temporary folders"
-msgstr ""
+msgstr "在临时文件夹中执行"
 
 #: ../../computation/execute.md:143
 msgid ""
@@ -277,16 +357,19 @@ msgid ""
 "such that, for each execution, a temporary directory will be created and "
 "used as the cwd."
 msgstr ""
+"默认情况下，笔记本运行的命令工作目录（cwd）将是其所在的目录。"
+"但是，您可以在 `conf.py` 中设置 `nb_execution_in_temp=True`，以更改此行为，使得每次执行时都会创建临时目录并将其用作 cwd。"
 
 #: ../../computation/execute.md:147
 msgid "Execution timeout"
-msgstr ""
+msgstr "执行超时"
 
 #: ../../computation/execute.md:149
 msgid ""
 "The execution of notebooks is managed by {doc}`nbclient "
 "<nbclient:client>`."
 msgstr ""
+"笔记本的执行由 {doc}`nbclient <nbclient:client>` 管理。"
 
 #: ../../computation/execute.md:151
 msgid ""
@@ -297,16 +380,20 @@ msgid ""
 "option can also be set to `None` or -1 to remove any restriction on "
 "execution time."
 msgstr ""
+"`nb_execution_timeout` sphinx 选项定义了每个笔记本单元格允许运行的最长时间（以秒为单位）。"
+"如果执行时间超过此限制，将引发异常。"
+"默认值为 30 秒，因此在长时间运行的单元格情况下，您可能需要指定更高的值。超时选项也可以设置为 `None` 或 -1，以取消对执行时间的任何限制。"
 
 #: ../../computation/execute.md:156
 msgid ""
 "This global value can also be overridden per notebook by adding this to "
 "you notebooks metadata:"
 msgstr ""
+"此全局值也可以通过将此添加到笔记本元数据中，针对每个笔记本进行覆盖："
 
 #: ../../computation/execute.md:168
 msgid "Raise errors in code cells"
-msgstr ""
+msgstr "在代码单元格中引发错误"
 
 #: ../../computation/execute.md:170
 msgid ""
@@ -314,14 +401,15 @@ msgid ""
 "(e.g., to show the error message). You can achieve this at \"three "
 "levels\":"
 msgstr ""
+"在某些情况下，您可能希望故意展示无法运行的代码（例如，为了显示错误信息）。您可以通过“三个级别”实现这一点："
 
 #: ../../computation/execute.md:173
 msgid "Globally, by setting `nb_execution_allow_errors=True` in your `conf.py`."
-msgstr ""
+msgstr "全局层面，通过在 `conf.py` 中设置 `nb_execution_allow_errors=True`。"
 
 #: ../../computation/execute.md:175
 msgid "Per notebook (overrides global), by adding this to you notebooks metadata:"
-msgstr ""
+msgstr "针对每个笔记本（覆盖全局设置），通过将此添加到笔记本元数据中："
 
 #: ../../computation/execute.md:186
 msgid ""
@@ -329,14 +417,15 @@ msgid ""
 "be done via a Jupyter interface, or via the `{code-cell}` directive like "
 "so:"
 msgstr ""
+"针对每个单元格，通过向代码单元格添加 `raises-exception` 标签。这可以通过 Jupyter 界面完成，或者通过 `{code-cell}` 指令实现，如下所示："
 
 #: ../../computation/execute.md:197
 msgid "Which produces:"
-msgstr ""
+msgstr "这将生成："
 
 #: ../../computation/execute.md:207
 msgid "Error reporting: Warning vs. Failure"
-msgstr ""
+msgstr "错误报告：警告与失败"
 
 #: ../../computation/execute.md:209
 msgid ""
@@ -350,10 +439,13 @@ msgid ""
 "option, you can achieve this by setting "
 "`nb_execution_raise_on_error=True` in your `conf.py`."
 msgstr ""
+"当在 `nb_execution_allow_errors=False` 的上下文中发生错误时，默认行为是将其报告为警告。此警告将仅被记录，不会导致构建失败，"
+"除非使用 [`-W` 选项](https://www.sphinx-doc.org/en/master/man/sphinx-build.html#cmdoption-sphinx-build-W) 运行 `sphinx-build`。"
+"如果您希望意外的执行错误导致构建失败而不是警告，无论是否使用 `-W` 选项，您可以通过在 `conf.py` 中设置 `nb_execution_raise_on_error=True` 来实现这一点。"
 
 #: ../../computation/execute.md:215
 msgid "Execution statistics"
-msgstr ""
+msgstr "执行统计信息"
 
 #: ../../computation/execute.md:217
 msgid ""
@@ -362,14 +454,25 @@ msgid ""
 "doc.org/en/master/extdev/envapi.html#sphinx.environment.BuildEnvironment)"
 " in `env.metadata[docname]`."
 msgstr ""
+"当笔记本被执行时，某些统计信息会存储在字典中，"
+"并保存在 [sphinx 环境对象](https://www.sphinx-doc.org/en/master/extdev/envapi.html#sphinx.environment.BuildEnvironment) 的 `env.metadata[docname]` 中。"
 
 #: ../../computation/execute.md:219
 msgid ""
 "You can access this in a post-transform in your own sphinx extensions, or"
 " use the built-in `nb-exec-table` directive:"
 msgstr ""
+"您可以在自己的 sphinx 扩展中的后转换中访问此信息，或使用内置的 `nb-exec-table` 指令："
 
 #: ../../computation/execute.md:226
 msgid "which produces:"
-msgstr ""
+msgstr "这将生成："
+
+#: ../../computation/index.md:1
+msgid "Computations"
+msgstr "计算"
+
+#: ../../computation/index.md:3
+msgid "Execute code and cache its output."
+msgstr "执行代码并缓存其输出。"
 

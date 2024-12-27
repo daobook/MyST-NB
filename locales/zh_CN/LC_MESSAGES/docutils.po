@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 16:52+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../docutils.md:2
+msgid "Single page builds"
+msgstr "单页构建"
+
+#: ../../docutils.md:7
+msgid ""
+"Sphinx, and thus MyST-NB, is built on top of the "
+"[Docutils](https://docutils.sourceforge.io/docs/) package. MyST-NB offers"
+" a renderer, parser and CLI-interface for working directly with Docutils,"
+" independent of Sphinx, as described below."
+msgstr ""
+"Sphinx 以及 MyST-NB 建立在 [Docutils](https://docutils.sourceforge.io/docs/) 包之上。"
+"MyST-NB 提供了渲染器、解析器和 CLI 接口，用于直接与 Docutils 一起工作，独立于 Sphinx，如下所述。"
+
+#: ../../docutils.md:11
+msgid ""
+"Since these tools are independent of Sphinx, this means they cannot parse"
+" any Sphinx or Sphinx extensions specific roles or directives."
+msgstr ""
+"由于这些工具独立于 Sphinx，这意味着它们无法解析任何 Sphinx 或 Sphinx 扩展特定的角色或指令。"
+
+#: ../../docutils.md:14
+msgid "On installing MyST-NB, the following CLI-commands are made available:"
+msgstr "安装 MyST-NB 后，可以使用以下 CLI 命令："
+
+#: ../../docutils.md:16
+msgid "`mystnb-docutils-html`: converts notebooks to HTML"
+msgstr "`mystnb-docutils-html`：将笔记本转换为 HTML"
+
+#: ../../docutils.md:17
+msgid "`mystnb-docutils-html5`: converts notebooks to HTML5"
+msgstr "`mystnb-docutils-html5`：将笔记本转换为 HTML5"
+
+#: ../../docutils.md:18
+msgid "`mystnb-docutils-latex`: converts notebooks to LaTeX"
+msgstr "`mystnb-docutils-latex`: 将笔记本转换为 LaTeX"
+
+#: ../../docutils.md:19
+msgid "`mystnb-docutils-xml`: converts notebooks to docutils-native XML"
+msgstr "`mystnb-docutils-xml`: 将笔记本转换为 docutils-native XML"
+
+#: ../../docutils.md:20
+msgid ""
+"`mystnb-docutils-pseudoxml`: converts notebooks to pseudo-XML (to "
+"visualise the AST structure)"
+msgstr ""
+"`mystnb-docutils-pseudoxml`: 将笔记本转换为伪 XML（用于可视化 AST 结构）"
+
+#: ../../docutils.md:22
+msgid "Each command can be piped stdin or take a file path as an argument:"
+msgstr "每个命令都可以通过管道传递 stdin 或将文件路径作为参数："
+
+#: ../../docutils.md:30
+msgid ""
+"The commands are based on the [Docutils Front-End "
+"Tools](https://docutils.sourceforge.io/docs/user/tools.html), and so "
+"follow the same argument and options structure, included many of the MyST"
+" NB specific options detailed in the [](config/intro) section."
+msgstr ""
+"这些命令基于 [Docutils 前端工具](https://docutils.sourceforge.io/docs/user/tools.html)，"
+"因此遵循相同的参数和选项结构，包括 [](config/intro) 部分中详细说明的许多 MyST NB 特定选项。"
+
+#: ../../docutils.md
+msgid "Shared Docutils CLI Options"
+msgstr "共享的 Docutils 命令行界面选项"
+
+#: ../../docutils.md:37
+msgid ""
+"The CLI commands can also utilise the [`docutils.conf` configuration "
+"file](https://docutils.sourceforge.io/docs/user/config.html) to configure"
+" the behaviour of the CLI commands. For example:"
+msgstr ""
+"命令行界面（CLI）命令还可以利用 [`docutils.conf` 配置文件](https://docutils.sourceforge.io/docs/user/config.html) 来配置 CLI 命令的行为。例如："
+
+#: ../../docutils.md:53
+msgid ""
+"You can also use the {py:class}`myst_nb.docutils_.Parser` class "
+"programmatically with the [Docutils publisher "
+"API](https://docutils.sourceforge.io/docs/api/publisher.html):"
+msgstr ""
+"你也可以通过编程方式使用 {py:class}`myst_nb.docutils_.Parser` 类，结合 [Docutils 发布者 API](https://docutils.sourceforge.io/docs/api/publisher.html) 来实现："
+
+#: ../../docutils.md:73
+msgid ""
+"Finally, you can include MyST Markdown files within a RestructuredText "
+"file, using the [`include` "
+"directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#include):"
+msgstr ""
+"最后，你可以使用 [`include` 指令](https://docutils.sourceforge.io/docs/ref/rst/directives.html#include)，在 reStructuredText 文件中包含 MyST Markdown 文件："
+
+#: ../../docutils.md:81
+msgid "The `parser` option requires `docutils>=0.17`"
+msgstr "`parser` 选项需要 `docutils>=0.17` 版本。"
+

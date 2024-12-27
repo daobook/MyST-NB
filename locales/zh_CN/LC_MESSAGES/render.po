@@ -1,0 +1,1449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Executable Book Project
+# This file is distributed under the same license as the MyST-NB package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: MyST-NB \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-27 13:29+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../render/format_code_cells.md:8
+msgid "Format code cells"
+msgstr "格式化代码单元格"
+
+#: ../../render/format_code_cells.md:10
+msgid ""
+"Code cell rendering behaviour is controlled with configuration at a "
+"global, per-file, or per-cell level, as outlined in the [configuration "
+"section](config/intro)."
+msgstr ""
+"代码单元格的渲染行为可以通过全局、文件或单元格级别的配置进行控制，如 [配置部分](config/intro) 所述。"
+
+#: ../../render/format_code_cells.md:12
+msgid ""
+"See the sections below for a description of these configuration option "
+"and their effect."
+msgstr ""
+"请参阅以下部分，了解这些配置选项及其效果的描述。"
+
+#: ../../render/format_code_cells.md:15
+msgid "Number source lines"
+msgstr "为源代码行编号"
+
+#: ../../render/format_code_cells.md:17
+msgid ""
+"You can control whether the number of source lines is displayed for code "
+"cells, globally with `nb_number_source_lines = True`, per-file with "
+"`number_source_lines` in the notebook metadata, or per-cell with "
+"`number_source_lines` in the cell metadata. For example:"
+msgstr ""
+"您可以通过全局设置 `nb_number_source_lines = True`、"
+"在笔记本元数据中设置 `number_source_lines` 或在单元格元数据中设置 `number_source_lines` 来控制是否为代码单元格显示源代码行号。例如："
+
+#: ../../render/format_code_cells.md:44
+msgid "stdout and stderr outputs"
+msgstr "标准输出和标准错误输出"
+
+#: ../../render/format_code_cells.md:47
+msgid "Remove stdout or stderr"
+msgstr "移除标准输出或标准错误"
+
+#: ../../render/format_code_cells.md:49
+msgid ""
+"In some cases you may not wish to display stdout/stderr outputs in your "
+"final documentation, for example, if they are only for debugging "
+"purposes."
+msgstr ""
+"在某些情况下，您可能不希望最终文档中显示标准输出/标准错误输出，例如，如果它们仅用于调试目的。"
+
+#: ../../render/format_code_cells.md:52
+msgid ""
+"You can tell MyST-NB to remove these outputs, per cell, using the "
+"`remove-stdout` and `remove-stderr` [cell tags](https://jupyter-"
+"notebook.readthedocs.io/en/stable/changelog.html#cell-tags), like so:"
+msgstr ""
+"您可以通过使用 `remove-stdout` 和 `remove-stderr` [单元格标签](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags) 来告诉 MyST-NB 移除这些输出，例如："
+
+#: ../../render/format_code_cells.md:76
+msgid ""
+"Alternatively, you can configure how stdout is dealt with at a global "
+"configuration level, using the `nb_output_stderr` configuration value. "
+"This can be set to:"
+msgstr ""
+"或者，您可以在全局配置级别配置如何处理标准输出，使用 `nb_output_stderr` 配置值。这可以设置为："
+
+#: ../../render/format_code_cells.md:79
+msgid ""
+"`\"show\"` (default): show all stderr (unless a `remove-stderr` tag is "
+"present)"
+msgstr ""
+"`\"show\"`（默认）：显示所有标准错误（除非存在 `remove-stderr` 标签）"
+
+#: ../../render/format_code_cells.md:80
+msgid "`\"remove\"`: remove all stderr"
+msgstr "`\"remove\"`：移除所有标准错误"
+
+#: ../../render/format_code_cells.md:81
+msgid ""
+"`\"remove-warn\"`: remove all stderr, but log a warning to sphinx if any "
+"found"
+msgstr ""
+"`\"remove-warn\"`：移除所有标准错误，但如果发现任何标准错误，则向 sphinx 记录警告"
+
+#: ../../render/format_code_cells.md:82
+msgid ""
+"`\"warn\"`, `\"error\"` or `\"severe\"`: log to sphinx, at a certain "
+"level, if any found."
+msgstr ""
+"`\"warn\"`、`\"error\"` 或 `\"severe\"`：如果发现任何标准错误，则以特定级别记录到 sphinx。"
+
+#: ../../render/format_code_cells.md:85
+msgid "Group into single streams"
+msgstr "合并为单一流"
+
+#: ../../render/format_code_cells.md:87
+msgid ""
+"Cells may print multiple things to `stdout` and `stderr`. For example, if"
+" a cell prints status updates throughout its execution, each of these is "
+"often printed to `stdout`. By default, these outputs may be split across "
+"multiple items, and will be rendered as separate \"chunks\" in your built"
+" documentation."
+msgstr ""
+"单元格可能会多次向 `stdout` 和 `stderr` 打印内容。"
+"例如，如果单元格在执行过程中打印状态更新，这些内容通常会打印到 `stdout`。默认情况下，这些输出可能会被分成多个项目，并在构建的文档中呈现为单独的“块”。"
+
+#: ../../render/format_code_cells.md:91
+msgid ""
+"If you'd like each of the outputs in `stderr` and `stdout` to be merged "
+"into a single stream for each, use the following configuration:"
+msgstr ""
+"如果您希望将 `stderr` 和 `stdout` 中的每个输出合并为单一流，请使用以下配置："
+
+#: ../../render/format_code_cells.md:97
+msgid ""
+"This will ensure that all `stderr` and `stdout` outputs are merged into a"
+" single group. This also makes cell outputs more deterministic. Normally,"
+" slight differences in timing may result in different orders of `stderr` "
+"and `stdout` in the cell output, while this setting will sort them "
+"properly."
+msgstr ""
+"这将确保所有 `stderr` 和 `stdout` 输出合并为一个组。这也使单元格输出更加确定。"
+"通常，时间上的微小差异可能会导致 `stderr` 和 `stdout` 在单元格输出中的顺序不同，而此设置将正确地对它们进行排序。"
+
+#: ../../render/format_code_cells.md:102
+msgid "Outputs MIME priority"
+msgstr "输出 MIME 优先级"
+
+#: ../../render/format_code_cells.md:104
+msgid ""
+"When Jupyter executes a code cell it can produce multiple outputs, and "
+"each of these outputs can contain multiple [MIME media "
+"types](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), for use by different output "
+"formats (like HTML or LaTeX)."
+msgstr ""
+"当 Jupyter 执行代码单元格时，它可以生成多个输出，每个输出可以包含多个 "
+"[MIME 媒体类型](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，用于不同的输出格式（如 HTML 或 LaTeX）。"
+
+#: ../../render/format_code_cells.md:106
+msgid ""
+"MyST-NB stores a base priority dictionary for most of the common [Sphinx "
+"builder names](https://www.sphinx-"
+"doc.org/en/master/usage/builders/index.html), mapping MIME types to a "
+"priority number (lower is higher priority):"
+msgstr ""
+"MyST-NB 为大多数常见的 "
+"[Sphinx 构建器名称](https://www.sphinx-doc.org/en/master/usage/builders/index.html) 存储了基本优先级字典，将 MIME 类型映射到优先级数字（数字越小，优先级越高）："
+
+#: ../../render/format_code_cells.md:117
+msgid ""
+"Items in this dictionary can be overridden by the "
+"`nb_mime_priority_overrides` configuration option, in your `conf.py`. For"
+" example, the following configuration applies in order:"
+msgstr ""
+"您可以在 `conf.py` 中使用 `nb_mime_priority_overrides` 配置选项覆盖此字典中的项目。例如，以下配置按顺序应用："
+
+#: ../../render/format_code_cells.md:120
+msgid "Sets `text/plain` as the highest priority for `html` output."
+msgstr "将 `text/plain` 设置为 `html` 输出的最高优先级。"
+
+#: ../../render/format_code_cells.md:121
+msgid "Disables `image/jpeg` for `latex` output"
+msgstr "禁用 `latex` 输出的 `image/jpeg`"
+
+#: ../../render/format_code_cells.md:122
+msgid ""
+"Adds a custom MIME type `customtype` for all builders (`*` applies to all"
+" builders)"
+msgstr ""
+"为所有构建器添加自定义 MIME 类型 `customtype` （`*` 适用于所有构建器）"
+
+#: ../../render/format_code_cells.md:133
+msgid "`nb_mime_priority_overrides` replaces `nb_render_priority`"
+msgstr "`nb_mime_priority_overrides` 替换 `nb_render_priority`"
+
+#: ../../render/format_code_cells.md:137
+msgid "[](render/output/customise), for a more advanced means of customisation."
+msgstr "[](render/output/customise)，用于更高级的自定义方法。"
+
+#: ../../render/format_code_cells.md:141
+msgid "Images and Figures"
+msgstr "图像和图表"
+
+#: ../../render/format_code_cells.md:143
+msgid ""
+"With the default renderer, for any image types output by the code, we can"
+" apply formatting *via* cell metadata. The top-level metadata key can be "
+"set using `nb_cell_metadata_key` in your `conf.py`, and is set to "
+"`mystnb` by default. Then for the image we can apply all the variables of"
+" the standard [image "
+"directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image):"
+msgstr ""
+"使用默认渲染器，对于代码输出的任何图像类型，我们可以通过单元格元数据应用格式化。顶层元数据键可以在 `conf.py` 中使用 `nb_cell_metadata_key` 设置，默认设置为 `mystnb`。"
+"然后，对于图像，可以应用标准 [图像指令](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image) 的所有变量："
+
+#: ../../render/format_code_cells.md:147
+msgid "**width**: length or percentage (%) of the current line width"
+msgstr "**width**：当前行宽度的长度或百分比（%）"
+
+#: ../../render/format_code_cells.md:148
+msgid "**height**: length"
+msgstr "**height**：长度"
+
+#: ../../render/format_code_cells.md:149
+msgid "**scale**: integer percentage (the \"%\" symbol is optional)"
+msgstr "**scale**：整数百分比（“%”符号可选）"
+
+#: ../../render/format_code_cells.md:150
+msgid ""
+"**align**: \"top\", \"middle\", \"bottom\", \"left\", \"center\", or "
+"\"right\""
+msgstr ""
+"**align**：\"top\"、\"middle\"、\"bottom\"、\"left\"、\"center\" 或 \"right\""
+
+#: ../../render/format_code_cells.md:151 ../../render/format_code_cells.md:162
+msgid "**classes**: space separated strings"
+msgstr "**classes**: 空格分隔的字符串"
+
+#: ../../render/format_code_cells.md:152
+msgid "**alt**: string"
+msgstr ""
+
+#: ../../render/format_code_cells.md:154
+msgid "Units of length are: 'em', 'ex', 'px', 'in', 'cm', 'mm', 'pt', 'pc'"
+msgstr "长度单位包括：'em'、'ex'、'px'、'in'、'cm'、'mm'、'pt'、'pc'"
+
+#: ../../render/format_code_cells.md:156
+msgid ""
+"You can also wrap the output in a "
+"[`figure`](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure),"
+" that can include:"
+msgstr ""
+"您还可以将输出包装在 [`figure`](https://docutils.sourceforge.io/docs/ref/rst/directives.html#figure) 中，其中可以包括："
+
+#: ../../render/format_code_cells.md:158
+msgid "**align**: \"left\", \"center\", or \"right\""
+msgstr ""
+
+#: ../../render/format_code_cells.md:159
+msgid ""
+"**caption**: a string, which must contain a single paragraph and is "
+"rendered as MyST Markdown (subsequent paragraphs are added as a legend)"
+msgstr ""
+"**caption**：字符串，必须包含一个段落，并呈现为 MyST Markdown（后续段落将作为图例添加）"
+
+#: ../../render/format_code_cells.md:160
+msgid ""
+"**caption_before**: a boolean, if true, the caption is rendered before "
+"the figure (default is false)"
+msgstr ""
+"**caption_before**：布尔值，如果为 true，则标题在图表之前呈现（默认为 false）"
+
+#: ../../render/format_code_cells.md:161
+msgid "**name**: by which to reference the figure"
+msgstr "**name**：用于引用图表的名称"
+
+#: ../../render/format_code_cells.md:186
+msgid "Hey everyone its **party** time!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:189
+msgid "(and I'm a legend)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:202
+msgid ""
+"Now we can link to the image from anywhere in our documentation: [swim to"
+" the fish](fun-fish-ref)"
+msgstr ""
+"现在可以从文档的任何位置链接到该图像：[游向鱼](fun-fish-ref)"
+
+#: ../../render/format_code_cells.md:204
+msgid "You can create figures for any mime outputs, including tables:"
+msgstr "您可以为任何 MIME 输出创建图表，包括表格："
+
+#: ../../render/format_code_cells.md:224
+msgid "This is my table caption, above the table"
+msgstr ""
+
+#: ../../render/format_code_cells.md:237
+msgid "Markdown"
+msgstr ""
+
+#: ../../render/format_code_cells.md:239
+msgid ""
+"The format of output `text/markdown` can be specified by "
+"`render_markdown_format` configuration:"
+msgstr ""
+"`text/markdown` 输出的格式可以通过 `render_markdown_format` 配置指定："
+
+#: ../../render/format_code_cells.md:241 ../../render/glue.md:379
+msgid ""
+"`commonmark` (default): Restricted to the [CommonMark "
+"specification](https://commonmark.org/)."
+msgstr ""
+"`commonmark` （默认）：限制为 [CommonMark 规范](https://commonmark.org/)。"
+
+#: ../../render/format_code_cells.md:242 ../../render/glue.md:380
+msgid ""
+"`gfm`: Restricted to the [GitHub-flavored "
+"markdown](https://github.github.com/gfm/)."
+msgstr ""
+"`gfm`：限制为 [GitHub 风格的 Markdown](https://github.github.com/gfm/)。"
+
+#: ../../render/format_code_cells.md:243 ../../render/glue.md:381
+msgid ""
+"Note, this requires the installation of the [linkify-it-py "
+"package](https://pypi.org/project/linkify-it-py)"
+msgstr ""
+"注意，这需要安装 [linkify-it-py 包](https://pypi.org/project/linkify-it-py)"
+
+#: ../../render/format_code_cells.md:244
+msgid ""
+"`myst`: Uses [the MyST parser](https://myst-"
+"parser.readthedocs.io/en/latest/) with the same configuration as the "
+"current document."
+msgstr ""
+"`myst`：使用 [MyST 解析器](https://myst-parser.readthedocs.io/en/latest/)，配置与当前文档相同。"
+
+#: ../../render/format_code_cells.md:246
+msgid "CommonMark formatting will output basic Markdown syntax:"
+msgstr "CommonMark 格式化将输出基本的 Markdown 语法："
+
+#: ../../render/format_code_cells.md:250
+msgid "**_some_ markdown** and an [a reference](https://example.com)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:253
+msgid "and even internal images can be rendered!"
+msgstr "甚至内部图像也可以渲染！"
+
+#: ../../render/format_code_cells.md:257
+msgid "![figure](../_static/logo-wide.svg)"
+msgstr ""
+
+#: ../../render/format_code_cells.md:257
+msgid "figure"
+msgstr ""
+
+#: ../../render/format_code_cells.md:259
+msgid ""
+"But setting the Markdown format to `myst` will allow for more advanced "
+"formatting, such as including internal references, tables, and even other"
+" directives, either using:"
+msgstr ""
+"但将 Markdown 格式设置为 `myst` 将允许更高级的格式化，例如包含内部引用、表格甚至其他指令，可以使用："
+
+#: ../../render/format_code_cells.md:262
+msgid ""
+"`myst_render_markdown_format = \"myst\"` in the `conf.py` to set "
+"globally, or"
+msgstr ""
+"在 `conf.py` 中使用 `myst_render_markdown_format = \"myst\"` 进行全局设置，或者"
+
+#: ../../render/format_code_cells.md:263
+msgid "`markdown_format` in the cell metadata to set per-cell."
+msgstr "在单元格元数据中使用 `markdown_format` 进行每单元格设置。"
+
+#: ../../render/format_code_cells.md:285
+msgid ""
+"The parsed Markdown is integrated into the wider documentation, and so it"
+" is possible, for example, to include internal references:"
+msgstr ""
+"解析后的 Markdown 被集成到更广泛的文档中，因此可以包含内部引用，例如："
+
+#: ../../render/format_code_cells.md:289
+msgid "**_some_ markdown** and an [internal reference](render/output/markdown)!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "a"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "b"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "c"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "1"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "2"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "3"
+msgstr ""
+
+#: ../../render/format_code_cells.md:289
+msgid "A note admonition!"
+msgstr ""
+
+#: ../../render/format_code_cells.md:306
+msgid "ANSI Outputs"
+msgstr "ANSI 输出"
+
+#: ../../render/format_code_cells.md:308
+msgid ""
+"By default, the standard output/error streams and text/plain MIME outputs"
+" may contain ANSI escape sequences to change the text and background "
+"colors."
+msgstr ""
+"默认情况下，标准输出/错误流和 text/plain MIME 输出可能包含 ANSI 转义序列，以更改文本和背景颜色。"
+
+#: ../../render/format_code_cells.md:317
+msgid ""
+"This uses the built-in {py:class}`~myst_nb.core.lexers.AnsiColorLexer` "
+"[pygments lexer](https://pygments.org/). You can change the lexer used in"
+" the `conf.py`, for example to turn off lexing:"
+msgstr ""
+"这使用了内置的 {py:class}`~myst_nb.core.lexers.AnsiColorLexer` [pygments 词法分析器](https://pygments.org/)。您可以在 `conf.py` 中更改使用的词法分析器，例如关闭词法分析："
+
+#: ../../render/format_code_cells.md:324
+msgid ""
+"The following code[^acknowledge] shows the 8 basic ANSI colors it is "
+"based on. Each of the 8 colors has an “intense” variation, which is used "
+"for bold text."
+msgstr ""
+"以下代码[^acknowledge] 显示了它所基于的 8 种基本 ANSI 颜色。每种颜色都有“强烈”变体，用于粗体文本。"
+
+#: ../../render/format_code_cells.md:351
+msgid ""
+"ANSI also supports a set of 256 indexed colors. This is currently not "
+"supported, but we hope to introduce it at a later date (raise an issue on"
+" the repository if you require it!)."
+msgstr ""
+"ANSI 还支持一组 256 种索引颜色。目前不支持此功能，但希望在以后引入它（如果您需要，请在存储库上提出问题！）。"
+
+#: ../../render/format_code_cells.md:357
+msgid "Customise the render process"
+msgstr "自定义渲染过程"
+
+#: ../../render/format_code_cells.md:359
+msgid ""
+"The render process is governed by subclasses of "
+"{py:class}`~myst_nb.core.render.NbElementRenderer`, which dictate how to "
+"create the `docutils` AST nodes for elements of the notebook."
+msgstr ""
+"渲染过程由 {py:class}`~myst_nb.core.render.NbElementRenderer` 的子类控制，这些子类规定了如何为笔记本元素创建 `docutils` AST 节点。"
+
+#: ../../render/format_code_cells.md:361
+msgid ""
+"Implementations are loaded *via* Python [entry "
+"points](https://packaging.python.org/guides/distributing-packages-using-"
+"setuptools/#entry-points), in the `myst_nb.renderers` group. So it is "
+"possible to inject your own subclass to fully override rendering."
+msgstr ""
+"实现通过 Python [入口点](https://packaging.python.org/guides/distributing-packages-using-setuptools/#entry-points) "
+"加载，位于 `myst_nb.renderers` 组中。因此，可以注入您自己的子类以完全覆盖渲染。"
+
+#: ../../render/format_code_cells.md:364
+msgid "For example, the renderer loaded in this package is:"
+msgstr "例如，此包中加载的渲染器是："
+
+#: ../../render/format_code_cells.md:371
+msgid "You can then select the renderer plugin in your `conf.py`:"
+msgstr "然后，您可以在 `conf.py` 中选择渲染器插件："
+
+#: ../../render/format_code_cells.md:377
+msgid ""
+"Plugins can also override rendering of particular output MIME types, "
+"using the `myst_nb.mime_renderers` entry point group to supply functions "
+"with signature: {py:class}`~myst_nb.core.render.MimeRenderPlugin`."
+msgstr ""
+"插件还可以覆盖特定输出 MIME 类型的渲染，使用 `myst_nb.mime_renderers` 入口点组来提供具有签名的函数：{py:class}`~myst_nb.core.render.MimeRenderPlugin`。"
+
+#: ../../render/format_code_cells.md:380
+msgid ""
+"For example {py:class}`myst_nb.core.render.ExampleMimeRenderPlugin`, is "
+"loaded in this package:"
+msgstr ""
+"例如 {py:class}`myst_nb.core.render.ExampleMimeRenderPlugin`，在此包中加载："
+
+#: ../../render/format_code_cells.md:387
+msgid "Meaning we can now render `custommimetype` in all output formats:"
+msgstr "这意味着现在可以在所有输出格式中渲染 `custommimetype`："
+
+#: ../../render/format_code_cells.md:391
+msgid "This is a custom mime type, with content: 'Some text'"
+msgstr ""
+
+#: ../../render/format_code_cells.md:327
+msgid ""
+"Borrowed from [nbsphinx](https://nbsphinx.readthedocs.io/en/0.7.1/code-"
+"cells.html#ANSI-Colors)!"
+msgstr ""
+"借鉴自 [nbsphinx](https://nbsphinx.readthedocs.io/en/0.7.1/code-cells.html#ANSI-Colors)！"
+
+#: ../../render/glue.md:9
+msgid "Saving variables to embed (glue)"
+msgstr "保存变量以嵌入（glue）"
+
+#: ../../render/glue.md:11
+msgid ""
+"The `glue` submodule allows you to store variables in the notebooks "
+"outputs, by keys, then reference those keys to embed the outputs inline "
+"of your text content.[^download]"
+msgstr ""
+"`glue` 子模块允许您通过键将变量存储在笔记本输出中，然后引用这些键以将输出嵌入到文本内容中。[^download]"
+
+#: ../../render/glue.md:17
+msgid ""
+"The `glue` roles and directives now only identify keys in the same "
+"notebook, by default. To glue keys from other notebooks, see "
+"{ref}`glue/crossdoc`."
+msgstr ""
+"默认情况下，`glue` 角色和指令现在仅识别同一笔记本中的键。要从其他笔记本中粘贴键，请参阅 {ref}`glue/crossdoc`。"
+
+#: ../../render/glue.md:25
+msgid "Save variables in code cells"
+msgstr "在代码单元格中保存变量"
+
+#: ../../render/glue.md:27
+msgid ""
+"You can use `myst_nb.glue()` to assign the output of a variable to a key "
+"of your choice. `glue` will store all of the information that is normally"
+" used to display that variable (that is, whatever happens when you "
+"display the variable by putting it at the end of a cell). Choose a key "
+"that you will remember, as you will use it later."
+msgstr ""
+"您可以使用 `myst_nb.glue()` 将变量的输出分配给您选择的键。"
+"`glue` 将存储通常用于显示该变量的所有信息（即，当您通过将变量放在单元格末尾来显示它时发生的任何情况）。选择您会记住的键，因为您稍后将使用它。"
+
+#: ../../render/glue.md:31
+msgid "The following code glues a variable inside the notebook:"
+msgstr "以下代码将变量粘贴到笔记本中："
+
+#: ../../render/glue.md:39
+msgid "You can then insert it into your text like so: {glue}`my_variable`."
+msgstr "然后，您可以像这样将其插入到文本中： {glue}`my_variable`。"
+
+#: ../../render/glue.md:41
+msgid "That was accomplished with the following code: `` {glue}`my_variable` ``."
+msgstr "这是通过以下代码实现的： `` {glue}`my_variable` ``。"
+
+#: ../../render/glue.md:43
+msgid "Saving different variable types"
+msgstr "保存不同类型的变量"
+
+#: ../../render/glue.md:45
+msgid ""
+"You can glue anything in your notebook and display it later with "
+"`{glue}`. Here we'll show how to glue and paste **numbers and images**. "
+"We'll simulate some data and run a simple bootstrap on it. We'll hide "
+"most of this process below, to focus on the glueing part."
+msgstr ""
+"您可以在笔记本中粘贴任何内容，并使用 `{glue}` 稍后显示。"
+"这里展示如何粘贴和显示 **数字和图像**。将模拟一些数据并对其运行简单的引导程序。将隐藏此过程的大部分内容，以专注于粘贴部分。"
+
+#: ../../render/glue.md:69
+msgid ""
+"In the cell below, `data` contains our data, and `bootstrap_indices` is a"
+" collection of sample indices in each bootstrap. Below we'll calculate a "
+"few statistics of interest, and `glue()` them into the notebook."
+msgstr ""
+"在下面的单元格中，`data` 包含我们的数据，`bootstrap_indices` 是每次引导程序中的样本索引集合。"
+"下面将计算一些感兴趣的统计量，并将它们 `glue()` 到笔记本中。"
+
+#: ../../render/glue.md:84
+msgid ""
+"By default, `glue` will display the value of the variable you are gluing."
+" This is useful for sanity-checking its value at glue-time. If you'd like"
+" to **prevent display**, use the `display=False` option. Note that below,"
+" we also *overwrite* the value of `boot_chi` (but using the same value):"
+msgstr ""
+"默认情况下，`glue` 会显示您正在粘贴的变量的值。"
+"这对于在粘贴时检查其值很有用。如果您想 **阻止显示**，请使用 `display=False` 选项。请注意，下面我们还 *覆盖* 了 `boot_chi` 的值（但使用相同的值）："
+
+#: ../../render/glue.md:93
+msgid ""
+"You can also glue visualizations, such as matplotlib figures (here we use"
+" `display=False` to ensure that the figure isn't plotted twice):"
+msgstr ""
+"您还可以粘贴可视化内容，例如 matplotlib 图形（这里我们使用 `display=False` 来确保图形不会绘制两次）："
+
+#: ../../render/glue.md:112
+msgid "The same can be done for DataFrames (or other table-like objects) as well."
+msgstr "同样，也可以对 DataFrame（或其他类似表格的对象）执行此操作。"
+
+#: ../../render/glue.md:121
+msgid ""
+"Since we are going to paste this figure into our document at a later "
+"point, you may wish to remove the output here, using the `remove-output` "
+"tag (see {ref}`use/removing`)."
+msgstr ""
+"由于稍后将在文档中粘贴此图，可能希望使用 `remove-output` 标签删除此处的输出（请参阅 {ref}`use/removing`）。"
+
+#: ../../render/glue.md:130
+msgid "Embedding variables in the page"
+msgstr "在页面中嵌入变量"
+
+#: ../../render/glue.md:132
+msgid ""
+"Once you have glued variables into a notebook, you can then **paste** "
+"those variables into your text in your book anywhere you like (even on "
+"other pages). These variables can be pasted using one of the roles or "
+"directives in the `glue:` *family*."
+msgstr ""
+"一旦您将变量粘贴到笔记本中，您就可以 **粘贴** 这些变量到您书中任何地方的文本中（甚至在其他页面上）。这些变量可以使用 `glue:`  *系列* 中的角色或指令进行粘贴。"
+
+#: ../../render/glue.md:138
+msgid "The `glue` role/directive"
+msgstr "`glue` 角色/指令"
+
+#: ../../render/glue.md:140
+msgid ""
+"The simplest role and directive are `glue` (also known as `glue:any`), "
+"which paste the glued output inline or as a block respectively, with no "
+"additional formatting. Simply add:"
+msgstr ""
+"最简单的角色和指令是 `glue` （也称为 `glue:any`），它们分别将粘贴的输出内联或作为块粘贴，没有额外的格式化。只需添加："
+
+#: ../../render/glue.md:150
+msgid ""
+"For example, we'll paste the plot we generated above with the following "
+"text:"
+msgstr ""
+"例如，将使用以下文本粘贴上面生成的图："
+
+#: ../../render/glue.md:157
+msgid "Here's how it looks:"
+msgstr "以下是它的样子："
+
+#: ../../render/glue.md:162
+msgid "Or we can paste inline objects like so:"
+msgstr "或者可以像这样粘贴内联对象："
+
+#: ../../render/glue.md:168
+msgid "Inline text; {glue}`boot_mean`, and figure; {glue}`boot_fig`."
+msgstr "内联文本；{glue}`boot_mean`，以及图；{glue}`boot_fig`。"
+
+#: ../../render/glue.md:171
+msgid ""
+"We recommend using wider, shorter figures when plotting in-line, with a "
+"ratio around 6x2. For example, here's is an in-line figure of sorted "
+"means from our bootstrap: {glue}`sorted_means_fig`. It can be used to "
+"make a visual point that isn't too complex! For more ideas, check out "
+"[how sparklines are used](https://en.wikipedia.org/wiki/Sparkline)."
+msgstr ""
+"建议在绘制内联图时使用更宽、更短的图形，比例约为 6x2。例如，这里是引导程序中排序均值的内联图：{glue}`sorted_means_fig`。"
+"它可以用来制作不太复杂的视觉点！有关更多想法，请查看 [如何使用迷你图](https://en.wikipedia.org/wiki/Sparkline)。"
+
+#: ../../render/glue.md:178
+msgid ""
+"Next we'll cover some more specific pasting functionality, which gives "
+"you more control over how the outputs look in your pages."
+msgstr ""
+"接下来，将介绍一些更具体的粘贴功能，这些功能可以让您更好地控制输出在页面中的显示方式。"
+
+#: ../../render/glue.md:183
+msgid "Controlling the output format"
+msgstr "控制输出格式"
+
+#: ../../render/glue.md:185
+msgid ""
+"You can control the pasted outputs by using a sub-command of `{glue}`. "
+"These are called like so: `` {glue:subcommand}`key` ``. These subcommands"
+" allow you to control more of the look, feel, and content of the pasted "
+"output."
+msgstr ""
+"您可以使用 `{glue}` 的子命令来控制粘贴的输出。这些子命令的调用方式如下：`` {glue:subcommand}`key` ``。这些子命令允许您更好地控制粘贴输出的外观、感觉和内容。"
+
+#: ../../render/glue.md:190
+msgid ""
+"When you use `{glue}` you are actually using a short-hand for "
+"`{glue:any}`. This is a generic command that doesn't make many "
+"assumptions about what you are gluing."
+msgstr ""
+"当您使用 `{glue}` 时，实际上是在使用 `{glue:any}` 的简写形式。这是通用命令，不会对您粘贴的内容做出太多假设。"
+
+#: ../../render/glue.md:196
+msgid "The `glue:text` role"
+msgstr "`glue:text` 角色"
+
+#: ../../render/glue.md:198
+msgid ""
+"The `glue:text` role, is specific to `text/plain` outputs. For example, "
+"the following text:"
+msgstr ""
+"`glue:text` 角色专门用于 `text/plain` 输出。例如，以下文本："
+
+#: ../../render/glue.md:205
+msgid "Is rendered as:"
+msgstr "渲染为："
+
+#: ../../render/glue.md:207
+#, python-format
+msgid ""
+"The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95%"
+" confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`)"
+msgstr ""
+"引导分布的均值为 {glue:text}`boot_mean`（95% 置信区间 {glue:text}`boot_clo`/{glue:text}`boot_chi`）"
+
+#: ../../render/glue.md:210
+msgid ""
+"`glue:text` only works with glued variables that contain a `text/plain` "
+"output."
+msgstr ""
+"`glue:text` 仅适用于包含 `text/plain` 输出的粘贴变量。"
+
+#: ../../render/glue.md:213
+msgid ""
+"With `glue:text` we can add formatting to the output, by specifying a "
+"format spec string after a `:`: `` {glue:text}`mykey:<format_spec>` ``"
+msgstr ""
+"使用 `glue:text`，我们可以通过在 `:` 后指定格式字符串来为输出添加格式化：`` {glue:text}`mykey:<format_spec>` ``"
+
+#: ../../render/glue.md:215
+msgid ""
+"The `<format_spec>` should be a valid [Python format "
+"specifier](https://docs.python.org/3/library/string.html#format-"
+"specification-mini-language)."
+msgstr ""
+"`<format_spec>` 应该是有效的 [Python 格式说明符](https://docs.python.org/3/library/string.html#format-specification-mini-language)。"
+
+#: ../../render/glue.md:217
+msgid ""
+"This is particularly useful if you are displaying numbers and want to "
+"round the results. For example, the following: ``My rounded mean: "
+"{glue:text}`boot_mean:.2f` `` will be rendered like this:"
+msgstr ""
+"这在显示数字并希望四舍五入结果时特别有用。例如，以下内容：``我的四舍五入均值：{glue:text}`boot_mean:.2f` `` 将呈现如下："
+
+#: ../../render/glue.md:220
+msgid ""
+"My rounded mean: {glue:text}`boot_mean:.2f` (95% CI: "
+"{glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`)."
+msgstr ""
+"我的四舍五入均值：{glue:text}`boot_mean:.2f`（95% 置信区间：{glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`）。"
+
+#: ../../render/glue.md:223
+msgid ""
+"As of NumPy 2.0, the `text/plain` representation of [NumPy objects has "
+"changed](https://numpy.org/devdocs/release/2.0.0-notes.html"
+"#representation-of-numpy-scalars-changed). Using text formatting with "
+"NumPy>=2.0 will give warnings like:"
+msgstr ""
+"从 NumPy 2.0 开始，[NumPy 对象的 `text/plain` 表示已更改](https://numpy.org/devdocs/release/2.0.0-notes.html#representation-of-numpy-scalars-changed)。使用 NumPy>=2.0 的文本格式化将给出如下警告："
+
+#: ../../render/glue.md:230
+msgid ""
+"This can be resolved by either formatting the number before glueing or by"
+" setting NumPy to use legacy print options, as shown below."
+msgstr ""
+"这可以通过在粘贴之前格式化数字或通过设置 NumPy 使用旧版打印选项来解决，如下所示。"
+
+#: ../../render/glue.md:245
+msgid "The `glue:figure` directive"
+msgstr "`glue:figure` 指令"
+
+#: ../../render/glue.md:247
+msgid ""
+"With `glue:figure` you can apply more formatting to figure like objects, "
+"such as giving them a caption and referenceable label:"
+msgstr ""
+"使用 `glue:figure`，您可以对类似图形的对象应用更多格式化，例如为它们添加标题和可引用标签："
+
+#: ../../render/glue.md:250
+msgid "`glue:figure` directive options"
+msgstr "`glue:figure` 指令选项"
+
+#: ../../render/glue.md:279
+msgid ""
+"This is a **caption**, with an embedded `{glue:text}` element: "
+"{glue:text}`boot_mean:.2f`!"
+msgstr ""
+"这是 **标题**，其中嵌入了 `{glue:text}` 元素：{glue:text}`boot_mean:.2f`！"
+
+#: ../../render/glue.md:286
+msgid "Here is a {ref}`reference to the figure <fig-boot>`"
+msgstr "这里是 {ref}`对图形的引用 <fig-boot>`"
+
+#: ../../render/glue.md:290
+msgid "Here's a table:"
+msgstr "这是表格："
+
+#: ../../render/glue.md:305
+msgid "A caption for a pandas table."
+msgstr ""
+
+#: ../../render/glue.md:310
+msgid "The `glue:math` directive"
+msgstr "`glue:math` 指令"
+
+#: ../../render/glue.md:312
+msgid ""
+"The `glue:math` directive, is specific to latex math outputs (glued "
+"variables that contain a `text/latex` mimetype), and works similarly to "
+"the [sphinx math directive](https://www.sphinx-"
+"doc.org/en/1.8/usage/restructuredtext/directives.html#math)."
+msgstr ""
+"`glue:math` 指令专门用于 LaTeX 数学输出（包含 `text/latex` MIME 类型的粘贴变量），"
+"其工作方式类似于 [Sphinx 数学指令](https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math)。"
+
+#: ../../render/glue.md:316
+msgid "`glue:math` directive options"
+msgstr "`glue:math` 指令选项"
+
+#: ../../render/glue.md:326 ../../render/glue.md:345
+msgid ""
+"\\displaystyle \\left(\\sqrt{5} i\\right)^{\\alpha} \\left(\\frac{1}{2} -"
+" \\frac{2 \\sqrt{5} i}{5}\\right) + \\left(- \\sqrt{5} "
+"i\\right)^{\\alpha} \\left(\\frac{1}{2} + \\frac{2 \\sqrt{5} "
+"i}{5}\\right)"
+msgstr ""
+
+#: ../../render/glue.md:343
+msgid "Insert the equation here:"
+msgstr ""
+
+#: ../../render/glue.md:349
+msgid "Which we reference as Equation {eq}`eq-sym`."
+msgstr ""
+
+#: ../../render/glue.md:352
+msgid ""
+"`glue:math` only works with glued variables that contain a `text/latex` "
+"output."
+msgstr ""
+"`glue:math` 仅适用于包含 `text/latex` 输出的粘贴变量。"
+
+#: ../../render/glue.md:355
+msgid "The `glue:md` role/directive"
+msgstr "`glue:md` 角色/指令"
+
+#: ../../render/glue.md:357
+msgid ""
+"With `glue:md`, you can output `text/markdown`, that will be integrated "
+"into your page."
+msgstr ""
+"使用 `glue:md`，您可以输出 `text/markdown`，它将集成到您的页面中。"
+
+#: ../../render/glue.md:377
+msgid "The format of the markdown can be specified as:"
+msgstr "markdown 格式可以指定为："
+
+#: ../../render/glue.md:382
+msgid "`myst`: The MyST parser configuration for the the current document."
+msgstr "`myst`: 当前文档的 MyST 解析器配置。"
+
+#: ../../render/glue.md:384
+msgid ""
+"For example, the following role/directive will glue inline/block MyST "
+"Markdown, as if it was part of the original document."
+msgstr ""
+"例如，以下角色/指令将粘贴内联/块 MyST Markdown，就像它是原始文档的一部分一样。"
+
+#: ../../render/glue.md:394
+msgid "Here is some {glue:md}`inline_md:myst`!"
+msgstr ""
+
+#: ../../render/glue.md:396
+msgid "A heading"
+msgstr ""
+
+#: ../../render/glue.md:396
+msgid "Then some text, and anything nested."
+msgstr ""
+
+#: ../../render/glue.md:403
+msgid "Embedding outputs from other pages"
+msgstr "从其他页面嵌入输出"
+
+#: ../../render/glue.md:405
+msgid ""
+"Certain `glue` roles and directives can be used to paste content from "
+"other notebooks, by specifying the (relative) path to them."
+msgstr ""
+"某些 `glue` 角色和指令可以通过指定（相对）路径来粘贴其他笔记本中的内容。"
+
+#: ../../render/glue.md:409
+msgid ""
+"Sometimes you'd like to use variables from notebooks that are not meant "
+"to be shown to users. In this case, you should bundle the notebook with "
+"the rest of your content pages, but include `orphan: true` in the "
+"metadata of the notebook."
+msgstr ""
+"有时您可能希望使用不打算向用户显示的笔记本中的变量。在这种情况下，您应该将笔记本与其他内容页面一起打包，但在笔记本的元数据中包含 `orphan: true`。"
+
+#: ../../render/glue.md:413
+msgid ""
+"For example, the following example pastes glue variables from {ref"
+"}`orphaned-nb`:"
+msgstr ""
+"例如，以下示例从 {ref}`orphaned-nb` 粘贴了 glue 变量："
+
+#: ../../render/glue.md:426
+msgid "A cross-pasted `any` role: {glue}`orphaned_nb.ipynb::var_text`"
+msgstr "交叉粘贴的 `any` 角色：{glue}`orphaned_nb.ipynb::var_text`"
+
+#: ../../render/glue.md:427
+msgid "A cross-pasted `text` role: {glue:text}`orphaned_nb.ipynb::var_float:.2E`"
+msgstr "交叉粘贴的 `text` 角色：{glue:text}`orphaned_nb.ipynb::var_float:.2E`"
+
+#: ../../render/glue.md:429
+msgid "A cross-pasted `any` directive:"
+msgstr "交叉粘贴的 `any` 指令："
+
+#: ../../render/glue.md:437
+msgid "Advanced use-cases"
+msgstr "高级用例"
+
+#: ../../render/glue.md:439
+msgid "Here are a few more specific and advanced uses of the `glue` submodule."
+msgstr "以下是 `glue` 子模块的一些更具体和高级的用法。"
+
+#: ../../render/glue.md:441
+msgid "Embedding into tables"
+msgstr "嵌入到表格中"
+
+#: ../../render/glue.md:443
+msgid ""
+"In addition to pasting blocks of outputs, or in-line with text, you can "
+"also paste directly into tables. This allows you to compose complex "
+"collections of structured data using outputs that were generated in other"
+" notebooks. For example the following table:"
+msgstr ""
+"除了粘贴输出块或与文本内联粘贴外，您还可以直接粘贴到表格中。这使您能够使用在其他笔记本中生成的输出来组合复杂的结构化数据集合。例如，以下表格："
+
+#: ../../render/glue.md:454
+msgid "Results in:"
+msgstr "结果如下："
+
+#: ../../render/glue.md:431
+msgid "name"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "plot"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "mean"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "ci"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "histogram and raw text"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_fig`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_mean`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`boot_clo`-{glue}`boot_chi`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "sorted means and formatted text"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue}`sorted_means_fig`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue:text}`boot_mean:.3f`"
+msgstr ""
+
+#: ../../render/glue.md:431
+msgid "{glue:text}`boot_clo:.3f`-{glue:text}`boot_chi:.3f`"
+msgstr ""
+
+#: ../../render/glue.md:14
+msgid ""
+"This notebook can be downloaded as **{nb-download}`glue.ipynb`** and "
+"{download}`glue.md`"
+msgstr ""
+"此笔记本可以下载为 **{nb-download}`glue.ipynb`** 和 {download}`glue.md`"
+
+#: ../../render/hiding.md:7
+msgid "Hide cell contents"
+msgstr "隐藏单元格内容"
+
+#: ../../render/hiding.md:9
+msgid ""
+"You can use Jupyter Notebook **cell tags** to control some of the "
+"behavior of the rendered notebook.[^download] If you are using cell tags "
+"for the first time, you can read more about them in this tutorial "
+"<https://jupyterbook.org/en/stable/content/metadata.html#add-metadata-to-"
+"notebooks>"
+msgstr ""
+"您可以使用 Jupyter Notebook **单元格标签** 来控制渲染笔记本的某些行为。[^download] "
+"如果您是第一次使用单元格标签，可以在此教程中了解更多信息 <https://jupyterbook.org/en/stable/content/metadata.html#add-metadata-to-notebooks>"
+
+#: ../../render/hiding.md:18
+msgid "Hide code cells"
+msgstr "隐藏代码单元格"
+
+#: ../../render/hiding.md:20
+msgid ""
+"You can use **cell tags** to control the content hidden with code cells "
+"at the cell level. Add the following tags to a cell's metadata to control"
+" what to hide in code cells:"
+msgstr ""
+"您可以使用 **单元格标签** 来控制代码单元格中隐藏的内容。将以下标签添加到单元格的元数据中，以控制在代码单元格中隐藏的内容："
+
+#: ../../render/hiding.md:24
+msgid "**`hide-input`** tag to hide the cell inputs"
+msgstr "**`hide-input`** 标签以隐藏单元格输入"
+
+#: ../../render/hiding.md:25
+msgid "**`hide-output`** to hide the cell outputs"
+msgstr "**`hide-output`** 标签以隐藏单元格输出"
+
+#: ../../render/hiding.md:26
+msgid "**`hide-cell`** to hide the entire cell"
+msgstr "**`hide-cell`** 标签以隐藏整个单元格"
+
+#: ../../render/hiding.md:28
+msgid "For example, we'll show cells with each below."
+msgstr "例如，显示下面的每个单元格。"
+
+#: ../../render/hiding.md:38
+msgid "Here is a cell with a `hide-input` tag."
+msgstr "这是带有 `hide-input` 标签的单元格。"
+
+#: ../../render/hiding.md:48
+msgid "Here's a cell with a `hide-output` tag:"
+msgstr "这是带有 `hide-output` 标签的单元格："
+
+#: ../../render/hiding.md:58
+msgid "Here's a cell with both `hide-input` and `hide-output` tags:"
+msgstr "这是同时带有 `hide-input` 和 `hide-output` 标签的单元格："
+
+#: ../../render/hiding.md:68
+msgid "Here's a cell with a `hide-cell` tag:"
+msgstr "这是带有 `hide-cell` 标签的单元格："
+
+#: ../../render/hiding.md:78
+msgid ""
+"Finally, a cell with both `remove-input` (see below) and `hide-output` "
+"tags:"
+msgstr ""
+"最后，同时带有 `remove-input`（见下文）和 `hide-output` 标签的单元格："
+
+#: ../../render/hiding.md:87
+msgid ""
+"You can control the hide/show prompts by using the `code_prompt_show` and"
+" `code_prompt_hide` configuration options. The optional `{type}` "
+"placeholder will be replaced with `content`, `source`, or `outputs`, "
+"depending on the hide tag. See the {ref}`config/intro` section for more "
+"details."
+msgstr ""
+"您可以使用 `code_prompt_show` 和 `code_prompt_hide` 配置选项来控制提示的显示/隐藏。"
+"可选的 `{type}` 占位符将根据隐藏标签替换为 `content`、`source` 或 `outputs`。有关更多详细信息，请参阅 {ref}`config/intro` 部分。"
+
+#: ../../render/hiding.md:114
+msgid "Hide markdown cells"
+msgstr "Hide markdown 单元格"
+
+#: ../../render/hiding.md:116
+msgid ""
+"You cannot hide an entire markdown cell, but you can hide sections of "
+"markdown **content** by using roles and directives."
+msgstr ""
+"您不能隐藏整个 Markdown 单元格，但可以使用角色和指令隐藏 Markdown **content** 的部分。"
+
+#: ../../render/hiding.md:118
+msgid ""
+"For information on how to hide / toggle markdown content in Sphinx, see "
+"either [the `sphinx-togglebutton` documentation](https://sphinx-"
+"togglebutton.readthedocs.io/en/latest/) or the [`sphinx-design` dropdowns"
+" documentation](https://sphinx-"
+"design.readthedocs.io/en/latest/dropdowns.html)."
+msgstr ""
+"有关如何在 Sphinx 中隐藏/切换 Markdown 内容的信息，请参阅 [the `sphinx-togglebutton` documentation](https://sphinx-togglebutton.readthedocs.io/en/latest/) 或 "
+"[`sphinx-design` dropdowns documentation](https://sphinx-design.readthedocs.io/en/latest/dropdowns.html)。"
+
+#: ../../render/hiding.md:122
+msgid "Remove parts of cells"
+msgstr "移除单元格的部分内容"
+
+#: ../../render/hiding.md:124
+msgid ""
+"Sometimes, you want to entirely remove parts of a cell so that it doesn't"
+" make it into the output at all."
+msgstr ""
+"有时，您希望完全移除单元格的某些部分，使其根本不会出现在输出中。"
+
+#: ../../render/hiding.md:126
+msgid ""
+"To do this at the global level, use the `nb_remove_code_source` or "
+"`nb_remove_code_outputs` configuration options, or at a per-file level, "
+"e.g."
+msgstr ""
+"要在全局级别执行此操作，请使用 `nb_remove_code_source` 或 `nb_remove_code_outputs` 配置选项，或在每个文件级别执行，例如："
+
+#: ../../render/hiding.md:136
+msgid "See the [configuration section](config/intro) for more details."
+msgstr "查看 [配置部分](config/intro) 了解更多详细信息。"
+
+#: ../../render/hiding.md:138
+msgid ""
+"At a per-cell level you can use the same tag pattern described above, but"
+" with the word `remove_` instead of `hide_`. Use the following tags:"
+msgstr ""
+"在每个单元格级别，您可以使用上述相同的标签模式，但使用 `remove_` 而不是 `hide_`。使用以下标签："
+
+#: ../../render/hiding.md:141
+msgid "**`remove-input`** tag to remove the cell inputs"
+msgstr "**`remove-input`** 标签以删除单元格输入"
+
+#: ../../render/hiding.md:142
+msgid "**`remove-output`** to remove the cell outputs"
+msgstr "**`remove-output`** 标签以删除单元格输出"
+
+#: ../../render/hiding.md:143
+msgid "**`remove-cell`** to remove the entire cell"
+msgstr "**`remove-cell`** 标签以删除整个单元格"
+
+#: ../../render/hiding.md:147
+msgid ""
+"Here is a cell with a `remove-input` tag. The inputs will not make it "
+"into the page at all."
+msgstr ""
+"这是带有 `remove-input` 标签的单元格。输入将不会出现在页面中。"
+
+#: ../../render/hiding.md:157
+msgid "Here's a cell with a `remove-output` tag:"
+msgstr "这是带有 `remove-output` 标签的单元格："
+
+#: ../../render/hiding.md:166
+msgid ""
+"And the following cell has a `remove-cell` tag (there should be nothing "
+"below, since the cell will be gone)."
+msgstr ""
+"下面的单元格有 `remove-cell` 标签（应该没有任何东西，因为单元格将消失）。"
+
+#: ../../render/hiding.md:13
+msgid ""
+"This notebook can be downloaded as         **{nb-"
+"download}`hiding.ipynb`** and {download}`hiding.md`"
+msgstr ""
+"此笔记本可以下载为 **{nb-download}`hiding.ipynb`** 和 {download}`hiding.md`"
+
+#: ../../render/index.md:1
+msgid "Rendering"
+msgstr "渲染"
+
+#: ../../render/index.md:3
+msgid ""
+"Convert Jupyter execution outputs to embedded content, and build output "
+"formats."
+msgstr ""
+"将 Jupyter 执行输出转换为嵌入内容，并构建输出格式。"
+
+#: ../../render/inline.md:11
+msgid "Inline variable evaluation (eval)"
+msgstr "内联变量评估（eval）"
+
+#: ../../render/inline.md:16
+msgid ""
+"The `eval` submodule allows you to insert code variables directly into "
+"the text flow of your documentation."
+msgstr ""
+"`eval` 子模块允许您将代码变量直接插入到文档的文本流中。"
+
+#: ../../render/inline.md:18
+msgid ""
+"Use of `eval` requires that the [notebook execution mode](execute/modes) "
+"is set to `inline`, since the variables are evaluated by the notebook "
+"kernel. For example, using the [top-matter](authoring/text-notebooks):"
+msgstr ""
+"使用 `eval` 需要将 [笔记本执行模式](execute/modes) 设置为 `inline`，因为变量是由笔记本内核评估的。例如，使用 [top-matter](authoring/text-notebooks)："
+
+#: ../../render/inline.md:31
+msgid "Basic example"
+msgstr "基本示例"
+
+#: ../../render/inline.md:33
+msgid "Below we set a variable `v1` within a code cell."
+msgstr "下面我们在代码单元格中设置变量 `v1`。"
+
+#: ../../render/inline.md:39
+msgid ""
+"Using the `eval` role, we can insert the variable `v1` into the text of a"
+" paragraph:"
+msgstr ""
+"使用 `eval` 角色，可以将变量 `v1` 插入到段落文本中："
+
+#: ../../render/inline.md:41 ../../render/inline.md:49
+msgid "`` {eval}`v1` `` -> {eval}`v1`"
+msgstr ""
+
+#: ../../render/inline.md:43
+msgid ""
+"If we update the variable, we can see the change reflected in subsequent "
+"evaluation:"
+msgstr ""
+"如果更新变量，可以看到后续评估中的变化："
+
+#: ../../render/inline.md:52
+msgid "Variable names must match the regex `[a-zA-Z][a-zA-Z0-9_]*`"
+msgstr "变量名称必须匹配正则表达式 `[a-zA-Z][a-zA-Z0-9_]*`"
+
+#: ../../render/inline.md:55
+msgid "Inserting different output types"
+msgstr "插入不同的输出类型"
+
+#: ../../render/inline.md:57
+msgid ""
+"Any variable type can be inserted into the text flow using the `eval` "
+"role, and the most suitable output type will be used, based on the output"
+" format (see {ref}`render/output/priority` for more information). For "
+"example:"
+msgstr ""
+"任何变量类型都可以使用 `eval` 角色插入到文本流中，并且将根据输出格式使用最合适的输出类型（有关更多信息，请参阅 {ref}`render/output/priority`）。例如："
+
+#: ../../render/inline.md:66
+msgid "An inline slider (`` {eval}`slider` ``): {eval}`slider`"
+msgstr "内联滑块(`` {eval}`slider` ``): {eval}`slider`"
+
+#: ../../render/inline.md:68
+msgid "You can also use the `eval` directive to insert variables as blocks:"
+msgstr "您还可以使用 `eval` 指令将变量作为块插入："
+
+#: ../../render/inline.md:79
+msgid "using:"
+msgstr "使用："
+
+#: ../../render/inline.md:86
+msgid "gives:"
+msgstr "给定："
+
+#: ../../render/inline.md:91
+msgid "Embedding outputs in figures"
+msgstr "在图表中嵌入输出"
+
+#: ../../render/inline.md:93
+msgid ""
+"The `eval:figure` directive allows you to embed outputs in a figure, with"
+" an optional caption and other formatting options."
+msgstr ""
+"`eval:figure` 指令允许您在图表中嵌入输出，并提供可选的标题和其他格式化选项。"
+
+#: ../../render/inline.md:96
+msgid "For example, we can embed the output of the above plot in a figure:"
+msgstr "例如，我们可以将上述图的输出嵌入到图表中："
+
+#: ../../render/inline.md:105
+msgid "which gives:"
+msgstr "这将生成："
+
+#: ../../render/inline.md:109
+msgid "My plot with a mean value of {eval}`mean`."
+msgstr ""
+
+#: ../../render/inline.md:112
+msgid "That can be referenced with `` {ref}`myplot` ``: {ref}`myplot`"
+msgstr "可以使用 `` {ref}`myplot` `` 引用它：{ref}`myplot`"
+
+#: ../../render/inline.md:114
+msgid "The following directive options are available:"
+msgstr "以下指令选项可用："
+
+#: ../../render/inline.md:116
+msgid "`eval:figure` directive options"
+msgstr "`eval:figure` 指令选项"
+
+#: ../../render/interactive.md:7
+msgid "Widgets and interactive outputs"
+msgstr "小部件和交互式输出"
+
+#: ../../render/interactive.md:9
+msgid ""
+"Jupyter Notebooks have support for many kinds of interactive outputs. "
+"These should all be supported in MyST-NB by passing the output HTML "
+"through automatically. This page has a few common examples.[^download]"
+msgstr ""
+"Jupyter Notebooks 支持多种交互式输出。这些在 MyST-NB 中都应该通过自动传递输出 HTML 来支持。本页提供了一些常见示例。[^download]"
+
+#: ../../render/interactive.md:15
+msgid "First off, we'll download a little bit of data and show its structure:"
+msgstr "首先，将下载一些数据并显示其结构："
+
+#: ../../render/interactive.md:23
+msgid "Plotting libraries"
+msgstr "绘图库"
+
+#: ../../render/interactive.md:25
+msgid "Altair"
+msgstr ""
+
+#: ../../render/interactive.md:27
+msgid ""
+"Interactive outputs will work under the assumption that the outputs they "
+"produce have self-contained HTML that works without requiring any "
+"external dependencies to load. See the [`Altair` installation "
+"instructions](https://altair-"
+"viz.github.io/getting_started/installation.html#installation) to get set "
+"up with Altair. Below is some example output."
+msgstr ""
+"交互式输出将在其生成的输出具有自包含 HTML 的假设下工作，无需加载任何外部依赖项。"
+"请参阅 [`Altair` 安装说明](https://altair-viz.github.io/getting_started/installation.html#installation) 以设置 Altair。以下是一些示例输出。"
+
+#: ../../render/interactive.md:42
+msgid "Plotly"
+msgstr ""
+
+#: ../../render/interactive.md:44
+msgid ""
+"Plotly is another interactive plotting library that provides a high-level"
+" API for visualization. See the [Plotly JupyterLab "
+"documentation](https://plotly.com/python/getting-started/#jupyterlab-"
+"support-python-35) to get started with Plotly in the notebook."
+msgstr ""
+"Plotly 是另一个提供高级 API 进行可视化的交互式绘图库。"
+"请参阅 [Plotly JupyterLab 文档](https://plotly.com/python/getting-started/#jupyterlab-support-python-35) 以在笔记本中开始使用 Plotly。"
+
+#: ../../render/interactive.md:47 ../../render/interactive.md:75
+msgid "Below is some example output."
+msgstr "以下是一些示例输出。"
+
+#: ../../render/interactive.md:61
+msgid ""
+"You may need to supply the `require.js` for plotly to display; in your "
+"`conf.py`:"
+msgstr ""
+"您可能需要为 plotly 提供 `require.js` 以显示；在您的 `conf.py` 中："
+
+#: ../../render/interactive.md:69
+msgid "Bokeh"
+msgstr ""
+
+#: ../../render/interactive.md:71
+msgid ""
+"Bokeh provides several options for interactive visualizations, and is "
+"part of the PyViz ecosystem. See [the Bokeh with Jupyter "
+"documentation](https://docs.bokeh.org/en/latest/docs/user_guide/jupyter.html"
+"#userguide-jupyter) to get started."
+msgstr ""
+"Bokeh 提供了多种交互式可视化选项，并且是 PyViz 生态系统的一部分。"
+"请参阅 [Bokeh 与 Jupyter 文档](https://docs.bokeh.org/en/latest/docs/user_guide/jupyter.html#userguide-jupyter) 以开始使用。"
+
+#: ../../render/interactive.md:91
+msgid "ipywidgets"
+msgstr ""
+
+#: ../../render/interactive.md:94
+msgid ""
+"IPyWidgets uses a special JS package `@jupyter-widgets/html-manager` for "
+"rendering Jupyter widgets outside notebooks. `myst-nb` loads a specific "
+"version of this package, which may be incompatible with your installation"
+" of IPyWidgets. If this is the case, you might need to specify the "
+"appropriate `nb_ipywidgets_js` config value, e.g. for `0.20.0`"
+msgstr ""
+"IPyWidgets 使用特殊的 JS 包 `@jupyter-widgets/html-manager` 来在笔记本之外渲染 Jupyter 小部件。"
+"`myst-nb` 加载了此包的特定版本，可能与您安装的 IPyWidgets 不兼容。如果是这种情况，您可能需要指定适当的 `nb_ipywidgets_js` 配置值，例如对于 `0.20.0`："
+
+#: ../../render/interactive.md:106
+msgid ""
+"To determine which version of `@jupyter-widgets/html-manager` is "
+"required, find the `html-manager` JS package in the [`ipywidgets` "
+"repo](https://github.com/jupyter-widgets/ipywidgets), and identify its "
+"version."
+msgstr ""
+"要确定需要哪个版本的 `@jupyter-widgets/html-manager`，请在 [`ipywidgets` 仓库](https://github.com/jupyter-widgets/ipywidgets) 中找到 `html-manager` JS 包，并确定其版本。"
+
+#: ../../render/interactive.md:109
+msgid ""
+"You may also run code for Jupyter Widgets in your document, and the "
+"interactive HTML outputs will embed themselves in your side. See [the "
+"ipywidgets "
+"documentation](https://ipywidgets.readthedocs.io/en/latest/user_install.html)"
+" for how to get set up in your own environment."
+msgstr ""
+"您还可以在文档中运行 Jupyter Widgets 的代码，交互式 HTML 输出将嵌入到您的页面中。"
+"请参阅 [ipywidgets 文档](https://ipywidgets.readthedocs.io/en/latest/user_install.html) 了解如何在您自己的环境中进行设置。"
+
+#: ../../render/interactive.md:113
+msgid "Widgets often need a kernel"
+msgstr "小部件通常需要内核"
+
+#: ../../render/interactive.md:114
+msgid ""
+"Note that `ipywidgets` tend to behave differently from other interactive "
+"viz libraries. They interact both with Javascript, and with Python. Some "
+"functionality in `ipywidgets` may not work in rendered pages (because no "
+"Python kernel is running). You may be able to get around this with tools "
+"for remote kernels, like [thebelab](https://thebelab.readthedocs.org)."
+msgstr ""
+"请注意，`ipywidgets` 的行为通常与其他交互式可视化库不同。它们既与 Javascript 交互，也与 Python 交互。"
+"`ipywidgets` 中的某些功能在渲染的页面中可能无法工作（因为没有 Python 内核在运行）。"
+"您可以使用远程内核工具（如 [thebelab](https://thebelab.readthedocs.org)）来解决此问题。"
+
+#: ../../render/interactive.md:120
+msgid "Here are some simple widget elements rendered below."
+msgstr "以下是一些渲染的简单小部件元素。"
+
+#: ../../render/interactive.md:148
+#, python-format
+msgid ""
+"You can find [a list of possible Jupyter "
+"Widgets](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html)"
+" in the jupyter-widgets documentation."
+msgstr ""
+"您可以在 [jupyter-widgets 文档](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html) "
+"中找到 [可能的 Jupyter 小部件列表](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20List.html)。"
+
+#: ../../render/interactive.md:13
+msgid ""
+"This notebook can be downloaded as **{nb-download}`interactive.ipynb`** "
+"and {download}`interactive.md`"
+msgstr ""
+"此笔记本可以下载为 **{nb-download}`interactive.ipynb`** 和 {download}`interactive.md`"
+
+#: ../../render/orphaned_nb.ipynb:10004
+msgid "An orphaned notebook"
+msgstr "孤立的笔记本"
+
+#: ../../render/orphaned_nb.ipynb:10006
+msgid "This defines a variable that we'll re-use in another notebook."
+msgstr "这定义了变量，将在另一个笔记本中重复使用它。"
+
