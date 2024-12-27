@@ -553,7 +553,7 @@ msgstr "以下代码将变量粘贴到笔记本中："
 
 #: ../../render/glue.md:39
 msgid "You can then insert it into your text like so: {glue}`my_variable`."
-msgstr "然后，您可以像这样将其插入到文本中： {glue}`my_variable`。"
+msgstr ""
 
 #: ../../render/glue.md:41
 msgid "That was accomplished with the following code: `` {glue}`my_variable` ``."
@@ -653,7 +653,7 @@ msgstr "或者可以像这样粘贴内联对象："
 
 #: ../../render/glue.md:168
 msgid "Inline text; {glue}`boot_mean`, and figure; {glue}`boot_fig`."
-msgstr "内联文本；{glue}`boot_mean`，以及图；{glue}`boot_fig`。"
+msgstr ""
 
 #: ../../render/glue.md:171
 msgid ""
@@ -663,8 +663,8 @@ msgid ""
 "make a visual point that isn't too complex! For more ideas, check out "
 "[how sparklines are used](https://en.wikipedia.org/wiki/Sparkline)."
 msgstr ""
-"建议在绘制内联图时使用更宽、更短的图形，比例约为 6x2。例如，这里是引导程序中排序均值的内联图：{glue}`sorted_means_fig`。"
-"它可以用来制作不太复杂的视觉点！有关更多想法，请查看 [如何使用迷你图](https://en.wikipedia.org/wiki/Sparkline)。"
+#  "建议在绘制内联图时使用更宽、更短的图形，比例约为 6x2。例如，这里是引导程序中排序均值的内联图： {glue}`sorted_means_fig` 。"
+#  "它可以用来制作不太复杂的视觉点！有关更多想法，请查看 [如何使用迷你图](https://en.wikipedia.org/wiki/Sparkline)。"
 
 #: ../../render/glue.md:178
 msgid ""
@@ -715,7 +715,7 @@ msgid ""
 "The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95%"
 " confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`)"
 msgstr ""
-"引导分布的均值为 {glue:text}`boot_mean`（95% 置信区间 {glue:text}`boot_clo`/{glue:text}`boot_chi`）"
+#  "引导分布的均值为 {glue:text}`boot_mean` （95% 置信区间 {glue:text}`boot_clo`/{glue:text}`boot_chi`）"
 
 #: ../../render/glue.md:210
 msgid ""
@@ -745,14 +745,15 @@ msgid ""
 "round the results. For example, the following: ``My rounded mean: "
 "{glue:text}`boot_mean:.2f` `` will be rendered like this:"
 msgstr ""
-"这在显示数字并希望四舍五入结果时特别有用。例如，以下内容：``我的四舍五入均值：{glue:text}`boot_mean:.2f` `` 将呈现如下："
+"这在显示数字并希望四舍五入结果时特别有用。"
+"例如，以下内容："
+"``My rounded mean: {glue:text}`boot_mean:.2f` `` 将呈现如下："
 
 #: ../../render/glue.md:220
 msgid ""
 "My rounded mean: {glue:text}`boot_mean:.2f` (95% CI: "
 "{glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`)."
 msgstr ""
-"我的四舍五入均值：{glue:text}`boot_mean:.2f`（95% 置信区间：{glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`）。"
 
 #: ../../render/glue.md:223
 msgid ""
@@ -790,7 +791,7 @@ msgid ""
 "This is a **caption**, with an embedded `{glue:text}` element: "
 "{glue:text}`boot_mean:.2f`!"
 msgstr ""
-"这是 **标题**，其中嵌入了 `{glue:text}` 元素：{glue:text}`boot_mean:.2f`！"
+#  "这是 **标题**，其中嵌入了 `{glue:text}` 元素：{glue:text}`boot_mean:.2f`！"
 
 #: ../../render/glue.md:286
 msgid "Here is a {ref}`reference to the figure <fig-boot>`"
@@ -1270,7 +1271,7 @@ msgstr ""
 
 #: ../../render/inline.md:96
 msgid "For example, we can embed the output of the above plot in a figure:"
-msgstr "例如，我们可以将上述图的输出嵌入到图表中："
+msgstr "例如，可以将上述图的输出嵌入到图表中："
 
 #: ../../render/inline.md:105
 msgid "which gives:"
