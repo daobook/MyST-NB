@@ -1,5 +1,71 @@
 # Change Log
 
+## v1.3.0 - 2025-07-13
+
+([full changelog](https://github.com/executablebooks/MyST-NB/compare/v1.2.0...v1.3.0))
+
+
+## What's Changed
+
+### Enhancements made
+
+* ENH: Adding scroll bars with proper cell tags by @dprada in https://github.com/executablebooks/MyST-NB/pull/454
+* Use admonitions to style collapsible cells :) by @sneakers-the-rat in https://github.com/executablebooks/MyST-NB/pull/656
+* Improve output cells in dark mode by @jaladh-singhal in https://github.com/executablebooks/MyST-NB/pull/679
+* Add scroll_outputs configuration by @jaladh-singhal in https://github.com/executablebooks/MyST-NB/pull/683
+* ENH: Add handling of image based `PendingGlueReference` in `generate_any_nodes` by @StFroese in https://github.com/executablebooks/MyST-NB/pull/675
+
+### Maintenance and upkeep improvements
+
+* DOCS: clarify meaning of merge_streams option (#664) by @mforbes in https://github.com/executablebooks/MyST-NB/pull/665
+* MAINT: minor cleanups by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/669
+* DOC: Mention conflict with myst_parser extension by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/672
+* TEST: Adding a test case for multiple captioned figures by @mmcky in https://github.com/executablebooks/MyST-NB/pull/373
+* Fix link to EBP Contributing Guide by @StFroese in https://github.com/executablebooks/MyST-NB/pull/674
+* MAINT: limit ipython in tox job, too by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/687
+* docs: nicer types in docs by @henryiii in https://github.com/executablebooks/MyST-NB/pull/688
+
+## New Contributors
+* @mforbes made their first contribution in https://github.com/executablebooks/MyST-NB/pull/665
+* @dprada made their first contribution in https://github.com/executablebooks/MyST-NB/pull/454
+* @StFroese made their first contribution in https://github.com/executablebooks/MyST-NB/pull/674
+* @jaladh-singhal made their first contribution in https://github.com/executablebooks/MyST-NB/pull/679
+* @henryiii made their first contribution in https://github.com/executablebooks/MyST-NB/pull/688
+
+
+## v1.2.0 - 2025-02-07
+
+([full changelog](https://github.com/executablebooks/MyST-NB/compare/v1.1.2...v1.2.0))
+
+### Enhancements made
+
+- ENH: Support translated notebooks by @OriolAbril in https://github.com/executablebooks/MyST-NB/pull/600
+
+### Bugs Fixed
+
+- BUG: using rstrip to preserve indents by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/637
+- FIX: fix path suffix condition in core/read.py by @je-cook in https://github.com/executablebooks/MyST-NB/pull/641
+
+### Maintenance and upkeep improvements
+
+- DOCS: adding changelog for 1.1.2 by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/638
+- MAINT: adding python 3.13 to CI and classifiers by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/635
+- CI: adding devdeps testing and cron and workflow dispatch by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/639
+- TST: fail on warnings by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/647
+- add `configuration` key to readthedocs.yml by @sneakers-the-rat in https://github.com/executablebooks/MyST-NB/pull/657
+- MAINT: fix CI in prep for release by @bsipocz in https://github.com/executablebooks/MyST-NB/pull/659
+
+### Other merged PRs
+
+- [pre-commit.ci] pre-commit autoupdate by @pre-commit-ci in https://github.com/executablebooks/MyST-NB/pull/569
+- Revert "[pre-commit.ci] pre-commit autoupdate" by @agoose77 in https://github.com/executablebooks/MyST-NB/pull/642
+
+### New Contributors
+- @sneakers-the-rat made their first contribution in https://github.com/executablebooks/MyST-NB/pull/657
+
+([GitHub contributors page for this release](https://github.com/executablebooks/MyST-NB/graphs/contributors?from=2024-09-24&to=2025-02-07&type=c))
+
+
 ## v1.1.2 - 2024-09-24
 
 ([full changelog](https://github.com/executablebooks/MyST-NB/compare/v1.1.1...c6a2d4b61205c2b20943391a656f01a4cc446076))
