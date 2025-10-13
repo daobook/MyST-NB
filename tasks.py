@@ -1,11 +1,12 @@
 import inspect
 from pathlib import Path
 import sys
+import inspect
 ROOT = Path(__file__).resolve().parents[0]
 sys.path.extend([str(ROOT/'src')])
 if not hasattr(inspect, 'getargspec'): # 修复
     inspect.getargspec = inspect.getfullargspec
     
-from taolib.flows.tasks import sites
+from taolib.doc import sites
 
 namespace = sites('docs', target='docs/_build/html')

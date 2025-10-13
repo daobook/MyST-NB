@@ -42,19 +42,19 @@ myst_enable_extensions = [
 ]
 
 nb_custom_formats = {".Rmd": ["jupytext.reads", {"fmt": "Rmd"}]}
-nb_execution_mode = "cache"
+nb_execution_mode = "off"
 nb_execution_show_tb = "READTHEDOCS" in os.environ
 nb_execution_timeout = 60  # Note: 30 was timing out on RTD
-nb_ipywidgets_js = {
-    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js": {
-        "integrity": "sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=",
-        "crossorigin": "anonymous",
-    },
-    "https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@*/dist/embed-amd.js": {
-        "data-jupyter-widgets-cdn": "https://cdn.jsdelivr.net/npm/",
-        "crossorigin": "anonymous",
-    },
-}
+# nb_ipywidgets_js = {
+#     "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js": {
+#         "integrity": "sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=",
+#         "crossorigin": "anonymous",
+#     },
+#     "https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@*/dist/embed-amd.js": {
+#         "data-jupyter-widgets-cdn": "https://cdn.jsdelivr.net/npm/",
+#         "crossorigin": "anonymous",
+#     },
+# }
 # nb_render_image_options = {"width": "200px"}
 # application/vnd.plotly.v1+json and application/vnd.bokehjs_load.v0+json
 suppress_warnings = ["mystnb.unknown_mime_type"]
@@ -137,6 +137,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+html_js_files = ["custom.js"]
 
 copybutton_selector = "div:not(.output) > div.highlight pre"
 
@@ -156,9 +157,15 @@ def setup(app):
 
     app = cast(Sphinx, app)
 
-    # this is required to register the coconut kernel with Jupyter,
-    # to execute docs/examples/coconut-lang.md
-    subprocess.check_call(["coconut", "--jupyter"])
+    # Try to register the coconut kernel with Jupyter,
+    # but don't fail if it doesn't work
+    try:
+        # this is required to register the coconut kernel with Jupyter,
+        # to execute docs/examples/coconut-lang.md
+        subprocess.check_call(["coconut", "--jupyter"])
+    except Exception as e:
+        print(f"Failed to register coconut kernel: {e}")
+        print("Continuing without coconut kernel support")
 
     class _ConfigBase(SphinxDirective):
         """Directive to automate printing of the configuration."""
